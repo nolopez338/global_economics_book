@@ -1,0 +1,109 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath, amssymb}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+
+% Optional styling (simple and robust)
+\setlist[itemize]{leftmargin=1.2em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\begin{document}
+	
+	% If your full document has a ToC elsewhere, keep only the link below.
+	% Otherwise, you can uncomment \tableofcontents and add your sections accordingly.
+	% \tableofcontents
+	
+	\section{Formulas Used in This Topic}\label{formulas-section}
+	
+	\subsection{Expected Value of a Discrete Random Variable}\label{formula-expected-value}
+	
+	\[
+	E[X] = \sum_{i=1}^{n} x_i p_i
+	\]
+	
+	Where
+	\begin{itemize}
+		\item \(X\) random variable representing uncertain outcomes
+		\item \(x_i\) the i-th possible outcome of \(X\)
+		\item \(p_i\) probability associated with outcome \(x_i\)
+		\item \(n\) number of possible outcomes
+	\end{itemize}
+	
+	Context
+	Represents the long-run average outcome under repeated identical conditions.
+	
+	\subsection{Variance of a Discrete Random Variable}\label{formula-variance}
+	
+	\[
+	\mathrm{Var}(X) = \sum_{i=1}^{n} (x_i - E[X])^2 p_i
+	\]
+	
+	Where
+	\begin{itemize}
+		\item \(x_i\) possible outcome
+		\item \(E[X]\) expected value of the distribution
+		\item \(p_i\) probability of outcome \(x_i\)
+		\item \(n\) number of outcomes
+	\end{itemize}
+	
+	Context
+	Measures dispersion and quantifies risk or volatility.
+	
+	\subsection{Expected Monetary Value (EMV)}\label{formula-emv}
+	
+	\[
+	EMV(A_j) = \sum_{i=1}^{m} p_i \,\text{Payoff}(A_j,S_i)
+	\]
+	
+	Where
+	\begin{itemize}
+		\item \(A_j\) decision alternative (for example a strategy)
+		\item \(S_i\) state of nature (future scenario)
+		\item \(\text{Payoff}(A_j,S_i)\) monetary result of \(A_j\) under state \(S_i\)
+		\item \(p_i\) probability of state \(S_i\)
+		\item \(m\) number of states of nature
+	\end{itemize}
+	
+	Context
+	Represents the average monetary performance of a strategy under uncertainty.
+	
+	\subsection{Maximin Criterion}\label{formula-maximin}
+	
+	\[
+	\text{Maximin}(A_j) = \max_j \left( \min_i \,\text{Payoff}(A_j,S_i) \right)
+	\]
+	
+	Where
+	\begin{itemize}
+		\item \(A_j\) decision alternatives
+		\item \(S_i\) states of nature
+		\item \(\min_i \text{Payoff}(A_j,S_i)\) worst-case payoff of \(A_j\)
+		\item outer max selects the highest worst-case result
+	\end{itemize}
+	
+	Context
+	Represents a conservative decision maker seeking safety.
+	
+	\subsection{Maximax Criterion}\label{formula-maximax}
+	
+	\[
+	\text{Maximax}(A_j) = \max_j \left( \max_i \,\text{Payoff}(A_j,S_i) \right)
+	\]
+	
+	Where
+	\begin{itemize}
+		\item inner max best payoff each alternative can achieve
+		\item outer max selects the alternative with the largest best-case payoff
+	\end{itemize}
+	
+	Context
+	Represents an optimistic decision maker seeking maximum possible gain.
+	
+	\vspace{6pt}
+	\noindent\hyperref[table-of-contents]{Back to Top}
+	
+\end{document}
