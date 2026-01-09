@@ -1,41 +1,4 @@
-% !TeX program = pdflatex
-\documentclass[11pt]{article}
-
-\usepackage[a4paper,margin=2.2cm]{geometry}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc} % remove if using lualatex/xelatex
-\usepackage{lmodern}
-\usepackage{microtype}
-\usepackage{tikz}
-\usetikzlibrary{trees,positioning}
-
-\usepackage{amsmath,amssymb}
-\usepackage{booktabs,array,tabularx}
-\usepackage{enumitem}
-\usepackage{hyperref}
-\usepackage{xcolor}
-
-\hypersetup{
-	colorlinks=true,
-	linkcolor=blue,
-	urlcolor=blue,
-	citecolor=blue
-}
-
-% --- Table helpers ---
-\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
-\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
-
-\setlist[itemize]{leftmargin=*, itemsep=0.35em, topsep=0.35em}
-
-\title{Example 2}
-\author{}
-\date{}
-
-\begin{document}
-	\maketitle
-	
-	\section{Example 2}\label{sec:example2}
+\chapter{Example 2}\label{sec:example2}
 	
 	\subsection{Problem description}\label{subsec:example2-problem}
 	
@@ -364,5 +327,3 @@
 	
 	\medskip
 	\noindent\hyperref[sec:example2]{Back to top}
-	
-\end{document}
