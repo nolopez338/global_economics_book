@@ -165,24 +165,32 @@
 	
 	We represent the same situation as a decision tree.
 	
-	\begin{verbatim}
-		Decision node choose strategy
-		│
-		├─ Strategy A  Innovate
-		│   ├─ High demand 0.30 → 150k
-		│   ├─ Moderate demand 0.40 → 80k
-		│   └─ Low demand 0.30 → −20k
-		│
-		├─ Strategy B  Improve
-		│   ├─ High demand 0.30 → 110k
-		│   ├─ Moderate demand 0.40 → 90k
-		│   └─ Low demand 0.30 → 40k
-		│
-		└─ Strategy C  License
-		├─ High demand 0.30 → 70k
-		├─ Moderate demand 0.40 → 70k
-		└─ Low demand 0.30 → 60k
-	\end{verbatim}
+	\begin{center}
+		\begin{tikzpicture}[
+			font=\small,
+			grow=right,
+			level distance=4cm,
+			sibling distance=1.3cm,
+			edge from parent/.style={draw,-{Stealth}}
+		]
+			\node[draw, rounded corners, align=left] {Decision node\\ choose strategy}
+				child { node[draw, rounded corners, align=left] {Strategy A\\ Innovate}
+					child { node[align=left] {High demand\\ 0.30 $\to$ 150k} }
+					child { node[align=left] {Moderate demand\\ 0.40 $\to$ 80k} }
+					child { node[align=left] {Low demand\\ 0.30 $\to$ -20k} }
+				}
+				child { node[draw, rounded corners, align=left] {Strategy B\\ Improve}
+					child { node[align=left] {High demand\\ 0.30 $\to$ 110k} }
+					child { node[align=left] {Moderate demand\\ 0.40 $\to$ 90k} }
+					child { node[align=left] {Low demand\\ 0.30 $\to$ 40k} }
+				}
+				child { node[draw, rounded corners, align=left] {Strategy C\\ License}
+					child { node[align=left] {High demand\\ 0.30 $\to$ 70k} }
+					child { node[align=left] {Moderate demand\\ 0.40 $\to$ 70k} }
+					child { node[align=left] {Low demand\\ 0.30 $\to$ 60k} }
+				};
+		\end{tikzpicture}
+	\end{center}
 	
 	This diagram helps visualise all possible paths decisions followed by demand realisations and the associated payoffs.
 	
