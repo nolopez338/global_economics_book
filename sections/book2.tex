@@ -168,26 +168,27 @@
 	\begin{center}
 		\begin{tikzpicture}[
 			font=\small,
-			grow=right,
-			level distance=4cm,
-			sibling distance=1.3cm,
-			edge from parent/.style={draw,-{Stealth}}
+			grow=down,
+			level distance=1.1cm,
+			sibling distance=2.8cm,
+			edge from parent/.style={draw,-{Stealth}},
+			every node/.style={align=left}
 		]
-			\node[draw, rounded corners, align=left] {Decision node\\ choose strategy}
-				child { node[draw, rounded corners, align=left] {Strategy A\\ Innovate}
-					child { node[align=left] {High demand\\ 0.30 $\to$ 150k} }
-					child { node[align=left] {Moderate demand\\ 0.40 $\to$ 80k} }
-					child { node[align=left] {Low demand\\ 0.30 $\to$ -20k} }
+			\node[draw, rounded corners] {Decision node (choose strategy)}
+				child { node[draw, rounded corners] {Strategy A\\ Innovate}
+					child { node {High demand (0.30) $\to$ 150k} }
+					child { node {Moderate demand (0.40) $\to$ 80k} }
+					child { node {Low demand (0.30) $\to$ -20k} }
 				}
-				child { node[draw, rounded corners, align=left] {Strategy B\\ Improve}
-					child { node[align=left] {High demand\\ 0.30 $\to$ 110k} }
-					child { node[align=left] {Moderate demand\\ 0.40 $\to$ 90k} }
-					child { node[align=left] {Low demand\\ 0.30 $\to$ 40k} }
+				child { node[draw, rounded corners] {Strategy B\\ Improve}
+					child { node {High demand (0.30) $\to$ 110k} }
+					child { node {Moderate demand (0.40) $\to$ 90k} }
+					child { node {Low demand (0.30) $\to$ 40k} }
 				}
-				child { node[draw, rounded corners, align=left] {Strategy C\\ License}
-					child { node[align=left] {High demand\\ 0.30 $\to$ 70k} }
-					child { node[align=left] {Moderate demand\\ 0.40 $\to$ 70k} }
-					child { node[align=left] {Low demand\\ 0.30 $\to$ 60k} }
+				child { node[draw, rounded corners] {Strategy C\\ License}
+					child { node {High demand (0.30) $\to$ 70k} }
+					child { node {Moderate demand (0.40) $\to$ 70k} }
+					child { node {Low demand (0.30) $\to$ 60k} }
 				};
 		\end{tikzpicture}
 	\end{center}
