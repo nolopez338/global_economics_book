@@ -306,55 +306,48 @@ strategy and cost strategy), then the demand level is realised and then the cost
 costs are independent, their probabilities multiply along each path. For simplicity, we show the combined states with their
 joint probabilities and profits.
 \begin{center}
-	\hspace*{-2.4cm}%
-	\resizebox{1.3\textwidth}{!}{%
-		\begin{tikzpicture}[
-			grow=right,
-			level distance=43mm,
-			sibling distance=22mm,
-			edge from parent/.style={draw,-latex,thick},
-			every node/.style={align=left,font=\scriptsize},
-			decision/.style={draw,rounded corners,inner sep=3pt,text width=42mm},
-			chance/.style={draw,circle,inner sep=1.2pt},
-			leaf/.style={inner sep=1pt,text width=58mm}
-			]
-			
-			\node[decision]{Decision node\\Choose combined decision}
-			child { node[decision]{Decision A\\Premium revenue\\Stable costs}
-				child { node[leaf]{S1 high demand, favourable costs\\$p=0.18$\\profit $=4000$} }
-				child { node[leaf]{S2 high demand, unfavourable costs\\$p=0.12$\\profit $=3400$} }
-				child { node[leaf]{S3 moderate demand, favourable costs\\$p=0.27$\\profit $=2500$} }
-				child { node[leaf]{S4 moderate demand, unfavourable costs\\$p=0.18$\\profit $=1900$} }
-				child { node[leaf]{S5 weak demand, favourable costs\\$p=0.15$\\profit $=1200$} }
-				child { node[leaf]{S6 weak demand, unfavourable costs\\$p=0.10$\\profit $=600$} }
+	\begin{tikzpicture}[
+		grow=down,
+		level distance=8mm,
+		sibling distance=3mm,
+		edge from parent/.style={draw},
+		edge from parent path={(\tikzparentnode.south) |- (\tikzchildnode.west)},
+		every node/.style={anchor=west,font=\small}
+	]
+		\node {Decision node (choose combined decision)}
+			child { node {Decision A premium revenue + stable costs}
+				child { node {S1 high demand, favourable costs (0.18) $\to$ 4000} }
+				child { node {S2 high demand, unfavourable costs (0.12) $\to$ 3400} }
+				child { node {S3 moderate demand, favourable costs (0.27) $\to$ 2500} }
+				child { node {S4 moderate demand, unfavourable costs (0.18) $\to$ 1900} }
+				child { node {S5 weak demand, favourable costs (0.15) $\to$ 1200} }
+				child { node {S6 weak demand, unfavourable costs (0.10) $\to$ 600} }
 			}
-			child { node[decision]{Decision B\\Premium revenue\\Flexible costs}
-				child { node[leaf]{S1\\$p=0.18$\\profit $=4500$} }
-				child { node[leaf]{S2\\$p=0.12$\\profit $=2600$} }
-				child { node[leaf]{S3\\$p=0.27$\\profit $=3000$} }
-				child { node[leaf]{S4\\$p=0.18$\\profit $=1100$} }
-				child { node[leaf]{S5\\$p=0.15$\\profit $=1700$} }
-				child { node[leaf]{S6\\$p=0.10$\\profit $=-200$} }
+			child { node {Decision B premium revenue + flexible costs}
+				child { node {S1 (0.18) $\to$ 4500} }
+				child { node {S2 (0.12) $\to$ 2600} }
+				child { node {S3 (0.27) $\to$ 3000} }
+				child { node {S4 (0.18) $\to$ 1100} }
+				child { node {S5 (0.15) $\to$ 1700} }
+				child { node {S6 (0.10) $\to$ -200} }
 			}
-			child { node[decision]{Decision C\\Volume revenue\\Stable costs}
-				child { node[leaf]{S1\\$p=0.18$\\profit $=3500$} }
-				child { node[leaf]{S2\\$p=0.12$\\profit $=2900$} }
-				child { node[leaf]{S3\\$p=0.27$\\profit $=2300$} }
-				child { node[leaf]{S4\\$p=0.18$\\profit $=1700$} }
-				child { node[leaf]{S5\\$p=0.15$\\profit $=1800$} }
-				child { node[leaf]{S6\\$p=0.10$\\profit $=1200$} }
+			child { node {Decision C volume revenue + stable costs}
+				child { node {S1 (0.18) $\to$ 3500} }
+				child { node {S2 (0.12) $\to$ 2900} }
+				child { node {S3 (0.27) $\to$ 2300} }
+				child { node {S4 (0.18) $\to$ 1700} }
+				child { node {S5 (0.15) $\to$ 1800} }
+				child { node {S6 (0.10) $\to$ 1200} }
 			}
-			child { node[decision]{Decision D\\Volume revenue\\Flexible costs}
-				child { node[leaf]{S1\\$p=0.18$\\profit $=4000$} }
-				child { node[leaf]{S2\\$p=0.12$\\profit $=2100$} }
-				child { node[leaf]{S3\\$p=0.27$\\profit $=2800$} }
-				child { node[leaf]{S4\\$p=0.18$\\profit $=900$} }
-				child { node[leaf]{S5\\$p=0.15$\\profit $=2300$} }
-				child { node[leaf]{S6\\$p=0.10$\\profit $=400$} }
+			child { node {Decision D volume revenue + flexible costs}
+				child { node {S1 (0.18) $\to$ 4000} }
+				child { node {S2 (0.12) $\to$ 2100} }
+				child { node {S3 (0.27) $\to$ 2800} }
+				child { node {S4 (0.18) $\to$ 900} }
+				child { node {S5 (0.15) $\to$ 2300} }
+				child { node {S6 (0.10) $\to$ 400} }
 			};
-			
-		\end{tikzpicture}%
-	}
+	\end{tikzpicture}
 \end{center}
 
 
