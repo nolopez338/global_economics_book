@@ -1,333 +1,3 @@
-\chapter{Example 2}\label{sec:example2}
-	
-	\subsection{Problem description}\label{subsec:example2-problem}
-	
-	A Colombian agro-export firm that currently sells fresh avocados and coffee in several markets is planning a
-	long-term investment strategy. Management is considering three mutually exclusive options for the next five years.
-	The first possibility is to build a modern avocado processing plant focused on the European Union market, which will
-	be referred to as Strategy A and described as the EU avocado plant. The second possibility is to concentrate on
-	raw coffee exports to the United States, improving logistics and marketing for that specific product, which will be
-	referred to as Strategy B or US coffee focus. The third possibility is to diversify its exports across several
-	regional markets in Latin America and to maintain a smaller presence in both the European Union and the United States,
-	which will be referred to as Strategy C or regional diversification.
-	
-	\medskip
-	The firm is worried about uncertainty in two independent aspects that affect its profit. The first aspect is global
-	demand for its export products, which affects revenue. The second aspect is production and logistics costs, which
-	affect expenses. Management models global demand with three possible demand scenarios. When world demand is high,
-	the EU avocado plant is expected to generate annual revenue of 7000, the US coffee focus 5000 and regional
-	diversification 4800. When demand is moderate, the EU avocado plant is expected to generate revenue of 4800, the
-	US coffee focus 4200 and regional diversification 4300. When demand is weak, the EU avocado plant is expected to
-	generate revenue of 3200, the US coffee focus 3600 and regional diversification 3900. These revenue figures are
-	measured in thousands of US dollars per year. The firm estimates that the probability of high demand is 0.30, the
-	probability of moderate demand is 0.45 and the probability of weak demand is 0.25.
-	
-	\medskip
-	Independent of demand, the firm also considers two possible cost scenarios for production and logistics. In a
-	favourable cost scenario with low input and shipping costs, yearly expenses are expected to be 2300 for the EU
-	avocado plant, 1600 for the US coffee focus and 2000 for regional diversification. In an unfavourable cost
-	scenario with high fuel prices and shipping costs, yearly expenses are expected to be 3500 for the EU avocado plant,
-	2600 for the US coffee focus and 2700 for regional diversification. These expense figures are also measured in
-	thousands of US dollars per year. The firm estimates that the probability of favourable costs is 0.60 and the
-	probability of unfavourable costs is 0.40, and it assumes that demand conditions and cost conditions are independent.
-	
-	\medskip
-	Profit in each year is defined as revenue minus expenses. Therefore, profit for each strategy in any given year will
-	be determined by the combination of the demand scenario that occurs and the cost scenario that occurs. Because the
-	firm considers the demand event and the cost event to be independent, the probability of any combined scenario is
-	the product of the probability of the corresponding demand level and the probability of the corresponding cost
-	level. Management wants to analyse these three strategies using different decision rules, including Maximax, Maximin,
-	the maximum opportunity minimax regret criterion and the Bayes expected value rule, and then decide which strategy
-	is most coherent given its views about risk and its probability assessments for demand and costs.
-	
-	\subsection{Solution}\label{subsec:example2-solution}
-	
-	\subsubsection{(C2) Interpreting the parts of the decision problem}\label{subsubsec:example2-c2}
-	
-	We interpret the narrative and identify the key components of the decision situation.
-	
-	\begin{table}[h!]
-		\centering
-		\begin{tabularx}{\linewidth}{L{0.28\linewidth}Y}
-			\toprule
-			Element & Description \\
-			\midrule
-			Decision alternatives &
-			Strategy A is the EU avocado plant, which focuses on processed avocados for the European Union.\newline
-			Strategy B is the US coffee focus, which concentrates on raw coffee exports to the United States.\newline
-			Strategy C is regional diversification, which mixes exports across Latin America and maintains a smaller EU and US presence.\\
-			\addlinespace
-			Independent events related to uncertainty &
-			Global demand conditions, which determine revenue, with three levels high, moderate and weak.\newline
-			Cost conditions, which determine expenses, with two levels favourable costs and unfavourable costs.\\
-			\addlinespace
-			States of nature &
-			Each state of nature is a combination of one demand level and one cost level, for example high demand with favourable costs, moderate demand with unfavourable costs and so on.\\
-			\addlinespace
-			Fortuitous events &
-			The actual demand level and the actual cost level that occur in a given year. These outcomes are outside the firm’s control and are unknown when the strategy is chosen.\\
-			\addlinespace
-			Consequences &
-			Annual profit measured in thousands of US dollars for each strategy, obtained by subtracting the expense level that corresponds to the cost scenario from the revenue level that corresponds to the demand scenario.\\
-			\addlinespace
-			Probabilities &
-			Demand probabilities are 0.30 for high demand, 0.45 for moderate demand and 0.25 for weak demand.\newline
-			Cost probabilities are 0.60 for favourable costs and 0.40 for unfavourable costs.\newline
-			The events demand level and cost level are assumed independent, so the probability of any combined state of nature is the product of the corresponding demand probability and cost probability.\\
-			\bottomrule
-		\end{tabularx}
-	\end{table}
-	
-	\subsubsection{(C3) Building the payoff table from revenue and expense information}\label{subsubsec:example2-c3}
-	
-	From the problem description, we first organise the revenue and expense information for each separate event. All figures are in thousands of US dollars per year.
-	
-	\medskip
-	\noindent Revenue as a function of demand for each strategy:
-	\begin{table}[h!]
-		\centering
-		\begin{tabular}{@{}lcccc@{}}
-			\toprule
-			Demand level & Probability & Strategy A Revenue & Strategy B Revenue & Strategy C Revenue \\
-			\midrule
-			High demand     & 0.30 & 7000 & 5000 & 4800 \\
-			Moderate demand & 0.45 & 4800 & 4200 & 4300 \\
-			Weak demand     & 0.25 & 3200 & 3600 & 3900 \\
-			\bottomrule
-		\end{tabular}
-	\end{table}
-	
-	\medskip
-	\noindent Expenses as a function of cost conditions for each strategy:
-	\begin{table}[h!]
-		\centering
-		\begin{tabular}{@{}lcccc@{}}
-			\toprule
-			Cost level & Probability & Strategy A Expenses & Strategy B Expenses & Strategy C Expenses \\
-			\midrule
-			Favourable costs   & 0.60 & 2300 & 1600 & 2000 \\
-			Unfavourable costs & 0.40 & 3500 & 2600 & 2700 \\
-			\bottomrule
-		\end{tabular}
-	\end{table}
-	
-	Because demand and cost conditions are independent, a state of nature is described by a pair of events, for example high demand with favourable costs. The probability of each combined state is the product of the probabilities of the corresponding demand and cost levels. Profit is revenue minus expenses for the chosen strategy in that combined state.
-	
-	\medskip
-	We define six combined states of nature: S1 is high demand with favourable costs, S2 is high demand with unfavourable costs, S3 is moderate demand with favourable costs, S4 is moderate demand with unfavourable costs, S5 is weak demand with favourable costs and S6 is weak demand with unfavourable costs. The joint probabilities are
-	\[
-	P(S1)=0.30\cdot 0.60=0.18,\quad
-	P(S2)=0.30\cdot 0.40=0.12,\quad
-	P(S3)=0.45\cdot 0.60=0.27,
-	\]
-	\[
-	P(S4)=0.45\cdot 0.40=0.18,\quad
-	P(S5)=0.25\cdot 0.60=0.15,\quad
-	P(S6)=0.25\cdot 0.40=0.10.
-	\]
-	
-	\medskip
-	Profit for each strategy and state of nature is revenue minus expenses. For example, under S3, which is moderate demand and favourable costs, the EU avocado plant has revenue 4800 and expenses 2300, so profit is \(4800-2300=2500\). Under S6, which is weak demand and unfavourable costs, the US coffee focus has revenue 3600 and expenses 2600, so profit is \(3600-2600=1000\).
-	
-	\medskip
-	The payoff table of profit in thousands of US dollars for each combined state is:
-	\begin{table}[h!]
-		\centering
-		\begin{tabularx}{\linewidth}{@{}lYcccc@{}}
-			\toprule
-			State of nature & Combined scenario & Probability & Strategy A Profit & Strategy B Profit & Strategy C Profit \\
-			\midrule
-			S1 & High demand, favourable costs   & 0.18 & 4700 & 3400 & 2800 \\
-			S2 & High demand, unfavourable costs & 0.12 & 3500 & 2400 & 2100 \\
-			S3 & Moderate demand, favourable costs   & 0.27 & 2500 & 2600 & 2300 \\
-			S4 & Moderate demand, unfavourable costs & 0.18 & 1300 & 1600 & 1600 \\
-			S5 & Weak demand, favourable costs   & 0.15 & 900  & 2000 & 1900 \\
-			S6 & Weak demand, unfavourable costs & 0.10 & -300 & 1000 & 1200 \\
-			\bottomrule
-		\end{tabularx}
-	\end{table}
-	
-	\subsubsection{(C4) Maximax rule for decision making without probabilities}\label{subsubsec:example2-c4}
-	
-	Under the Maximax rule, the decision maker focuses on the best possible payoff of each strategy and ignores both probabilities and worst cases. We identify, for each strategy, the highest profit among the six states.
-	
-	\[
-	\max\{4700,\ 3500,\ 2500,\ 1300,\ 900,\ -300\}=4700.
-	\]
-	\[
-	\max\{3400,\ 2400,\ 2600,\ 1600,\ 2000,\ 1000\}=3400.
-	\]
-	\[
-	\max\{2800,\ 2100,\ 2300,\ 1600,\ 1900,\ 1200\}=2800.
-	\]
-	The largest of these best profits is 4700, which corresponds to strategy A in state S1. According to the Maximax rule, the firm should choose \emph{Strategy A (EU avocado plant)}.
-	
-	\subsubsection{(C5) Maximin rule for decision making without probabilities}\label{subsubsec:example2-c5}
-	
-	Under the Maximin rule, the decision maker looks at the worst profit of each strategy and then chooses the strategy whose worst-case outcome is the strongest.
-	
-	\[
-	\min\{4700,\ 3500,\ 2500,\ 1300,\ 900,\ -300\}=-300.
-	\]
-	\[
-	\min\{3400,\ 2400,\ 2600,\ 1600,\ 2000,\ 1000\}=1000.
-	\]
-	\[
-	\min\{2800,\ 2100,\ 2300,\ 1600,\ 1900,\ 1200\}=1200.
-	\]
-	We compare these worst-case values and choose the highest one,
-	\[
-	\max\{-300,\ 1000,\ 1200\}=1200.
-	\]
-	Under the Maximin rule, the firm should choose \emph{Strategy C (regional diversification)}, because it offers the strongest worst-case profit.
-	
-	\subsubsection{(C6) Maximum opportunity criterion (minimax regret)}\label{subsubsec:example2-c6}
-	
-	The maximum opportunity or minimax regret criterion focuses on regret, defined as the loss from not having chosen the best strategy in a given state of nature. For each state, we identify the best profit and then compute regret as the best profit in that state minus the profit of the chosen strategy.
-	
-	\[
-	\begin{aligned}
-		\text{S1 (high demand, favourable costs)} &:\ \max\{4700,\ 3400,\ 2800\}=4700,\\
-		\text{S2 (high demand, unfavourable costs)} &:\ \max\{3500,\ 2400,\ 2100\}=3500,\\
-		\text{S3 (moderate demand, favourable costs)} &:\ \max\{2500,\ 2600,\ 2300\}=2600,\\
-		\text{S4 (moderate demand, unfavourable costs)} &:\ \max\{1300,\ 1600,\ 1600\}=1600,\\
-		\text{S5 (weak demand, favourable costs)} &:\ \max\{900,\ 2000,\ 1900\}=2000,\\
-		\text{S6 (weak demand, unfavourable costs)} &:\ \max\{-300,\ 1000,\ 1200\}=1200.
-	\end{aligned}
-	\]
-	
-	The regret table in thousands of US dollars is:
-	\begin{table}[h!]
-		\centering
-		\begin{tabularx}{\linewidth}{@{}lYccc@{}}
-			\toprule
-			State & Scenario & Strategy A Regret & Strategy B Regret & Strategy C Regret \\
-			\midrule
-			S1 & High demand, favourable costs &
-			\(4700-4700=0\) & \(4700-3400=1300\) & \(4700-2800=1900\) \\
-			S2 & High demand, unfavourable costs &
-			\(3500-3500=0\) & \(3500-2400=1100\) & \(3500-2100=1400\) \\
-			S3 & Moderate demand, favourable costs &
-			\(2600-2500=100\) & \(2600-2600=0\) & \(2600-2300=300\) \\
-			S4 & Moderate demand, unfavourable costs &
-			\(1600-1300=300\) & \(1600-1600=0\) & \(1600-1600=0\) \\
-			S5 & Weak demand, favourable costs &
-			\(2000-900=1100\) & \(2000-2000=0\) & \(2000-1900=100\) \\
-			S6 & Weak demand, unfavourable costs &
-			\(1200-(-300)=1500\) & \(1200-1000=200\) & \(1200-1200=0\) \\
-			\bottomrule
-		\end{tabularx}
-	\end{table}
-	
-	For each strategy, we identify its maximum regret across all states:
-	\[
-	\begin{aligned}
-		\max \text{Regret for A} &= \max\{0,\ 0,\ 100,\ 300,\ 1100,\ 1500\}=1500,\\
-		\max \text{Regret for B} &= \max\{1300,\ 1100,\ 0,\ 0,\ 0,\ 200\}=1300,\\
-		\max \text{Regret for C} &= \max\{1900,\ 1400,\ 300,\ 0,\ 100,\ 0\}=1900.
-	\end{aligned}
-	\]
-	The minimax regret rule chooses the strategy with the smallest of these maximum regrets, which is strategy B. The maximum opportunity criterion therefore recommends \emph{Strategy B (US coffee focus)}.
-	
-	\subsubsection{(C7) Using probabilities and expected value (Bayes decision rule)}\label{subsubsec:example2-c7}
-	
-	The Bayes decision rule with expected monetary value (EMV) multiplies each profit by the probability of its state and adds the results. We use the joint probabilities of S1 to S6.
-	
-	\[
-	\begin{aligned}
-		EMV_A &= 0.18(4700)+0.12(3500)+0.27(2500)+0.18(1300)+0.15(900)+0.10(-300)\\
-		&= 846+420+675+234+135-30=2280.
-	\end{aligned}
-	\]
-	\[
-	\begin{aligned}
-		EMV_B &= 0.18(3400)+0.12(2400)+0.27(2600)+0.18(1600)+0.15(2000)+0.10(1000)\\
-		&= 612+288+702+288+300+100=2290.
-	\end{aligned}
-	\]
-	\[
-	\begin{aligned}
-		EMV_C &= 0.18(2800)+0.12(2100)+0.27(2300)+0.18(1600)+0.15(1900)+0.10(1200)\\
-		&= 504+252+621+288+285+120=2070.
-	\end{aligned}
-	\]
-	These values are expected annual profits in thousands of US dollars. Since \(EMV_B=2290\) is slightly higher than \(EMV_A=2280\) and larger than \(EMV_C=2070\), the Bayes EMV rule recommends \emph{Strategy B (US coffee focus)}.
-	
-	\subsubsection{(C9) Tree diagram of the decision-making problem}\label{subsubsec:example2-c9}
-	
-	The same decision situation can be represented as a decision tree. The firm first chooses a strategy, then the
-	demand and cost outcomes are realised. Because demand and costs are independent, their probabilities multiply along
-	each path. For simplicity, we show the combined states with their joint probabilities and profits.
-	
-	\begin{center}
-		\begin{tikzpicture}[
-			grow=right,
-			level distance=40mm,
-			sibling distance=8mm,
-			edge from parent/.style={draw,-latex,thick},
-			every node/.style={align=left,font=\small},
-			decision/.style={draw,rounded corners,inner sep=3pt},
-			chance/.style={draw,circle,inner sep=1.2pt},
-			leaf/.style={inner sep=1pt}
-			]
-			
-			\node[decision]{Decision node\\Choose strategy}
-			child { node[decision]{Strategy A\\EU avocado plant}
-				child { node[leaf]{S1: high demand, favourable costs\\$p=0.18$\\profit $=4700$} }
-				child { node[leaf]{S2: high demand, unfavourable costs\\$p=0.12$\\profit $=3500$} }
-				child { node[leaf]{S3: moderate demand, favourable costs\\$p=0.27$\\profit $=2500$} }
-				child { node[leaf]{S4: moderate demand, unfavourable costs\\$p=0.18$\\profit $=1300$} }
-				child { node[leaf]{S5: weak demand, favourable costs\\$p=0.15$\\profit $=900$} }
-				child { node[leaf]{S6: weak demand, unfavourable costs\\$p=0.10$\\profit $=-300$} }
-			}
-			child { node[decision]{Strategy B\\US coffee focus}
-				child { node[leaf]{S1\\$p=0.18$\\profit $=3400$} }
-				child { node[leaf]{S2\\$p=0.12$\\profit $=2400$} }
-				child { node[leaf]{S3\\$p=0.27$\\profit $=2600$} }
-				child { node[leaf]{S4\\$p=0.18$\\profit $=1600$} }
-				child { node[leaf]{S5\\$p=0.15$\\profit $=2000$} }
-				child { node[leaf]{S6\\$p=0.10$\\profit $=1000$} }
-			}
-			child { node[decision]{Strategy C\\Regional diversification}
-				child { node[leaf]{S1\\$p=0.18$\\profit $=2800$} }
-				child { node[leaf]{S2\\$p=0.12$\\profit $=2100$} }
-				child { node[leaf]{S3\\$p=0.27$\\profit $=2300$} }
-				child { node[leaf]{S4\\$p=0.18$\\profit $=1600$} }
-				child { node[leaf]{S5\\$p=0.15$\\profit $=1900$} }
-				child { node[leaf]{S6\\$p=0.10$\\profit $=1200$} }
-			};
-			
-		\end{tikzpicture}
-	\end{center}
-	
-	This diagram makes explicit the sequence of decisions and uncertain events, as well as the joint probabilities and
-	profits associated with each possible path.
-	
-	\subsubsection{(C8) Comparing Bayes, Maximin, Maximax and minimax regret}\label{subsubsec:example2-c8}
-	
-	We summarise the recommendations from the different decision rules:
-	\begin{itemize}
-		\item Maximax, which is very optimistic and focuses on the best possible profit, recommends Strategy A because it can reach 4700.
-		\item Maximin, which is very cautious and focuses on the worst-case profit, recommends Strategy C because its worst case is 1200.
-		\item The maximum opportunity or minimax regret rule, which focuses on limiting the largest possible regret, recommends Strategy B because its maximum regret is 1300, smaller than the maximum regrets of A and C.
-		\item The Bayes EMV rule, which uses the full joint distribution of probabilities and profits, recommends Strategy B because it has the highest expected monetary value.
-	\end{itemize}
-	This comparison shows that rules ignoring probabilities and focusing on extreme outcomes can produce different recommendations from rules that use the full information about the distribution of profits. Strategy A is favoured by a very optimistic view, Strategy C by a very cautious view, and Strategy B by both minimax regret and expected value.
-	
-	\subsubsection{(C10) Evaluating all possibilities in the decision problem}\label{subsubsec:example2-c10}
-	
-	Looking across all rules, the firm can evaluate each strategy in terms of risk and reward. Strategy A, the EU avocado plant, offers the highest possible profit if demand is high and costs are favourable but exposes the firm to a negative profit of -300 when demand is weak and costs are unfavourable. It also has a relatively large maximum regret, because in some unfavourable states another strategy would have generated much better results. Strategy C, regional diversification, never performs extremely badly or extremely well. It offers the strongest worst-case profit but does not maximise expected profit or minimise regret. Strategy B, the US coffee focus, does not reach the highest possible profit of Strategy A but avoids losses, maintains good results in all combined states and is simultaneously favoured by expected value and by the minimax regret criterion. This evaluation highlights how attitudes towards risk, regret and the use of probabilities lead to different recommended actions, and why Strategy B appears as a compromise between the more aggressive and the more conservative options.
-	
-	\subsubsection{(C1) Formulating the final decision and summarising all criteria}\label{subsubsec:example2-c1}
-	
-	Based on each of the decision criteria used in the solution, the recommended strategy would be as follows. If the firm decides according to the Maximax rule and adopts a highly optimistic and risk-seeking attitude, it should choose Strategy A, the EU avocado plant, because this option can reach the highest profit among all combined states. If the firm decides according to the Maximin rule and wants to protect itself against the worst possible profit, it should choose Strategy C, regional diversification, because this option has the strongest worst-case outcome. If the firm uses the maximum opportunity or minimax regret criterion and cares mainly about limiting the largest possible regret from a wrong choice, it should choose Strategy B, the US coffee focus, because this option has the smallest maximum regret. If the firm trusts the estimated probabilities for demand and cost conditions and uses the Bayes expected value rule to maximise expected annual profit, it should again choose Strategy B, since it has the highest expected monetary value.
-	
-	\medskip
-	The decision tree representation confirms the structure of the problem and helps visualise the role of the two independent events demand and costs, while the comparison and the overall evaluation clarify how each rule reflects a particular attitude to risk and uncertainty. Taking all criteria together, a coherent summary conclusion is that Strategy B, the US coffee focus, is the most balanced choice for this firm. It avoids the potential losses of Strategy A in adverse states, performs better than Strategy C in terms of expected profit and at the same time keeps the maximum regret at a relatively low level. For a firm that wants to use probability information responsibly and avoid extreme risk while still pursuing strong expected returns, formulating the final decision as choosing Strategy B is consistent with the overall analysis of the decision-making problem.
-	
-\medskip
-\noindent\hyperref[sec:example2]{Back to top}
-
 \chapter{Example 3}\label{sec:example3}
 
 \subsection{Problem description}\label{subsec:example3-problem}
@@ -484,19 +154,28 @@ decision B, revenue is 3200 and expenses are 3400, so profit is \(3200 - 3400 = 
 The resulting payoff table of profit (in thousands of US dollars) is:
 \begin{table}[h!]
 	\centering
-	\begin{tabularx}{\linewidth}{@{}lYcccc@{}}
+	\footnotesize
+	\setlength{\tabcolsep}{4pt}
+	\begin{tabularx}{\linewidth}{@{}l p{5cm} c *{4}{c} @{}}
 		\toprule
-		State & Combined scenario & Probability & A: Premium + stable & B: Premium + flexible & C: Volume + stable & D: Volume + flexible \\
+		\multirow{2}{*}{State}
+		& \multirow{2}{3cm}{Combined scenario}
+		& \multirow{2}{*}{Probability}
+		& A: Premium & B: Premium & C: Volume & D: Volume \\
+		& & & stable & flexible & stable & flexible \\
 		\midrule
-		S1 & High demand, favourable costs & 0.18 & 4000 & 4500 & 3500 & 4000 \\
-		S2 & High demand, unfavourable costs & 0.12 & 3400 & 2600 & 2900 & 2100 \\
-		S3 & Moderate demand, favourable costs & 0.27 & 2500 & 3000 & 2300 & 2800 \\
-		S4 & Moderate demand, unfavourable costs & 0.18 & 1900 & 1100 & 1700 & 900 \\
-		S5 & Weak demand, favourable costs & 0.15 & 1200 & 1700 & 1800 & 2300 \\
-		S6 & Weak demand, unfavourable costs & 0.10 & 600 & -200 & 1200 & 400 \\
+		S1 & High demand, favourable costs       & 0.18 & 4000 & 4500 & 3500 & 4000 \\
+		S2 & High demand, unfavourable costs     & 0.12 & 3400 & 2600 & 2900 & 2100 \\
+		S3 & Moderate demand, favourable costs   & 0.27 & 2500 & 3000 & 2300 & 2800 \\
+		S4 & Moderate demand, unfavourable costs & 0.18 & 1900 & 1100 & 1700 &  900 \\
+		S5 & Weak demand, favourable costs       & 0.15 & 1200 & 1700 & 1800 & 2300 \\
+		S6 & Weak demand, unfavourable costs     & 0.10 &  600 & -200 & 1200 &  400 \\
 		\bottomrule
 	\end{tabularx}
 \end{table}
+
+
+
 
 \subsubsection{(C4) Maximax rule for decision making without probabilities}\label{subsubsec:example3-c4}
 
@@ -626,42 +305,58 @@ The same decision situation can be represented as a decision tree. The firm firs
 strategy and cost strategy), then the demand level is realised and then the cost level is realised. Because demand and
 costs are independent, their probabilities multiply along each path. For simplicity, we show the combined states with their
 joint probabilities and profits.
+\begin{center}
+	\hspace*{-2.4cm}%
+	\resizebox{1.3\textwidth}{!}{%
+		\begin{tikzpicture}[
+			grow=right,
+			level distance=43mm,
+			sibling distance=22mm,
+			edge from parent/.style={draw,-latex,thick},
+			every node/.style={align=left,font=\scriptsize},
+			decision/.style={draw,rounded corners,inner sep=3pt,text width=42mm},
+			chance/.style={draw,circle,inner sep=1.2pt},
+			leaf/.style={inner sep=1pt,text width=58mm}
+			]
+			
+			\node[decision]{Decision node\\Choose combined decision}
+			child { node[decision]{Decision A\\Premium revenue\\Stable costs}
+				child { node[leaf]{S1 high demand, favourable costs\\$p=0.18$\\profit $=4000$} }
+				child { node[leaf]{S2 high demand, unfavourable costs\\$p=0.12$\\profit $=3400$} }
+				child { node[leaf]{S3 moderate demand, favourable costs\\$p=0.27$\\profit $=2500$} }
+				child { node[leaf]{S4 moderate demand, unfavourable costs\\$p=0.18$\\profit $=1900$} }
+				child { node[leaf]{S5 weak demand, favourable costs\\$p=0.15$\\profit $=1200$} }
+				child { node[leaf]{S6 weak demand, unfavourable costs\\$p=0.10$\\profit $=600$} }
+			}
+			child { node[decision]{Decision B\\Premium revenue\\Flexible costs}
+				child { node[leaf]{S1\\$p=0.18$\\profit $=4500$} }
+				child { node[leaf]{S2\\$p=0.12$\\profit $=2600$} }
+				child { node[leaf]{S3\\$p=0.27$\\profit $=3000$} }
+				child { node[leaf]{S4\\$p=0.18$\\profit $=1100$} }
+				child { node[leaf]{S5\\$p=0.15$\\profit $=1700$} }
+				child { node[leaf]{S6\\$p=0.10$\\profit $=-200$} }
+			}
+			child { node[decision]{Decision C\\Volume revenue\\Stable costs}
+				child { node[leaf]{S1\\$p=0.18$\\profit $=3500$} }
+				child { node[leaf]{S2\\$p=0.12$\\profit $=2900$} }
+				child { node[leaf]{S3\\$p=0.27$\\profit $=2300$} }
+				child { node[leaf]{S4\\$p=0.18$\\profit $=1700$} }
+				child { node[leaf]{S5\\$p=0.15$\\profit $=1800$} }
+				child { node[leaf]{S6\\$p=0.10$\\profit $=1200$} }
+			}
+			child { node[decision]{Decision D\\Volume revenue\\Flexible costs}
+				child { node[leaf]{S1\\$p=0.18$\\profit $=4000$} }
+				child { node[leaf]{S2\\$p=0.12$\\profit $=2100$} }
+				child { node[leaf]{S3\\$p=0.27$\\profit $=2800$} }
+				child { node[leaf]{S4\\$p=0.18$\\profit $=900$} }
+				child { node[leaf]{S5\\$p=0.15$\\profit $=2300$} }
+				child { node[leaf]{S6\\$p=0.10$\\profit $=400$} }
+			};
+			
+		\end{tikzpicture}%
+	}
+\end{center}
 
-\begin{verbatim}
-Decision node (choose combined decision)
-|
-|- Decision A  premium revenue + stable costs
-|  |- S1  high demand, favourable costs (0.18) -> 4000
-|  |- S2  high demand, unfavourable costs (0.12) -> 3400
-|  |- S3  moderate demand, favourable costs (0.27) -> 2500
-|  |- S4  moderate demand, unfavourable costs (0.18) -> 1900
-|  |- S5  weak demand, favourable costs (0.15) -> 1200
-|  `- S6  weak demand, unfavourable costs (0.10) -> 600
-|
-|- Decision B  premium revenue + flexible costs
-|  |- S1 (0.18) -> 4500
-|  |- S2 (0.12) -> 2600
-|  |- S3 (0.27) -> 3000
-|  |- S4 (0.18) -> 1100
-|  |- S5 (0.15) -> 1700
-|  `- S6 (0.10) -> -200
-|
-|- Decision C  volume revenue + stable costs
-|  |- S1 (0.18) -> 3500
-|  |- S2 (0.12) -> 2900
-|  |- S3 (0.27) -> 2300
-|  |- S4 (0.18) -> 1700
-|  |- S5 (0.15) -> 1800
-|  `- S6 (0.10) -> 1200
-|
-`- Decision D  volume revenue + flexible costs
-   |- S1 (0.18) -> 4000
-   |- S2 (0.12) -> 2100
-   |- S3 (0.27) -> 2800
-   |- S4 (0.18) -> 900
-   |- S5 (0.15) -> 2300
-   `- S6 (0.10) -> 400
-\end{verbatim}
 
 This diagram makes explicit the sequence of decisions and uncertain events, as well as the joint probabilities and
 profits associated with each possible path.
