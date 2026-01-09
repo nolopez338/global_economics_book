@@ -55,7 +55,7 @@ and its probability assessments.
 We interpret the narrative and identify the key components of the decision situation.
 \begin{table}[h!]
 	\centering
-	\begin{tabularx}{\linewidth}{L{0.28\linewidth}Y}
+	\begin{tabularx}{\linewidth}{@{}L{0.3\linewidth}Y@{}}
 		\toprule
 		Element & Description \\
 		\midrule
@@ -103,7 +103,7 @@ All amounts are in thousands of US dollars per year.
 \noindent Revenue as a function of demand for each revenue strategy:
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{@{}lcccc@{}}
+	\begin{tabularx}{\linewidth}{@{}L{0.3\linewidth}C C C@{}}
 		\toprule
 		Demand level & Probability & Premium revenue strategy & Volume revenue strategy \\
 		\midrule
@@ -111,21 +111,21 @@ All amounts are in thousands of US dollars per year.
 		Moderate & 0.45 & 4500 & 4300 \\
 		Weak & 0.25 & 3200 & 3800 \\
 		\bottomrule
-	\end{tabular}
+	\end{tabularx}
 \end{table}
 
 \medskip
 \noindent Expenses as a function of cost conditions for each cost strategy:
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{@{}lcccc@{}}
+	\begin{tabularx}{\linewidth}{@{}L{0.3\linewidth}C C C@{}}
 		\toprule
 		Cost level & Probability & Stable cost strategy & Flexible cost strategy \\
 		\midrule
 		Favourable & 0.60 & 2000 & 1500 \\
 		Unfavourable & 0.40 & 2600 & 3400 \\
 		\bottomrule
-	\end{tabular}
+	\end{tabularx}
 \end{table}
 
 Because demand and cost conditions are independent, a state of nature is described by a pair of events. We define six
@@ -154,15 +154,9 @@ decision B, revenue is 3200 and expenses are 3400, so profit is \(3200 - 3400 = 
 The resulting payoff table of profit (in thousands of US dollars) is:
 \begin{table}[h!]
 	\centering
-	\footnotesize
-	\setlength{\tabcolsep}{4pt}
-	\begin{tabularx}{\linewidth}{@{}l p{5cm} c *{4}{c} @{}}
+	\begin{tabularx}{\linewidth}{@{}L{0.12\linewidth}Y C C C C C@{}}
 		\toprule
-		\multirow{2}{*}{State}
-		& \multirow{2}{3cm}{Combined scenario}
-		& \multirow{2}{*}{Probability}
-		& A: Premium & B: Premium & C: Volume & D: Volume \\
-		& & & stable & flexible & stable & flexible \\
+		State & Combined scenario & Probability & \shortstack{A: Premium\\stable} & \shortstack{B: Premium\\flexible} & \shortstack{C: Volume\\stable} & \shortstack{D: Volume\\flexible} \\
 		\midrule
 		S1 & High demand, favourable costs       & 0.18 & 4000 & 4500 & 3500 & 4000 \\
 		S2 & High demand, unfavourable costs     & 0.12 & 3400 & 2600 & 2900 & 2100 \\
@@ -241,7 +235,7 @@ in that state minus the profit of the chosen decision.
 The regret table in thousands of US dollars is:
 \begin{table}[h!]
 	\centering
-	\begin{tabularx}{\linewidth}{@{}lYcccc@{}}
+	\begin{tabularx}{\linewidth}{@{}L{0.12\linewidth}Y C C C C@{}}
 		\toprule
 		State & Scenario & A Regret & B Regret & C Regret & D Regret \\
 		\midrule

@@ -48,7 +48,7 @@
 	
 	\begin{table}[h!]
 		\centering
-		\begin{tabularx}{\linewidth}{L{0.25\linewidth}Y}
+		\begin{tabularx}{\linewidth}{@{}L{0.3\linewidth}Y@{}}
 			\toprule
 			Element & Description \\
 			\midrule
@@ -86,7 +86,7 @@
 	\noindent Revenue as a function of demand for each strategy:
 	\begin{table}[h!]
 		\centering
-		\begin{tabular}{@{}lcccc@{}}
+		\begin{tabularx}{\linewidth}{@{}L{0.3\linewidth}C C C C@{}}
 			\toprule
 			Demand level & Probability & Strategy A Revenue & Strategy B Revenue & Strategy C Revenue \\
 			\midrule
@@ -94,21 +94,21 @@
 			Moderate demand & 0.45 & 4800 & 4200 & 4300 \\
 			Weak demand     & 0.25 & 3200 & 3600 & 3900 \\
 			\bottomrule
-		\end{tabular}
+		\end{tabularx}
 	\end{table}
 	
 	\medskip
 	\noindent Expenses as a function of cost conditions for each strategy:
 	\begin{table}[h!]
 		\centering
-		\begin{tabular}{@{}lcccc@{}}
+		\begin{tabularx}{\linewidth}{@{}L{0.3\linewidth}C C C C@{}}
 			\toprule
 			Cost level & Probability & Strategy A Expenses & Strategy B Expenses & Strategy C Expenses \\
 			\midrule
 			Favourable costs   & 0.60 & 2300 & 1600 & 2000 \\
 			Unfavourable costs & 0.40 & 3500 & 2600 & 2700 \\
 			\bottomrule
-		\end{tabular}
+		\end{tabularx}
 	\end{table}
 	
 	Because demand and cost conditions are independent, a state of nature is described by a pair of events, for example high demand with favourable costs. The probability of each combined state is the product of the probabilities of the corresponding demand and cost levels. Profit is revenue minus expenses for the chosen strategy in that combined state.
@@ -133,7 +133,7 @@
 	The payoff table of profit in thousands of US dollars for each combined state is:
 	\begin{table}[h!]
 		\centering
-		\begin{tabularx}{\linewidth}{@{}lYcccc@{}}
+		\begin{tabularx}{\linewidth}{@{}L{0.12\linewidth}Y C C C C@{}}
 			\toprule
 			State of nature & Combined scenario & Probability & Strategy A Profit & Strategy B Profit & Strategy C Profit \\
 			\midrule
@@ -199,7 +199,7 @@
 	The regret table in thousands of US dollars is:
 	\begin{table}[h!]
 		\centering
-		\begin{tabularx}{\linewidth}{@{}lYccc@{}}
+		\begin{tabularx}{\linewidth}{@{}L{0.12\linewidth}Y C C C@{}}
 			\toprule
 			State & Scenario & Strategy A Regret & Strategy B Regret & Strategy C Regret \\
 			\midrule

@@ -26,7 +26,7 @@
 	We identify the key elements and summarise them in a table.
 	
 	\begin{center}
-		\begin{tabularx}{\linewidth}{L{0.25\linewidth}Y}
+		\begin{tabularx}{\linewidth}{@{}L{0.3\linewidth}Y@{}}
 			\toprule
 			Element & Description \\
 			\midrule
@@ -44,7 +44,7 @@
 	From the problem description, we construct the payoff table (profits in thousands of dollars).
 	
 	\begin{center}
-		\begin{tabular}{@{}p{0.26\linewidth}p{0.14\linewidth}p{0.16\linewidth}p{0.16\linewidth}p{0.16\linewidth}@{}}
+		\begin{tabularx}{\linewidth}{@{}L{0.3\linewidth}C C C C@{}}
 			\toprule
 			State of Nature & Probability & Innovate (A) & Improve (B) & License (C) \\
 			\midrule
@@ -52,7 +52,7 @@
 			Moderate demand & \(0.40\) & 80   & 90  & 70 \\
 			Low demand      & \(0.30\) & -20  & 40  & 60 \\
 			\bottomrule
-		\end{tabular}
+		\end{tabularx}
 	\end{center}
 	
 	\subsubsection{(C4) Maximax rule decision making without probabilities}\label{example-1-c4}
@@ -104,7 +104,7 @@
 	Regrets are computed as best payoff minus actual payoff.
 	
 	\begin{center}
-		\begin{tabular}{@{}p{0.28\linewidth}p{0.20\linewidth}p{0.20\linewidth}p{0.20\linewidth}@{}}
+		\begin{tabularx}{\linewidth}{@{}L{0.3\linewidth}C C C@{}}
 			\toprule
 			State of Nature & Innovate (A) & Improve (B) & License (C) \\
 			\midrule
@@ -112,7 +112,7 @@
 			Moderate demand & \(90-80=10\)  & \(90-90=0\)    & \(90-70=20\) \\
 			Low demand      & \(60-(-20)=80\) & \(60-40=20\) & \(60-60=0\) \\
 			\bottomrule
-		\end{tabular}
+		\end{tabularx}
 	\end{center}
 	
 	Maximum regret for each strategy
