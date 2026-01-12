@@ -1,0 +1,168 @@
+\chapter{Formulas Used in This Topic}\label{sec:interval-formulas}
+
+\subsection{Getting Oriented: Random Variables and Notation}\label{sec:interval-notation}
+
+Suppose the same process is repeated and gives similar kinds of results. For example, two small datasets from the same distribution could look like:
+
+\begin{itemize}
+	\item Dataset A (5 quiz scores): 6, 7, 8, 7, 6.
+	\item Dataset B (5 quiz scores): 7, 6, 8, 7, 7.
+\end{itemize}
+
+Each score is one outcome of the same random process. We describe that process with a random variable. For example, let \(X\) be the quiz score of a randomly chosen student. Then the values we actually see are written as \(x\) or \(x_i\), such as 6, 7, or 8.
+
+Standard notation used in the formulas:
+
+\begin{itemize}
+	\item \(X\) (uppercase): the random variable itself.
+	\item \(x\) or \(x_i\) (lowercase): a specific observed value.
+	\item \(X_1, X_2, \dots, X_n\): outcomes from repeated observations of the same process.
+	\item \(x_1, x_2, \dots, x_n\): the actual numbers recorded in a dataset.
+\end{itemize}
+
+Before solving the examples, we work with a generic dataset made of \(n\) data points: \(x_1, x_2, \dots, x_n\), where \(x_i\) is the value of the i-th data point in the sample (for example, the score of the i-th student in a quiz, or the i-th measurement taken in an experiment). All the formulas below refer to this dataset.
+
+Use \(X_1, X_2, \dots\) to label the first, second, and subsequent observations by position in the dataset, and \(x_1, x_2, \dots\) for the numerical values those observations take. The indices are fixed by position, while the values can change from sample to sample. For example, in one sample the first observation might be \(x_1^{(1)} = 1\), while in another sample the first observation could be \(x_1^{(2)} = 5\).
+
+\subsection{Sample Mean}\label{sec:interval-sample-mean}
+
+\[
+\bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
+\]
+
+Meaning of variables:
+
+\begin{itemize}
+	\item \(x_i\): each observed data value.
+	\item \(n\): number of observations in the sample.
+	\item \(\bar{x}\): the sample mean.
+\end{itemize}
+
+\subsection{Standard Deviation}\label{sec:interval-standard-deviation}
+
+There are two closely related ways to compute the standard deviation, depending on whether the data represent a sample or the entire population:
+
+\[
+ s^2 = \frac{1}{n - 1} \sum_{i=1}^{n}(x_i - \bar{x})^2
+\]
+
+\[
+\sigma^2 = \frac{1}{N} \sum_{i=1}^{N}(x_i - \mu)^2
+\]
+
+Meaning of variables:
+
+\begin{itemize}
+	\item \(x_i\): each observed data value.
+	\item \(\bar{x}\): the sample mean.
+	\item \(n\): number of observations in the sample.
+	\item \(N\): number of observations in the full population.
+	\item \(n - 1\): degrees of freedom when using the data as a sample of a larger population.
+	\item \(\mu\): population mean (used when the full population is known).
+	\item \(s\): sample standard deviation, used when the dataset is a sample and we estimate population variability (denominator \(n - 1\)).
+	\item \(s^2\): sample variance, used when the dataset is a sample and we estimate population variability; it measures the average squared deviation of the observations from the sample mean (denominator \(n - 1\)).
+	\item \(\sigma\): population standard deviation, used when the dataset is the entire population (denominator \(N\)).
+\end{itemize}
+
+In summary, use \(s\) when your data are a sample from a larger population because the \(n - 1\) denominator accounts for estimation uncertainty. Use \(\sigma\) when you have the complete population, where the denominator is \(N\) and no estimation is needed.
+
+\subsection{Bernoulli Distribution}\label{sec:interval-bernoulli}
+
+Let \(X\) follow a Bernoulli distribution with success probability \(p\). The average (mean) outcome is \(\mu = \mathbb{E}[X] = p\), and the variance is:
+
+\[
+ s^2 = \mathrm{Var}(X) = p(1 - p)
+\]
+
+In words, a Bernoulli variable only takes values 0 or 1, so the average is the probability of success, and the variability depends on how close \(p\) is to 0 or 1.
+
+From a sample of size \(n\) with \(x\) successes, estimate the probability of success with \(\hat{p} = \frac{x}{n}\), which is the sample mean of the 0/1 outcomes.
+
+\subsection{Margin of Error for a Mean}\label{sec:interval-margin-of-error}
+
+\[
+E = z_{\alpha/2} \cdot \frac{s}{\sqrt{n}}
+\]
+
+Normal distribution critical values
+
+\begin{center}
+	\begin{tabularx}{0.6\linewidth}{@{}L{0.35\linewidth}C@{}}
+		\toprule
+		Confidence level & \(z\) critical value \\
+		\midrule
+		99\% & 2.576 \\
+		98\% & 2.326 \\
+		95\% & 1.960 \\
+		90\% & 1.645 \\
+		\bottomrule
+	\end{tabularx}
+\end{center}
+
+\[
+E = t_{\alpha/2,\, n - 1} \cdot \frac{s}{\sqrt{n}}
+\]
+
+Student's t distribution critical values
+
+\begin{center}
+	\begin{tabularx}{\linewidth}{@{}L{0.12\linewidth}C C C C@{}}
+		\toprule
+		df & 99\% & 98\% & 95\% & 90\% \\
+		\midrule
+		1 & 63.657 & 31.821 & 12.706 & 6.314 \\
+		2 & 9.925 & 6.965 & 4.303 & 2.920 \\
+		3 & 5.841 & 4.541 & 3.182 & 2.353 \\
+		4 & 4.604 & 3.747 & 2.776 & 2.132 \\
+		5 & 4.032 & 3.365 & 2.571 & 2.015 \\
+		6 & 3.707 & 3.143 & 2.447 & 1.943 \\
+		7 & 3.499 & 2.998 & 2.365 & 1.895 \\
+		8 & 3.355 & 2.896 & 2.306 & 1.860 \\
+		9 & 3.250 & 2.821 & 2.262 & 1.833 \\
+		10 & 3.169 & 2.764 & 2.228 & 1.812 \\
+		11 & 3.106 & 2.718 & 2.201 & 1.796 \\
+		12 & 3.055 & 2.681 & 2.179 & 1.782 \\
+		13 & 3.012 & 2.650 & 2.160 & 1.771 \\
+		14 & 2.977 & 2.624 & 2.145 & 1.761 \\
+		15 & 2.947 & 2.602 & 2.131 & 1.753 \\
+		16 & 2.921 & 2.583 & 2.120 & 1.746 \\
+		17 & 2.898 & 2.567 & 2.110 & 1.740 \\
+		18 & 2.878 & 2.552 & 2.101 & 1.734 \\
+		19 & 2.861 & 2.539 & 2.093 & 1.729 \\
+		20 & 2.845 & 2.528 & 2.086 & 1.725 \\
+		21 & 2.831 & 2.518 & 2.080 & 1.721 \\
+		22 & 2.819 & 2.508 & 2.074 & 1.717 \\
+		23 & 2.807 & 2.500 & 2.069 & 1.714 \\
+		24 & 2.797 & 2.492 & 2.064 & 1.711 \\
+		25 & 2.787 & 2.485 & 2.060 & 1.708 \\
+		26 & 2.779 & 2.479 & 2.056 & 1.706 \\
+		27 & 2.771 & 2.473 & 2.052 & 1.703 \\
+		28 & 2.763 & 2.467 & 2.048 & 1.701 \\
+		29 & 2.756 & 2.462 & 2.045 & 1.699 \\
+		30 & 2.750 & 2.457 & 2.042 & 1.697 \\
+		\bottomrule
+	\end{tabularx}
+\end{center}
+
+The correct distribution for the margin of error of a mean is the Student's t distribution with \(n - 1\) degrees of freedom. As the sample size increases, the t distribution converges to the normal distribution, and for \(n \ge 30\) it is nearly indistinguishable from the normal distribution for practical purposes.
+
+Meaning of variables:
+
+\begin{itemize}
+	\item \(z_{\alpha/2}\): critical value from the standard normal distribution (for example, 1.96 for 95\% confidence).
+	\item \(t_{\alpha/2,\, n - 1}\): critical value from the t distribution with \(n - 1\) degrees of freedom.
+	\item \(s\): standard deviation computed from the data (typically using \(n - 1\) in the denominator when treating the data as a sample).
+	\item \(n\): sample size.
+	\item \(E\): margin of error.
+\end{itemize}
+
+\subsection{Confidence Interval for a Mean}\label{sec:interval-mean-ci}
+
+\[
+\bar{x} \pm E
+\]
+
+Meaning: the interval of plausible values for the population mean based on the sample mean and the margin of error.
+
+\vspace{6pt}
+\noindent\hyperref[table-of-contents]{Back to Top}
