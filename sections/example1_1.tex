@@ -1,0 +1,199 @@
+\chapter{Example 1.1}\label{sec:example1-1}
+
+\subsection{Problem description}\label{subsec:example1-1-problem}
+
+A decision maker has three alternatives, A, B and C, and three possible states of nature \(S_1\), \(S_2\) and \(S_3\).
+State probabilities are \(P(S_1)=0.30\), \(P(S_2)=0.40\) and \(P(S_3)=0.30\).
+The payoffs (in generic units) are:
+
+\begin{itemize}
+	\item Alternative A: \(S_1=150\), \(S_2=80\), \(S_3=-20\).
+	\item Alternative B: \(S_1=110\), \(S_2=90\), \(S_3=40\).
+	\item Alternative C: \(S_1=70\), \(S_2=70\), \(S_3=60\).
+\end{itemize}
+
+\subsection{Solution}\label{subsec:example1-1-solution}
+
+\subsubsection{(C2) Interpreting the parts of the decision problem}\label{subsubsec:example1-1-c2}
+
+We identify the components of the decision situation.
+
+\begin{center}
+	\begin{tabularx}{\linewidth}{@{}L{0.35\linewidth}Y@{}}
+		\toprule
+		Element & Description \\
+		\midrule
+		Decision alternatives & Alternatives A, B, C \\
+		States of nature & \(S_1\), \(S_2\), \(S_3\) \\
+		Fortuitous events & The state of nature that occurs, unknown at the time of the decision \\
+		Consequences & Payoff (generic units) for each alternative--state pair \\
+		Probabilities & \(P(S_1)=0.30\), \(P(S_2)=0.40\), \(P(S_3)=0.30\) \\
+		\bottomrule
+	\end{tabularx}
+\end{center}
+
+\subsubsection{(C3) Building the payoff table from the description}\label{subsubsec:example1-1-c3}
+
+From the description we build the payoff table.
+
+\begin{center}
+	\begin{tabularx}{\linewidth}{@{}L{0.25\linewidth}C C C C@{}}
+		\toprule
+		State of nature & Probability & Alternative A & Alternative B & Alternative C \\
+		\midrule
+		\(S_1\) & 0.30 & 150 & 110 & 70 \\
+		\(S_2\) & 0.40 & 80 & 90 & 70 \\
+		\(S_3\) & 0.30 & -20 & 40 & 60 \\
+		\bottomrule
+	\end{tabularx}
+\end{center}
+
+\subsubsection{(C4) Maximax rule decision making without probabilities}\label{subsubsec:example1-1-c4}
+
+We ignore probabilities and focus on the best payoff for each alternative.
+
+\[
+\begin{aligned}
+\max_i \text{Payoff}(A, S_i) &= 150\\
+\max_i \text{Payoff}(B, S_i) &= 110\\
+\max_i \text{Payoff}(C, S_i) &= 70
+\end{aligned}
+\]
+\[
+\max\{150, 110, 70\} = 150
+\]
+The largest of these is 150, so the Maximax rule recommends Alternative A.
+
+\subsubsection{(C5) Maximin rule decision making without probabilities}\label{subsubsec:example1-1-c5}
+
+We focus on the worst payoff for each alternative.
+
+\[
+\begin{aligned}
+\min_i \text{Payoff}(A, S_i) &= -20\\
+\min_i \text{Payoff}(B, S_i) &= 40\\
+\min_i \text{Payoff}(C, S_i) &= 60
+\end{aligned}
+\]
+We then select the highest of these worst outcomes:
+\[
+\max\{-20, 40, 60\} = 60
+\]
+The Maximin rule recommends Alternative C.
+
+\subsubsection{(C6) Maximum opportunity criterion minimax regret}\label{subsubsec:example1-1-c6}
+
+We compute the regret table by comparing each payoff to the best payoff in each state.
+
+Best payoff in each state
+\[
+\begin{aligned}
+\text{S1} &:\ \max\{150, 110, 70\} = 150\\
+\text{S2} &:\ \max\{80, 90, 70\} = 90\\
+\text{S3} &:\ \max\{-20, 40, 60\} = 60
+\end{aligned}
+\]
+
+Regrets are best payoff minus actual payoff.
+
+\begin{center}
+	\begin{tabularx}{\linewidth}{@{}L{0.25\linewidth}C C C@{}}
+		\toprule
+		State of Nature & Alternative A & Alternative B & Alternative C \\
+		\midrule
+		\(S_1\) & \(150-150=0\) & \(150-110=40\) & \(150-70=80\) \\
+		\(S_2\) & \(90-80=10\) & \(90-90=0\) & \(90-70=20\) \\
+		\(S_3\) & \(60-(-20)=80\) & \(60-40=20\) & \(60-60=0\) \\
+		\bottomrule
+	\end{tabularx}
+\end{center}
+
+Maximum regret for each alternative
+\[
+\begin{aligned}
+\max_i \text{Regret}(A, S_i) &= \max\{0, 10, 80\} = 80\\
+\max_i \text{Regret}(B, S_i) &= \max\{40, 0, 20\} = 40\\
+\max_i \text{Regret}(C, S_i) &= \max\{80, 20, 0\} = 80
+\end{aligned}
+\]
+\[
+\min\{80, 40, 80\} = 40
+\]
+The minimax regret rule chooses Alternative B.
+
+\subsubsection{(C7) Using probabilities and expected value Bayes decision rule}\label{subsubsec:example1-1-c7}
+
+We compute the expected monetary value (EMV) for each alternative.
+
+For Alternative A
+\[
+\begin{aligned}
+EMV_A &= 0.30(150) + 0.40(80) + 0.30(-20) \\
+&= 45 + 32 - 6 = 71
+\end{aligned}
+\]
+
+For Alternative B
+\[
+\begin{aligned}
+EMV_B &= 0.30(110) + 0.40(90) + 0.30(40) \\
+&= 33 + 36 + 12 = 81
+\end{aligned}
+\]
+
+For Alternative C
+\[
+\begin{aligned}
+EMV_C &= 0.30(70) + 0.40(70) + 0.30(60) \\
+&= 21 + 28 + 18 = 67
+\end{aligned}
+\]
+\[
+\max\{71, 81, 67\} = 81
+\]
+Under the Bayes EMV rule, the highest EMV is 81, so the rule recommends Alternative B.
+
+\subsubsection{(C8) Comparing Bayes, Maximin, Maximax and minimax regret}\label{subsubsec:example1-1-c8}
+
+Summary of recommendations from the different rules
+
+\begin{itemize}
+	\item Bayes EMV recommends Alternative B.
+	\item Minimax regret recommends Alternative B.
+	\item Maximax recommends Alternative A.
+	\item Maximin recommends Alternative C.
+\end{itemize}
+
+The EMV and minimax regret rules both favor the same alternative, while Maximax and Maximin highlight different extremes of the payoff table.
+
+\subsubsection{(C9) Tree diagram of the decision-making problem}\label{subsubsec:example1-1-c9}
+
+We represent the same situation as a decision tree.
+
+This diagram summarises the possible states and payoffs for each alternative.
+
+\subsubsection{(C10) Evaluating all possibilities in the decision problem}\label{subsubsec:example1-1-c10}
+
+\begin{itemize}
+	\item Alternative A maximises the best payoff but performs poorly in worst-case and regret terms.
+	\item Alternative C protects against the worst case but yields lower expected value.
+	\item Alternative B is favoured by both expected value and minimax regret.
+\end{itemize}
+
+Overall, the comparison shows how the choice depends on risk attitude, with Alternative B providing a balanced option.
+
+\subsubsection{(C1) Formulating the final decision and summarising all criteria}\label{subsubsec:example1-1-c1}
+
+Summary of final recommendations across all decision criteria
+
+\begin{itemize}
+	\item Maximax favors Alternative A, prioritising the highest possible payoff.
+	\item Maximin favors Alternative C, emphasising protection against the worst case.
+	\item Minimax regret favors Alternative B, limiting potential regret.
+	\item Bayes EMV favors Alternative B, maximising expected value.
+\end{itemize}
+
+Considering all criteria together, Alternative B represents the most coherent final decision. It is supported by both expected value and minimax regret and avoids extreme downside outcomes.
+
+\vspace{6pt}
+\noindent\hyperref[table-of-contents]{Back to Top}

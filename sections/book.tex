@@ -1,4 +1,17 @@
 \chapter{Formulas Used in This Topic}\label{formulas-section}
+
+\subsection{Decision-Making Notation}\label{formula-notation}
+
+The formulas below use a payoff table with decisions and uncertain future states. Keep the following notation in mind.
+
+\begin{itemize}
+	\item \(A_j\): a decision alternative (strategy) for \(j = 1, 2, \dots, n\).
+	\item \(S_i\): a state of nature (future scenario) for \(i = 1, 2, \dots, m\).
+	\item \(\text{Payoff}(A_j,S_i)\): outcome (profit or loss) if \(A_j\) happens and \(S_i\) occurs.
+	\item \(p_i\): probability of state \(S_i\) (only used when probabilities are given).
+	\item \(\max_i\) / \(\min_i\): pick the best or worst payoff within a row.
+	\item \(\text{Regret}(A_j,S_i)\): missed opportunity compared with the best payoff in state \(S_i\).
+\end{itemize}
 	
 	\subsection{Expected Value of a Discrete Random Variable}\label{formula-expected-value}
 	
@@ -69,7 +82,7 @@
 	Context
 	Represents a conservative decision maker seeking safety.
 	
-	\subsection{Maximax Criterion}\label{formula-maximax}
+\subsection{Maximax Criterion}\label{formula-maximax}
 	
 	\[
 	\text{Maximax}(A_j) = \max_j \left( \max_i \,\text{Payoff}(A_j,S_i) \right)
@@ -81,8 +94,29 @@
 		\item outer max selects the alternative with the largest best-case payoff
 	\end{itemize}
 	
-	Context
-	Represents an optimistic decision maker seeking maximum possible gain.
+Context
+Represents an optimistic decision maker seeking maximum possible gain.
+
+\subsection{Maximum Opportunity Criterion (Minimax Regret)}\label{formula-minimax-regret}
+
+\[
+\text{Regret}(A_j,S_i) = \max_j \text{Payoff}(A_j,S_i) - \text{Payoff}(A_j,S_i)
+\]
+
+\[
+\text{Minimax Regret} = \min_j \left( \max_i \,\text{Regret}(A_j,S_i) \right)
+\]
+
+Where
+\begin{itemize}
+	\item \(A_j\) decision alternatives
+	\item \(S_i\) states of nature
+	\item \(\max_j \text{Payoff}(A_j,S_i)\) best payoff available in state \(S_i\)
+	\item \(\max_i \text{Regret}(A_j,S_i)\) largest regret for alternative \(A_j\)
+\end{itemize}
+
+Context
+Chooses the alternative that minimizes the worst missed opportunity.
 	
 	\vspace{6pt}
 	\noindent\hyperref[table-of-contents]{Back to Top}
