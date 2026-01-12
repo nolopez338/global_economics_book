@@ -21,12 +21,12 @@
 		\end{mdframed}
 		
 		% =============================================================
-		\section{Description}
+		\subsection{Description}
 		
 		This file documents the preamble that is used as a shared base for multiple LaTeX documents. Other files include it with \texttt{\textbackslash input\{preambulo\}}, so changing the preamble modifies every document that imports it. The preamble includes packages, page settings, colors, frames, hyperlinks, and custom commands used across guides.
 		
 		% ----------------------------------------------------------
-		\section{General}\label{sec:general}
+		\subsection{General}\label{sec:general}
 		
 		\begin{enumerate}
 			\item Document type: \texttt{standalone} is used with \texttt{varwidth} to produce compact pages and allow custom margins.
@@ -46,7 +46,7 @@
 
 		
 		% ----------------------------------------------------------
-		\section{Tables}\label{sec:tables}
+		\subsection{Tables}\label{sec:tables}
 		
 		\begin{enumerate}
 			\item \texttt{multicol}: allows text or content to be split into columns.
@@ -65,7 +65,7 @@
 		\end{mdframed}
 		
 		% ----------------------------------------------------------
-		\section{Mathematics}\label{sec:math}
+		\subsection{Mathematics}\label{sec:math}
 		
 		\begin{enumerate}
 			\item \texttt{amsmath}: improves equation environments and alignment.
@@ -83,7 +83,7 @@
 		\end{mdframed}
 		
 		% ----------------------------------------------------------
-		\section{Hidden Content Switch}\label{sec:hidden}
+		\subsection{Hidden Content Switch}\label{sec:hidden}
 		
 		This section defines a boolean switch to show or hide explanatory content without deleting it.
 		
@@ -110,7 +110,7 @@
 		\end{mdframed}
 		
 		% ----------------------------------------------------------
-		\section{Numbering and Table of Contents}\label{sec:numbering}
+		\subsection{Numbering and Table of Contents}\label{sec:numbering}
 		
 		\begin{enumerate}
 			\item \texttt{fancyhdr} is loaded, but page numbering is disabled with \texttt{\textbackslash pagestyle\{empty\}}.
@@ -132,7 +132,7 @@
 		\end{mdframed}
 		
 		% ----------------------------------------------------------
-		\section{Images, Figures, and Colors}\label{sec:images}
+		\subsection{Images, Figures, and Colors}\label{sec:images}
 		
 		\subsection{Images and positioning}
 		
@@ -181,7 +181,7 @@
 		\end{mdframed}
 		
 		% ----------------------------------------------------------
-		\section{Frames}\label{sec:frames}
+		\subsection{Frames}\label{sec:frames}
 		
 		Frames are used to highlight content blocks and code blocks in a consistent style.
 		
@@ -212,7 +212,7 @@
 		\end{mdframed}
 		
 		% ----------------------------------------------------------
-		\section{Page Settings}\label{sec:page}
+		\subsection{Page Settings}\label{sec:page}
 		
 		\subsection{Background commands}
 		
@@ -241,7 +241,7 @@
 		\end{mdframed}
 		
 		% ----------------------------------------------------------
-		\section{Font and Code Listings}\label{sec:font}
+		\subsection{Font and Code Listings}\label{sec:font}
 		
 		\begin{enumerate}
 			\item \texttt{tgbonum} sets the main text font.
@@ -260,7 +260,7 @@
 		\end{mdframed}
 		
 		% ----------------------------------------------------------
-		\section{Hyperlinks and Custom Link Commands}\label{sec:links}
+		\subsection{Hyperlinks and Custom Link Commands}\label{sec:links}
 		
 		\subsection{Hyperref configuration}
 		
@@ -303,7 +303,7 @@
 		\end{mdframed}
 		
 		% ----------------------------------------------------------
-		\section{Custom Figure Commands}\label{sec:figcmd}
+		\subsection{Custom Figure Commands}\label{sec:figcmd}
 		
 		These commands wrap \texttt{\textbackslash includegraphics} with consistent spacing and optional framing, and can optionally create clickable images.
 		
@@ -325,7 +325,7 @@
 		\end{mdframed}
 		
 		% ----------------------------------------------------------
-		\section{Other Utility Commands}\label{sec:other}
+		\subsection{Other Utility Commands}\label{sec:other}
 		
 		\begin{enumerate}
 			\item \texttt{\textbackslash cuadro\{...\}} wraps content in the general styled frame.
@@ -346,7 +346,7 @@
 		\end{mdframed}
 		
 		% ----------------------------------------------------------
-		\section{Navigation and Visual Examples}\label{sec:navigation}
+		\subsection{Navigation and Visual Examples}\label{sec:navigation}
 		
 		\begin{enumerate}
 			\item The command \texttt{\textbackslash secInicio} depends on a label called \texttt{sec:inicio}.
