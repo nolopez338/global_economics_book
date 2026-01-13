@@ -25,6 +25,104 @@ Market research indicates:
 
 Question: Make a decision on the best option based on three perspectives: safe behavior (Maximin), balanced behavior (Expected Value), and risky behavior (Maximax).
 
+\subsubsection{Solution 1 --- Local Café Investment}\label{subsec:practice-activity-1-solution-1}
+
+\textbf{Structured solution}
+
+\paragraph{(C2) Interpreting decision alternatives, events, consequences, and states}\label{subsubsec:practice-activity-1-solution-1-c2}
+
+\begin{center}
+	\begin{tabularx}{\linewidth}{@{}L{0.35\linewidth}Y@{}}
+		\toprule
+		Element & Description \\
+		\midrule
+		Alternatives & Launch desserts; Keep current menu \\
+		States of nature & High demand (0.60); Low demand (0.40) \\
+		Events & Actual demand level observed after the decision \\
+		Consequences & Profit in thousands of USD for each alternative--state pair \\
+		\bottomrule
+	\end{tabularx}
+\end{center}
+
+\paragraph{(C3) Building the payoff table}\label{subsubsec:practice-activity-1-solution-1-c3}
+
+\begin{center}
+	\begin{tabularx}{\linewidth}{@{}L{0.3\linewidth}C C@{}}
+		\toprule
+		Alternative & High demand (0.60) & Low demand (0.40) \\
+		\midrule
+		Launch desserts & 40 & 10 \\
+		Keep menu & 25 & 25 \\
+		\bottomrule
+	\end{tabularx}
+\end{center}
+
+\paragraph{(C4) Applying the Maximax criterion}\label{subsubsec:practice-activity-1-solution-1-c4}
+
+The maximax rule ignores probabilities and selects the alternative with the highest possible payoff.
+
+\[
+\begin{aligned}
+\max_i \text{Payoff}(\text{Launch}, S_i) &= \max\{40, 10\} = 40\\
+\max_i \text{Payoff}(\text{Keep}, S_i) &= \max\{25, 25\} = 25
+\end{aligned}
+\]
+
+\[
+\max\{40, 25\} = 40
+\]
+
+Because 40 is the largest best payoff, the maximax (risk-seeking) recommendation is launch desserts.
+
+\paragraph{(C5) Applying the Maximin criterion}\label{subsubsec:practice-activity-1-solution-1-c5}
+
+The maximin rule focuses on the worst-case payoff of each alternative and picks the largest of those worst cases.
+
+\[
+\begin{aligned}
+\min_i \text{Payoff}(\text{Launch}, S_i) &= \min\{40, 10\} = 10\\
+\min_i \text{Payoff}(\text{Keep}, S_i) &= \min\{25, 25\} = 25
+\end{aligned}
+\]
+
+\[
+\max\{10, 25\} = 25
+\]
+
+Since 25 exceeds 10, the maximin (risk-averse) choice is keep the current menu.
+
+\paragraph{(C1) Formulating the decision problem for an optimal choice}\label{subsubsec:practice-activity-1-solution-1-c1}
+
+We frame the decision as choosing the menu strategy that maximizes the café's objective. Alternatives are
+Launch desserts or Keep menu; the uncertain states are high or low demand with
+probabilities 0.60 and 0.40. The optimal decision under each criterion uses the following calculations.
+
+\[
+\begin{aligned}
+EV_{\text{Launch}} &= 0.60(40) + 0.40(10) \\
+&= 0.60\cdot40 + 0.40\cdot10 \\
+&= 24 + 4 = 28 \\
+EV_{\text{Keep}} &= 0.60(25) + 0.40(25) \\
+&= 0.60\cdot25 + 0.40\cdot25 \\
+&= 15 + 10 = 25
+\end{aligned}
+\]
+
+\[
+\max\{28, 25\} = 28
+\]
+
+Summary of recommendations across decision criteria
+
+\begin{itemize}
+	\item Maximax favors launch desserts (highest payoff of 40).
+	\item Maximin favors keep the current menu (best worst-case payoff of 25).
+	\item Expected value favors launch desserts (EV of 28).
+\end{itemize}
+
+Comparing the criteria shows that the launch option leads on optimistic and average performance, while keeping the
+menu provides stronger downside protection.
+
 \subsection{Problem 2 --- Green Energy Production Mix}\label{subsec:practice-activity-1-problem-2}
 
 A renewable-energy company is evaluating its energy production strategy for the coming year.
@@ -62,124 +160,11 @@ Weather probabilities:
 
 Question: Make a decision on the best strategy based on three perspectives: safe behavior (Maximin), balanced behavior (Expected Value), and risky behavior (Maximax).
 
-\subsection{Problem 3 --- Global Shipping Network Design}\label{subsec:practice-activity-1-problem-3}
-
-A multinational logistics firm must redesign its global shipping network for the next five years to balance efficiency
-with resilience. Management is weighing three mutually exclusive configurations: a centralized network built around a
-single mega-hub in East Asia, a regional network with three hubs in the Americas, Europe, and Asia, and an adaptive
-AI--driven network that relies on dynamic routing powered by machine-learning models.
-
-The firm is uncertain about future trade volatility. It models three possible scenarios: low volatility with stable trade
-flows, medium volatility with moderate regional disruptions, and high volatility with significant unpredictability. The
-firm assigns probabilities of 0.25 to low volatility, 0.45 to medium volatility, and 0.30 to high volatility. Expected
-profits (in million USD) are estimated at 210, 130, and $-40$ for the centralized option under low, medium, and high
-volatility; 180, 160, and 70 for the regional option; and 150, 175, and 140 for the AI--driven option.
-
-Question: Make a decision on the best configuration based on three perspectives: safe behavior (Maximin), balanced behavior (Expected Value), and risky behavior (Maximax).
-
-\subsection{Solution 1 --- Local Café Investment}\label{subsec:practice-activity-1-solution-1}
+\subsubsection{Solution 2 --- Green Energy Production Mix}\label{subsec:practice-activity-1-solution-2}
 
 \textbf{Structured solution}
 
-\subsubsection{(C2) Interpreting decision alternatives, events, consequences, and states}\label{subsubsec:practice-activity-1-solution-1-c2}
-
-\begin{center}
-	\begin{tabularx}{\linewidth}{@{}L{0.35\linewidth}Y@{}}
-		\toprule
-		Element & Description \\
-		\midrule
-		Alternatives & Launch desserts; Keep current menu \\
-		States of nature & High demand (0.60); Low demand (0.40) \\
-		Events & Actual demand level observed after the decision \\
-		Consequences & Profit in thousands of USD for each alternative--state pair \\
-		\bottomrule
-	\end{tabularx}
-\end{center}
-
-\subsubsection{(C3) Building the payoff table}\label{subsubsec:practice-activity-1-solution-1-c3}
-
-\begin{center}
-	\begin{tabularx}{\linewidth}{@{}L{0.3\linewidth}C C@{}}
-		\toprule
-		Alternative & High demand (0.60) & Low demand (0.40) \\
-		\midrule
-		Launch desserts & 40 & 10 \\
-		Keep menu & 25 & 25 \\
-		\bottomrule
-	\end{tabularx}
-\end{center}
-
-\subsubsection{(C4) Applying the Maximax criterion}\label{subsubsec:practice-activity-1-solution-1-c4}
-
-The maximax rule ignores probabilities and selects the alternative with the highest possible payoff.
-
-\[
-\begin{aligned}
-\max_i \text{Payoff}(\text{Launch}, S_i) &= \max\{40, 10\} = 40\\
-\max_i \text{Payoff}(\text{Keep}, S_i) &= \max\{25, 25\} = 25
-\end{aligned}
-\]
-
-\[
-\max\{40, 25\} = 40
-\]
-
-Because 40 is the largest best payoff, the maximax (risk-seeking) recommendation is launch desserts.
-
-\subsubsection{(C5) Applying the Maximin criterion}\label{subsubsec:practice-activity-1-solution-1-c5}
-
-The maximin rule focuses on the worst-case payoff of each alternative and picks the largest of those worst cases.
-
-\[
-\begin{aligned}
-\min_i \text{Payoff}(\text{Launch}, S_i) &= \min\{40, 10\} = 10\\
-\min_i \text{Payoff}(\text{Keep}, S_i) &= \min\{25, 25\} = 25
-\end{aligned}
-\]
-
-\[
-\max\{10, 25\} = 25
-\]
-
-Since 25 exceeds 10, the maximin (risk-averse) choice is keep the current menu.
-
-\subsubsection{(C1) Formulating the decision problem for an optimal choice}\label{subsubsec:practice-activity-1-solution-1-c1}
-
-We frame the decision as choosing the menu strategy that maximizes the café's objective. Alternatives are
-Launch desserts or Keep menu; the uncertain states are high or low demand with
-probabilities 0.60 and 0.40. The optimal decision under each criterion uses the following calculations.
-
-\[
-\begin{aligned}
-EV_{\text{Launch}} &= 0.60(40) + 0.40(10) \\
-&= 0.60\cdot40 + 0.40\cdot10 \\
-&= 24 + 4 = 28 \\
-EV_{\text{Keep}} &= 0.60(25) + 0.40(25) \\
-&= 0.60\cdot25 + 0.40\cdot25 \\
-&= 15 + 10 = 25
-\end{aligned}
-\]
-
-\[
-\max\{28, 25\} = 28
-\]
-
-Summary of recommendations across decision criteria
-
-\begin{itemize}
-	\item Maximax favors launch desserts (highest payoff of 40).
-	\item Maximin favors keep the current menu (best worst-case payoff of 25).
-	\item Expected value favors launch desserts (EV of 28).
-\end{itemize}
-
-Comparing the criteria shows that the launch option leads on optimistic and average performance, while keeping the
-menu provides stronger downside protection.
-
-\subsection{Solution 2 --- Green Energy Production Mix}\label{subsec:practice-activity-1-solution-2}
-
-\textbf{Structured solution}
-
-\subsubsection{(C2) Interpreting decision alternatives, events, consequences, and states}\label{subsubsec:practice-activity-1-solution-2-c2}
+\paragraph{(C2) Interpreting decision alternatives, events, consequences, and states}\label{subsubsec:practice-activity-1-solution-2-c2}
 
 \begin{center}
 	\begin{tabularx}{\linewidth}{@{}L{0.35\linewidth}Y@{}}
@@ -194,7 +179,7 @@ menu provides stronger downside protection.
 	\end{tabularx}
 \end{center}
 
-\subsubsection{(C3) Building the payoff table}\label{subsubsec:practice-activity-1-solution-2-c3}
+\paragraph{(C3) Building the payoff table}\label{subsubsec:practice-activity-1-solution-2-c3}
 
 \begin{center}
 	\begin{tabularx}{\linewidth}{@{}L{0.3\linewidth}C C C@{}}
@@ -208,7 +193,7 @@ menu provides stronger downside protection.
 	\end{tabularx}
 \end{center}
 
-\subsubsection{(C4) Applying the Maximax criterion}\label{subsubsec:practice-activity-1-solution-2-c4}
+\paragraph{(C4) Applying the Maximax criterion}\label{subsubsec:practice-activity-1-solution-2-c4}
 
 Maximax considers only the best possible outcome for each alternative and then picks the largest one.
 
@@ -226,7 +211,7 @@ Maximax considers only the best possible outcome for each alternative and then p
 
 The largest best payoff is 90, so the maximax (risk-seeking) decision is build solar farms.
 
-\subsubsection{(C5) Applying the Maximin criterion}\label{subsubsec:practice-activity-1-solution-2-c5}
+\paragraph{(C5) Applying the Maximin criterion}\label{subsubsec:practice-activity-1-solution-2-c5}
 
 Maximin evaluates the worst payoff for each alternative and favors the highest of those worst cases.
 
@@ -244,7 +229,7 @@ Maximin evaluates the worst payoff for each alternative and favors the highest o
 
 Because 55 is the largest minimum payoff, the maximin (risk-averse) recommendation is the hybrid system.
 
-\subsubsection{(C1) Formulating the decision problem for an optimal choice}\label{subsubsec:practice-activity-1-solution-2-c1}
+\paragraph{(C1) Formulating the decision problem for an optimal choice}\label{subsubsec:practice-activity-1-solution-2-c1}
 
 The firm wants the production mix that best supports its profit goal. Alternatives are wind,
 solar, or a hybrid system and the uncertain states are windy,
@@ -280,11 +265,26 @@ Summary of recommendations across decision criteria
 The comparison shows solar excels only in the best-case outcome, while the hybrid strategy dominates on downside
 protection and average profitability.
 
-\subsection{Solution 3 --- Global Shipping Network Design}\label{subsec:practice-activity-1-solution-3}
+\subsection{Problem 3 --- Global Shipping Network Design}\label{subsec:practice-activity-1-problem-3}
+
+A multinational logistics firm must redesign its global shipping network for the next five years to balance efficiency
+with resilience. Management is weighing three mutually exclusive configurations: a centralized network built around a
+single mega-hub in East Asia, a regional network with three hubs in the Americas, Europe, and Asia, and an adaptive
+AI--driven network that relies on dynamic routing powered by machine-learning models.
+
+The firm is uncertain about future trade volatility. It models three possible scenarios: low volatility with stable trade
+flows, medium volatility with moderate regional disruptions, and high volatility with significant unpredictability. The
+firm assigns probabilities of 0.25 to low volatility, 0.45 to medium volatility, and 0.30 to high volatility. Expected
+profits (in million USD) are estimated at 210, 130, and $-40$ for the centralized option under low, medium, and high
+volatility; 180, 160, and 70 for the regional option; and 150, 175, and 140 for the AI--driven option.
+
+Question: Make a decision on the best configuration based on three perspectives: safe behavior (Maximin), balanced behavior (Expected Value), and risky behavior (Maximax).
+
+\subsubsection{Solution 3 --- Global Shipping Network Design}\label{subsec:practice-activity-1-solution-3}
 
 \textbf{Structured solution}
 
-\subsubsection{(C2) Interpreting decision alternatives, events, consequences, and states}\label{subsubsec:practice-activity-1-solution-3-c2}
+\paragraph{(C2) Interpreting decision alternatives, events, consequences, and states}\label{subsubsec:practice-activity-1-solution-3-c2}
 
 \begin{center}
 	\begin{tabularx}{\linewidth}{@{}L{0.35\linewidth}Y@{}}
@@ -299,7 +299,7 @@ protection and average profitability.
 	\end{tabularx}
 \end{center}
 
-\subsubsection{(C3) Building the payoff table}\label{subsubsec:practice-activity-1-solution-3-c3}
+\paragraph{(C3) Building the payoff table}\label{subsubsec:practice-activity-1-solution-3-c3}
 
 \begin{center}
 	\begin{tabularx}{\linewidth}{@{}L{0.3\linewidth}C C C@{}}
@@ -313,7 +313,7 @@ protection and average profitability.
 	\end{tabularx}
 \end{center}
 
-\subsubsection{(C4) Applying the Maximax criterion}\label{subsubsec:practice-activity-1-solution-3-c4}
+\paragraph{(C4) Applying the Maximax criterion}\label{subsubsec:practice-activity-1-solution-3-c4}
 
 Maximax selects the alternative with the highest possible payoff regardless of downside.
 
@@ -331,7 +331,7 @@ Maximax selects the alternative with the highest possible payoff regardless of d
 
 The greatest best payoff is 210, so the maximax choice is the centralized network.
 
-\subsubsection{(C5) Applying the Maximin criterion}\label{subsubsec:practice-activity-1-solution-3-c5}
+\paragraph{(C5) Applying the Maximin criterion}\label{subsubsec:practice-activity-1-solution-3-c5}
 
 Maximin emphasizes protection against the worst case by comparing the minimum payoff of each alternative.
 
@@ -349,7 +349,7 @@ Maximin emphasizes protection against the worst case by comparing the minimum pa
 
 Because 140 is the largest of these minimums, the maximin recommendation is the AI--driven network.
 
-\subsubsection{(C1) Formulating the decision problem for an optimal choice}\label{subsubsec:practice-activity-1-solution-3-c1}
+\paragraph{(C1) Formulating the decision problem for an optimal choice}\label{subsubsec:practice-activity-1-solution-3-c1}
 
 The logistics firm frames its decision as selecting the network that maximizes long-run profit. Alternatives are
 centralized, regional, or AI--driven and the uncertain states are
