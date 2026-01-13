@@ -1,6 +1,6 @@
-\section{Example 1.1}\label{sec:interval-example1-1}
+\subsection{Example 1.1}\label{sec:interval-example1-1}
 
-\subsection{Problem description}\label{subsec:interval-example1-1-problem}
+\subsubsection{Problem description}\label{subsec:interval-example1-1-problem}
 
 The school is planning next semester's scholarship fund and wants to estimate the average monthly scholarship cost per student. Teacher A oversees the STEM cohort, and Teacher B oversees the Arts cohort. Each teacher serves a different student population, so the finance office takes separate samples to estimate the average cost for each group. A confidence interval is needed because the fund must cover typical costs without overspending.
 
@@ -20,7 +20,7 @@ After the samples are collected, the principal shares the true population parame
 Because each sample represents only part of its population, we use confidence intervals to express uncertainty and plan the scholarship fund with a safety margin.
 
 
-\subsection{(C1) Obtain sample mean and standard deviation}\label{subsubsec:interval-example1-1-c1}
+\subsubsection{(C1) Obtain sample mean and standard deviation}\label{subsubsec:interval-example1-1-c1}
 
 Each teacher summarises their sample with a mean and standard deviation to estimate typical monthly scholarship costs and the spread around those costs.
 
@@ -51,15 +51,15 @@ Teacher B (Arts cohort):
 
 These sample statistics provide point estimates for the population means and standard deviations, which will be refined with confidence intervals.
 
-\subsection{(C2) Compare sample estimates across cohorts}\label{subsubsec:interval-example1-1-c2}
+\subsubsection{(C2) Compare sample estimates across cohorts}\label{subsubsec:interval-example1-1-c2}
 
 Comparing the samples already suggests differences: Teacher B's sample mean is higher (\(\bar{x}_B = 525\)) than Teacher A's (\(\bar{x}_A = 500\)). Both samples show the same estimated variability (\(s_A \approx s_B \approx 15.81\)), but the smaller STEM sample will still have more sampling uncertainty. The principal's true parameters confirm the cohorts differ (\(\mu_A = 505\) vs. \(\mu_B = 530\)), giving a benchmark to compare the t-based estimates to the variance-known results.
 
-\subsection{(C3) Explain the need for estimation based on the comparison}\label{subsubsec:interval-example1-1-c3}
+\subsubsection{(C3) Explain the need for estimation based on the comparison}\label{subsubsec:interval-example1-1-c3}
 
 Because the school cannot survey every student in each cohort, the sample means and standard deviations are only estimates. Relying on a single number could lead to underfunding or overfunding the scholarship pool. Confidence intervals turn the point estimates into ranges that show plausible values for the true average monthly cost in each program, which is essential for responsible budgeting. The principal's shared \(\mu\) and \(\sigma\) let the teachers verify the t-based intervals against variance-known Z intervals.
 
-\subsection{(C5) Calculate the confidence interval (variance known)}\label{subsubsec:interval-example1-1-c5}
+\subsubsection{(C5) Calculate the confidence interval (variance known)}\label{subsubsec:interval-example1-1-c5}
 
 With the population variance known, use the Z distribution for a 95\% confidence level. For \(\alpha = 0.05\), \(z_{\alpha/2} = z_{0.025} = 1.96\). Using the population standard deviations:
 
@@ -80,7 +80,7 @@ E_B^{(Z)} = z_{\alpha/2} \cdot \frac{\sigma_B}{\sqrt{n_B}}
 \mu_B \in 525 \pm 11.16 = (513.84, 536.16)
 \]
 
-\subsection{(C8) Calculate the confidence interval (variance unknown)}\label{subsubsec:interval-example1-1-c8}
+\subsubsection{(C8) Calculate the confidence interval (variance unknown)}\label{subsubsec:interval-example1-1-c8}
 
 Because the population variance is unknown at the time of sampling, use the t distribution with a 95\% confidence level for each cohort:
 
@@ -106,7 +106,7 @@ E_B = t_{0.025,9} \cdot \frac{s_B}{\sqrt{n_B}}
 
 The larger sample for Teacher B yields a smaller margin of error and a narrower interval, reflecting greater precision.
 
-\subsection{(C4) Interpret and compare intervals for scholarship planning}\label{subsubsec:interval-example1-1-c4}
+\subsubsection{(C4) Interpret and compare intervals for scholarship planning}\label{subsubsec:interval-example1-1-c4}
 
 The principal's true parameters allow a variance-known analysis using the Z distribution to compare with the earlier t-based estimates.
 
@@ -116,7 +116,7 @@ Variance known (Z, 95\%) recap: Using the population standard deviations, the Z-
 
 For scholarship planning, the finance team can treat the upper ends of the intervals as conservative per-student allocations to avoid shortfalls. Teacher A's intervals are wider because the STEM sample is smaller, so the budget for that cohort needs a larger cushion. Teacher B's intervals are narrower thanks to the larger sample, giving planners more confidence in the Arts allocation. The comparison shows how larger samples reduce uncertainty and support more precise budgeting, while smaller samples imply more cautious funding decisions.
 
-\subsection{(C10) Conclude about a statistical parameter in finance and economy}\label{subsubsec:interval-example1-1-c10}
+\subsubsection{(C10) Conclude about a statistical parameter in finance and economy}\label{subsubsec:interval-example1-1-c10}
 
 Based on the confidence intervals, the finance office can conclude that the true mean monthly scholarship cost per student differs by cohort, with the STEM cohort centered near 500 USD and the Arts cohort centered near 525 USD. This supports budgeting separate per-student allocations for each program rather than assuming a single overall mean, reducing the risk of underfunding or overspending in the scholarship fund.
 
