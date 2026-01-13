@@ -14,9 +14,8 @@ Given sample summary:
 
 Estimate the 95\% confidence interval for the population mean monthly return (\(\mu\)), and explain why the normal approximation is justified.
 
-\subsection{Solution}\label{subsec:interval-example2-solution}
 
-\subsubsection{(C9) Estimate the mean with a large-sample t approximation}\label{subsubsec:interval-example2-c9}
+\subsection{(C9) Estimate the mean with a large-sample t approximation}\label{subsubsec:interval-example2-c9}
 
 Because the population variance is unknown, the exact approach would use the t distribution with \(n - 1\) degrees of freedom. However, since \(n = 400\) is very large, the t distribution is almost identical to the normal distribution. Therefore we approximate using \(z_{0.025} = 1.96\).
 
@@ -38,11 +37,11 @@ So the confidence interval is:
 
 This interval estimates the plausible range for the true mean monthly return.
 
-\subsubsection{(C4) Interpret the confidence interval for a finance decision}\label{subsubsec:interval-example2-c4}
+\subsection{(C4) Interpret the confidence interval for a finance decision}\label{subsubsec:interval-example2-c4}
 
 The interval suggests the portfolio's true mean monthly return is likely between about 0.96\% and 1.45\%. For allocation decisions, the finance team can use the lower bound as a conservative expected return when stress-testing plans and use the midpoint as a baseline forecast. The range also helps compare this portfolio to alternatives with different risk profiles.
 
-\subsubsection{(C10) Conclude about a statistical parameter in finance and economy}\label{subsubsec:interval-example2-c10}
+\subsection{(C10) Conclude about a statistical parameter in finance and economy}\label{subsubsec:interval-example2-c10}
 
 Based on the large sample, the team can conclude that the population mean monthly return is about 1.2\%, with a 95\% confidence interval from roughly 0.96\% to 1.45\%. Even though the variance is unknown, the large-sample approximation supports using the normal critical value to obtain a reliable interval for planning.
 
