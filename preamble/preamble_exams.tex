@@ -1,4 +1,8 @@
-\input{preamble.tex}
+\IfFileExists{preamble.tex}{
+  \input{preamble.tex}
+}{
+  \input{preamble/preamble.tex}
+}
 
 \geometry{margin=0.85in}
 \AtBeginDocument{\small}
