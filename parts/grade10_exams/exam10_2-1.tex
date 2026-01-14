@@ -9,91 +9,57 @@
 
 \subsection{Assessment and evaluation}\label{sec:grade10-exam2-1-evaluation}
 
-This exam evaluates only the criteria C1--C5. Each criterion is evaluated across the three points below.
+This exam evaluates only the criteria listed below and uses this order consistently:
+\begin{enumerate}
+	\item C1 Mean and standard deviation in sample and population.
+	\item C2 Population parameter vs sample statistic (estimation of the parameter).
+	\item C3 Point estimation vs interval estimation.
+	\item C5 Confidence interval for the mean with variance known.
+	\item C4 Interpretation in economy/finance context.
+\end{enumerate}
+Each criterion is evaluated across the three points below.
 A student passes a criterion if it is correctly activated in at least two of the three points.
 The overall exam result is binary (Passed/Not passed) and is determined by the set of criteria passed.
 
 \begin{enumerate}
-	\item A school cafeteria must choose one of three menu plans for a two-week festival: Plan A (local produce focus),
-	Plan B (mixed menu), or Plan C (bulk staples). Demand for meals can be high, medium, or low.
-	Based on past festivals, the probability of high demand is $0.35$, medium demand is $0.45$, and low demand is $0.20$.
-	Profits are measured in hundreds of dollars. If demand is high, the profits are 92 for Plan A, 70 for Plan B, and 55 for Plan C.
-	If demand is medium, the profits are 50 for Plan A, 62 for Plan B, and 48 for Plan C. If demand is low, the profits are
-	$-8$ for Plan A, 30 for Plan B, and 38 for Plan C.
+	\item A school cafeteria tracks daily net profit during a two-week festival to estimate the population mean profit per day.
+	The cafeteria has historical records indicating that the population standard deviation of daily profit is $15$ (in hundreds of dollars),
+	and the population mean is unknown. In the most recent festival, a random sample of $36$ days produced a sample mean daily profit
+	of $52$ (in hundreds of dollars) and a sample standard deviation of $12$ (in hundreds of dollars). The administration wants a
+	$95\%$ confidence interval for the population mean daily profit to guide future pricing decisions.
 
 	\begin{itemize}
-		\item Formulate the decision problem by clearly stating the decision alternatives, states of nature, probabilities, and consequences.
-		\item Interpret the key elements of the decision problem (alternatives, fortuitous events, and consequences) in this context.
-		\item Build the payoff table from the description.
-		\item Apply the maximax rule and state the recommended plan.
-		\item Apply the maximin rule and state the recommended plan.
+		\item Identify the sample mean and sample standard deviation, and state the population mean and population standard deviation, explaining which are statistics and which are parameters.
+		\item Explain how the sample statistics are used to estimate the population mean in this setting.
+		\item State the point estimate for the population mean and describe how it differs from an interval estimate.
+		\item Construct the $95\%$ confidence interval for the population mean assuming the population variance is known.
+		\item Interpret the confidence interval for daily profit in the cafeteria's pricing context.
 	\end{itemize}
-	\item A delivery cooperative is choosing a fleet strategy for the next season: Strategy A (electric vans),
-	Strategy B (hybrid vans), or Strategy C (diesel vans). Demand for deliveries can be strong, steady, or weak.
-	Fuel costs can be low or high. The cooperative estimates the demand probabilities as $0.30$ (strong), $0.50$ (steady),
-	$0.20$ (weak). Fuel costs are independent of demand, with probabilities $0.55$ (low) and $0.45$ (high).
-
-	Revenue (in thousands of dollars) by demand level is shown below.
-	\begin{center}
-		\begin{tabularx}{0.8\linewidth}{@{}L{0.32\linewidth}C C C@{}}
-			\toprule
-			Demand level & Strategy A & Strategy B & Strategy C \\
-			\midrule
-			Strong & 420 & 380 & 340 \\
-			Steady & 320 & 300 & 270 \\
-			Weak & 210 & 230 & 220 \\
-			\bottomrule
-		\end{tabularx}
-	\end{center}
-
-	Operating costs (in thousands of dollars) by fuel cost level are shown below.
-	\begin{center}
-		\begin{tabularx}{0.8\linewidth}{@{}L{0.32\linewidth}C C C@{}}
-			\toprule
-			Fuel cost level & Strategy A & Strategy B & Strategy C \\
-			\midrule
-			Low & 160 & 190 & 210 \\
-			High & 220 & 250 & 290 \\
-			\bottomrule
-		\end{tabularx}
-	\end{center}
+	\item A delivery cooperative wants to estimate the population mean fuel cost per delivery (in dollars) for budgeting.
+	Audit data from prior years indicate the population standard deviation of fuel cost per delivery is $5.0$ dollars, while the
+	population mean is unknown. A random sample of $50$ deliveries in the current season produced a sample mean fuel cost of
+	$18.4$ dollars and a sample standard deviation of $4.2$ dollars. The cooperative requests a $90\%$ confidence interval for the
+	population mean fuel cost to guide pricing of delivery contracts.
 
 	\begin{itemize}
-		\item Formulate the decision problem and define the combined states of nature using the independence assumption.
-		\item Interpret the decision alternatives, states of nature, and consequences for this setting.
-		\item Build the payoff table by computing profits for each combined state and the probability of each state.
-		\item Apply the maximax rule and state the recommended strategy.
-		\item Apply the maximin rule and state the recommended strategy.
+		\item Identify the sample mean and sample standard deviation, and state the population mean and population standard deviation, explaining which are statistics and which are parameters.
+		\item Explain how the sample statistics estimate the population mean in this budgeting context.
+		\item State the point estimate for the population mean and contrast it with an interval estimate.
+		\item Construct the $90\%$ confidence interval for the population mean assuming the population variance is known.
+		\item Interpret the confidence interval for fuel cost per delivery in an economic decision-making context.
 	\end{itemize}
-	\item A community sports center must choose a membership model for the next year: Model A (standard monthly pass),
-	Model B (premium pass with classes), or Model C (flex pass). Demand for memberships can be high, medium, or low.
-	Staffing costs can be favorable or unfavorable. Demand probabilities are $0.25$ (high), $0.50$ (medium),
-	$0.25$ (low). Staffing costs are independent of demand, with probabilities $0.60$ (favorable) and $0.40$ (unfavorable).
-
-	Expected number of members by demand level is shown below.
-	\begin{center}
-		\begin{tabularx}{0.85\linewidth}{@{}L{0.32\linewidth}C C C@{}}
-			\toprule
-			Demand level & Model A & Model B & Model C \\
-			\midrule
-			High & 620 & 480 & 700 \\
-			Medium & 460 & 360 & 520 \\
-			Low & 300 & 240 & 360 \\
-			\bottomrule
-		\end{tabularx}
-	\end{center}
-
-	Membership fees are $35$ (Model A), $48$ (Model B), and $30$ (Model C) dollars per member per year.
-	Variable staffing cost per member is $18$ when costs are favorable and $26$ when costs are unfavorable.
-	Fixed annual costs are $6{,}500$ for Model A, $9{,}000$ for Model B, and $5{,}200$ for Model C.
-	All monetary amounts in this point can be treated in dollars.
+	\item A community sports center studies annual membership spending per member to plan next year's budget.
+	From long-term accounting data, the population standard deviation of annual spending per member is known to be $12$ dollars,
+	while the population mean is unknown. A random sample of $40$ members reports an average annual spending of $52$ dollars per member,
+	with a sample standard deviation of $10$ dollars. Management wants a $99\%$ confidence interval for the population mean annual
+	spending per member to evaluate financial sustainability.
 
 	\begin{itemize}
-		\item Formulate the decision problem, specifying how states of nature are formed and how profits are computed.
-		\item Interpret the alternatives, fortuitous events, and consequences in this context.
-		\item Build the payoff table by calculating profit for each combined state and assigning the correct probabilities.
-		\item Apply the maximax rule and state the recommended model.
-		\item Apply the maximin rule and state the recommended model.
+		\item Identify the sample mean and sample standard deviation, and state the population mean and population standard deviation, explaining which are statistics and which are parameters.
+		\item Explain how the sample statistics estimate the population mean in this membership-spending context.
+		\item State the point estimate for the population mean and distinguish it from an interval estimate.
+		\item Construct the $99\%$ confidence interval for the population mean assuming the population variance is known.
+		\item Interpret the confidence interval in terms of the sports center's financial planning decisions.
 	\end{itemize}
 \end{enumerate}
 \ifdefined\ExamBook
