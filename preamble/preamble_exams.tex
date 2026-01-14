@@ -1,8 +1,7 @@
-\IfFileExists{preamble.tex}{
-  \input{preamble.tex}
-}{
-  \input{preamble/preamble.tex}
-}
+\makeatletter
+\def\input@path{{./}{../}{../../}{preamble/}{../preamble/}{../../preamble/}}
+\makeatother
+\input{preamble.tex}
 
 \geometry{margin=0.85in}
 \AtBeginDocument{\small}
