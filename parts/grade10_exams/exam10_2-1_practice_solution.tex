@@ -6,37 +6,80 @@
 	\begin{ExamProblems}
 		\item
 		\subsection*{C2}
-		Decision alternatives are the membership models: Model A (standard), Model B (premium), and Model C (flex).
-		The states of nature are the combined outcomes of demand (high, medium, low) and staffing costs (favorable, unfavorable).
-		Each outcome represents the annual profit (in dollars) from membership fees minus staffing costs and fixed costs.
-		Demand probabilities are $0.30$ (high), $0.45$ (medium), and $0.25$ (low), while staffing costs are $0.55$ (favorable) and $0.45$ (unfavorable), independent of demand.
-		Therefore, the combined-state probabilities are products of the two probabilities.
+		\begin{center}
+			\begin{tabular}{l p{0.74\linewidth}}
+				\toprule
+				Decision Alternatives & Model A (standard), Model B (premium), Model C (flex) \\
+				States of Nature & Demand high, medium, low with staffing costs favorable or unfavorable \\
+				Events & Realized demand level paired with staffing cost conditions in the year \\
+				Consequences & Annual profit in dollars from membership fees minus staffing and fixed costs \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
 
 		\subsection*{C3}
 		Payoff = revenue $-$ cost, where revenue = (members $\times$ fee) and cost = (members $\times$ variable cost) $+$ fixed cost.
-		\[
-		\begin{aligned}
-		\text{High, favorable: } &\Pi_A = 640(36-19)-6800=4080,\\
-		&\Pi_B = 500(50-19)-9200=6300,\\
-		&\Pi_C = 720(32-19)-5400=3960.\\[4pt]
-		\text{High, unfavorable: } &\Pi_A = 640(36-27)-6800=-1040,\\
-		&\Pi_B = 500(50-27)-9200=2300,\\
-		&\Pi_C = 720(32-27)-5400=-1800.\\[4pt]
-		\text{Medium, favorable: } &\Pi_A = 480(36-19)-6800=1360,\\
-		&\Pi_B = 380(50-19)-9200=2580,\\
-		&\Pi_C = 540(32-19)-5400=1620.\\[4pt]
-		\text{Medium, unfavorable: } &\Pi_A = 480(36-27)-6800=-2480,\\
-		&\Pi_B = 380(50-27)-9200=-460,\\
-		&\Pi_C = 540(32-27)-5400=-2700.\\[4pt]
-		\text{Low, favorable: } &\Pi_A = 320(36-19)-6800=-1360,\\
-		&\Pi_B = 250(50-19)-9200=-1450,\\
-		&\Pi_C = 380(32-19)-5400=-460.\\[4pt]
-		\text{Low, unfavorable: } &\Pi_A = 320(36-27)-6800=-3920,\\
-		&\Pi_B = 250(50-27)-9200=-3450,\\
-		&\Pi_C = 380(32-27)-5400=-3500.
-		\end{aligned}
-		\]
-		Combined probabilities: $0.30\cdot 0.55=0.165$, $0.30\cdot 0.45=0.135$, $0.45\cdot 0.55=0.2475$, $0.45\cdot 0.45=0.2025$, $0.25\cdot 0.55=0.1375$, $0.25\cdot 0.45=0.1125$.
+		\begin{center}
+			\begin{tabular}{l c c c}
+				\toprule
+				State of nature & Model A revenue & Model B revenue & Model C revenue \\
+				\midrule
+				High demand, favorable cost & 23040 & 25000 & 23040 \\
+				High demand, unfavorable cost & 23040 & 25000 & 23040 \\
+				Medium demand, favorable cost & 17280 & 19000 & 17280 \\
+				Medium demand, unfavorable cost & 17280 & 19000 & 17280 \\
+				Low demand, favorable cost & 11520 & 12500 & 12160 \\
+				Low demand, unfavorable cost & 11520 & 12500 & 12160 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		\begin{center}
+			\begin{tabular}{l c c c}
+				\toprule
+				State of nature & Model A cost & Model B cost & Model C cost \\
+				\midrule
+				High demand, favorable cost & 18960 & 18700 & 19080 \\
+				High demand, unfavorable cost & 24080 & 22700 & 24840 \\
+				Medium demand, favorable cost & 15920 & 16420 & 15660 \\
+				Medium demand, unfavorable cost & 19760 & 19460 & 19980 \\
+				Low demand, favorable cost & 12880 & 13950 & 12620 \\
+				Low demand, unfavorable cost & 15440 & 15950 & 15660 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		\begin{center}
+			\begin{tabular}{l p{0.23\linewidth} p{0.23\linewidth} p{0.23\linewidth}}
+				\toprule
+				State of nature & Model A & Model B & Model C \\
+				\midrule
+				High demand, favorable cost &
+				Revenue = 23040\newline Cost = 18960\newline Payoff = Revenue $-$ Cost = 4080 &
+				Revenue = 25000\newline Cost = 18700\newline Payoff = Revenue $-$ Cost = 6300 &
+				Revenue = 23040\newline Cost = 19080\newline Payoff = Revenue $-$ Cost = 3960 \\
+				High demand, unfavorable cost &
+				Revenue = 23040\newline Cost = 24080\newline Payoff = Revenue $-$ Cost = -1040 &
+				Revenue = 25000\newline Cost = 22700\newline Payoff = Revenue $-$ Cost = 2300 &
+				Revenue = 23040\newline Cost = 24840\newline Payoff = Revenue $-$ Cost = -1800 \\
+				Medium demand, favorable cost &
+				Revenue = 17280\newline Cost = 15920\newline Payoff = Revenue $-$ Cost = 1360 &
+				Revenue = 19000\newline Cost = 16420\newline Payoff = Revenue $-$ Cost = 2580 &
+				Revenue = 17280\newline Cost = 15660\newline Payoff = Revenue $-$ Cost = 1620 \\
+				Medium demand, unfavorable cost &
+				Revenue = 17280\newline Cost = 19760\newline Payoff = Revenue $-$ Cost = -2480 &
+				Revenue = 19000\newline Cost = 19460\newline Payoff = Revenue $-$ Cost = -460 &
+				Revenue = 17280\newline Cost = 19980\newline Payoff = Revenue $-$ Cost = -2700 \\
+				Low demand, favorable cost &
+				Revenue = 11520\newline Cost = 12880\newline Payoff = Revenue $-$ Cost = -1360 &
+				Revenue = 12500\newline Cost = 13950\newline Payoff = Revenue $-$ Cost = -1450 &
+				Revenue = 12160\newline Cost = 12620\newline Payoff = Revenue $-$ Cost = -460 \\
+				Low demand, unfavorable cost &
+				Revenue = 11520\newline Cost = 15440\newline Payoff = Revenue $-$ Cost = -3920 &
+				Revenue = 12500\newline Cost = 15950\newline Payoff = Revenue $-$ Cost = -3450 &
+				Revenue = 12160\newline Cost = 15660\newline Payoff = Revenue $-$ Cost = -3500 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Combined probabilities are $0.30\cdot 0.55=0.165$, $0.30\cdot 0.45=0.135$, $0.45\cdot 0.55=0.2475$, $0.45\cdot 0.45=0.2025$, $0.25\cdot 0.55=0.1375$, $0.25\cdot 0.45=0.1125$.
 		\begin{center}
 			\begin{tabular}{l c c c c}
 				\toprule
@@ -55,20 +98,26 @@
 		\subsection*{C4}
 		\[
 		\begin{aligned}
-		\max \text{Model A} &= 4080,\\
-		\max \text{Model B} &= 6300,\\
-		\max \text{Model C} &= 3960.
+		\max(\text{Model A}) &= \max\{4080,-1040,1360,-2480,-1360,-3920\} = 4080,\\
+		\max(\text{Model B}) &= \max\{6300,2300,2580,-460,-1450,-3450\} = 6300,\\
+		\max(\text{Model C}) &= \max\{3960,-1800,1620,-2700,-460,-3500\} = 3960.
 		\end{aligned}
+		\]
+		\[
+		\max\{\max(\text{Model A}), \max(\text{Model B}), \max(\text{Model C})\} = 6300.
 		\]
 		The Maximax choice is Model B with 6300. The criterion is \emph{risky} because it focuses only on the best possible payoff and ignores how likely it is.
 
 		\subsection*{C5}
 		\[
 		\begin{aligned}
-		\min \text{Model A} &= -3920,\\
-		\min \text{Model B} &= -3450,\\
-		\min \text{Model C} &= -3500.
+		\min(\text{Model A}) &= \min\{4080,-1040,1360,-2480,-1360,-3920\} = -3920,\\
+		\min(\text{Model B}) &= \min\{6300,2300,2580,-460,-1450,-3450\} = -3450,\\
+		\min(\text{Model C}) &= \min\{3960,-1800,1620,-2700,-460,-3500\} = -3500.
 		\end{aligned}
+		\]
+		\[
+		\max\{\min(\text{Model A}), \min(\text{Model B}), \min(\text{Model C})\} = -3450.
 		\]
 		The Maximin choice is Model B with $-3450$ because it has the least severe worst-case loss. This is \emph{safe} because it protects against the worst outcome.
 
@@ -88,9 +137,16 @@
 
 		\item
 		\subsection*{C2}
-		Decision alternatives are the snack plans: Plan A (fresh-made items), Plan B (mixed menu), and Plan C (budget staples).
-		The states of nature are demand levels (high, medium, low) with probabilities $0.30$, $0.50$, and $0.20$.
-		Each outcome represents profit in hundreds of dollars after all costs.
+		\begin{center}
+			\begin{tabular}{l p{0.74\linewidth}}
+				\toprule
+				Decision Alternatives & Plan A (fresh-made items), Plan B (mixed menu), Plan C (budget staples) \\
+				States of Nature & Demand high, medium, low with probabilities $0.30$, $0.50$, $0.20$ \\
+				Events & Realized demand level in the serving period \\
+				Consequences & Profit in hundreds of dollars after all costs \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
 
 		\subsection*{C3}
 		Payoff = revenue $-$ cost, and the problem already provides the resulting profits for each plan and demand level.
@@ -116,20 +172,26 @@
 		\subsection*{C4}
 		\[
 		\begin{aligned}
-		\max \text{Plan A} &= 88,\\
-		\max \text{Plan B} &= 74,\\
-		\max \text{Plan C} &= 60.
+		\max(\text{Plan A}) &= \max\{88,54,-6\} = 88,\\
+		\max(\text{Plan B}) &= \max\{74,66,28\} = 74,\\
+		\max(\text{Plan C}) &= \max\{60,50,36\} = 60.
 		\end{aligned}
+		\]
+		\[
+		\max\{\max(\text{Plan A}), \max(\text{Plan B}), \max(\text{Plan C})\} = 88.
 		\]
 		The Maximax choice is Plan A. It is \emph{risky} because it only considers the highest possible profit.
 
 		\subsection*{C5}
 		\[
 		\begin{aligned}
-		\min \text{Plan A} &= -6,\\
-		\min \text{Plan B} &= 28,\\
-		\min \text{Plan C} &= 36.
+		\min(\text{Plan A}) &= \min\{88,54,-6\} = -6,\\
+		\min(\text{Plan B}) &= \min\{74,66,28\} = 28,\\
+		\min(\text{Plan C}) &= \min\{60,50,36\} = 36.
 		\end{aligned}
+		\]
+		\[
+		\max\{\min(\text{Plan A}), \min(\text{Plan B}), \min(\text{Plan C})\} = 36.
 		\]
 		The Maximin choice is Plan C with 36 because it gives the best worst-case outcome. It is \emph{safe} because it prioritizes the least harmful result.
 
