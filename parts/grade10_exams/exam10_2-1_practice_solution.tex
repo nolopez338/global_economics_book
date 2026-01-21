@@ -4,252 +4,143 @@
 	
 	\ExamSection{Problems}
 	\begin{ExamProblems}
-		\item \textbf{Structured solution}
-	
-	\paragraph{Interpreting decision alternatives, events, consequences, and states of nature}\label{subsubsec:grade10-exam2-1-practice-solution-1-c2}
-	
-	\begin{center}
-		\begin{tabularx}{\linewidth}{@{}L{0.36\linewidth}Y@{}}
-			\toprule
-			Element & Description \\
-			\midrule
-			Decision alternatives & Plan A (expanded stock), Plan B (balanced mix), Plan C (lean stock) \\
-			States of nature & High demand (0.40), Medium demand (0.35), Low demand (0.25) \\
-			Events & Demand level observed after selecting a plan \\
-			Consequences & Profit (hundreds of dollars) for each plan--demand pair \\
-			Probabilities & 0.40, 0.35, 0.25 for high, medium, low demand \\
-			\bottomrule
-		\end{tabularx}
-	\end{center}
-	
-	\paragraph{Building the payoff table from the description}\label{subsubsec:grade10-exam2-1-practice-solution-1-c3}
-	
-	\begin{center}
-		\begin{tabularx}{\linewidth}{@{}L{0.28\linewidth}C C C C@{}}
-			\toprule
-			State of nature & Probability & Plan A & Plan B & Plan C \\
-			\midrule
-			High demand & 0.40 & 88 & 76 & 60 \\
-			Medium demand & 0.35 & 52 & 58 & 50 \\
-			Low demand & 0.25 & -12 & 28 & 36 \\
-			\bottomrule
-		\end{tabularx}
-	\end{center}
-	
-	\paragraph{Applying the Maximax criterion}\label{subsubsec:grade10-exam2-1-practice-solution-1-c4}
-	
-	We ignore probabilities and select the plan with the highest possible payoff.
-	\[
-	\begin{aligned}
-	\max_i \text{Payoff}(\text{Plan A}, S_i) &= 88 \\
-	\max_i \text{Payoff}(\text{Plan B}, S_i) &= 76 \\
-	\max_i \text{Payoff}(\text{Plan C}, S_i) &= 60
-	\end{aligned}
-	\]
-	\[
-	\max\{88, 76, 60\} = 88
-	\]
-	The Maximax rule recommends Plan A.
-	
-	\paragraph{Applying the Maximin criterion}\label{subsubsec:grade10-exam2-1-practice-solution-1-c5}
-	
-	We focus on the worst payoff for each plan.
-	\[
-	\begin{aligned}
-	\min_i \text{Payoff}(\text{Plan A}, S_i) &= -12 \\
-	\min_i \text{Payoff}(\text{Plan B}, S_i) &= 28 \\
-	\min_i \text{Payoff}(\text{Plan C}, S_i) &= 36
-	\end{aligned}
-	\]
-	\[
-	\max\{-12, 28, 36\} = 36
-	\]
-	The Maximin rule recommends Plan C.
-	
-	\paragraph{Formulating the decision problem for an optimal choice}\label{subsubsec:grade10-exam2-1-practice-solution-1-c1}
-	
-	We compute expected profits using the stated probabilities.
-	\[
-	\begin{aligned}
-	EV_A &= 0.40(88) + 0.35(52) + 0.25(-12) \\
-	&= 35.2 + 18.2 - 3 = 50.4 \\
-	EV_B &= 0.40(76) + 0.35(58) + 0.25(28) \\
-	&= 30.4 + 20.3 + 7 = 57.7 \\
-	EV_C &= 0.40(60) + 0.35(50) + 0.25(36) \\
-	&= 24 + 17.5 + 9 = 50.5
-	\end{aligned}
-	\]
-	\[
-	\max\{50.4, 57.7, 50.5\} = 57.7
-	\]
-	The expected value criterion recommends Plan B.
-	
-		\item \textbf{Structured solution}
-	
-	\paragraph{Interpreting decision alternatives, events, consequences, and states of nature}\label{subsubsec:grade10-exam2-1-practice-solution-2-c2}
-	
-	\begin{center}
-		\begin{tabularx}{\linewidth}{@{}L{0.36\linewidth}Y@{}}
-			\toprule
-			Element & Description \\
-			\midrule
-			Decision alternatives & Strategy A (electric), Strategy B (hybrid), Strategy C (diesel) \\
-			States of nature & Combined demand and fuel-cost outcomes (6 states) \\
-			Events & Demand level and fuel cost realized after the strategy choice \\
-			Consequences & Profit (thousands of dollars) for each strategy--state pair \\
-			Probabilities & Demand: 0.25, 0.55, 0.20; Fuel cost: 0.60, 0.40; independent \\
-			\bottomrule
-		\end{tabularx}
-	\end{center}
-	
-	\paragraph{Building the payoff table from revenue and cost data}\label{subsubsec:grade10-exam2-1-practice-solution-2-c3}
-	
-	Combined state probabilities are obtained by multiplying demand and fuel-cost probabilities.
-	\begin{center}
-		\begin{tabularx}{\linewidth}{@{}L{0.28\linewidth}C C C C@{}}
-			\toprule
-			State of nature & Probability & Strategy A & Strategy B & Strategy C \\
-			\midrule
-			Strong demand, low cost & 0.15 & 290 & 210 & 140 \\
-			Strong demand, high cost & 0.10 & 220 & 140 & 60 \\
-			Steady demand, low cost & 0.33 & 160 & 110 & 60 \\
-			Steady demand, high cost & 0.22 & 90 & 40 & -20 \\
-			Weak demand, low cost & 0.12 & 50 & 40 & 10 \\
-			Weak demand, high cost & 0.08 & -20 & -30 & -70 \\
-			\bottomrule
-		\end{tabularx}
-	\end{center}
-	
-	\paragraph{Applying the Maximax criterion}\label{subsubsec:grade10-exam2-1-practice-solution-2-c4}
-	
-	We select the largest possible profit for each strategy.
-	\[
-	\begin{aligned}
-	\max_i \text{Payoff}(A, S_i) &= 290 \\
-	\max_i \text{Payoff}(B, S_i) &= 210 \\
-	\max_i \text{Payoff}(C, S_i) &= 140
-	\end{aligned}
-	\]
-	\[
-	\max\{290, 210, 140\} = 290
-	\]
-	The Maximax rule recommends Strategy A.
-	
-	\paragraph{Applying the Maximin criterion}\label{subsubsec:grade10-exam2-1-practice-solution-2-c5}
-	
-	We compare the worst outcomes across strategies.
-	\[
-	\begin{aligned}
-	\min_i \text{Payoff}(A, S_i) &= -20 \\
-	\min_i \text{Payoff}(B, S_i) &= -30 \\
-	\min_i \text{Payoff}(C, S_i) &= -70
-	\end{aligned}
-	\]
-	\[
-	\max\{-20, -30, -70\} = -20
-	\]
-	The Maximin rule recommends Strategy A.
-	
-	\paragraph{Formulating the decision problem for an optimal choice}\label{subsubsec:grade10-exam2-1-practice-solution-2-c1}
-	
-	Expected profits are computed with the combined-state probabilities.
-	\[
-	\begin{aligned}
-	EV_A &= 0.15(290) + 0.10(220) + 0.33(160) + 0.22(90) + 0.12(50) + 0.08(-20) \\
-	&= 43.5 + 22 + 52.8 + 19.8 + 6 - 1.6 = 142.5 \\
-	EV_B &= 0.15(210) + 0.10(140) + 0.33(110) + 0.22(40) + 0.12(40) + 0.08(-30) \\
-	&= 31.5 + 14 + 36.3 + 8.8 + 4.8 - 2.4 = 93.0 \\
-	EV_C &= 0.15(140) + 0.10(60) + 0.33(60) + 0.22(-20) + 0.12(10) + 0.08(-70) \\
-	&= 21 + 6 + 19.8 - 4.4 + 1.2 - 5.6 = 38.0
-	\end{aligned}
-	\]
-	\[
-	\max\{142.5, 93.0, 38.0\} = 142.5
-	\]
-	The expected value criterion recommends Strategy A.
-	
-		\item \textbf{Structured solution}
-	
-	\paragraph{Interpreting decision alternatives, events, consequences, and states of nature}\label{subsubsec:grade10-exam2-1-practice-solution-3-c2}
-	
-	\begin{center}
-		\begin{tabularx}{\linewidth}{@{}L{0.36\linewidth}Y@{}}
-			\toprule
-			Element & Description \\
-			\midrule
-			Decision alternatives & Model A (standard), Model B (premium), Model C (flex) \\
-			States of nature & Combined demand and staffing-cost outcomes (6 states) \\
-			Events & Demand and staffing-cost conditions observed after selection \\
-			Consequences & Profit (dollars) for each model--state pair \\
-			Probabilities & Demand: 0.30, 0.45, 0.25; Staffing: 0.55, 0.45; independent \\
-			\bottomrule
-		\end{tabularx}
-	\end{center}
-	
-	\paragraph{Building the payoff table from the narrative data}\label{subsubsec:grade10-exam2-1-practice-solution-3-c3}
-	
-	Using profit = (members $\times$ fee) $-$ (members $\times$ variable cost) $-$ fixed cost.
-	\begin{center}
-		\begin{tabularx}{\linewidth}{@{}L{0.30\linewidth}C C C C@{}}
-			\toprule
-			State of nature & Probability & Model A & Model B & Model C \\
-			\midrule
-			High demand, favorable cost & 0.165 & 4080 & 6300 & 3960 \\
-			High demand, unfavorable cost & 0.135 & -1040 & 2300 & -1800 \\
-			Medium demand, favorable cost & 0.2475 & 1360 & 2580 & 1620 \\
-			Medium demand, unfavorable cost & 0.2025 & -2480 & -460 & -2700 \\
-			Low demand, favorable cost & 0.1375 & -1360 & -1450 & -460 \\
-			Low demand, unfavorable cost & 0.1125 & -3920 & -3450 & -3500 \\
-			\bottomrule
-		\end{tabularx}
-	\end{center}
-	
-	\paragraph{Applying the Maximax criterion}\label{subsubsec:grade10-exam2-1-practice-solution-3-c4}
-	
-	We compare the best-case profits for each model.
-	\[
-	\begin{aligned}
-	\max_i \text{Payoff}(A, S_i) &= 4080 \\
-	\max_i \text{Payoff}(B, S_i) &= 6300 \\
-	\max_i \text{Payoff}(C, S_i) &= 3960
-	\end{aligned}
-	\]
-	\[
-	\max\{4080, 6300, 3960\} = 6300
-	\]
-	The Maximax rule recommends Model B.
-	
-	\paragraph{Applying the Maximin criterion}\label{subsubsec:grade10-exam2-1-practice-solution-3-c5}
-	
-	We compare the worst outcomes for each model.
-	\[
-	\begin{aligned}
-	\min_i \text{Payoff}(A, S_i) &= -3920 \\
-	\min_i \text{Payoff}(B, S_i) &= -3450 \\
-	\min_i \text{Payoff}(C, S_i) &= -3500
-	\end{aligned}
-	\]
-	\[
-	\max\{-3920, -3450, -3500\} = -3450
-	\]
-	The Maximin rule recommends Model B.
-	
-	\paragraph{Formulating the decision problem for an optimal choice}\label{subsubsec:grade10-exam2-1-practice-solution-3-c1}
-	
-	Expected profits use the combined-state probabilities.
-	\[
-	\begin{aligned}
-	EV_A &= 0.165(4080) + 0.135(-1040) + 0.2475(1360) + 0.2025(-2480) + 0.1375(-1360) + 0.1125(-3920) \\
-	&= 673.2 - 140.4 + 336.6 - 502.2 - 187 - 441 = -260.8 \\
-	EV_B &= 0.165(6300) + 0.135(2300) + 0.2475(2580) + 0.2025(-460) + 0.1375(-1450) + 0.1125(-3450) \\
-	&= 1039.5 + 310.5 + 638.55 - 93.15 - 199.375 - 388.125 = 1307.9 \\
-	EV_C &= 0.165(3960) + 0.135(-1800) + 0.2475(1620) + 0.2025(-2700) + 0.1375(-460) + 0.1125(-3500) \\
-	&= 653.4 - 243 + 400.95 - 546.75 - 63.25 - 393.75 = -192.4
-	\end{aligned}
-	\]
-	\[
-	\max\{-260.8, 1307.9, -192.4\} = 1307.9
-	\]
-	The expected value criterion recommends Model B.
+		\item
+		\subsection*{C2}
+		Decision alternatives are the membership models: Model A (standard), Model B (premium), and Model C (flex).
+		The states of nature are the combined outcomes of demand (high, medium, low) and staffing costs (favorable, unfavorable).
+		Each outcome represents the annual profit (in dollars) from membership fees minus staffing costs and fixed costs.
+		Demand probabilities are $0.30$ (high), $0.45$ (medium), and $0.25$ (low), while staffing costs are $0.55$ (favorable) and $0.45$ (unfavorable), independent of demand.
+		Therefore, the combined-state probabilities are products of the two probabilities.
+
+		\subsection*{C3}
+		Payoff = revenue $-$ cost, where revenue = (members $\times$ fee) and cost = (members $\times$ variable cost) $+$ fixed cost.
+		\[
+		\begin{aligned}
+		\text{High, favorable: } &\Pi_A = 640(36-19)-6800=4080,\\
+		&\Pi_B = 500(50-19)-9200=6300,\\
+		&\Pi_C = 720(32-19)-5400=3960.\\[4pt]
+		\text{High, unfavorable: } &\Pi_A = 640(36-27)-6800=-1040,\\
+		&\Pi_B = 500(50-27)-9200=2300,\\
+		&\Pi_C = 720(32-27)-5400=-1800.\\[4pt]
+		\text{Medium, favorable: } &\Pi_A = 480(36-19)-6800=1360,\\
+		&\Pi_B = 380(50-19)-9200=2580,\\
+		&\Pi_C = 540(32-19)-5400=1620.\\[4pt]
+		\text{Medium, unfavorable: } &\Pi_A = 480(36-27)-6800=-2480,\\
+		&\Pi_B = 380(50-27)-9200=-460,\\
+		&\Pi_C = 540(32-27)-5400=-2700.\\[4pt]
+		\text{Low, favorable: } &\Pi_A = 320(36-19)-6800=-1360,\\
+		&\Pi_B = 250(50-19)-9200=-1450,\\
+		&\Pi_C = 380(32-19)-5400=-460.\\[4pt]
+		\text{Low, unfavorable: } &\Pi_A = 320(36-27)-6800=-3920,\\
+		&\Pi_B = 250(50-27)-9200=-3450,\\
+		&\Pi_C = 380(32-27)-5400=-3500.
+		\end{aligned}
+		\]
+		Combined probabilities: $0.30\cdot 0.55=0.165$, $0.30\cdot 0.45=0.135$, $0.45\cdot 0.55=0.2475$, $0.45\cdot 0.45=0.2025$, $0.25\cdot 0.55=0.1375$, $0.25\cdot 0.45=0.1125$.
+		\begin{center}
+			\begin{tabular}{l c c c c}
+				\toprule
+				State of nature & Probability & Model A & Model B & Model C \\
+				\midrule
+				High demand, favorable cost & 0.165 & 4080 & 6300 & 3960 \\
+				High demand, unfavorable cost & 0.135 & -1040 & 2300 & -1800 \\
+				Medium demand, favorable cost & 0.2475 & 1360 & 2580 & 1620 \\
+				Medium demand, unfavorable cost & 0.2025 & -2480 & -460 & -2700 \\
+				Low demand, favorable cost & 0.1375 & -1360 & -1450 & -460 \\
+				Low demand, unfavorable cost & 0.1125 & -3920 & -3450 & -3500 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+
+		\subsection*{C4}
+		\[
+		\begin{aligned}
+		\max \text{Model A} &= 4080,\\
+		\max \text{Model B} &= 6300,\\
+		\max \text{Model C} &= 3960.
+		\end{aligned}
+		\]
+		The Maximax choice is Model B with 6300. The criterion is \emph{risky} because it focuses only on the best possible payoff and ignores how likely it is.
+
+		\subsection*{C5}
+		\[
+		\begin{aligned}
+		\min \text{Model A} &= -3920,\\
+		\min \text{Model B} &= -3450,\\
+		\min \text{Model C} &= -3500.
+		\end{aligned}
+		\]
+		The Maximin choice is Model B with $-3450$ because it has the least severe worst-case loss. This is \emph{safe} because it protects against the worst outcome.
+
+		\subsection*{C1}
+		Expected values use the combined-state probabilities.
+		\[
+		\begin{aligned}
+		EV_A &= 0.165(4080)+0.135(-1040)+0.2475(1360)+0.2025(-2480)+0.1375(-1360)+0.1125(-3920)\\
+		&= 673.2-140.4+336.6-502.2-187-441=-260.8,\\
+		EV_B &= 0.165(6300)+0.135(2300)+0.2475(2580)+0.2025(-460)+0.1375(-1450)+0.1125(-3450)\\
+		&= 1039.5+310.5+638.55-93.15-199.375-388.125=1307.9,\\
+		EV_C &= 0.165(3960)+0.135(-1800)+0.2475(1620)+0.2025(-2700)+0.1375(-460)+0.1125(-3500)\\
+		&= 653.4-243+400.95-546.75-63.25-393.75=-192.4.
+		\end{aligned}
+		\]
+		The expected value criterion chooses Model B because $1307.9$ is the largest expected profit. This aligns with both the Maximax and Maximin outcomes for Model B, so it is the best overall decision under uncertainty.
+
+		\item
+		\subsection*{C2}
+		Decision alternatives are the snack plans: Plan A (fresh-made items), Plan B (mixed menu), and Plan C (budget staples).
+		The states of nature are demand levels (high, medium, low) with probabilities $0.30$, $0.50$, and $0.20$.
+		Each outcome represents profit in hundreds of dollars after all costs.
+
+		\subsection*{C3}
+		Payoff = revenue $-$ cost, and the problem already provides the resulting profits for each plan and demand level.
+		\[
+		\begin{aligned}
+		\text{High demand: } &\Pi_A=88,\ \Pi_B=74,\ \Pi_C=60,\\
+		\text{Medium demand: } &\Pi_A=54,\ \Pi_B=66,\ \Pi_C=50,\\
+		\text{Low demand: } &\Pi_A=-6,\ \Pi_B=28,\ \Pi_C=36.
+		\end{aligned}
+		\]
+		\begin{center}
+			\begin{tabular}{l c c c c}
+				\toprule
+				State of nature & Probability & Plan A & Plan B & Plan C \\
+				\midrule
+				High demand & 0.30 & 88 & 74 & 60 \\
+				Medium demand & 0.50 & 54 & 66 & 50 \\
+				Low demand & 0.20 & -6 & 28 & 36 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+
+		\subsection*{C4}
+		\[
+		\begin{aligned}
+		\max \text{Plan A} &= 88,\\
+		\max \text{Plan B} &= 74,\\
+		\max \text{Plan C} &= 60.
+		\end{aligned}
+		\]
+		The Maximax choice is Plan A. It is \emph{risky} because it only considers the highest possible profit.
+
+		\subsection*{C5}
+		\[
+		\begin{aligned}
+		\min \text{Plan A} &= -6,\\
+		\min \text{Plan B} &= 28,\\
+		\min \text{Plan C} &= 36.
+		\end{aligned}
+		\]
+		The Maximin choice is Plan C with 36 because it gives the best worst-case outcome. It is \emph{safe} because it prioritizes the least harmful result.
+
+		\subsection*{C1}
+		\[
+		\begin{aligned}
+		EV_A &= 0.30(88)+0.50(54)+0.20(-6)=26.4+27-1.2=52.2,\\
+		EV_B &= 0.30(74)+0.50(66)+0.20(28)=22.2+33+5.6=60.8,\\
+		EV_C &= 0.30(60)+0.50(50)+0.20(36)=18+25+7.2=50.2.
+		\end{aligned}
+		\]
+		The expected value criterion chooses Plan B because $60.8$ is the largest expected profit. This differs from the Maximax choice (Plan A) and the Maximin choice (Plan C), so the expected value gives a balanced decision using the probabilities.
 	\end{ExamProblems}
 \end{document}
