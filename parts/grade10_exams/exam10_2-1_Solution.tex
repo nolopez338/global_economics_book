@@ -23,13 +23,6 @@
 
 		\subsection*{C3}
 		Payoff = revenue $-$ cost, and the problem already provides the resulting profits for each plan and demand level.
-		\[
-		\begin{aligned}
-		\text{High demand: } &\Pi_A=92,\ \Pi_B=70,\ \Pi_C=55,\\
-		\text{Medium demand: } &\Pi_A=50,\ \Pi_B=62,\ \Pi_C=48,\\
-		\text{Low demand: } &\Pi_A=-8,\ \Pi_B=30,\ \Pi_C=38.
-		\end{aligned}
-		\]
 		\begin{center}
 			\begin{tabular}{l c c c c}
 				\toprule
@@ -103,22 +96,6 @@
 		Payoff = revenue $-$ cost, where revenue is determined by demand and cost is determined by fuel prices.
 		\begin{center}
 			\begin{minipage}[t]{0.48\linewidth}
-				\textit{Cost parameters by strategy}
-				\begin{center}
-					\begin{tabular}{l c c}
-						\toprule
-						Strategy & Low cost & High cost \\
-						\midrule
-						Probabilities& 0.55 & 0.45 \\
-						Strategy A & 160 & 220 \\
-						Strategy B & 190 & 250 \\
-						Strategy C & 210 & 290 \\
-						\bottomrule
-					\end{tabular}
-				\end{center}
-			\end{minipage}
-			\hfill
-			\begin{minipage}[t]{0.48\linewidth}
 				\textit{Revenue parameters by strategy}
 				\begin{center}
 					\begin{tabular}{l c c c}
@@ -129,6 +106,22 @@
 						Strategy A & 420 & 320 & 210 \\
 						Strategy B & 380 & 300 & 230 \\
 						Strategy C & 340 & 270 & 220 \\
+						\bottomrule
+					\end{tabular}
+				\end{center}
+			\end{minipage}
+			\hfill
+			\begin{minipage}[t]{0.48\linewidth}
+				\textit{Cost parameters by strategy}
+				\begin{center}
+					\begin{tabular}{l c c}
+						\toprule
+						Strategy & Low cost & High cost \\
+						\midrule
+						Probabilities& 0.55 & 0.45 \\
+						Strategy A & 160 & 220 \\
+						Strategy B & 190 & 250 \\
+						Strategy C & 210 & 290 \\
 						\bottomrule
 					\end{tabular}
 				\end{center}
@@ -144,7 +137,7 @@
 				\midrule
 				Strong demand, low cost &
 				$\begin{array}{l}
-					0.3 0.55\\
+					0.3 \cdot 0.55\\
 					= 0.165
 				\end{array}$ &
 				$\begin{array}{l}
@@ -161,7 +154,7 @@
 				\end{array}$ \\
 				Strong demand, high cost &
 				$\begin{array}{l}
-					0.3 p(\text{High cost})\\
+					0.3 \cdot 0.45\\
 					= 0.135
 				\end{array}$ &
 				$\begin{array}{l}
@@ -178,7 +171,7 @@
 				\end{array}$ \\
 				Steady demand, low cost &
 				$\begin{array}{l}
-					p(\text{Steady})0.55\\
+					0.5 \cdot 0.55\\
 					= 0.275
 				\end{array}$ &
 				$\begin{array}{l}
@@ -195,7 +188,7 @@
 				\end{array}$ \\
 				Steady demand, high cost &
 				$\begin{array}{l}
-					p(\text{Steady})p(\text{High cost})\\
+					0.5 \cdot 0.55 \\
 					= 0.225
 				\end{array}$ &
 				$\begin{array}{l}
@@ -212,7 +205,7 @@
 				\end{array}$ \\
 				Weak demand, low cost &
 				$\begin{array}{l}
-					p(\text{Weak})0.55\\
+					0.2 \cdot 0.55\\
 					= 0.11
 				\end{array}$ &
 				$\begin{array}{l}
@@ -229,7 +222,7 @@
 				\end{array}$ \\
 				Weak demand, high cost &
 				$\begin{array}{l}
-					p(\text{Weak})p(\text{High cost})\\
+					0.2 \cdot 0.55\\
 					= 0.09
 				\end{array}$ &
 				$\begin{array}{l}
