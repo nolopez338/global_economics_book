@@ -15,7 +15,7 @@
 			\item Zone B sample (\(n_B = 3\)): 24, 26, 23.
 		\end{itemize}
 
-		An annual audit provides the population standard deviations for the zones: \(\sigma_A = 3.5\) and \(\sigma_B = 4.0\).
+		An annual audit provides the population standard deviation for this population: \(\sigma = 3.5\).
 		For classroom purposes, suppose the true population mean weekly subsidy for this population is \(\mu\).
 		Construct and interpret a 95\% confidence interval for the population mean weekly subsidy in each zone.
 
@@ -60,15 +60,15 @@
 		\]
 
 		\subsection*{C2}
-		The sample statistics are $\bar{x}_A = 19.5$, $s_A \approx 1.87$, $\bar{x}_B \approx 24.33$, and $s_B \approx 1.53$, while the population parameters are $\mu$, $\sigma_A = 3.5$, and $\sigma_B = 4.0$. Both samples come from the same population, so each sample provides an estimate for $\mu$.
+		The sample statistics are $\bar{x}_A = 19.5$, $s_A \approx 1.87$, $\bar{x}_B \approx 24.33$, and $s_B \approx 1.53$, while the population parameters are $\mu$ and $\sigma = 3.5$. Both samples come from the same population, so each sample provides an estimate for $\mu$.
 
 		\subsection*{C3}
 		A single point estimate can miss the true mean because of sampling variation. A confidence interval shows a range of plausible values for the mean $\mu$, which is more informative for planning.
 
 		\subsection*{C5}
-		With known $\sigma_A = 3.5$ and $n_A = 6$,
+		With known $\sigma = 3.5$ and $n_A = 6$,
 		\[
-		SE_A = \frac{\sigma_A}{\sqrt{n_A}}
+		SE_A = \frac{\sigma}{\sqrt{n_A}}
 		\]
 		\[
 		SE_A = \frac{3.5}{\sqrt{6}} \approx 1.43
@@ -86,28 +86,28 @@
 		\[
 		\mu \in 19.5 \pm 2.80 = [19.5 - 2.80, 19.5 + 2.80] = [16.70, 22.30]
 		\]
-		With known $\sigma_B = 4.0$ and $n_B = 3$,
+		With known $\sigma = 3.5$ and $n_B = 3$,
 		\[
-		SE_B = \frac{\sigma_B}{\sqrt{n_B}}
+		SE_B = \frac{\sigma}{\sqrt{n_B}}
 		\]
 		\[
-		SE_B = \frac{4.0}{\sqrt{3}} \approx 2.31
+		SE_B = \frac{3.5}{\sqrt{3}} \approx 2.02
 		\]
 		\[
 		E_B = z_{0.025} \cdot SE_B
 		\]
 		\[
-		E_B = 1.96(2.31) \approx 4.52
+		E_B = 1.96(2.02) \approx 3.96
 		\]
 		\[
 		\mu \in \bar{x}_B \pm E_B
 		\]
 		\[
-		\mu \in 24.33 \pm 4.52 = [24.33 - 4.52, 24.33 + 4.52] = [19.81, 28.85]
+		\mu \in 24.33 \pm 3.96 = [24.33 - 3.96, 24.33 + 3.96] = [20.37, 28.29]
 		\]
 
 		\subsection*{C4}
-		We are 95\% confident the true mean weekly subsidy in the population is between about 16.70 and 22.30 dollars based on Sample A, and 95\% confident it is between about 19.81 and 28.85 dollars based on Sample B. The intervals reflect uncertainty from different samples drawn from the same population.
+		We are 95\% confident the true mean weekly subsidy in the population is between about 16.70 and 22.30 dollars based on Sample A, and 95\% confident it is between about 20.37 and 28.29 dollars based on Sample B. The intervals reflect uncertainty from different samples drawn from the same population.
 
 		\item
 		\subsection*{Problem description}
