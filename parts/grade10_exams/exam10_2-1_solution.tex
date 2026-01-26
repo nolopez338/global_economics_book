@@ -283,7 +283,7 @@
 						\toprule
 						Model & Favorable & Unfavorable \\
 						\midrule
-						Model A & 18 & 26 \\
+						Model A & 12 & 25 \\
 						Model B & 18 & 26 \\
 						\bottomrule
 					\end{tabular}
@@ -297,8 +297,8 @@
 						\toprule
 						Model & High & Low \\
 						\midrule
-						Model A & 35 & 35 \\
-						Model B & 40 & 40 \\
+						Model A & 36 & 36 \\
+						Model B & 38 & 38 \\
 						\bottomrule
 					\end{tabular}
 				\end{center}
@@ -312,21 +312,21 @@
 				\midrule
 				High demand &
 				$\begin{array}{l}
-					620\cdot 35\\
-					= 21700
+					620\cdot 36\\
+					= 22320
 				\end{array}$ &
 				$\begin{array}{l}
-					700\cdot 40\\
-					= 28000
+					700\cdot 38\\
+					= 26600
 				\end{array}$ \\
 				Low demand &
 				$\begin{array}{l}
-					300\cdot 35\\
-					= 10500
+					300\cdot 36\\
+					= 10800
 				\end{array}$ &
 				$\begin{array}{l}
-					360\cdot 40\\
-					= 14400
+					360\cdot 38\\
+					= 13680
 				\end{array}$ \\
 				\bottomrule
 			\end{tabular}
@@ -339,8 +339,8 @@
 				\midrule
 				High demand, favorable cost &
 				$\begin{array}{l}
-					620\cdot 18\\
-					= 11160
+					620\cdot 12\\
+					= 7440
 				\end{array}$ &
 				$\begin{array}{l}
 					700\cdot 18\\
@@ -348,8 +348,8 @@
 				\end{array}$ \\
 				High demand, unfavorable cost &
 				$\begin{array}{l}
-					620\cdot 26\\
-					= 16120
+					620\cdot 25\\
+					= 15500
 				\end{array}$ &
 				$\begin{array}{l}
 					700\cdot 26\\
@@ -357,8 +357,8 @@
 				\end{array}$ \\
 				Low demand, favorable cost &
 				$\begin{array}{l}
-					300\cdot 18\\
-					= 5400
+					300\cdot 12\\
+					= 3600
 				\end{array}$ &
 				$\begin{array}{l}
 					360\cdot 18\\
@@ -366,8 +366,8 @@
 				\end{array}$ \\
 				Low demand, unfavorable cost &
 				$\begin{array}{l}
-					300\cdot 26\\
-					= 7800
+					300\cdot 25\\
+					= 7500
 				\end{array}$ &
 				$\begin{array}{l}
 					360\cdot 26\\
@@ -385,12 +385,12 @@
 				\midrule
 				High demand, favorable cost &
 				$\begin{array}{l}
-					21700 - 11160\\
-					= 10540
+					22320 - 7440\\
+					= 14880
 				\end{array}$ &
 				$\begin{array}{l}
-					28000 - 12600\\
-					= 15400
+					26600 - 12600\\
+					= 14000
 				\end{array}$ &
 				$\begin{array}{l}
 					0.50 \cdot 0.60\\
@@ -398,12 +398,12 @@
 				\end{array}$ \\
 				High demand, unfavorable cost &
 				$\begin{array}{l}
-					21700 - 16120\\
-					= 5580
+					22320 - 15500\\
+					= 6820
 				\end{array}$ &
 				$\begin{array}{l}
-					28000 - 18200\\
-					= 9800
+					26600 - 18200\\
+					= 8400
 				\end{array}$ &
 				$\begin{array}{l}
 					0.50 \cdot 0.40\\
@@ -411,12 +411,12 @@
 				\end{array}$ \\
 				Low demand, favorable cost &
 				$\begin{array}{l}
-					10500 - 5400\\
-					= 5100
+					10800 - 3600\\
+					= 7200
 				\end{array}$ &
 				$\begin{array}{l}
-					14400 - 6480\\
-					= 7920
+					13680 - 6480\\
+					= 7200
 				\end{array}$ &
 				$\begin{array}{l}
 					0.50 \cdot 0.60\\
@@ -424,12 +424,12 @@
 				\end{array}$ \\
 				Low demand, unfavorable cost &
 				$\begin{array}{l}
-					10500 - 7800\\
-					= 2700
+					10800 - 7500\\
+					= 3300
 				\end{array}$ &
 				$\begin{array}{l}
-					14400 - 9360\\
-					= 5040
+					13680 - 9360\\
+					= 4320
 				\end{array}$ &
 				$\begin{array}{l}
 					0.50 \cdot 0.40\\
@@ -444,10 +444,10 @@
 				\toprule
 				State of nature & Probability & Model A & Model B \\
 				\midrule
-				High demand, favorable cost & 0.30 & 10540 & 15400 \\
-				High demand, unfavorable cost & 0.20 & 5580 & 9800 \\
-				Low demand, favorable cost & 0.30 & 5100 & 7920 \\
-				Low demand, unfavorable cost & 0.20 & 2700 & 5040 \\
+				High demand, favorable cost & 0.30 & 14880 & 14000 \\
+				High demand, unfavorable cost & 0.20 & 6820 & 8400 \\
+				Low demand, favorable cost & 0.30 & 7200 & 7200 \\
+				Low demand, unfavorable cost & 0.20 & 3300 & 4320 \\
 				\bottomrule
 			\end{tabular}
 		\end{center}
@@ -455,41 +455,41 @@
 		\subsection*{C4}
 		\[
 		\begin{aligned}
-		\max(\text{Model A}) &= \max\{10540,5580,5100,2700\} = 10540,\\
-		\max(\text{Model B}) &= \max\{15400,9800,7920,5040\} = 15400.
+		\max(\text{Model A}) &= \max\{14880,6820,7200,3300\} = 14880,\\
+		\max(\text{Model B}) &= \max\{14000,8400,7200,4320\} = 14000.
 		\end{aligned}
 		\]
 		\[
 		\max\{\max(\text{Model A}), \max(\text{Model B})\}
-		= \max\{10540, 15400\}
-		= 15400.
+		= \max\{14880, 14000\}
+		= 14880.
 		\]
-		The Maximax choice is Model B with 15400. The criterion is \emph{risky} because it focuses only on the best possible payoff and ignores how likely it is.
+		The Maximax choice is Model A with 14880. The criterion is \emph{risky} because it focuses only on the best possible payoff and ignores how likely it is.
 
 		\subsection*{C5}
 		\[
 		\begin{aligned}
-		\min(\text{Model A}) &= \min\{10540,5580,5100,2700\} = 2700,\\
-		\min(\text{Model B}) &= \min\{15400,9800,7920,5040\} = 5040.
+		\min(\text{Model A}) &= \min\{14880,6820,7200,3300\} = 3300,\\
+		\min(\text{Model B}) &= \min\{14000,8400,7200,4320\} = 4320.
 		\end{aligned}
 		\]
 		\[
 		\max\{\min(\text{Model A}), \min(\text{Model B})\}
-		= \max\{2700, 5040\}
-		= 5040.
+		= \max\{3300, 4320\}
+		= 4320.
 		\]
-		The Maximin choice is Model B with 5040 because it has the least severe worst-case loss. This is \emph{safe} because it protects against the worst outcome.
+		The Maximin choice is Model B with 4320 because it has the least severe worst-case loss. This is \emph{safe} because it protects against the worst outcome.
 
 		\subsection*{C1}
 		Expected values use the combined-state probabilities.
 		\[
 		\begin{aligned}
-		EV_A &= 0.30(10540)+0.20(5580)+0.30(5100)+0.20(2700)\\
-		&= 3162+1116+1530+540=6348,\\
-		EV_B &= 0.30(15400)+0.20(9800)+0.30(7920)+0.20(5040)\\
-		&= 4620+1960+2376+1008=9964.
+		EV_A &= 0.30(14880)+0.20(6820)+0.30(7200)+0.20(3300)\\
+		&= 4464+1364+2160+660=8648,\\
+		EV_B &= 0.30(14000)+0.20(8400)+0.30(7200)+0.20(4320)\\
+		&= 4200+1680+2160+864=8904.
 		\end{aligned}
 		\]
-		The expected value criterion chooses Model B because 9964 is the largest expected profit. This aligns with both the Maximax and Maximin outcomes for Model B, so it is the best overall decision under uncertainty.
+		The expected value criterion chooses Model B because 8904 is the largest expected profit. This differs from the Maximax choice Model A and agrees with the Maximin choice Model B, so the expected value balances payoffs and probabilities.
 	\end{ExamProblems}
 \end{document}
