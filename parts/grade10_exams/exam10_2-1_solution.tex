@@ -80,7 +80,7 @@
 		\item
 		\subsection*{Problem description}
 		A delivery cooperative is choosing a fleet strategy for the next season, Strategy A (electric vans)
-		or Strategy B (hybrid vans). Demand for deliveries can be strong or weak, and fuel costs can be low or high. The cooperative estimates the demand probabilities as $0.60$ (strong) and $0.40$ (weak). Fuel costs are independent of demand, with probabilities $0.55$ (low) and $0.45$ (high). Revenue, in thousands of dollars, depends on the demand level and strategy. Under strong demand, revenue is 420 for Strategy A and 380 for Strategy B. Under weak demand, revenue is 210 for Strategy A and 230 for Strategy B. Operating costs, in thousands of dollars, depend on the fuel cost level and strategy. If fuel costs are low, operating costs are 160 for Strategy A and 190 for Strategy B. If fuel costs are high, operating costs are 220 for Strategy A and 250 for Strategy B. The cooperative should treat each combined demand and fuel-cost outcome as a state of nature and use the stated probabilities to compute expected profits.
+		or Strategy B (hybrid vans). Demand for deliveries can be strong or weak, and fuel costs can be low or high. The cooperative estimates the demand probabilities as $0.60$ (strong) and $0.40$ (weak). Fuel costs are independent of demand, with probabilities $0.55$ (low) and $0.45$ (high). Revenue, in thousands of dollars, depends on the demand level and strategy. Under strong demand, revenue is 420 for Strategy A and 460 for Strategy B. Under weak demand, revenue is 210 for Strategy A and 230 for Strategy B. Operating costs, in thousands of dollars, depend on the fuel cost level and strategy. If fuel costs are low, operating costs are 160 for Strategy A and 190 for Strategy B. If fuel costs are high, operating costs are 220 for Strategy A and 250 for Strategy B. The cooperative should treat each combined demand and fuel-cost outcome as a state of nature and use the stated probabilities to compute expected profits.
 
 		\subsection*{C2}
 		\begin{center}
@@ -106,7 +106,7 @@
 						\midrule
 						Probabilities & 0.60 & 0.40 \\
 						Strategy A & 420 & 210 \\
-						Strategy B & 380 & 230 \\
+						Strategy B & 460 & 230 \\
 						\bottomrule
 					\end{tabular}
 				\end{center}
@@ -145,8 +145,8 @@
 					= 260
 				\end{array}$ &
 				$\begin{array}{l}
-					380 - 190\\
-					= 190
+					460 - 190\\
+					= 270
 				\end{array}$ \\
 				Strong demand, high cost &
 				$\begin{array}{l}
@@ -158,8 +158,8 @@
 					= 200
 				\end{array}$ &
 				$\begin{array}{l}
-					380 - 250\\
-					= 130
+					460 - 250\\
+					= 210
 				\end{array}$ \\
 				Weak demand, low cost &
 				$\begin{array}{l}
@@ -196,8 +196,8 @@
 				\toprule
 				State of nature & Probability & Strategy A & Strategy B \\
 				\midrule
-				Strong demand, low cost & 0.33 & 260 & 190 \\
-				Strong demand, high cost & 0.27 & 200 & 130 \\
+				Strong demand, low cost & 0.33 & 260 & 270 \\
+				Strong demand, high cost & 0.27 & 200 & 210 \\
 				Weak demand, low cost & 0.22 & 50 & 40 \\
 				Weak demand, high cost & 0.18 & -10 & -20 \\
 				\bottomrule
@@ -208,21 +208,21 @@
 		\[
 		\begin{aligned}
 		\max(\text{Strategy A}) &= \max\{260,200,50,-10\} = 260,\\
-		\max(\text{Strategy B}) &= \max\{190,130,40,-20\} = 190.
+		\max(\text{Strategy B}) &= \max\{270,210,40,-20\} = 270.
 		\end{aligned}
 		\]
 		\[
 		\max\{\max(\text{Strategy A}), \max(\text{Strategy B})\}
-		= \max\{260, 190\}
-		= 260.
+		= \max\{260, 270\}
+		= 270.
 		\]
-		The Maximax choice is Strategy A. The criterion is \emph{risky} because it focuses only on the best possible payoff and ignores how likely it is.
+		The Maximax choice is Strategy B. The criterion is \emph{risky} because it focuses only on the best possible payoff and ignores how likely it is.
 
 		\subsection*{C5}
 		\[
 		\begin{aligned}
 		\min(\text{Strategy A}) &= \min\{260,200,50,-10\} = -10,\\
-		\min(\text{Strategy B}) &= \min\{190,130,40,-20\} = -20.
+		\min(\text{Strategy B}) &= \min\{270,210,40,-20\} = -20.
 		\end{aligned}
 		\]
 		\[
@@ -238,16 +238,16 @@
 		\begin{aligned}
 		EV_A &= 0.33(260)+0.27(200)+0.22(50)+0.18(-10)\\
 		&= 85.8+54+11-1.8=149.0,\\
-		EV_B &= 0.33(190)+0.27(130)+0.22(40)+0.18(-20)\\
-		&= 62.7+35.1+8.8-3.6=103.0.
+		EV_B &= 0.33(270)+0.27(210)+0.22(40)+0.18(-20)\\
+		&= 89.1+56.7+8.8-3.6=151.0.
 		\end{aligned}
 		\]
-		The expected value criterion chooses Strategy A because $149.0$ is the largest expected profit. This aligns with both the Maximax and Maximin outcomes for Strategy A, so it is the best overall decision under uncertainty.
+		The expected value criterion chooses Strategy B because $151.0$ is the largest expected profit. This matches the Maximax choice and differs from the Maximin choice, so the expected value emphasizes the weighted outcomes.
 
 		\item
 		\subsection*{Problem description}
 		A community sports center must choose a membership model for the next year, Model A (standard monthly pass)
-		or Model B (flex pass). Demand for memberships can be high or low, and staffing costs can be favorable or unfavorable. Demand probabilities are $0.50$ (high) and $0.50$ (low). Staffing costs are independent of demand, with probabilities $0.60$ (favorable) and $0.40$ (unfavorable). Expected membership counts depend on demand and model. Under high demand the center expects 620 members with Model A and 700 with Model B. Under low demand it expects 300 with Model A and 360 with Model B. Membership fees are $35$ for Model A and $30$ for Model B per member per year. Variable staffing cost per member is $18$ when costs are favorable and $26$ when costs are unfavorable. All monetary amounts in this point can be treated in dollars. Use the combined demand and staffing outcomes as states of nature and the stated probabilities to compute expected profits.
+		or Model B (flex pass). Demand for memberships can be high or low, and staffing costs can be favorable or unfavorable. Demand probabilities are $0.50$ (high) and $0.50$ (low). Staffing costs are independent of demand, with probabilities $0.60$ (favorable) and $0.40$ (unfavorable). Expected membership counts depend on demand and model. Under high demand the center expects 620 members with Model A and 700 with Model B. Under low demand it expects 300 with Model A and 360 with Model B. Membership fees are $35$ for Model A and $40$ for Model B per member per year. Variable staffing cost per member is $18$ when costs are favorable and $26$ when costs are unfavorable. All monetary amounts in this point can be treated in dollars. Use the combined demand and staffing outcomes as states of nature and the stated probabilities to compute expected profits.
 
 		\subsection*{C2}
 		\begin{center}
@@ -298,7 +298,7 @@
 						Model & High & Low \\
 						\midrule
 						Model A & 35 & 35 \\
-						Model B & 30 & 30 \\
+						Model B & 40 & 40 \\
 						\bottomrule
 					\end{tabular}
 				\end{center}
@@ -316,8 +316,8 @@
 					= 21700
 				\end{array}$ &
 				$\begin{array}{l}
-					700\cdot 30\\
-					= 21000
+					700\cdot 40\\
+					= 28000
 				\end{array}$ \\
 				Low demand &
 				$\begin{array}{l}
@@ -325,8 +325,8 @@
 					= 10500
 				\end{array}$ &
 				$\begin{array}{l}
-					360\cdot 30\\
-					= 10800
+					360\cdot 40\\
+					= 14400
 				\end{array}$ \\
 				\bottomrule
 			\end{tabular}
@@ -389,8 +389,8 @@
 					= 10540
 				\end{array}$ &
 				$\begin{array}{l}
-					21000 - 12600\\
-					= 8400
+					28000 - 12600\\
+					= 15400
 				\end{array}$ &
 				$\begin{array}{l}
 					0.50 \cdot 0.60\\
@@ -402,8 +402,8 @@
 					= 5580
 				\end{array}$ &
 				$\begin{array}{l}
-					21000 - 18200\\
-					= 2800
+					28000 - 18200\\
+					= 9800
 				\end{array}$ &
 				$\begin{array}{l}
 					0.50 \cdot 0.40\\
@@ -415,8 +415,8 @@
 					= 5100
 				\end{array}$ &
 				$\begin{array}{l}
-					10800 - 6480\\
-					= 4320
+					14400 - 6480\\
+					= 7920
 				\end{array}$ &
 				$\begin{array}{l}
 					0.50 \cdot 0.60\\
@@ -428,8 +428,8 @@
 					= 2700
 				\end{array}$ &
 				$\begin{array}{l}
-					10800 - 9360\\
-					= 1440
+					14400 - 9360\\
+					= 5040
 				\end{array}$ &
 				$\begin{array}{l}
 					0.50 \cdot 0.40\\
@@ -444,10 +444,10 @@
 				\toprule
 				State of nature & Probability & Model A & Model B \\
 				\midrule
-				High demand, favorable cost & 0.30 & 10540 & 8400 \\
-				High demand, unfavorable cost & 0.20 & 5580 & 2800 \\
-				Low demand, favorable cost & 0.30 & 5100 & 4320 \\
-				Low demand, unfavorable cost & 0.20 & 2700 & 1440 \\
+				High demand, favorable cost & 0.30 & 10540 & 15400 \\
+				High demand, unfavorable cost & 0.20 & 5580 & 9800 \\
+				Low demand, favorable cost & 0.30 & 5100 & 7920 \\
+				Low demand, unfavorable cost & 0.20 & 2700 & 5040 \\
 				\bottomrule
 			\end{tabular}
 		\end{center}
@@ -456,29 +456,29 @@
 		\[
 		\begin{aligned}
 		\max(\text{Model A}) &= \max\{10540,5580,5100,2700\} = 10540,\\
-		\max(\text{Model B}) &= \max\{8400,2800,4320,1440\} = 8400.
+		\max(\text{Model B}) &= \max\{15400,9800,7920,5040\} = 15400.
 		\end{aligned}
 		\]
 		\[
 		\max\{\max(\text{Model A}), \max(\text{Model B})\}
-		= \max\{10540, 8400\}
-		= 10540.
+		= \max\{10540, 15400\}
+		= 15400.
 		\]
-		The Maximax choice is Model A with 10540. The criterion is \emph{risky} because it focuses only on the best possible payoff and ignores how likely it is.
+		The Maximax choice is Model B with 15400. The criterion is \emph{risky} because it focuses only on the best possible payoff and ignores how likely it is.
 
 		\subsection*{C5}
 		\[
 		\begin{aligned}
 		\min(\text{Model A}) &= \min\{10540,5580,5100,2700\} = 2700,\\
-		\min(\text{Model B}) &= \min\{8400,2800,4320,1440\} = 1440.
+		\min(\text{Model B}) &= \min\{15400,9800,7920,5040\} = 5040.
 		\end{aligned}
 		\]
 		\[
 		\max\{\min(\text{Model A}), \min(\text{Model B})\}
-		= \max\{2700, 1440\}
-		= 2700.
+		= \max\{2700, 5040\}
+		= 5040.
 		\]
-		The Maximin choice is Model A with 2700 because it has the least severe worst-case loss. This is \emph{safe} because it protects against the worst outcome.
+		The Maximin choice is Model B with 5040 because it has the least severe worst-case loss. This is \emph{safe} because it protects against the worst outcome.
 
 		\subsection*{C1}
 		Expected values use the combined-state probabilities.
@@ -486,10 +486,10 @@
 		\begin{aligned}
 		EV_A &= 0.30(10540)+0.20(5580)+0.30(5100)+0.20(2700)\\
 		&= 3162+1116+1530+540=6348,\\
-		EV_B &= 0.30(8400)+0.20(2800)+0.30(4320)+0.20(1440)\\
-		&= 2520+560+1296+288=4664.
+		EV_B &= 0.30(15400)+0.20(9800)+0.30(7920)+0.20(5040)\\
+		&= 4620+1960+2376+1008=9964.
 		\end{aligned}
 		\]
-		The expected value criterion chooses Model A because 6348 is the largest expected profit. This aligns with both the Maximax and Maximin outcomes for Model A, so it is the best overall decision under uncertainty.
+		The expected value criterion chooses Model B because 9964 is the largest expected profit. This aligns with both the Maximax and Maximin outcomes for Model B, so it is the best overall decision under uncertainty.
 	\end{ExamProblems}
 \end{document}
