@@ -16,7 +16,7 @@
 		\end{itemize}
 
 		An annual audit provides the population standard deviation for this population: \(\sigma = 3.5\).
-		For classroom purposes, suppose the true population mean weekly subsidy for this population is \(\mu\).
+		For classroom purposes, suppose the true population mean weekly subsidy for this population is \(\mu = 21\).
 		Construct and interpret a 95\% confidence interval for the population mean weekly subsidy in each zone.
 
 		\subsection*{C1}
@@ -60,10 +60,10 @@
 		\]
 
 		\subsection*{C2}
-		The sample statistics are $\bar{x}_A = 19.5$, $s_A \approx 1.87$, $\bar{x}_B \approx 24.33$, and $s_B \approx 1.53$, while the population parameters are $\mu$ and $\sigma = 3.5$. Both samples come from the same population, so each sample provides an estimate for $\mu$.
+		The population parameters are $\mu = 21$ and $\sigma = 3.5$, while the sample statistics are $\bar{x}_A = 19.5$, $s_A \approx 1.87$, $\bar{x}_B \approx 24.33$, and $s_B \approx 1.53$. The values $\bar{x}_A$ and $\bar{x}_B$ estimate the population mean $\mu$, and $s_A$ and $s_B$ estimate the spread even though $\sigma$ is known for this exercise. This comparison shows that statistical inference relies on sample statistics when population values are unknown or only partially known.
 
 		\subsection*{C3}
-		A single point estimate can miss the true mean because of sampling variation. A confidence interval shows a range of plausible values for the mean $\mu$, which is more informative for planning.
+		A single point estimate can miss the true mean because of sampling variability in the weekly subsidy amounts. A confidence interval is preferred because it accounts for that uncertainty and gives a range of plausible values for $\mu$. For budgeting in the two zones, a range of plausible means is more informative than one value when setting subsidy policies.
 
 		\subsection*{C5}
 		With known $\sigma = 3.5$ and $n_A = 6$,
@@ -107,7 +107,7 @@
 		\]
 
 		\subsection*{C4}
-		We are 95\% confident the true mean weekly subsidy in the population is between about 16.70 and 22.30 dollars based on Sample A, and 95\% confident it is between about 20.37 and 28.29 dollars based on Sample B. The intervals reflect uncertainty from different samples drawn from the same population.
+		We are 95\% confident the true mean weekly subsidy in the population is between about 16.70 and 22.30 dollars based on Sample A, and 95\% confident it is between about 20.37 and 28.29 dollars based on Sample B. The confidence level means that in repeated sampling about 95\% of the resulting intervals would capture $\mu$, and it does not mean there is a 95\% chance that $\mu$ lies in one specific interval. Since the classroom value $\mu = 21$ falls in both intervals, the samples support that value as plausible. Decision makers can also compare each interval with a target subsidy, such as checking whether values above 23 dollars appear plausible, to evaluate budgeting claims.
 
 		\item
 		\subsection*{Problem description}
@@ -152,10 +152,10 @@
 		\]
 
 		\subsection*{C2}
-		The sample statistics are $\bar{x} \approx 20.37$ and $s \approx 3.85$, while the population parameters are $\mu$ and $\sigma = 6.2$. The sample values estimate the population values.
+		The population parameters are $\mu$ and $\sigma = 6.2$, while the sample statistics are $\bar{x} \approx 20.37$ and $s \approx 3.85$. The sample mean $\bar{x}$ estimates the population mean $\mu$, and the sample standard deviation $s$ estimates $\sigma$ even though $\sigma$ is known here. This comparison shows that inference for the mean depends on sample statistics when the population mean is not directly observed.
 
 		\subsection*{C3}
-		The sample summarizes only 54 hours, so the true mean could differ from the point estimate. A confidence interval expresses the likely range for $\mu$ based on the data.
+		The sample summarizes only 54 hours, so the true mean could differ from the point estimate because of sampling variability. An interval estimate is preferred because it captures that uncertainty and provides a range of plausible values for $\mu$. In staffing decisions, a plausible range for the order rate is more useful than a single number.
 
 		\subsection*{C5}
 		With known $\sigma = 6.2$ and $n=54$,
@@ -193,7 +193,7 @@
 		\]
 
 		\subsection*{C4}
-		We are 90\% confident the true mean orders processed per hour is between about 18.98 and 21.76 orders, and 98\% confident it is between about 18.41 and 22.33 orders. The intervals show the range supported by the sample and known standard deviation.
+		We are 90\% confident the true mean orders processed per hour is between about 18.98 and 21.76 orders, and 98\% confident it is between about 18.41 and 22.33 orders. The confidence level means that in repeated sampling about 90\% or 98\% of such intervals would contain $\mu$, and it does not mean there is a 90\% or 98\% chance that $\mu$ lies in this one interval. Decision makers can compare the intervals with a staffing benchmark such as 22 orders per hour to judge whether the data support a claim about typical performance.
 
 		\item
 		\subsection*{Problem description}
@@ -237,10 +237,10 @@
 		\]
 
 		\subsection*{C2}
-		The sample statistics are $\bar{x} \approx 31.91$ and $s \approx 4.02$, while the population parameters are $\mu$ and $\sigma = 5.8$. The sample values estimate the population values, and $\mu$ remains unknown.
+		The population parameters are $\mu$ and $\sigma = 5.8$, while the sample statistics are $\bar{x} \approx 31.91$ and $s \approx 4.02$. The sample mean $\bar{x}$ estimates the population mean $\mu$, and the sample standard deviation $s$ estimates $\sigma$ even though $\sigma$ is given. This comparison shows that we still rely on sample statistics to infer $\mu$ when the population mean is unknown.
 
 		\subsection*{C3}
-		Even with 55 observations, a point estimate does not show how much the mean could vary. A confidence interval summarizes that uncertainty by giving a plausible range for $\mu$.
+		Even with 55 observations, a point estimate does not show how much the mean could vary because of sampling variability. An interval estimate is preferred because it summarizes that uncertainty by giving a plausible range for $\mu$. For planning port operations, a range of likely loading times is more informative than a single value.
 
 		\subsection*{C5}
 		With known $\sigma = 5.8$ and $n=55$,
@@ -265,6 +265,6 @@
 		\]
 
 		\subsection*{C4}
-		We are 95\% confident the true mean loading time is between about 30.38 and 33.44 minutes. The interval provides a plausible range for the population mean based on the sample.
+		We are 95\% confident the true mean loading time is between about 30.38 and 33.44 minutes. The confidence level means that in repeated sampling about 95\% of such intervals would contain $\mu$, and it does not mean there is a 95\% chance that $\mu$ lies in this one interval. Managers can compare this interval with a performance threshold such as 32 minutes to decide whether current loading times meet goals or whether a claim about faster loading is plausible.
 	\end{ExamProblems}
 \end{document}
