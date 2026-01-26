@@ -114,7 +114,7 @@
 		A regional warehouse studies the number of orders processed per hour to plan staffing.
 		A random sample of 54 hours is summarized in grouped form below. The operations team also reports a known population standard deviation of \(\sigma = 6.2\) orders per hour.
 		For academic purposes only, assume the true population mean order rate is \(\mu = 22\) orders per hour.
-		The grouped data pairs (orders per hour, frequency) are \(14 \rightarrow 8\), \(18 \rightarrow 16\), \(22 \rightarrow 20\), and \(26 \rightarrow 10\).
+		The grouped data pairs list orders per hour first and the frequency (number of hours) second: \(14 \rightarrow 8\), \(18 \rightarrow 16\), \(22 \rightarrow 20\), and \(26 \rightarrow 10\).
 		Construct and interpret a 90\% confidence interval and a 98\% confidence interval for the population mean orders per hour.
 
 		\subsection*{C1}
@@ -198,8 +198,8 @@
 		\item
 		\subsection*{Problem description}
 		A logistics firm monitors the time (in minutes) required to load containers at a port.
-		A sample of 67 loading times is grouped into class intervals below. The firm has a historical estimate of the population standard deviation, \(\sigma = 5.8\) minutes.
-		The grouped intervals and frequencies are 20--24 minutes (12), 25--29 minutes (18), 30--34 minutes (20), and 35--39 minutes (17).
+		A sample of 55 loading times is grouped into class intervals below. The firm has a historical estimate of the population standard deviation, \(\sigma = 5.8\) minutes.
+		The grouped intervals and frequencies are 25--29 minutes (18), 30--34 minutes (20), and 35--39 minutes (17).
 		Construct and interpret a 95\% confidence interval for the population mean loading time.
 
 		\subsection*{C1}
@@ -211,60 +211,60 @@
 		n = \sum f
 		\]
 		\[
-		n = 12 + 18 + 20 + 17 = 67
+		n = 18 + 20 + 17 = 55
 		\]
 		\[
-		\sum f x = 12(22) + 18(27) + 20(32) + 17(37) = 2019
+		\sum f x = 18(27) + 20(32) + 17(37) = 1755
 		\]
 		\[
-		\bar{x} = \frac{2019}{67} \approx 30.13
+		\bar{x} = \frac{1755}{55} \approx 31.91
 		\]
 		Second, we calculate the sample standard deviation $s$.
 		\[
 		s^2 = \frac{\sum f(x-\bar{x})^2}{n-1}
 		\]
 		\[
-		\sum f(x-\bar{x})^2 \approx 12(22-30.13)^2 + 18(27-30.13)^2 + 20(32-30.13)^2 + 17(37-30.13)^2
+		\sum f(x-\bar{x})^2 \approx 18(27-31.91)^2 + 20(32-31.91)^2 + 17(37-31.91)^2
 		\]
 		\[
-		\sum f(x-\bar{x})^2 \approx 1841.79
+		\sum f(x-\bar{x})^2 \approx 874.55
 		\]
 		\[
 		s = \sqrt{\frac{\sum f(x-\bar{x})^2}{n-1}}
 		\]
 		\[
-		s = \sqrt{\frac{1841.79}{67-1}} \approx 5.28
+		s = \sqrt{\frac{874.55}{55-1}} \approx 4.02
 		\]
 
 		\subsection*{C2}
-		The sample statistics are $\bar{x} \approx 30.13$ and $s \approx 5.28$, while the population parameters are $\mu$ and $\sigma = 5.8$. The sample values estimate the population values, and $\mu$ remains unknown.
+		The sample statistics are $\bar{x} \approx 31.91$ and $s \approx 4.02$, while the population parameters are $\mu$ and $\sigma = 5.8$. The sample values estimate the population values, and $\mu$ remains unknown.
 
 		\subsection*{C3}
-		Even with 67 observations, a point estimate does not show how much the mean could vary. A confidence interval summarizes that uncertainty by giving a plausible range for $\mu$.
+		Even with 55 observations, a point estimate does not show how much the mean could vary. A confidence interval summarizes that uncertainty by giving a plausible range for $\mu$.
 
 		\subsection*{C5}
-		With known $\sigma = 5.8$ and $n=67$,
+		With known $\sigma = 5.8$ and $n=55$,
 		\[
 		SE = \frac{\sigma}{\sqrt{n}}
 		\]
 		\[
-		SE = \frac{5.8}{\sqrt{67}} \approx 0.71
+		SE = \frac{5.8}{\sqrt{55}} \approx 0.78
 		\]
 		For 95\% confidence, $z_{0.025}=1.96$.
 		\[
 		E = z_{0.025} \cdot SE
 		\]
 		\[
-		E = 1.96(0.71) \approx 1.39
+		E = 1.96(0.78) \approx 1.53
 		\]
 		\[
 		\mu \in \bar{x} \pm E
 		\]
 		\[
-		\mu \in 30.13 \pm 1.39 = [30.13 - 1.39, 30.13 + 1.39] = [28.74, 31.52]
+		\mu \in 31.91 \pm 1.53 = [31.91 - 1.53, 31.91 + 1.53] = [30.38, 33.44]
 		\]
 
 		\subsection*{C4}
-		We are 95\% confident the true mean loading time is between about 28.74 and 31.52 minutes. The interval provides a plausible range for the population mean based on the sample.
+		We are 95\% confident the true mean loading time is between about 30.38 and 33.44 minutes. The interval provides a plausible range for the population mean based on the sample.
 	\end{ExamProblems}
 \end{document}
