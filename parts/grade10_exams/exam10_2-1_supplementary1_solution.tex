@@ -6,7 +6,7 @@
 	\begin{ExamProblems}
 		\item
 		\subsection*{Problem description}
-		A weekend coffee cart must choose a service plan for a street market. Plan A is a specialty menu and Plan B is a classic menu. Customer turnout can be high or low with probabilities $0.55$ and $0.45$. Expected orders are 180 for Plan A and 150 for Plan B under high turnout, and 90 for Plan A and 80 for Plan B under low turnout. The selling price per order is $8$ for Plan A and $6$ for Plan B. Variable cost per order is $3$ for Plan A and $2$ for Plan B, and fixed costs are $200$ for Plan A and $120$ for Plan B. Which decision is the risky choice under Maximax, the safe choice under Maximin, and the balanced choice under Expected Value?
+		A weekend coffee cart must choose a service plan for a street market. Plan A is a specialty menu and Plan B is a classic menu. Customer turnout can be high or low with probabilities $0.55$ and $0.45$. Profit outcomes are given directly: under high turnout Plan A earns $700$ and Plan B earns $480$, and under low turnout Plan A earns $250$ and Plan B earns $200$. Which decision is the risky choice under Maximax, the safe choice under Maximin, and the balanced choice under Expected Value?
 
 		\subsection*{C2}
 		\begin{center}
@@ -21,125 +21,14 @@
 		\end{center}
 
 		\subsection*{C3}
-		Payoff = revenue $-$ cost, where revenue = (orders $\times$ price) and cost = (orders $\times$ variable cost) $+$ fixed cost.
-		\begin{center}
-			\textit{Orders by plan and turnout} \\
-			\begin{tabular}{l c c}
-				\toprule
-				Plan & High turnout & Low turnout \\
-				\midrule
-				Plan A & 180 & 90 \\
-				Plan B & 150 & 80 \\
-				\bottomrule
-		\end{tabular}
-		\end{center}
-		\begin{center}
-			\begin{minipage}[t]{0.48\linewidth}
-				\textit{Price parameters by plan}
-				\begin{center}
-					\begin{tabular}{l c}
-						\toprule
-						Plan & Price per order \\
-						\midrule
-						Plan A & 8 \\
-						Plan B & 6 \\
-						\bottomrule
-					\end{tabular}
-				\end{center}
-			\end{minipage}
-			\hfill
-			\begin{minipage}[t]{0.48\linewidth}
-				\textit{Cost parameters by plan}
-				\begin{center}
-					\begin{tabular}{l c c}
-						\toprule
-						Plan & Variable cost & Fixed cost \\
-						\midrule
-						Plan A & 3 & 200 \\
-						Plan B & 2 & 120 \\
-						\bottomrule
-					\end{tabular}
-				\end{center}
-			\end{minipage}
-		\end{center}
-		\begin{center}
-			\textit{Revenue by turnout} \\
-			\begin{tabular}{l c c}
-				\toprule
-				State of nature & Plan A revenue & Plan B revenue \\
-				\midrule
-				High turnout &
-				$\begin{array}{l}
-					180\cdot 8\\
-					= 1440
-				\end{array}$ &
-				$\begin{array}{l}
-					150\cdot 6\\
-					= 900
-				\end{array}$ \\
-				Low turnout &
-				$\begin{array}{l}
-					90\cdot 8\\
-					= 720
-				\end{array}$ &
-				$\begin{array}{l}
-					80\cdot 6\\
-					= 480
-				\end{array}$ \\
-				\bottomrule
-		\end{tabular}
-		\end{center}
-		\begin{center}
-			\textit{Cost by turnout} \\
-			\begin{tabular}{l c c}
-				\toprule
-				State of nature & Plan A cost & Plan B cost \\
-				\midrule
-				High turnout &
-				$\begin{array}{l}
-					180\cdot 3 + 200\\
-					= 740
-				\end{array}$ &
-				$\begin{array}{l}
-					150\cdot 2 + 120\\
-					= 420
-				\end{array}$ \\
-				Low turnout &
-				$\begin{array}{l}
-					90\cdot 3 + 200\\
-					= 470
-				\end{array}$ &
-				$\begin{array}{l}
-					80\cdot 2 + 120\\
-					= 280
-				\end{array}$ \\
-				\bottomrule
-		\end{tabular}
-		\end{center}
-		Profit is computed as Revenue minus Cost for each alternative and state.
+		Payoff is the profit in dollars given for each alternative and state.
 		\begin{center}
 			\begin{tabular}{l c c c}
 				\toprule
 				State of nature & Probability & Plan A & Plan B \\
 				\midrule
-				High turnout & 0.55 &
-				$\begin{array}{l}
-					1440 - 740\\
-					= 700
-				\end{array}$ &
-				$\begin{array}{l}
-					900 - 420\\
-					= 480
-				\end{array}$ \\
-				Low turnout & 0.45 &
-				$\begin{array}{l}
-					720 - 470\\
-					= 250
-				\end{array}$ &
-				$\begin{array}{l}
-					480 - 280\\
-					= 200
-				\end{array}$ \\
+				High turnout & 0.55 & 700 & 480 \\
+				Low turnout & 0.45 & 250 & 200 \\
 				\bottomrule
 		\end{tabular}
 		\end{center}
@@ -183,7 +72,7 @@
 
 		\item
 		\subsection*{Problem description}
-		A campus bookstore must choose a stocking plan for a semester. Plan A is premium notebooks, Plan B is standard notebooks, and Plan C is discount notebooks. Demand for notebooks can be strong, moderate, or weak with probabilities $0.35$, $0.45$, and $0.20$. Expected unit sales depend on demand and plan. Under strong demand Plan A sells 420 units, Plan B sells 520 units, and Plan C sells 600 units. Under moderate demand Plan A sells 300 units, Plan B sells 380 units, and Plan C sells 450 units. Under weak demand Plan A sells 180 units, Plan B sells 240 units, and Plan C sells 300 units. Unit prices are $22$, $18$, and $15$ for Plans A, B, and C. Variable costs per unit are $10$, $8$, and $6$, and fixed costs are $1500$, $1200$, and $900$. Which decision is the risky choice under Maximax, the safe choice under Maximin, and the balanced choice under Expected Value?
+		A campus bookstore must choose a stocking plan for a semester. Plan A is premium notebooks, Plan B is standard notebooks, and Plan C is discount notebooks. Demand for notebooks can be strong, moderate, or weak with probabilities $0.35$, $0.45$, and $0.20$. Expected unit sales depend on demand and plan. Under strong demand Plan A sells 420 units, Plan B sells 520 units, and Plan C sells 600 units. Under moderate demand Plan A sells 300 units, Plan B sells 380 units, and Plan C sells 450 units. Under weak demand Plan A sells 180 units, Plan B sells 240 units, and Plan C sells 300 units. Unit prices are $22$, $18$, and $15$ for Plans A, B, and C. Variable costs per unit are $10$, $8$, and $6$, and fixed costs are $1500$, $1200$, and $900$. Use these parameters to calculate the profit payoff table. Which decision is the risky choice under Maximax, the safe choice under Maximin, and the balanced choice under Expected Value?
 
 		\subsection*{C2}
 		\begin{center}
@@ -817,14 +706,14 @@
 
 		\item
 		\subsection*{Problem description}
-		A community fitness hub must choose a membership model for the next year. Model A is a weekday focus, Model B is a family pass, and Model C is an evening pass. Demand can be very high, high, medium, or low with probabilities $0.20$, $0.30$, $0.30$, and $0.20$. Staffing costs can be favorable or unfavorable with probabilities $0.55$ and $0.45$, and these costs are independent of demand. Expected membership counts depend on demand and model. Under very high demand Model A has 820 members, Model B has 760 members, and Model C has 900 members. Under high demand Model A has 700 members, Model B has 650 members, and Model C has 760 members. Under medium demand Model A has 520 members, Model B has 480 members, and Model C has 600 members. Under low demand Model A has 360 members, Model B has 320 members, and Model C has 420 members. Membership fees are $38$ for Model A, $42$ for Model B, and $34$ for Model C per member per year. Variable staffing cost per member is $20$ when costs are favorable and $28$ when costs are unfavorable. Fixed annual costs are $8200$ for Model A, $9600$ for Model B, and $7000$ for Model C. Which decision is the risky choice under Maximax, the safe choice under Maximin, and the balanced choice under Expected Value?
+		A community fitness hub must choose a membership model for the next year. Model A is a weekday focus, Model B is a family pass, and Model C is an evening pass. Demand can be high, medium, or low with probabilities $0.40$, $0.35$, and $0.25$. Staffing costs can be favorable or unfavorable with probabilities $0.55$ and $0.45$, and these costs are independent of demand. Expected membership counts depend on demand and model. Under high demand Model A has 700 members, Model B has 650 members, and Model C has 760 members. Under medium demand Model A has 520 members, Model B has 480 members, and Model C has 600 members. Under low demand Model A has 360 members, Model B has 320 members, and Model C has 420 members. Membership fees are $38$ for Model A, $42$ for Model B, and $34$ for Model C per member per year. Variable staffing cost per member is $20$ when costs are favorable and $28$ when costs are unfavorable. Fixed annual costs are $8200$ for Model A, $9600$ for Model B, and $7000$ for Model C. Which decision is the risky choice under Maximax, the safe choice under Maximin, and the balanced choice under Expected Value?
 
 		\subsection*{C2}
 		\begin{center}
 			\begin{tabular}{l p{0.74\linewidth}}
 				\toprule
 				Decision Alternatives & Model A (weekday), Model B (family), Model C (evening) \\
-				States of Nature & Demand very high, high, medium, low with staffing costs favorable or unfavorable \\
+				States of Nature & Demand high, medium, low with staffing costs favorable or unfavorable \\
 				Events & Realized demand level paired with staffing cost conditions \\
 				Consequences & Annual profit in dollars from membership fees minus staffing and fixed costs \\
 				\bottomrule
@@ -835,13 +724,13 @@
 		Payoff = revenue $-$ cost, where revenue = (members $\times$ fee) and cost = (members $\times$ variable cost) $+$ fixed cost.
 		\begin{center}
 			\textit{Members per model by demand} \\
-			\begin{tabular}{l c c c c}
+			\begin{tabular}{l c c c}
 				\toprule
-				Model & Very high & High & Medium & Low \\
+				Model & High & Medium & Low \\
 				\midrule
-				Model A & 820 & 700 & 520 & 360 \\
-				Model B & 760 & 650 & 480 & 320 \\
-				Model C & 900 & 760 & 600 & 420 \\
+				Model A & 700 & 520 & 360 \\
+				Model B & 650 & 480 & 320 \\
+				Model C & 760 & 600 & 420 \\
 				\bottomrule
 		\end{tabular}
 		\end{center}
@@ -882,19 +771,6 @@
 				\toprule
 				State of nature & Model A revenue & Model B revenue & Model C revenue \\
 				\midrule
-				Very high demand &
-				$\begin{array}{l}
-					820\cdot 38\\
-					= 31160
-				\end{array}$ &
-				$\begin{array}{l}
-					760\cdot 42\\
-					= 31920
-				\end{array}$ &
-				$\begin{array}{l}
-					900\cdot 34\\
-					= 30600
-				\end{array}$ \\
 				High demand &
 				$\begin{array}{l}
 					700\cdot 38\\
@@ -943,32 +819,6 @@
 				\toprule
 				State of nature & Model A cost & Model B cost & Model C cost \\
 				\midrule
-				Very high demand, favorable cost &
-				$\begin{array}{l}
-					820\cdot 20 + 8200\\
-					= 24600
-				\end{array}$ &
-				$\begin{array}{l}
-					760\cdot 20 + 9600\\
-					= 24800
-				\end{array}$ &
-				$\begin{array}{l}
-					900\cdot 20 + 7000\\
-					= 25000
-				\end{array}$ \\
-				Very high demand, unfavorable cost &
-				$\begin{array}{l}
-					820\cdot 28 + 8200\\
-					= 31160
-				\end{array}$ &
-				$\begin{array}{l}
-					760\cdot 28 + 9600\\
-					= 30880
-				\end{array}$ &
-				$\begin{array}{l}
-					900\cdot 28 + 7000\\
-					= 32200
-				\end{array}$ \\
 				High demand, favorable cost &
 				$\begin{array}{l}
 					700\cdot 20 + 8200\\
@@ -1052,49 +902,15 @@
 		\end{center}
 		Profit is computed as Revenue minus Cost for each alternative and state.
 		\begin{center}
-			\textit{Profit parameters by model} \\
-			\begin{tabular}{l p{0.19\linewidth} p{0.19\linewidth} p{0.19\linewidth} p{0.19\linewidth}}
-				\toprule
-				State of nature & Model A & Model B & Model C & Probabilities \\
-				\midrule
-				Very high demand, favorable cost &
-				$\begin{array}{l}
-					31160 - 24600\\
-					= 6560
-				\end{array}$ &
-				$\begin{array}{l}
-					31920 - 24800\\
-					= 7120
-				\end{array}$ &
-				$\begin{array}{l}
-					30600 - 25000\\
-					= 5600
-				\end{array}$ &
-				$\begin{array}{l}
-					0.20\cdot 0.55\\
-					= 0.11
-				\end{array}$ \\
-				Very high demand, unfavorable cost &
-				$\begin{array}{l}
-					31160 - 31160\\
-					= 0
-				\end{array}$ &
-				$\begin{array}{l}
-					31920 - 30880\\
-					= 1040
-				\end{array}$ &
-				$\begin{array}{l}
-					30600 - 32200\\
-					= -1600
-				\end{array}$ &
-				$\begin{array}{l}
-					0.20\cdot 0.45\\
-					= 0.09
-				\end{array}$ \\
-				High demand, favorable cost &
-				$\begin{array}{l}
-					26600 - 22200\\
-					= 4400
+		\textit{Profit parameters by model} \\
+		\begin{tabular}{l p{0.19\linewidth} p{0.19\linewidth} p{0.19\linewidth} p{0.19\linewidth}}
+			\toprule
+			State of nature & Model A & Model B & Model C & Probabilities \\
+			\midrule
+			High demand, favorable cost &
+			$\begin{array}{l}
+				26600 - 22200\\
+				= 4400
 				\end{array}$ &
 				$\begin{array}{l}
 					27300 - 22600\\
@@ -1103,14 +919,14 @@
 				$\begin{array}{l}
 					25840 - 22200\\
 					= 3640
-				\end{array}$ &
-				$\begin{array}{l}
-					0.30\cdot 0.55\\
-					= 0.165
-				\end{array}$ \\
-				High demand, unfavorable cost &
-				$\begin{array}{l}
-					26600 - 27800\\
+			\end{array}$ &
+			$\begin{array}{l}
+				0.40\cdot 0.55\\
+				= 0.22
+			\end{array}$ \\
+			High demand, unfavorable cost &
+			$\begin{array}{l}
+				26600 - 27800\\
 					= -1200
 				\end{array}$ &
 				$\begin{array}{l}
@@ -1120,14 +936,14 @@
 				$\begin{array}{l}
 					25840 - 28280\\
 					= -2440
-				\end{array}$ &
-				$\begin{array}{l}
-					0.30\cdot 0.45\\
-					= 0.135
-				\end{array}$ \\
-				Medium demand, favorable cost &
-				$\begin{array}{l}
-					19760 - 18600\\
+			\end{array}$ &
+			$\begin{array}{l}
+				0.40\cdot 0.45\\
+				= 0.18
+			\end{array}$ \\
+			Medium demand, favorable cost &
+			$\begin{array}{l}
+				19760 - 18600\\
 					= 1160
 				\end{array}$ &
 				$\begin{array}{l}
@@ -1137,14 +953,14 @@
 				$\begin{array}{l}
 					20400 - 19000\\
 					= 1400
-				\end{array}$ &
-				$\begin{array}{l}
-					0.30\cdot 0.55\\
-					= 0.165
-				\end{array}$ \\
-				Medium demand, unfavorable cost &
-				$\begin{array}{l}
-					19760 - 22760\\
+			\end{array}$ &
+			$\begin{array}{l}
+				0.35\cdot 0.55\\
+				= 0.1925
+			\end{array}$ \\
+			Medium demand, unfavorable cost &
+			$\begin{array}{l}
+				19760 - 22760\\
 					= -3000
 				\end{array}$ &
 				$\begin{array}{l}
@@ -1154,14 +970,14 @@
 				$\begin{array}{l}
 					20400 - 23800\\
 					= -3400
-				\end{array}$ &
-				$\begin{array}{l}
-					0.30\cdot 0.45\\
-					= 0.135
-				\end{array}$ \\
-				Low demand, favorable cost &
-				$\begin{array}{l}
-					13680 - 15400\\
+			\end{array}$ &
+			$\begin{array}{l}
+				0.35\cdot 0.45\\
+				= 0.1575
+			\end{array}$ \\
+			Low demand, favorable cost &
+			$\begin{array}{l}
+				13680 - 15400\\
 					= -1720
 				\end{array}$ &
 				$\begin{array}{l}
@@ -1171,14 +987,14 @@
 				$\begin{array}{l}
 					14280 - 15400\\
 					= -1120
-				\end{array}$ &
-				$\begin{array}{l}
-					0.20\cdot 0.55\\
-					= 0.11
-				\end{array}$ \\
-				Low demand, unfavorable cost &
-				$\begin{array}{l}
-					13680 - 18280\\
+			\end{array}$ &
+			$\begin{array}{l}
+				0.25\cdot 0.55\\
+				= 0.1375
+			\end{array}$ \\
+			Low demand, unfavorable cost &
+			$\begin{array}{l}
+				13680 - 18280\\
 					= -4600
 				\end{array}$ &
 				$\begin{array}{l}
@@ -1188,53 +1004,51 @@
 				$\begin{array}{l}
 					14280 - 18760\\
 					= -4480
-				\end{array}$ &
-				$\begin{array}{l}
-					0.20\cdot 0.45\\
-					= 0.09
-				\end{array}$ \\
-				\bottomrule
-		\end{tabular}
-		\end{center}
-		Combined probabilities are $0.20\cdot 0.55=0.11$, $0.20\cdot 0.45=0.09$, $0.30\cdot 0.55=0.165$, $0.30\cdot 0.45=0.135$, $0.30\cdot 0.55=0.165$, $0.30\cdot 0.45=0.135$, $0.20\cdot 0.55=0.11$, $0.20\cdot 0.45=0.09$.
-		\begin{center}
-			\begin{tabular}{l c c c c}
-				\toprule
-				State of nature & Probability & Model A & Model B & Model C \\
-				\midrule
-				Very high demand, favorable cost & 0.11 & 6560 & 7120 & 5600 \\
-				Very high demand, unfavorable cost & 0.09 & 0 & 1040 & -1600 \\
-				High demand, favorable cost & 0.165 & 4400 & 4700 & 3640 \\
-				High demand, unfavorable cost & 0.135 & -1200 & -500 & -2440 \\
-				Medium demand, favorable cost & 0.165 & 1160 & 960 & 1400 \\
-				Medium demand, unfavorable cost & 0.135 & -3000 & -2880 & -3400 \\
-				Low demand, favorable cost & 0.11 & -1720 & -2560 & -1120 \\
-				Low demand, unfavorable cost & 0.09 & -4600 & -5120 & -4480 \\
-				\bottomrule
-		\end{tabular}
-		\end{center}
+			\end{array}$ &
+			$\begin{array}{l}
+				0.25\cdot 0.45\\
+				= 0.1125
+			\end{array}$ \\
+			\bottomrule
+	\end{tabular}
+	\end{center}
+	Combined probabilities are $0.40\cdot 0.55=0.22$, $0.40\cdot 0.45=0.18$, $0.35\cdot 0.55=0.1925$, $0.35\cdot 0.45=0.1575$, $0.25\cdot 0.55=0.1375$, $0.25\cdot 0.45=0.1125$.
+	\begin{center}
+		\begin{tabular}{l c c c c}
+			\toprule
+			State of nature & Probability & Model A & Model B & Model C \\
+			\midrule
+			High demand, favorable cost & 0.22 & 4400 & 4700 & 3640 \\
+			High demand, unfavorable cost & 0.18 & -1200 & -500 & -2440 \\
+			Medium demand, favorable cost & 0.1925 & 1160 & 960 & 1400 \\
+			Medium demand, unfavorable cost & 0.1575 & -3000 & -2880 & -3400 \\
+			Low demand, favorable cost & 0.1375 & -1720 & -2560 & -1120 \\
+			Low demand, unfavorable cost & 0.1125 & -4600 & -5120 & -4480 \\
+			\bottomrule
+	\end{tabular}
+	\end{center}
 
 		\subsection*{C4}
 		\[
 		\begin{aligned}
-		\max(\text{Model A}) &= \max\{6560,0,4400,-1200,1160,-3000,-1720,-4600\} = 6560,\\
-		\max(\text{Model B}) &= \max\{7120,1040,4700,-500,960,-2880,-2560,-5120\} = 7120,\\
-		\max(\text{Model C}) &= \max\{5600,-1600,3640,-2440,1400,-3400,-1120,-4480\} = 5600.
+		\max(\text{Model A}) &= \max\{4400,-1200,1160,-3000,-1720,-4600\} = 4400,\\
+		\max(\text{Model B}) &= \max\{4700,-500,960,-2880,-2560,-5120\} = 4700,\\
+		\max(\text{Model C}) &= \max\{3640,-2440,1400,-3400,-1120,-4480\} = 3640.
 		\end{aligned}
 		\]
 		\[
 		\max\{\max(\text{Model A}), \max(\text{Model B}), \max(\text{Model C})\}
-		= \max\{6560, 7120, 5600\}
-		= 7120.
+		= \max\{4400, 4700, 3640\}
+		= 4700.
 		\]
-		The Maximax choice is Model B with 7120. The criterion is \emph{risky} because it focuses only on the best possible payoff and ignores how likely it is.
+		The Maximax choice is Model B with 4700. The criterion is \emph{risky} because it focuses only on the best possible payoff and ignores how likely it is.
 
 		\subsection*{C5}
 		\[
 		\begin{aligned}
-		\min(\text{Model A}) &= \min\{6560,0,4400,-1200,1160,-3000,-1720,-4600\} = -4600,\\
-		\min(\text{Model B}) &= \min\{7120,1040,4700,-500,960,-2880,-2560,-5120\} = -5120,\\
-		\min(\text{Model C}) &= \min\{5600,-1600,3640,-2440,1400,-3400,-1120,-4480\} = -4480.
+		\min(\text{Model A}) &= \min\{4400,-1200,1160,-3000,-1720,-4600\} = -4600,\\
+		\min(\text{Model B}) &= \min\{4700,-500,960,-2880,-2560,-5120\} = -5120,\\
+		\min(\text{Model C}) &= \min\{3640,-2440,1400,-3400,-1120,-4480\} = -4480.
 		\end{aligned}
 		\]
 		\[
@@ -1248,14 +1062,14 @@
 		Expected values use the combined state probabilities.
 		\[
 		\begin{aligned}
-		EV_A &= 0.11(6560)+0.09(0)+0.165(4400)+0.135(-1200)+0.165(1160)+0.135(-3000)+0.11(-1720)+0.09(-4600)\\
-		&= 721.6+0+726-162+191.4-405-189.2-414=468.8,\\
-		EV_B &= 0.11(7120)+0.09(1040)+0.165(4700)+0.135(-500)+0.165(960)+0.135(-2880)+0.11(-2560)+0.09(-5120)\\
-		&= 783.2+93.6+775.5-67.5+158.4-388.8-281.6-460.8=612.0,\\
-		EV_C &= 0.11(5600)+0.09(-1600)+0.165(3640)+0.135(-2440)+0.165(1400)+0.135(-3400)+0.11(-1120)+0.09(-4480)\\
-		&= 616-144+600.6-329.4+231-459-123.2-403.2=-11.2.
+		EV_A &= 0.22(4400)+0.18(-1200)+0.1925(1160)+0.1575(-3000)+0.1375(-1720)+0.1125(-4600)\\
+		&= 968-216+223.3-472.5-236.5-517.5=-251.2,\\
+		EV_B &= 0.22(4700)+0.18(-500)+0.1925(960)+0.1575(-2880)+0.1375(-2560)+0.1125(-5120)\\
+		&= 1034-90+184.8-453.6-352-576=-252.8,\\
+		EV_C &= 0.22(3640)+0.18(-2440)+0.1925(1400)+0.1575(-3400)+0.1375(-1120)+0.1125(-4480)\\
+		&= 800.8-439.2+269.5-535.5-154-504=-562.4.
 		\end{aligned}
 		\]
-		The expected value criterion chooses Model B because $612.0$ is the largest expected profit. This differs from the Maximin choice and matches the Maximax choice, so the expected value gives a balanced decision using the probabilities.
+		The expected value criterion chooses Model A because $-251.2$ is the largest expected profit. This differs from the Maximin and Maximax choices, so the expected value gives a balanced decision using the probabilities.
 	\end{ExamProblems}
 \end{document}
