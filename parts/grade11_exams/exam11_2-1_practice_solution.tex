@@ -27,38 +27,17 @@
 		Using grouped midpoints $x$ with frequencies $f$. \\
 		First, we calculate the sample mean $\overline{x}$
 		\[
-		\bar{x} = \frac{\sum f x}{n}
+		n = \sum f \qquad \longrightarrow \qquad n = 10 + 16 + 19 + 17 + 13 = 75
 		\]
 		\[
-		n = \sum f
-		\]
-		\[
-		n = 10 + 16 + 19 + 17 + 13 = 75
-		\]
-		\[
-		\sum f x = \sum (f \cdot x)
-		\]
-		\[
-		\sum f x = 10(20) + 16(25) + 19(30) + 17(35) + 13(40) = 2285
-		\]
-		\[
-		\bar{x} = \frac{2285}{75} \approx 30.47
+		\bar{x} = \frac{\sum f x}{n} \qquad \longrightarrow \qquad \sum f x = 10(20) + 16(25) + 19(30) + 17(35) + 13(40) = 2285 \qquad \longrightarrow \qquad \bar{x} = \frac{2285}{75} \approx 30.47
 		\]
 		Second, we calculate the sample standard deviation $s$ or the sample variance $s^2$
 		\[
-		s^2 = \frac{\sum f(x-\bar{x})^2}{n-1}
+		s^2 = \frac{\sum f(x-\bar{x})^2}{n-1} \qquad \longrightarrow \qquad \sum f(x-\bar{x})^2 \approx 10(20-30.47)^2 + 16(25-30.47)^2 + 19(30-30.47)^2 + 17(35-30.47)^2 + 13(40-30.47)^2
 		\]
 		\[
-		\sum f(x-\bar{x})^2 \approx 10(20-30.47)^2 + 16(25-30.47)^2 + 19(30-30.47)^2 + 17(35-30.47)^2 + 13(40-30.47)^2
-		\]
-		\[
-		\sum f(x-\bar{x})^2 \approx 1095.51 + 478.15 + 4.14 + 349.37 + 1181.50 = 3108.67
-		\]
-		\[
-		s = \sqrt{\frac{\sum f(x-\bar{x})^2}{n-1}}
-		\]
-		\[
-		s = \sqrt{\frac{3108.67}{75-1}} = \sqrt{\frac{3108.67}{74}} \approx 6.48
+		\sum f(x-\bar{x})^2 \approx 1095.51 + 478.15 + 4.14 + 349.37 + 1181.50 = 3108.67 \qquad \longrightarrow \qquad s = \sqrt{\frac{\sum f(x-\bar{x})^2}{n-1}} = \sqrt{\frac{3108.67}{75-1}} = \sqrt{\frac{3108.67}{74}} \approx 6.48
 		\]
 
 		\subsection*{C2}
@@ -70,36 +49,21 @@
 		\subsection*{C5}
 		With known $\sigma = 6.0$ and $n=75$, the standard error is
 		\[
-		SE = \frac{\sigma}{\sqrt{n}}
-		\]
-		\[
-		SE = \frac{6.0}{\sqrt{75}} \approx 0.69
+		SE = \frac{\sigma}{\sqrt{n}} \qquad \longrightarrow \qquad SE = \frac{6.0}{\sqrt{75}} \approx 0.69
 		\]
 		For 95\% confidence, $z_{0.025}=1.96$.
 		\[
-		E = z_{0.025} \cdot SE
+		E = z_{0.025} \cdot SE \qquad \longrightarrow \qquad E = 1.96(0.69) \approx 1.36
 		\]
 		\[
-		E = 1.96(0.69) \approx 1.36
-		\]
-		\[
-		\mu \in \bar{x} \pm E
-		\]
-		\[
-		\mu \in 30.47 \pm 1.36 = [30.47 - 1.36, 30.47 + 1.36] = [29.11, 31.82]
+		\mu \in \bar{x} \pm E \qquad \longrightarrow \qquad \mu \in 30.47 \pm 1.36 = [30.47 - 1.36, 30.47 + 1.36] = [29.11, 31.82]
 		\]
 		For 98\% confidence, $z_{0.01}=2.33$.
 		\[
-		E = z_{0.01} \cdot SE
+		E = z_{0.01} \cdot SE \qquad \longrightarrow \qquad E = 2.33(0.69) \approx 1.61
 		\]
 		\[
-		E = 2.33(0.69) \approx 1.61
-		\]
-		\[
-		\mu \in \bar{x} \pm E
-		\]
-		\[
-		\mu \in 30.47 \pm 1.61 = [30.47 - 1.61, 30.47 + 1.61] = [28.85, 32.08]
+		\mu \in \bar{x} \pm E \qquad \longrightarrow \qquad \mu \in 30.47 \pm 1.61 = [30.47 - 1.61, 30.47 + 1.61] = [28.85, 32.08]
 		\]
 
 		\subsection*{C4}
@@ -121,30 +85,14 @@
 		\subsection*{C1}
 		First, we calculate the sample mean $\overline{x}$
 		\[
-		\bar{x} = \frac{\sum x}{n}
-		\]
-		\[
-		\sum x = 42 + 38 + 45 + 47 + 40 + 44 + 39 + 41 + 46 + 43 + 37 + 48 + 40 + 45 + 42 + 44 + 39 + 46 + 41 + 43 = 850
-		\]
-		\[
-		\bar{x} = \frac{850}{20} = 42.5
+		\bar{x} = \frac{\sum x}{n} \qquad \longrightarrow \qquad \sum x = 42 + 38 + 45 + 47 + 40 + 44 + 39 + 41 + 46 + 43 + 37 + 48 + 40 + 45 + 42 + 44 + 39 + 46 + 41 + 43 = 850 \qquad \longrightarrow \qquad \bar{x} = \frac{850}{20} = 42.5
 		\]
 		Second, we calculate the sample standard deviation $s$ or the sample variance $s^2$
 		\[
-		s^2 = \frac{\sum (x-\bar{x})^2}{n-1}
+		s^2 = \frac{\sum (x-\bar{x})^2}{n-1} \qquad \longrightarrow \qquad \sum (x-\bar{x})^2 = 2(42-42.5)^2 + 2(40-42.5)^2 + 2(45-42.5)^2 + 2(44-42.5)^2 + 2(39-42.5)^2 + 2(46-42.5)^2 + 2(41-42.5)^2 + 2(43-42.5)^2 + (38-42.5)^2 + (47-42.5)^2 + (37-42.5)^2 + (48-42.5)^2 = 185
 		\]
 		\[
-		\begin{aligned}
-			\sum (x-\bar{x})^2 =\;& 2(42-42.5)^2 + 2(40-42.5)^2 + 2(45-42.5)^2 + 2(44-42.5)^2 \\
-			&+ 2(39-42.5)^2 + 2(46-42.5)^2 + 2(41-42.5)^2 + 2(43-42.5)^2 \\
-			&+ (38-42.5)^2 + (47-42.5)^2 + (37-42.5)^2 + (48-42.5)^2 = 185
-		\end{aligned}
-		\]
-		\[
-		s = \sqrt{\frac{\sum (x-\bar{x})^2}{n-1}}
-		\]
-		\[
-		s = \sqrt{\frac{185}{20-1}} = \sqrt{\frac{185}{19}} \approx 3.12
+		s = \sqrt{\frac{\sum (x-\bar{x})^2}{n-1}} \qquad \longrightarrow \qquad s = \sqrt{\frac{185}{20-1}} = \sqrt{\frac{185}{19}} \approx 3.12
 		\]
 
 		\subsection*{C2}
@@ -156,36 +104,21 @@
 		\subsection*{C5}
 		With known $\sigma = 5.5$ and $n=20$,
 		\[
-		SE = \frac{\sigma}{\sqrt{n}}
-		\]
-		\[
-		SE = \frac{5.5}{\sqrt{20}} \approx 1.23
+		SE = \frac{\sigma}{\sqrt{n}} \qquad \longrightarrow \qquad SE = \frac{5.5}{\sqrt{20}} \approx 1.23
 		\]
 		For 95\% confidence, $z_{0.025}=1.96$.
 		\[
-		E = z_{0.025} \cdot SE
+		E = z_{0.025} \cdot SE \qquad \longrightarrow \qquad E = 1.96(1.23) \approx 2.41
 		\]
 		\[
-		E = 1.96(1.23) \approx 2.41
-		\]
-		\[
-		\mu \in \bar{x} \pm E
-		\]
-		\[
-		\mu \in 42.5 \pm 2.41 = [42.5 - 2.41, 42.5 + 2.41] = [40.09, 44.91]
+		\mu \in \bar{x} \pm E \qquad \longrightarrow \qquad \mu \in 42.5 \pm 2.41 = [42.5 - 2.41, 42.5 + 2.41] = [40.09, 44.91]
 		\]
 		For 98\% confidence, $z_{0.01}=2.33$.
 		\[
-		E = z_{0.01} \cdot SE
+		E = z_{0.01} \cdot SE \qquad \longrightarrow \qquad E = 2.33(1.23) \approx 2.87
 		\]
 		\[
-		E = 2.33(1.23) \approx 2.87
-		\]
-		\[
-		\mu \in \bar{x} \pm E
-		\]
-		\[
-		\mu \in 42.5 \pm 2.87 = [42.5 - 2.87, 42.5 + 2.87] = [39.63, 45.37]
+		\mu \in \bar{x} \pm E \qquad \longrightarrow \qquad \mu \in 42.5 \pm 2.87 = [42.5 - 2.87, 42.5 + 2.87] = [39.63, 45.37]
 		\]
 
 		\subsection*{C4}
