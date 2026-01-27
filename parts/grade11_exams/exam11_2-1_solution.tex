@@ -31,35 +31,20 @@
 		\subsection*{C1}
 		First, we calculate the sample means.
 		\[
-		\bar{x}_A = \frac{\sum x_A}{n_A}
+		\bar{x}_A = \frac{\sum x_A}{n_A} \qquad \longrightarrow \qquad \sum x_A = 18 + 22 + 19 + 21 + 20 + 17 = 117 \qquad \longrightarrow \qquad \bar{x}_A = \frac{117}{6} = 19.5
 		\]
 		\[
-		\sum x_A = 18 + 22 + 19 + 21 + 20 + 17 = 117
-		\]
-		\[
-		\bar{x}_A = \frac{117}{6} = 19.5
-		\]
-		\[
-		\bar{x}_B = \frac{\sum x_B}{n_B}
-		\]
-		\[
-		\sum x_B = 24 + 26 + 23 = 73
-		\]
-		\[
-		\bar{x}_B = \frac{73}{3} \approx 24.33
+		\bar{x}_B = \frac{\sum x_B}{n_B}  \qquad \longrightarrow \qquad \sum x_B = 24 + 26 + 23 = 73  \qquad \longrightarrow \qquad \bar{x}_B = \frac{73}{3} \approx 24.33
 		\]
 		Second, we calculate the sample standard deviations.
 		\[
-		s_A^2 = \frac{\sum (x_A-\bar{x}_A)^2}{n_A-1}
+		s_A^2 = \frac{\sum (x_A-\bar{x}_A)^2}{n_A-1} \qquad \qquad s_B^2 = \frac{\sum (x_B-\bar{x}_B)^2}{n_B-1}
 		\]
 		\[
 		\sum (x_A-\bar{x}_A)^2 = (18-19.5)^2 + (22-19.5)^2 + (19-19.5)^2 + (21-19.5)^2 + (20-19.5)^2 + (17-19.5)^2 = 17.5
 		\]
 		\[
 		s_A = \sqrt{\frac{17.5}{6-1}} = \sqrt{3.5} \approx 1.87
-		\]
-		\[
-		s_B^2 = \frac{\sum (x_B-\bar{x}_B)^2}{n_B-1}
 		\]
 		\[
 		\sum (x_B-\bar{x}_B)^2 = (24-24.33)^2 + (26-24.33)^2 + (23-24.33)^2 \approx 4.67
@@ -75,44 +60,19 @@
 		A single point estimate can miss the true mean because of sampling variability in the weekly subsidy amounts. A confidence interval is preferred because it accounts for that uncertainty and gives a range of plausible values for $\mu$. For budgeting in the two zones, a range of plausible means is more informative than one value when setting subsidy policies.
 
 		\subsection*{C5}
-		With known $\sigma = 3.5$ and $n_A = 6$,
+		With known $\sigma = 3.5$ and $n_A = 6$, For 95\% confidence, $z_{0.025}=1.96$.
 		\[
-		SE_A = \frac{\sigma}{\sqrt{n_A}}
+		SE_A = \frac{\sigma}{\sqrt{n_A}}  \qquad \longrightarrow \qquad SE_A = \frac{3.5}{\sqrt{6}} \approx 1.43  \qquad \longrightarrow \qquad  E_A = z_{0.025} \cdot SE_A = 1.96(1.43) \approx 2.80
 		\]
 		\[
-		SE_A = \frac{3.5}{\sqrt{6}} \approx 1.43
-		\]
-		For 95\% confidence, $z_{0.025}=1.96$.
-		\[
-		E_A = z_{0.025} \cdot SE_A
-		\]
-		\[
-		E_A = 1.96(1.43) \approx 2.80
-		\]
-		\[
-		\mu \in \bar{x}_A \pm E_A
-		\]
-		\[
-		\mu \in 19.5 \pm 2.80 = [19.5 - 2.80, 19.5 + 2.80] = [16.70, 22.30]
+		\mu \in \bar{x}_A \pm E_A  \qquad \longrightarrow \qquad \mu \in 19.5 \pm 2.80 = [19.5 - 2.80, 19.5 + 2.80] = [16.70, 22.30]
 		\]
 		With known $\sigma = 3.5$ and $n_B = 3$,
 		\[
-		SE_B = \frac{\sigma}{\sqrt{n_B}}
+		SE_B = \frac{\sigma}{\sqrt{n_B}}  \qquad \longrightarrow \qquad SE_B = \frac{3.5}{\sqrt{3}} \approx 2.02  \qquad \longrightarrow \qquad E_B = z_{0.025} \cdot SE_B = 1.96(2.02) \approx 3.96
 		\]
 		\[
-		SE_B = \frac{3.5}{\sqrt{3}} \approx 2.02
-		\]
-		\[
-		E_B = z_{0.025} \cdot SE_B
-		\]
-		\[
-		E_B = 1.96(2.02) \approx 3.96
-		\]
-		\[
-		\mu \in \bar{x}_B \pm E_B
-		\]
-		\[
-		\mu \in 24.33 \pm 3.96 = [24.33 - 3.96, 24.33 + 3.96] = [20.37, 28.29]
+		\mu \in \bar{x}_B \pm E_B   \qquad \longrightarrow \qquad \mu \in 24.33 \pm 3.96 = [24.33 - 3.96, 24.33 + 3.96] = [20.37, 28.29]
 		\]
 
 		\subsection*{C4}
@@ -129,19 +89,10 @@
 		\subsection*{C1}
 		Using grouped values $x$ with frequencies $f$.
 		\[
-		\bar{x} = \frac{\sum f x}{n}
+		n = \sum f   \qquad \longrightarrow \qquad n = 8 + 16 + 20 + 10 = 54
 		\]
 		\[
-		n = \sum f
-		\]
-		\[
-		n = 8 + 16 + 20 + 10 = 54
-		\]
-		\[
-		\sum f x = 8(14) + 16(18) + 20(22) + 10(26) = 1100
-		\]
-		\[
-		\bar{x} = \frac{1100}{54} \approx 20.37
+		\bar{x} = \frac{\sum f x}{n} \qquad \longrightarrow \qquad \sum f x = 8(14) + 16(18) + 20(22) + 10(26) = 1100  \qquad \longrightarrow \qquad \bar{x} = \frac{1100}{54} \approx 20.37
 		\]
 		Second, we calculate the sample standard deviation $s$.
 		\[
@@ -154,10 +105,7 @@
 		\sum f(x-\bar{x})^2 \approx 324.65 + 89.90 + 53.11 + 316.93 = 784.59
 		\]
 		\[
-		s = \sqrt{\frac{\sum f(x-\bar{x})^2}{n-1}}
-		\]
-		\[
-		s = \sqrt{\frac{784.59}{54-1}} \approx 3.85
+		s = \sqrt{\frac{\sum f(x-\bar{x})^2}{n-1}}  = \sqrt{\frac{784.59}{54-1}} \approx 3.85
 		\]
 
 		\subsection*{C2}
