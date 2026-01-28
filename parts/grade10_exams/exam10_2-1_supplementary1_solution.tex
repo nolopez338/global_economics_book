@@ -72,7 +72,7 @@
 
 		\item
 		\subsection*{Problem description}
-		A campus bookstore must choose a stocking plan for a semester. Plan A is premium notebooks, Plan B is standard notebooks, and Plan C is discount notebooks. Demand for notebooks can be strong, moderate, or weak with probabilities $0.35$, $0.45$, and $0.20$. Expected unit sales depend on demand and plan. Under strong demand Plan A sells 420 units, Plan B sells 520 units, and Plan C sells 600 units. Under moderate demand Plan A sells 300 units, Plan B sells 380 units, and Plan C sells 450 units. Under weak demand Plan A sells 180 units, Plan B sells 240 units, and Plan C sells 300 units. Unit prices are $22$, $18$, and $15$ for Plans A, B, and C. Variable costs per unit are $10$, $8$, and $6$. Use these parameters to calculate the profit payoff table. Which decision is the risky choice under Maximax, the safe choice under Maximin, and the balanced choice under Expected Value?
+		A campus bookstore must choose a stocking plan for a semester. Plan A is premium notebooks, Plan B is standard notebooks, and Plan C is discount notebooks. Demand for notebooks can be strong, moderate, or weak with probabilities $0.35$, $0.45$, and $0.20$. Expected unit sales depend on demand and plan. Under strong demand Plan A sells 420 units, Plan B sells 520 units, and Plan C sells 600 units. Under moderate demand Plan A sells 300 units, Plan B sells 380 units, and Plan C sells 450 units. Under weak demand Plan A sells 180 units, Plan B sells 240 units, and Plan C sells 300 units. Unit prices are $22$, $18$, and $15$ for Plans A, B, and C. Total costs by demand and plan are provided in the cost table. Use these parameters to calculate the profit payoff table. Which decision is the risky choice under Maximax, the safe choice under Maximin, and the balanced choice under Expected Value?
 
 		\subsection*{C2}
 		\begin{center}
@@ -87,7 +87,7 @@
 		\end{center}
 
 		\subsection*{C3}
-		Payoff = revenue $-$ cost, where revenue = (units $\times$ price) and cost = (units $\times$ variable cost).
+		Payoff = revenue $-$ cost, where revenue = units $\times$ price and cost is taken from the cost table.
 		\begin{center}
 			\textit{Units by plan and demand} \\
 			\begin{tabular}{l c c c}
@@ -162,52 +162,16 @@
 				\bottomrule
 		\end{tabular}
 		\end{center}
-		Variable costs per unit follow the problem description.
+		Total costs by demand and plan are listed below.
 		\begin{center}
 			\textit{Cost by demand} \\
 			\begin{tabular}{l c c c}
 				\toprule
 				State of nature & Plan A cost & Plan B cost & Plan C cost \\
 				\midrule
-				Strong demand &
-				$\begin{array}{l}
-					420\cdot 10\\
-					= 4200
-				\end{array}$ &
-				$\begin{array}{l}
-					520\cdot 8\\
-					= 4160
-				\end{array}$ &
-				$\begin{array}{l}
-					600\cdot 6\\
-					= 3600
-				\end{array}$ \\
-				Moderate demand &
-				$\begin{array}{l}
-					300\cdot 10\\
-					= 3000
-				\end{array}$ &
-				$\begin{array}{l}
-					380\cdot 8\\
-					= 3040
-				\end{array}$ &
-				$\begin{array}{l}
-					450\cdot 6\\
-					= 2700
-				\end{array}$ \\
-				Weak demand &
-				$\begin{array}{l}
-					180\cdot 10\\
-					= 1800
-				\end{array}$ &
-				$\begin{array}{l}
-					240\cdot 8\\
-					= 1920
-				\end{array}$ &
-				$\begin{array}{l}
-					300\cdot 6\\
-					= 1800
-				\end{array}$ \\
+				Strong demand & 4200 & 4160 & 3600 \\
+				Moderate demand & 3000 & 3040 & 2700 \\
+				Weak demand & 1800 & 1920 & 1800 \\
 				\bottomrule
 		\end{tabular}
 		\end{center}
@@ -763,14 +727,14 @@
 
 		\item
 		\subsection*{Problem description}
-		A regional utility must choose a generation mix for the next year. Strategy A is solar heavy, Strategy B is wind heavy, and Strategy C is balanced. Demand can be high, medium, or low with probabilities $0.25$, $0.50$, and $0.25$. Operating cost conditions can be low or high with probabilities $0.60$ and $0.40$, and these conditions are independent of demand. Revenue in thousands of dollars depends on demand and strategy. Under high demand revenue is 680 for Strategy A, 620 for Strategy B, and 650 for Strategy C. Under medium demand revenue is 530 for Strategy A, 500 for Strategy B, and 515 for Strategy C. Under low demand revenue is 360 for Strategy A, 380 for Strategy B, and 370 for Strategy C. Operating costs in thousands of dollars depend on cost conditions and strategy. Under low costs operating costs are 300 for Strategy A, 280 for Strategy B, and 290 for Strategy C. Under high costs operating costs are 380 for Strategy A, 360 for Strategy B, and 370 for Strategy C. Which decision is the risky choice under Maximax, the safe choice under Maximin, and the balanced choice under Expected Value?
+		A regional utility must choose a generation mix for the next year. Strategy A is solar heavy, Strategy B is wind heavy, and Strategy C is balanced. Demand can be strong or weak with probabilities $0.55$ and $0.45$. Operating cost conditions can be favorable or unfavorable with probabilities $0.60$ and $0.40$, and these conditions are independent of demand. Revenue in thousands of dollars depends on demand and strategy. Under strong demand revenue is 680 for Strategy A, 620 for Strategy B, and 650 for Strategy C. Under weak demand revenue is 360 for Strategy A, 380 for Strategy B, and 370 for Strategy C. Operating costs in thousands of dollars depend on cost conditions and strategy. Under favorable costs operating costs are 300 for Strategy A, 280 for Strategy B, and 290 for Strategy C. Under unfavorable costs operating costs are 380 for Strategy A, 360 for Strategy B, and 370 for Strategy C. Which decision is the risky choice under Maximax, the safe choice under Maximin, and the balanced choice under Expected Value?
 
 		\subsection*{C2}
 		\begin{center}
 			\begin{tabular}{l p{0.74\linewidth}}
 				\toprule
 				Decision Alternatives & Strategy A (solar), Strategy B (wind), Strategy C (balanced) \\
-				States of Nature & Demand high, medium, low with cost conditions low or high \\
+				States of Nature & Demand strong or weak with cost conditions favorable or unfavorable \\
 				Events & Realized demand level paired with operating cost conditions \\
 				Consequences & Profit in thousands of dollars from revenue minus operating costs \\
 				\bottomrule
@@ -783,14 +747,14 @@
 			\begin{minipage}[t]{0.48\linewidth}
 				\textit{Revenue parameters by strategy}
 				\begin{center}
-					\begin{tabular}{l c c c}
+					\begin{tabular}{l c c}
 						\toprule
-						Strategy & High & Medium & Low \\
+						Strategy & Strong & Weak \\
 						\midrule
-						Probabilities & 0.25 & 0.50 & 0.25 \\
-						Strategy A & 680 & 530 & 360 \\
-						Strategy B & 620 & 500 & 380 \\
-						Strategy C & 650 & 515 & 370 \\
+						Probabilities & 0.55 & 0.45 \\
+						Strategy A & 680 & 360 \\
+						Strategy B & 620 & 380 \\
+						Strategy C & 650 & 370 \\
 						\bottomrule
 					\end{tabular}
 				\end{center}
@@ -801,7 +765,7 @@
 				\begin{center}
 					\begin{tabular}{l c c}
 						\toprule
-						Strategy & Low cost & High cost \\
+						Strategy & Favorable & Unfavorable \\
 						\midrule
 						Probabilities & 0.60 & 0.40 \\
 						Strategy A & 300 & 380 \\
@@ -819,10 +783,10 @@
 				\toprule
 				State of nature & Probability & Strategy A & Strategy B & Strategy C \\
 				\midrule
-				High demand, low cost &
+				Strong demand, favorable cost &
 				$\begin{array}{l}
-					0.25\cdot 0.60\\
-					= 0.15
+					0.55\cdot 0.60\\
+					= 0.33
 				\end{array}$ &
 				$\begin{array}{l}
 					680 - 300\\
@@ -836,10 +800,10 @@
 					650 - 290\\
 					= 360
 				\end{array}$ \\
-				High demand, high cost &
+				Strong demand, unfavorable cost &
 				$\begin{array}{l}
-					0.25\cdot 0.40\\
-					= 0.10
+					0.55\cdot 0.40\\
+					= 0.22
 				\end{array}$ &
 				$\begin{array}{l}
 					680 - 380\\
@@ -853,44 +817,10 @@
 					650 - 370\\
 					= 280
 				\end{array}$ \\
-				Medium demand, low cost &
+				Weak demand, favorable cost &
 				$\begin{array}{l}
-					0.50\cdot 0.60\\
-					= 0.30
-				\end{array}$ &
-				$\begin{array}{l}
-					530 - 300\\
-					= 230
-				\end{array}$ &
-				$\begin{array}{l}
-					500 - 280\\
-					= 220
-				\end{array}$ &
-				$\begin{array}{l}
-					515 - 290\\
-					= 225
-				\end{array}$ \\
-				Medium demand, high cost &
-				$\begin{array}{l}
-					0.50\cdot 0.40\\
-					= 0.20
-				\end{array}$ &
-				$\begin{array}{l}
-					530 - 380\\
-					= 150
-				\end{array}$ &
-				$\begin{array}{l}
-					500 - 360\\
-					= 140
-				\end{array}$ &
-				$\begin{array}{l}
-					515 - 370\\
-					= 145
-				\end{array}$ \\
-				Low demand, low cost &
-				$\begin{array}{l}
-					0.25\cdot 0.60\\
-					= 0.15
+					0.45\cdot 0.60\\
+					= 0.27
 				\end{array}$ &
 				$\begin{array}{l}
 					360 - 300\\
@@ -904,10 +834,10 @@
 					370 - 290\\
 					= 80
 				\end{array}$ \\
-				Low demand, high cost &
+				Weak demand, unfavorable cost &
 				$\begin{array}{l}
-					0.25\cdot 0.40\\
-					= 0.10
+					0.45\cdot 0.40\\
+					= 0.18
 				\end{array}$ &
 				$\begin{array}{l}
 					360 - 380\\
@@ -930,12 +860,10 @@
 				\toprule
 				State of nature & Probability & Strategy A & Strategy B & Strategy C \\
 				\midrule
-				High demand, low cost & 0.15 & 380 & 340 & 360 \\
-				High demand, high cost & 0.10 & 300 & 260 & 280 \\
-				Medium demand, low cost & 0.30 & 230 & 220 & 225 \\
-				Medium demand, high cost & 0.20 & 150 & 140 & 145 \\
-				Low demand, low cost & 0.15 & 60 & 100 & 80 \\
-				Low demand, high cost & 0.10 & -20 & 20 & 0 \\
+				Strong demand, favorable cost & 0.33 & 380 & 340 & 360 \\
+				Strong demand, unfavorable cost & 0.22 & 300 & 260 & 280 \\
+				Weak demand, favorable cost & 0.27 & 60 & 100 & 80 \\
+				Weak demand, unfavorable cost & 0.18 & -20 & 20 & 0 \\
 				\bottomrule
 		\end{tabular}
 		\end{center}
@@ -943,9 +871,9 @@
 		\subsection*{C4}
 		\[
 		\begin{aligned}
-		\max(\text{Strategy A}) &= \max\{380,300,230,150,60,-20\} = 380,\\
-		\max(\text{Strategy B}) &= \max\{340,260,220,140,100,20\} = 340,\\
-		\max(\text{Strategy C}) &= \max\{360,280,225,145,80,0\} = 360.
+		\max(\text{Strategy A}) &= \max\{380,300,60,-20\} = 380,\\
+		\max(\text{Strategy B}) &= \max\{340,260,100,20\} = 340,\\
+		\max(\text{Strategy C}) &= \max\{360,280,80,0\} = 360.
 		\end{aligned}
 		\]
 		\[
@@ -958,9 +886,9 @@
 		\subsection*{C5}
 		\[
 		\begin{aligned}
-		\min(\text{Strategy A}) &= \min\{380,300,230,150,60,-20\} = -20,\\
-		\min(\text{Strategy B}) &= \min\{340,260,220,140,100,20\} = 20,\\
-		\min(\text{Strategy C}) &= \min\{360,280,225,145,80,0\} = 0.
+		\min(\text{Strategy A}) &= \min\{380,300,60,-20\} = -20,\\
+		\min(\text{Strategy B}) &= \min\{340,260,100,20\} = 20,\\
+		\min(\text{Strategy C}) &= \min\{360,280,80,0\} = 0.
 		\end{aligned}
 		\]
 		\[
@@ -974,15 +902,15 @@
 		Expected values use the combined state probabilities.
 		\[
 		\begin{aligned}
-		EV_A &= 0.15(380)+0.10(300)+0.30(230)+0.20(150)+0.15(60)+0.10(-20)\\
-		&= 57+30+69+30+9-2=193,\\
-		EV_B &= 0.15(340)+0.10(260)+0.30(220)+0.20(140)+0.15(100)+0.10(20)\\
-		&= 51+26+66+28+15+2=188,\\
-		EV_C &= 0.15(360)+0.10(280)+0.30(225)+0.20(145)+0.15(80)+0.10(0)\\
-		&= 54+28+67.5+29+12+0=190.5.
+		EV_A &= 0.33(380)+0.22(300)+0.27(60)+0.18(-20)\\
+		&= 125.4+66+16.2-3.6=204,\\
+		EV_B &= 0.33(340)+0.22(260)+0.27(100)+0.18(20)\\
+		&= 112.2+57.2+27+3.6=200,\\
+		EV_C &= 0.33(360)+0.22(280)+0.27(80)+0.18(0)\\
+		&= 118.8+61.6+21.6+0=202.
 		\end{aligned}
 		\]
-		The expected value criterion chooses Strategy A because $193$ is the largest expected profit. This differs from the Maximin choice and matches the Maximax choice, so the expected value gives a balanced decision using the probabilities.
+		The expected value criterion chooses Strategy A because $204$ is the largest expected profit. This differs from the Maximin choice and matches the Maximax choice, so the expected value gives a balanced decision using the probabilities.
 
 		\item
 		\subsection*{Problem description}
