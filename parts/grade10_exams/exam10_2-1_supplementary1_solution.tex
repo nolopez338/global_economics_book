@@ -72,7 +72,7 @@
 
 		\item
 		\subsection*{Problem description}
-		A campus bookstore must choose a stocking plan for a semester. Plan A is premium notebooks, Plan B is standard notebooks, and Plan C is discount notebooks. Demand for notebooks can be strong, moderate, or weak with probabilities $0.35$, $0.45$, and $0.20$. Profit outcomes are given directly: under strong demand Plans A, B, and C earn $3540$, $2800$, and $4500$. Under moderate demand Plans A, B, and C earn $2100$, $2600$, and $3150$. Under weak demand Plans A, B, and C earn $660$, $1200$, and $1800$. Which decision is the risky choice under Maximax, the safe choice under Maximin, and the balanced choice under Expected Value?
+		A campus bookstore must choose a stocking plan for a semester. Plan A is premium notebooks, Plan B is standard notebooks, and Plan C is discount notebooks. Demand for notebooks can be strong, moderate, or weak with probabilities $0.35$, $0.45$, and $0.20$. Expected unit sales depend on demand and plan. Under strong demand Plan A sells 420 units, Plan B sells 520 units, and Plan C sells 600 units. Under moderate demand Plan A sells 300 units, Plan B sells 380 units, and Plan C sells 450 units. Under weak demand Plan A sells 180 units, Plan B sells 240 units, and Plan C sells 300 units. Unit prices are $22$, $18$, and $15$ for Plans A, B, and C. Variable costs per unit are $10$, $8$, and $6$. Use these parameters to calculate the profit payoff table. Which decision is the risky choice under Maximax, the safe choice under Maximin, and the balanced choice under Expected Value?
 
 		\subsection*{C2}
 		\begin{center}
@@ -87,7 +87,19 @@
 		\end{center}
 
 		\subsection*{C3}
-		Payoff is the profit in dollars given for each alternative and state.
+		Payoff = revenue $-$ cost, where revenue = (units $\times$ price) and cost = (units $\times$ variable cost).
+		\begin{center}
+			\textit{Units by plan and demand} \\
+			\begin{tabular}{l c c c}
+				\toprule
+				Plan & Strong & Moderate & Weak \\
+				\midrule
+				Plan A & 420 & 300 & 180 \\
+				Plan B & 520 & 380 & 240 \\
+				Plan C & 600 & 450 & 300 \\
+				\bottomrule
+		\end{tabular}
+		\end{center}
 		\begin{center}
 			\begin{minipage}[t]{0.48\linewidth}
 				\textit{Price parameters by plan}
@@ -107,26 +119,159 @@
 			\begin{minipage}[t]{0.48\linewidth}
 				\textit{Cost parameters by plan}
 				\begin{center}
-					\begin{tabular}{l c c}
+					\begin{tabular}{l c}
 						\toprule
-						Plan & Variable cost & Fixed cost \\
+						Plan & Variable cost \\
 						\midrule
-						Plan A & 10 & 1500 \\
-						Plan B & 8 & 1200 \\
-						Plan C & 6 & 900 \\
+						Plan A & 10 \\
+						Plan B & 8 \\
+						Plan C & 6 \\
 						\bottomrule
 					\end{tabular}
 				\end{center}
 			\end{minipage}
 		\end{center}
 		\begin{center}
+			\textit{Revenue by demand} \\
+			\begin{tabular}{l c c c}
+				\toprule
+				State of nature & Plan A revenue & Plan B revenue & Plan C revenue \\
+				\midrule
+				Strong demand &
+				$\begin{array}{l}
+					420\cdot 22\\
+					= 9240
+				\end{array}$ &
+				$\begin{array}{l}
+					520\cdot 18\\
+					= 9360
+				\end{array}$ &
+				$\begin{array}{l}
+					600\cdot 15\\
+					= 9000
+				\end{array}$ \\
+				Moderate demand &
+				$\begin{array}{l}
+					300\cdot 22\\
+					= 6600
+				\end{array}$ &
+				$\begin{array}{l}
+					380\cdot 18\\
+					= 6840
+				\end{array}$ &
+				$\begin{array}{l}
+					450\cdot 15\\
+					= 6750
+				\end{array}$ \\
+				Weak demand &
+				$\begin{array}{l}
+					180\cdot 22\\
+					= 3960
+				\end{array}$ &
+				$\begin{array}{l}
+					240\cdot 18\\
+					= 4320
+				\end{array}$ &
+				$\begin{array}{l}
+					300\cdot 15\\
+					= 4500
+				\end{array}$ \\
+				\bottomrule
+		\end{tabular}
+		\end{center}
+		\begin{center}
+			\textit{Cost by demand} \\
+			\begin{tabular}{l c c c}
+				\toprule
+				State of nature & Plan A cost & Plan B cost & Plan C cost \\
+				\midrule
+				Strong demand &
+				$\begin{array}{l}
+					420\cdot 10\\
+					= 4200
+				\end{array}$ &
+				$\begin{array}{l}
+					520\cdot 8\\
+					= 4160
+				\end{array}$ &
+				$\begin{array}{l}
+					600\cdot 6\\
+					= 3600
+				\end{array}$ \\
+				Moderate demand &
+				$\begin{array}{l}
+					300\cdot 10\\
+					= 3000
+				\end{array}$ &
+				$\begin{array}{l}
+					380\cdot 8\\
+					= 3040
+				\end{array}$ &
+				$\begin{array}{l}
+					450\cdot 6\\
+					= 2700
+				\end{array}$ \\
+				Weak demand &
+				$\begin{array}{l}
+					180\cdot 10\\
+					= 1800
+				\end{array}$ &
+				$\begin{array}{l}
+					240\cdot 8\\
+					= 1920
+				\end{array}$ &
+				$\begin{array}{l}
+					300\cdot 6\\
+					= 1800
+				\end{array}$ \\
+				\bottomrule
+		\end{tabular}
+		\end{center}
+		Profit is computed as Revenue minus Cost for each alternative and state.
+		\begin{center}
 			\begin{tabular}{l c c c c}
 				\toprule
 				State of nature & Probability & Plan A & Plan B & Plan C \\
 				\midrule
-				Strong demand & 0.35 & 3540 & 2800 & 4500 \\
-				Moderate demand & 0.45 & 2100 & 2600 & 3150 \\
-				Weak demand & 0.20 & 660 & 1200 & 1800 \\
+				Strong demand & 0.35 &
+				$\begin{array}{l}
+					9240 - 4200\\
+					= 5040
+				\end{array}$ &
+				$\begin{array}{l}
+					9360 - 4160\\
+					= 5200
+				\end{array}$ &
+				$\begin{array}{l}
+					9000 - 3600\\
+					= 5400
+				\end{array}$ \\
+				Moderate demand & 0.45 &
+				$\begin{array}{l}
+					6600 - 3000\\
+					= 3600
+				\end{array}$ &
+				$\begin{array}{l}
+					6840 - 3040\\
+					= 3800
+				\end{array}$ &
+				$\begin{array}{l}
+					6750 - 2700\\
+					= 4050
+				\end{array}$ \\
+				Weak demand & 0.20 &
+				$\begin{array}{l}
+					3960 - 1800\\
+					= 2160
+				\end{array}$ &
+				$\begin{array}{l}
+					4320 - 1920\\
+					= 2400
+				\end{array}$ &
+				$\begin{array}{l}
+					4500 - 1800\\
+					= 2700
+				\end{array}$ \\
 				\bottomrule
 		\end{tabular}
 		\end{center}
@@ -134,42 +279,42 @@
 		\subsection*{C4}
 		\[
 		\begin{aligned}
-		\max(\text{Plan A}) &= \max\{3540,2100,660\} = 3540,\\
-		\max(\text{Plan B}) &= \max\{2800,2600,1200\} = 2800,\\
-		\max(\text{Plan C}) &= \max\{4500,3150,1800\} = 4500.
+		\max(\text{Plan A}) &= \max\{5040,3600,2160\} = 5040,\\
+		\max(\text{Plan B}) &= \max\{5200,3800,2400\} = 5200,\\
+		\max(\text{Plan C}) &= \max\{5400,4050,2700\} = 5400.
 		\end{aligned}
 		\]
 		\[
 		\max\{\max(\text{Plan A}), \max(\text{Plan B}), \max(\text{Plan C})\}
-		= \max\{3540, 2800, 4500\}
-		= 4500.
+		= \max\{5040, 5200, 5400\}
+		= 5400.
 		\]
-		The Maximax choice is Plan C with 4500. The criterion is \emph{risky} because it focuses only on the best possible payoff and ignores how likely it is.
+		The Maximax choice is Plan C with 5400. The criterion is \emph{risky} because it focuses only on the best possible payoff and ignores how likely it is.
 
 		\subsection*{C5}
 		\[
 		\begin{aligned}
-		\min(\text{Plan A}) &= \min\{3540,2100,660\} = 660,\\
-		\min(\text{Plan B}) &= \min\{2800,2600,1200\} = 1200,\\
-		\min(\text{Plan C}) &= \min\{4500,3150,1800\} = 1800.
+		\min(\text{Plan A}) &= \min\{5040,3600,2160\} = 2160,\\
+		\min(\text{Plan B}) &= \min\{5200,3800,2400\} = 2400,\\
+		\min(\text{Plan C}) &= \min\{5400,4050,2700\} = 2700.
 		\end{aligned}
 		\]
 		\[
 		\max\{\min(\text{Plan A}), \min(\text{Plan B}), \min(\text{Plan C})\}
-		= \max\{660, 1200, 1800\}
-		= 1800.
+		= \max\{2160, 2400, 2700\}
+		= 2700.
 		\]
-		The Maximin choice is Plan C with 1800 because it gives the best worst case outcome. This is \emph{safe} because it prioritizes the least harmful result.
+		The Maximin choice is Plan C with 2700 because it gives the best worst case outcome. This is \emph{safe} because it prioritizes the least harmful result.
 
 		\subsection*{C1}
 		\[
 		\begin{aligned}
-		EV_A &= 0.35(3540)+0.45(2100)+0.20(660)=1239+945+132=2316,\\
-		EV_B &= 0.35(2800)+0.45(2600)+0.20(1200)=980+1170+240=2390,\\
-		EV_C &= 0.35(4500)+0.45(3150)+0.20(1800)=1575+1417.5+360=3352.5.
+		EV_A &= 0.35(5040)+0.45(3600)+0.20(2160)=1764+1620+432=3816,\\
+		EV_B &= 0.35(5200)+0.45(3800)+0.20(2400)=1820+1710+480=4010,\\
+		EV_C &= 0.35(5400)+0.45(4050)+0.20(2700)=1890+1822.5+540=4252.5.
 		\end{aligned}
 		\]
-		The expected value criterion chooses Plan C because $3352.5$ is the largest expected profit. This aligns with the Maximax and Maximin outcomes for Plan C, so it is the balanced decision using the probabilities.
+		The expected value criterion chooses Plan C because $4252.5$ is the largest expected profit. This aligns with the Maximax and Maximin outcomes for Plan C, so it is the balanced decision using the probabilities.
 
 		\item
 		\subsection*{Problem description}
@@ -762,7 +907,10 @@
 			\toprule
 			State of nature & Model A & Model B & Model C & Probabilities \\
 			\midrule
-			High demand, favorable cost &
+			$\begin{array}{l}
+				High\ demand,\\
+				favorable\ cost
+			\end{array}$ &
 			$\begin{array}{l}
 				26600 - 22200\\
 				= 4400
@@ -779,7 +927,10 @@
 				0.40\cdot 0.55\\
 				= 0.22
 			\end{array}$ \\
-			High demand, unfavorable cost &
+			$\begin{array}{l}
+				High\ demand,\\
+				unfavorable\ cost
+			\end{array}$ &
 			$\begin{array}{l}
 				26600 - 27800\\
 					= -1200
@@ -796,7 +947,10 @@
 				0.40\cdot 0.45\\
 				= 0.18
 			\end{array}$ \\
-			Medium demand, favorable cost &
+			$\begin{array}{l}
+				Medium\ demand,\\
+				favorable\ cost
+			\end{array}$ &
 			$\begin{array}{l}
 				19760 - 18600\\
 					= 1160
@@ -813,7 +967,10 @@
 				0.35\cdot 0.55\\
 				= 0.1925
 			\end{array}$ \\
-			Medium demand, unfavorable cost &
+			$\begin{array}{l}
+				Medium\ demand,\\
+				unfavorable\ cost
+			\end{array}$ &
 			$\begin{array}{l}
 				19760 - 22760\\
 					= -3000
@@ -830,7 +987,10 @@
 				0.35\cdot 0.45\\
 				= 0.1575
 			\end{array}$ \\
-			Low demand, favorable cost &
+			$\begin{array}{l}
+				Low\ demand,\\
+				favorable\ cost
+			\end{array}$ &
 			$\begin{array}{l}
 				13680 - 15400\\
 					= -1720
@@ -847,7 +1007,10 @@
 				0.25\cdot 0.55\\
 				= 0.1375
 			\end{array}$ \\
-			Low demand, unfavorable cost &
+			$\begin{array}{l}
+				Low\ demand,\\
+				unfavorable\ cost
+			\end{array}$ &
 			$\begin{array}{l}
 				13680 - 18280\\
 					= -4600
