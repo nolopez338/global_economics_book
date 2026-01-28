@@ -72,7 +72,7 @@
 
 		\item
 		\subsection*{Problem description}
-		A campus bookstore must choose a stocking plan for a semester. Plan A is premium notebooks, Plan B is standard notebooks, and Plan C is discount notebooks. Demand for notebooks can be strong, moderate, or weak with probabilities $0.35$, $0.45$, and $0.20$. Expected unit sales depend on demand and plan. Under strong demand Plan A sells 420 units, Plan B sells 520 units, and Plan C sells 600 units. Under moderate demand Plan A sells 300 units, Plan B sells 380 units, and Plan C sells 450 units. Under weak demand Plan A sells 180 units, Plan B sells 240 units, and Plan C sells 300 units. Unit prices are $22$, $18$, and $15$ for Plans A, B, and C. Total costs by demand and plan are provided in the cost table. Use these parameters to calculate the profit payoff table. Which decision is the risky choice under Maximax, the safe choice under Maximin, and the balanced choice under Expected Value?
+		A campus bookstore must choose a stocking plan for a semester. Plan A is premium notebooks, Plan B is standard notebooks, and Plan C is discount notebooks. Demand for notebooks can be strong, moderate, or weak with probabilities $0.35$, $0.45$, and $0.20$. Expected unit sales depend on demand and plan. Under strong demand Plan A sells 420 units, Plan B sells 520 units, and Plan C sells 600 units. Under moderate demand Plan A sells 300 units, Plan B sells 380 units, and Plan C sells 450 units. Under weak demand Plan A sells 180 units, Plan B sells 240 units, and Plan C sells 300 units. Unit prices are $22$, $18$, and $15$ for Plans A, B, and C. Use these parameters to calculate the payoff table. Which decision is the risky choice under Maximax, the safe choice under Maximin, and the balanced choice under Expected Value?
 
 		\subsection*{C2}
 		\begin{center}
@@ -81,13 +81,13 @@
 				Decision Alternatives & Plan A (premium), Plan B (standard), Plan C (discount) \\
 				States of Nature & Demand strong, moderate, weak with probabilities $0.35$, $0.45$, $0.20$ \\
 				Events & Realized demand level during the semester \\
-				Consequences & Profit in dollars after revenue and costs \\
+				Consequences & Payoff in dollars from revenue \\
 				\bottomrule
 			\end{tabular}
 		\end{center}
 
 		\subsection*{C3}
-		Payoff = revenue $-$ cost, where revenue = units $\times$ price and cost is taken from the cost table.
+		Payoff equals revenue, where revenue = units $\times$ price.
 		\begin{center}
 			\textit{Units by plan and demand} \\
 			\begin{tabular}{l c c c}
@@ -162,64 +162,16 @@
 				\bottomrule
 		\end{tabular}
 		\end{center}
-		Total costs by demand and plan are listed below.
+		Payoff equals revenue, so the payoff table matches the revenue values.
 		\begin{center}
-			\textit{Cost by demand} \\
-			\begin{tabular}{l c c c}
-				\toprule
-				State of nature & Plan A cost & Plan B cost & Plan C cost \\
-				\midrule
-				Strong demand & 4200 & 4160 & 3600 \\
-				Moderate demand & 3000 & 3040 & 2700 \\
-				Weak demand & 1800 & 1920 & 1800 \\
-				\bottomrule
-		\end{tabular}
-		\end{center}
-		Profit is computed as Revenue minus Cost for each alternative and state.
-		\begin{center}
+			\textit{Payoff table} \\
 			\begin{tabular}{l c c c c}
 				\toprule
 				State of nature & Probability & Plan A & Plan B & Plan C \\
 				\midrule
-				Strong demand & 0.35 &
-				$\begin{array}{l}
-					9240 - 4200\\
-					= 5040
-				\end{array}$ &
-				$\begin{array}{l}
-					9360 - 4160\\
-					= 5200
-				\end{array}$ &
-				$\begin{array}{l}
-					9000 - 3600\\
-					= 5400
-				\end{array}$ \\
-				Moderate demand & 0.45 &
-				$\begin{array}{l}
-					6600 - 3000\\
-					= 3600
-				\end{array}$ &
-				$\begin{array}{l}
-					6840 - 3040\\
-					= 3800
-				\end{array}$ &
-				$\begin{array}{l}
-					6750 - 2700\\
-					= 4050
-				\end{array}$ \\
-				Weak demand & 0.20 &
-				$\begin{array}{l}
-					3960 - 1800\\
-					= 2160
-				\end{array}$ &
-				$\begin{array}{l}
-					4320 - 1920\\
-					= 2400
-				\end{array}$ &
-				$\begin{array}{l}
-					4500 - 1800\\
-					= 2700
-				\end{array}$ \\
+				Strong demand & 0.35 & 9240 & 9360 & 9000 \\
+				Moderate demand & 0.45 & 6600 & 6840 & 6750 \\
+				Weak demand & 0.20 & 3960 & 4320 & 4500 \\
 				\bottomrule
 		\end{tabular}
 		\end{center}
@@ -227,42 +179,42 @@
 		\subsection*{C4}
 		\[
 		\begin{aligned}
-		\max(\text{Plan A}) &= \max\{5040,3600,2160\} = 5040,\\
-		\max(\text{Plan B}) &= \max\{5200,3800,2400\} = 5200,\\
-		\max(\text{Plan C}) &= \max\{5400,4050,2700\} = 5400.
+		\max(\text{Plan A}) &= \max\{9240,6600,3960\} = 9240,\\
+		\max(\text{Plan B}) &= \max\{9360,6840,4320\} = 9360,\\
+		\max(\text{Plan C}) &= \max\{9000,6750,4500\} = 9000.
 		\end{aligned}
 		\]
 		\[
 		\max\{\max(\text{Plan A}), \max(\text{Plan B}), \max(\text{Plan C})\}
-		= \max\{5040, 5200, 5400\}
-		= 5400.
+		= \max\{9240, 9360, 9000\}
+		= 9360.
 		\]
-		The Maximax choice is Plan C with 5400. The criterion is \emph{risky} because it focuses only on the best possible payoff and ignores how likely it is.
+		The Maximax choice is Plan B with 9360. The criterion is \emph{risky} because it focuses only on the best possible payoff and ignores how likely it is.
 
 		\subsection*{C5}
 		\[
 		\begin{aligned}
-		\min(\text{Plan A}) &= \min\{5040,3600,2160\} = 2160,\\
-		\min(\text{Plan B}) &= \min\{5200,3800,2400\} = 2400,\\
-		\min(\text{Plan C}) &= \min\{5400,4050,2700\} = 2700.
+		\min(\text{Plan A}) &= \min\{9240,6600,3960\} = 3960,\\
+		\min(\text{Plan B}) &= \min\{9360,6840,4320\} = 4320,\\
+		\min(\text{Plan C}) &= \min\{9000,6750,4500\} = 4500.
 		\end{aligned}
 		\]
 		\[
 		\max\{\min(\text{Plan A}), \min(\text{Plan B}), \min(\text{Plan C})\}
-		= \max\{2160, 2400, 2700\}
-		= 2700.
+		= \max\{3960, 4320, 4500\}
+		= 4500.
 		\]
-		The Maximin choice is Plan C with 2700 because it gives the best worst case outcome. This is \emph{safe} because it prioritizes the least harmful result.
+		The Maximin choice is Plan C with 4500 because it gives the best worst case outcome. This is \emph{safe} because it prioritizes the least harmful result.
 
 		\subsection*{C1}
 		\[
 		\begin{aligned}
-		EV_A &= 0.35(5040)+0.45(3600)+0.20(2160)=1764+1620+432=3816,\\
-		EV_B &= 0.35(5200)+0.45(3800)+0.20(2400)=1820+1710+480=4010,\\
-		EV_C &= 0.35(5400)+0.45(4050)+0.20(2700)=1890+1822.5+540=4252.5.
+		EV_A &= 0.35(9240)+0.45(6600)+0.20(3960)=3234+2970+792=6996,\\
+		EV_B &= 0.35(9360)+0.45(6840)+0.20(4320)=3276+3078+864=7218,\\
+		EV_C &= 0.35(9000)+0.45(6750)+0.20(4500)=3150+3037.5+900=7087.5.
 		\end{aligned}
 		\]
-			The expected value criterion chooses Plan C because $4252.5$ is the largest expected profit. This aligns with the Maximax and Maximin outcomes for Plan C, so it is the balanced decision using the probabilities.
+			The expected value criterion chooses Plan B because $7218$ is the largest expected payoff. This matches the Maximax outcome and differs from the Maximin outcome, so it is the balanced decision using the probabilities.
 	
 			\item
 			\subsection*{Problem description}
@@ -580,109 +532,126 @@
 	
 			\item
 			\subsection*{Problem description}
-			A rideshare cooperative must choose a service focus for the next season. Strategy A is an urban focus and Strategy B is a suburban focus. Demand can be strong or weak with probabilities $0.65$ and $0.35$. Revenue in thousands of dollars depends on demand and strategy. Under strong demand revenue is 520 for Strategy A and 560 for Strategy B. Under weak demand revenue is 260 for Strategy A and 240 for Strategy B. Which decision is the risky choice under Maximax, the safe choice under Maximin, and the balanced choice under Expected Value?
+			A drone delivery service must choose a routing plan for the next season. Strategy A uses an in house routing system and Strategy B uses a contracted routing partner. Demand can be strong or weak with probabilities $0.55$ and $0.45$. Battery cost conditions can be favorable or unfavorable with probabilities $0.70$ and $0.30$, and these conditions are independent of demand. Revenue in thousands of dollars depends on demand and strategy. Under strong demand revenue is 620 for Strategy A and 660 for Strategy B. Under weak demand revenue is 340 for Strategy A and 320 for Strategy B. Operating costs in thousands of dollars depend on battery cost conditions and strategy. Under favorable costs operating costs are 260 for Strategy A and 300 for Strategy B. Under unfavorable costs operating costs are 340 for Strategy A and 380 for Strategy B. Which decision is the risky choice under Maximax, the safe choice under Maximin, and the balanced choice under Expected Value?
 
 		\subsection*{C2}
 		\begin{center}
 			\begin{tabular}{l p{0.74\linewidth}}
 				\toprule
-				Decision Alternatives & Strategy A (urban), Strategy B (suburban) \\
-				States of Nature & Demand strong or weak \\
-				Events & Realized demand level \\
-				Consequences & Profit in thousands of dollars \\
+				Decision Alternatives & Strategy A (in house), Strategy B (contracted) \\
+				States of Nature & Demand strong or weak with battery costs favorable or unfavorable \\
+				Events & Realized demand level paired with battery cost conditions \\
+				Consequences & Profit in thousands of dollars from revenue minus operating costs \\
 				\bottomrule
 			\end{tabular}
 		\end{center}
 
 		\subsection*{C3}
-		Payoff equals revenue minus cost, with revenue determined by demand and cost taken from the cost parameters.
+		Payoff equals revenue minus cost, where revenue is determined by demand and cost is determined by battery conditions.
 		\begin{center}
-			\textit{Revenue parameters by strategy}
-			\begin{tabular}{l c c}
-				\toprule
-				Strategy & Strong & Weak \\
-				\midrule
-				Probabilities & 0.65 & 0.35 \\
-				Strategy A & 520 & 260 \\
-				Strategy B & 560 & 240 \\
-				\bottomrule
-			\end{tabular}
+			\begin{minipage}[t]{0.48\linewidth}
+				\textit{Revenue parameters by strategy}
+				\begin{center}
+					\begin{tabular}{l c c}
+						\toprule
+						Strategy & Strong & Weak \\
+						\midrule
+						Probabilities & 0.55 & 0.45 \\
+						Strategy A & 620 & 340 \\
+						Strategy B & 660 & 320 \\
+						\bottomrule
+					\end{tabular}
+				\end{center}
+			\end{minipage}
+			\hfill
+			\begin{minipage}[t]{0.48\linewidth}
+				\textit{Cost parameters by strategy}
+				\begin{center}
+					\begin{tabular}{l c c}
+						\toprule
+						Strategy & Favorable & Unfavorable \\
+						\midrule
+						Probabilities & 0.70 & 0.30 \\
+						Strategy A & 260 & 340 \\
+						Strategy B & 300 & 380 \\
+						\bottomrule
+					\end{tabular}
+				\end{center}
+			\end{minipage}
 		\end{center}
-		\begin{center}
-			\textit{Cost parameters by strategy}
-			\begin{tabular}{l c c}
-				\toprule
-				Strategy & Strong & Weak \\
-				\midrule
-				Strategy A & 0 & 0 \\
-				Strategy B & 0 & 0 \\
-				\bottomrule
-			\end{tabular}
-		\end{center}
-		\begin{center}
-			\textit{Cost by demand}
-			\begin{tabular}{l c c}
-				\toprule
-				State of nature & Strategy A cost & Strategy B cost \\
-				\midrule
-				Strong demand &
-				$\begin{array}{l}
-					0
-				\end{array}$ &
-				$\begin{array}{l}
-					0
-				\end{array}$ \\
-				Weak demand &
-				$\begin{array}{l}
-					0
-				\end{array}$ &
-				$\begin{array}{l}
-					0
-				\end{array}$ \\
-				\bottomrule
-			\end{tabular}
-		\end{center}
+		Profit is computed as revenue minus cost for each alternative and state.
 		\begin{center}
 			\textit{Profit parameters by strategy}
 			\begin{tabular}{l p{0.17\linewidth} p{0.2\linewidth} p{0.2\linewidth}}
 				\toprule
 				State of nature & Probability & Strategy A & Strategy B \\
 				\midrule
-				Strong demand &
+				Strong demand, favorable cost &
 				$\begin{array}{l}
-					0.65
+					0.55\cdot 0.70\\
+					= 0.385
 				\end{array}$ &
 				$\begin{array}{l}
-					520 - 0\\
-					= 520
+					620 - 260\\
+					= 360
 				\end{array}$ &
 				$\begin{array}{l}
-					560 - 0\\
-					= 560
+					660 - 300\\
+					= 360
 				\end{array}$ \\
-				Weak demand &
+				Strong demand, unfavorable cost &
 				$\begin{array}{l}
-					0.35
+					0.55\cdot 0.30\\
+					= 0.165
 				\end{array}$ &
 				$\begin{array}{l}
-					260 - 0\\
-					= 260
+					620 - 340\\
+					= 280
 				\end{array}$ &
 				$\begin{array}{l}
-					240 - 0\\
-					= 240
+					660 - 380\\
+					= 280
+				\end{array}$ \\
+				Weak demand, favorable cost &
+				$\begin{array}{l}
+					0.45\cdot 0.70\\
+					= 0.315
+				\end{array}$ &
+				$\begin{array}{l}
+					340 - 260\\
+					= 80
+				\end{array}$ &
+				$\begin{array}{l}
+					320 - 300\\
+					= 20
+				\end{array}$ \\
+				Weak demand, unfavorable cost &
+				$\begin{array}{l}
+					0.45\cdot 0.30\\
+					= 0.135
+				\end{array}$ &
+				$\begin{array}{l}
+					340 - 340\\
+					= 0
+				\end{array}$ &
+				$\begin{array}{l}
+					320 - 380\\
+					= -60
 				\end{array}$ \\
 				\bottomrule
 		\end{tabular}
 		\end{center}
+		Combined probabilities are $0.55\cdot 0.70=0.385$, $0.55\cdot 0.30=0.165$, $0.45\cdot 0.70=0.315$, $0.45\cdot 0.30=0.135$.
 		\begin{center}
 			\textit{Payoff table} \\
 			\begin{tabular}{l c c c}
 				\toprule
 				State of nature & Probability & Strategy A & Strategy B \\
 				\midrule
-				Strong demand & 0.65 & 520 & 560 \\
-				Weak demand & 0.35 & 260 & 240 \\
+				Strong demand, favorable cost & 0.385 & 360 & 360 \\
+				Strong demand, unfavorable cost & 0.165 & 280 & 280 \\
+				Weak demand, favorable cost & 0.315 & 80 & 20 \\
+				Weak demand, unfavorable cost & 0.135 & 0 & -60 \\
 				\bottomrule
 		\end{tabular}
 		\end{center}
@@ -690,40 +659,42 @@
 		\subsection*{C4}
 		\[
 		\begin{aligned}
-		\max(\text{Strategy A}) &= \max\{520,260\} = 520,\\
-		\max(\text{Strategy B}) &= \max\{560,240\} = 560.
+		\max(\text{Strategy A}) &= \max\{360,280,80,0\} = 360,\\
+		\max(\text{Strategy B}) &= \max\{360,280,20,-60\} = 360.
 		\end{aligned}
 		\]
 		\[
 		\max\{\max(\text{Strategy A}), \max(\text{Strategy B})\}
-		= \max\{520, 560\}
-		= 560.
+		= \max\{360, 360\}
+		= 360.
 		\]
-		The Maximax choice is Strategy B with 560. The criterion is \emph{risky} because it focuses only on the best possible payoff and ignores how likely it is.
+		The Maximax choice is Strategy A or Strategy B with 360. The criterion is \emph{risky} because it focuses only on the best possible payoff and ignores how likely it is.
 
 		\subsection*{C5}
 		\[
 		\begin{aligned}
-		\min(\text{Strategy A}) &= \min\{520,260\} = 260,\\
-		\min(\text{Strategy B}) &= \min\{560,240\} = 240.
+		\min(\text{Strategy A}) &= \min\{360,280,80,0\} = 0,\\
+		\min(\text{Strategy B}) &= \min\{360,280,20,-60\} = -60.
 		\end{aligned}
 		\]
 		\[
 		\max\{\min(\text{Strategy A}), \min(\text{Strategy B})\}
-		= \max\{260, 240\}
-		= 260.
+		= \max\{0, -60\}
+		= 0.
 		\]
-		The Maximin choice is Strategy A with 260 because it has the least severe worst case. This is \emph{safe} because it protects against the worst outcome.
+		The Maximin choice is Strategy A with 0 because it has the least severe worst case. This is \emph{safe} because it protects against the worst outcome.
 
 		\subsection*{C1}
-		Expected values use the demand probabilities.
+		Expected values use the combined state probabilities.
 		\[
 		\begin{aligned}
-		EV_A &= 0.65(520)+0.35(260)=338+91=429,\\
-		EV_B &= 0.65(560)+0.35(240)=364+84=448.
+		EV_A &= 0.385(360)+0.165(280)+0.315(80)+0.135(0)\\
+		&= 138.6+46.2+25.2+0=210,\\
+		EV_B &= 0.385(360)+0.165(280)+0.315(20)+0.135(-60)\\
+		&= 138.6+46.2+6.3-8.1=183.
 		\end{aligned}
 		\]
-		The expected value criterion chooses Strategy B because $448$ is the largest expected profit. This matches the Maximax choice and differs from the Maximin choice, so the expected value emphasizes weighted outcomes.
+		The expected value criterion chooses Strategy A because $210$ is the largest expected profit. This differs from the Maximin choice and matches the Maximax outcome, so the expected value gives a balanced decision using the probabilities.
 
 		\item
 		\subsection*{Problem description}
