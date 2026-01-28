@@ -735,36 +735,30 @@
 		\end{tabular}
 		\end{center}
 		\begin{center}
-			\begin{minipage}[t]{0.48\linewidth}
-				\textit{Cost parameters by model}
-				\begin{center}
-					\begin{tabular}{l c c c}
-						\toprule
-						Model & Variable favorable & Variable unfavorable & Fixed cost \\
-						\midrule
-						Model A & 20 & 28 & 8200 \\
-						Model B & 20 & 28 & 9600 \\
-						Model C & 20 & 28 & 7000 \\
-						\bottomrule
-					\end{tabular}
-				\end{center}
-			\end{minipage}
-			\hfill
-			\begin{minipage}[t]{0.48\linewidth}
-				\textit{Revenue parameters by member}
-				\begin{center}
-					\begin{tabular}{l c}
-						\toprule
-						Model & Fee per member \\
-						\midrule
-						Model A & 38 \\
-						Model B & 42 \\
-						Model C & 34 \\
-						\bottomrule
-					\end{tabular}
-				\end{center}
-			\end{minipage}
+			\begin{tabular}{@{}l@{\hspace{0.06\linewidth}}l@{}}
+				\textit{Cost parameters by model} & \textit{Revenue parameters by member} \\
+				\begin{tabular}{l c c c}
+					\toprule
+					Model & Favorable & Unfavorable & Fixed cost \\
+					\midrule
+					Model A & 20 & 28 & 8200 \\
+					Model B & 20 & 28 & 9600 \\
+					Model C & 20 & 28 & 7000 \\
+					\bottomrule
+				\end{tabular}
+				&
+				\begin{tabular}{l c}
+					\toprule
+					Model & Fee per member \\
+					\midrule
+					Model A & 38 \\
+					Model B & 42 \\
+					Model C & 34 \\
+					\bottomrule
+				\end{tabular}
+			\end{tabular}
 		\end{center}
+
 		\begin{center}
 			\textit{Revenue by demand} \\
 			\begin{tabular}{l c c c}
@@ -903,132 +897,119 @@
 		Profit is computed as Revenue minus Cost for each alternative and state.
 		\begin{center}
 		\textit{Profit parameters by model} \\
-		\begin{tabular}{l p{0.19\linewidth} p{0.19\linewidth} p{0.19\linewidth} p{0.19\linewidth}}
+		\begin{tabular}{p{0.19\linewidth} p{0.19\linewidth} p{0.19\linewidth} p{0.19\linewidth} p{0.19\linewidth}}
 			\toprule
 			State of nature & Model A & Model B & Model C & Probabilities \\
 			\midrule
-			$\begin{array}{l}
-				High\ demand,\\
-				favorable\ cost
-			\end{array}$ &
+			\parbox[t]{\linewidth}{High demand,\\ favorable cost} &
 			$\begin{array}{l}
 				26600 - 22200\\
 				= 4400
-				\end{array}$ &
-				$\begin{array}{l}
-					27300 - 22600\\
-					= 4700
-				\end{array}$ &
-				$\begin{array}{l}
-					25840 - 22200\\
-					= 3640
+			\end{array}$ &
+			$\begin{array}{l}
+				27300 - 22600\\
+				= 4700
+			\end{array}$ &
+			$\begin{array}{l}
+				25840 - 22200\\
+				= 3640
 			\end{array}$ &
 			$\begin{array}{l}
 				0.40\cdot 0.55\\
 				= 0.22
 			\end{array}$ \\
-			$\begin{array}{l}
-				High\ demand,\\
-				unfavorable\ cost
-			\end{array}$ &
+			
+			\parbox[t]{\linewidth}{High demand,\\ unfavorable cost} &
 			$\begin{array}{l}
 				26600 - 27800\\
-					= -1200
-				\end{array}$ &
-				$\begin{array}{l}
-					27300 - 27800\\
-					= -500
-				\end{array}$ &
-				$\begin{array}{l}
-					25840 - 28280\\
-					= -2440
+				= -1200
+			\end{array}$ &
+			$\begin{array}{l}
+				27300 - 27800\\
+				= -500
+			\end{array}$ &
+			$\begin{array}{l}
+				25840 - 28280\\
+				= -2440
 			\end{array}$ &
 			$\begin{array}{l}
 				0.40\cdot 0.45\\
 				= 0.18
 			\end{array}$ \\
-			$\begin{array}{l}
-				Medium\ demand,\\
-				favorable\ cost
-			\end{array}$ &
+			
+			\parbox[t]{\linewidth}{Medium demand,\\ favorable cost} &
 			$\begin{array}{l}
 				19760 - 18600\\
-					= 1160
-				\end{array}$ &
-				$\begin{array}{l}
-					20160 - 19200\\
-					= 960
-				\end{array}$ &
-				$\begin{array}{l}
-					20400 - 19000\\
-					= 1400
+				= 1160
+			\end{array}$ &
+			$\begin{array}{l}
+				20160 - 19200\\
+				= 960
+			\end{array}$ &
+			$\begin{array}{l}
+				20400 - 19000\\
+				= 1400
 			\end{array}$ &
 			$\begin{array}{l}
 				0.35\cdot 0.55\\
 				= 0.1925
 			\end{array}$ \\
-			$\begin{array}{l}
-				Medium\ demand,\\
-				unfavorable\ cost
-			\end{array}$ &
+			
+			\parbox[t]{\linewidth}{Medium demand,\\ unfavorable cost} &
 			$\begin{array}{l}
 				19760 - 22760\\
-					= -3000
-				\end{array}$ &
-				$\begin{array}{l}
-					20160 - 23040\\
-					= -2880
-				\end{array}$ &
-				$\begin{array}{l}
-					20400 - 23800\\
-					= -3400
+				= -3000
+			\end{array}$ &
+			$\begin{array}{l}
+				20160 - 23040\\
+				= -2880
+			\end{array}$ &
+			$\begin{array}{l}
+				20400 - 23800\\
+				= -3400
 			\end{array}$ &
 			$\begin{array}{l}
 				0.35\cdot 0.45\\
 				= 0.1575
 			\end{array}$ \\
-			$\begin{array}{l}
-				Low\ demand,\\
-				favorable\ cost
-			\end{array}$ &
+			
+			\parbox[t]{\linewidth}{Low demand,\\ favorable cost} &
 			$\begin{array}{l}
 				13680 - 15400\\
-					= -1720
-				\end{array}$ &
-				$\begin{array}{l}
-					13440 - 16000\\
-					= -2560
-				\end{array}$ &
-				$\begin{array}{l}
-					14280 - 15400\\
-					= -1120
+				= -1720
+			\end{array}$ &
+			$\begin{array}{l}
+				13440 - 16000\\
+				= -2560
+			\end{array}$ &
+			$\begin{array}{l}
+				14280 - 15400\\
+				= -1120
 			\end{array}$ &
 			$\begin{array}{l}
 				0.25\cdot 0.55\\
 				= 0.1375
 			\end{array}$ \\
-			$\begin{array}{l}
-				Low\ demand,\\
-				unfavorable\ cost
-			\end{array}$ &
+			
+			\parbox[t]{\linewidth}{Low demand,\\ unfavorable cost} &
 			$\begin{array}{l}
 				13680 - 18280\\
-					= -4600
-				\end{array}$ &
-				$\begin{array}{l}
-					13440 - 18560\\
-					= -5120
-				\end{array}$ &
-				$\begin{array}{l}
-					14280 - 18760\\
-					= -4480
+				= -4600
+			\end{array}$ &
+			$\begin{array}{l}
+				13440 - 18560\\
+				= -5120
+			\end{array}$ &
+			$\begin{array}{l}
+				14280 - 18760\\
+				= -4480
 			\end{array}$ &
 			$\begin{array}{l}
 				0.25\cdot 0.45\\
 				= 0.1125
 			\end{array}$ \\
 			\bottomrule
-	\end{tabular}
+		\end{tabular}
 	\end{center}
 	Combined probabilities are $0.40\cdot 0.55=0.22$, $0.40\cdot 0.45=0.18$, $0.35\cdot 0.55=0.1925$, $0.35\cdot 0.45=0.1575$, $0.25\cdot 0.55=0.1375$, $0.25\cdot 0.45=0.1125$.
 	\begin{center}
