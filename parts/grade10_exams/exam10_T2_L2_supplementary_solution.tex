@@ -1,8 +1,245 @@
 \input{../../preamble/preamble_exams.tex}
 \begin{document}
-	\ExamTitleBlock{10th grade}{Learning evidence T2 L2 Decision analysis supplementary solutions}{}
+	\ExamTitleBlock{10th grade}{Learning evidence T2 L2 Decision analysis supplementary material solutions}{}
 	
-	\ExamSection{Problems}
+	\ExamSection{C6 Develops decision-making strategies using probabilities and the maximum opportunity criterion.}
+	
+	% Practice Activity 2.1 — Maximum Opportunity Criterion (Minimax Regret)
+	% Problems and worked solutions extracted from the provided webpage content.
+	
+	% -------------------------
+	% Problem 1 — Community Bookstore Upgrade
+	% -------------------------
+	\subsection*{Problem 1 — Community Bookstore Upgrade}
+	
+	\textbf{Problem.} A community bookstore is deciding how to update its storefront.
+	
+	\begin{itemize}
+		\item Alternatives (profits in thousands of USD): Expand reading space; Launch a mobile book cart.
+		\item States of nature and probabilities: High foot traffic ($0.55$); Low foot traffic ($0.45$).
+	\end{itemize}
+	
+	Payoff table (given):
+	\[
+	\begin{array}{lcc}
+		\toprule
+		\text{Alternative} & \text{High traffic }(0.55) & \text{Low traffic }(0.45)\\
+		\midrule
+		\text{Expand space} & 48 & 12\\
+		\text{Mobile cart} & 32 & 20\\
+		\bottomrule
+	\end{array}
+	\]
+	
+	\textbf{Question.} Use the maximum opportunity (minimax regret) criterion to choose the best alternative. Then compare the choice to Maximax, Maximin, and Expected Value.
+	
+	\textbf{Solution.}
+	
+	\textbf{(C6) Maximum opportunity criterion (minimax regret).} Best payoff in each state:
+	\[
+	\begin{aligned}
+		\text{High traffic: } &\max\{48, 32\} = 48\\
+		\text{Low traffic: }  &\max\{12, 20\} = 20
+	\end{aligned}
+	\]
+	
+	Regret table (best payoff $-$ payoff):
+	\[
+	\begin{array}{lccc}
+		\toprule
+		\text{Alternative} & \text{High traffic} & \text{Low traffic} & \text{Maximum regret}\\
+		\midrule
+		\text{Expand space} & 48-48=0 & 20-12=8 & 8\\
+		\text{Mobile cart}  & 48-32=16 & 20-20=0 & 16\\
+		\bottomrule
+	\end{array}
+	\]
+	
+	Minimax regret choice: \emph{Expand space}, since its maximum regret is $8$ (smaller than $16$).
+	
+	\textbf{Comparison with other criteria.}
+	\begin{itemize}
+		\item \textbf{Maximax:} Choose \emph{Expand space} since $\max(48,12)=48$ is larger than $\max(32,20)=32$.
+		\item \textbf{Maximin:} Choose \emph{Mobile cart} since $\min(32,20)=20$ is larger than $\min(48,12)=12$.
+		\item \textbf{Expected Value:} Favors \emph{Expand space} because the higher payoff in the high-traffic state dominates when weighted by the given probabilities.
+	\end{itemize}
+	
+	% -------------------------
+	% Problem 2 — Cooperative Packing Line Choice
+	% -------------------------
+	\subsection*{Problem 2 — Cooperative Packing Line Choice}
+	
+	\textbf{Problem.} A dairy cooperative is choosing a packing line. The profit payoff table below was obtained from estimated revenues and costs under each order size.
+	
+	\begin{itemize}
+		\item Alternatives: Automated packing line; Manual packing line.
+		\item States of nature (order size): High order ($0.30$); Medium order ($0.45$); Low order ($0.25$).
+	\end{itemize}
+	
+	Payoff table (profit in thousand USD, given):
+	\[
+	\begin{array}{lccc}
+		\toprule
+		\text{Alternative} & \text{High }(0.30) & \text{Medium }(0.45) & \text{Low }(0.25)\\
+		\midrule
+		\text{Automated} & 42 & 28 & 8\\
+		\text{Manual} & 30 & 24 & 12\\
+		\bottomrule
+	\end{array}
+	\]
+	
+	\textbf{Question.} Apply the maximum opportunity criterion and then compare with Maximax, Maximin, and Expected Value.
+	
+	\textbf{Solution.}
+	
+	\textbf{(C6) Maximum opportunity criterion (minimax regret).} Best payoff in each state:
+	\[
+	\begin{aligned}
+		\text{High: } &\max\{42, 30\} = 42\\
+		\text{Medium: } &\max\{28, 24\} = 28\\
+		\text{Low: } &\max\{8, 12\} = 12
+	\end{aligned}
+	\]
+	
+	Regret table (best payoff $-$ payoff):
+	\[
+	\begin{array}{lcccc}
+		\toprule
+		\text{Alternative} & \text{High} & \text{Medium} & \text{Low} & \text{Maximum regret}\\
+		\midrule
+		\text{Automated} & 42-42=0 & 28-28=0 & 12-8=4 & 4\\
+		\text{Manual} & 42-30=12 & 28-24=4 & 12-12=0 & 12\\
+		\bottomrule
+	\end{array}
+	\]
+	
+	Minimax regret choice: \emph{Automated packing}, since its maximum regret is $4$ (smaller than $12$).
+	
+	\textbf{Comparison with other criteria.}
+	\begin{itemize}
+		\item \textbf{Maximax:} Choose \emph{Automated} since its best payoff is $42$ (greater than $30$).
+		\item \textbf{Maximin:} Choose \emph{Manual} since its worst payoff is $12$ (greater than $8$).
+		\item \textbf{Expected Value:} Favors \emph{Automated} because the high and medium outcomes carry more total probability and higher payoffs.
+	\end{itemize}
+	
+	% -------------------------
+	% Problem 3 — Craft Export Shipping Plan
+	% -------------------------
+	\subsection*{Problem 3 — Craft Export Shipping Plan}
+	
+	\textbf{Problem.} A cooperative that exports handmade crafts must choose a shipping plan. It can ship by air, ship by sea, or delay shipment. Demand and exchange rates combine into four states of nature:
+	\begin{itemize}
+		\item S1 (high demand + strong currency), $P=0.20$
+		\item S2 (high demand + weak currency), $P=0.30$
+		\item S3 (low demand + strong currency), $P=0.25$
+		\item S4 (low demand + weak currency), $P=0.25$
+	\end{itemize}
+	
+	Payoff table (profit in thousand USD, given):
+	\[
+	\begin{array}{lcccc}
+		\toprule
+		\text{Alternative} & \text{S1 }(0.20) & \text{S2 }(0.30) & \text{S3 }(0.25) & \text{S4 }(0.25)\\
+		\midrule
+		\text{Air} & 60 & 48 & 20 & 10\\
+		\text{Sea} & 50 & 44 & 26 & 18\\
+		\text{Delay} & 35 & 32 & 28 & 24\\
+		\bottomrule
+	\end{array}
+	\]
+	
+	\textbf{Question.} Apply the maximum opportunity criterion and then compare with Maximax, Maximin, and Expected Value.
+	
+	\textbf{Solution.}
+	
+	\textbf{(C6) Maximum opportunity criterion (minimax regret).} Best payoff in each state:
+	\[
+	\begin{aligned}
+		\text{S1: } &\max\{60, 50, 35\} = 60\\
+		\text{S2: } &\max\{48, 44, 32\} = 48\\
+		\text{S3: } &\max\{20, 26, 28\} = 28\\
+		\text{S4: } &\max\{10, 18, 24\} = 24
+	\end{aligned}
+	\]
+	
+	Regret table (best payoff $-$ payoff):
+	\[
+	\begin{array}{lccccc}
+		\toprule
+		\text{Alternative} & \text{S1} & \text{S2} & \text{S3} & \text{S4} & \text{Maximum regret}\\
+		\midrule
+		\text{Air} & 60-60=0 & 48-48=0 & 28-20=8 & 24-10=14 & 14\\
+		\text{Sea} & 60-50=10 & 48-44=4 & 28-26=2 & 24-18=6 & 10\\
+		\text{Delay} & 60-35=25 & 48-32=16 & 28-28=0 & 24-24=0 & 25\\
+		\bottomrule
+	\end{array}
+	\]
+	
+	Minimax regret choice: \emph{Ship by sea}, since its maximum regret is $10$ (smaller than $14$ and $25$).
+	
+	\textbf{Comparison with other criteria.}
+	\begin{itemize}
+		\item \textbf{Maximax:} Choose \emph{Air} since its best payoff is $60$ (largest).
+		\item \textbf{Maximin:} Choose \emph{Delay} since its worst payoff is $24$ (greater than $10$ and $18$).
+		\item \textbf{Expected Value:} Favors \emph{Sea} because it balances payoffs with moderate risk across the four states.
+	\end{itemize}
+	
+	% -------------------------
+	% Problem 4 — Campus Vending Options
+	% -------------------------
+	\subsection*{Problem 4 — Campus Vending Options}
+	
+	\textbf{Problem.} A student council is selecting a vending option for campus events. It can choose smart vending kiosks or pop-up snack stalls. Campus traffic can be high ($P=0.40$), medium ($P=0.35$), or low ($P=0.25$). The profit payoff table below was obtained from estimated revenues and costs under each scenario.
+	
+	Payoff table (profit in thousand USD, given):
+	\[
+	\begin{array}{lccc}
+		\toprule
+		\text{Alternative} & \text{High }(0.40) & \text{Medium }(0.35) & \text{Low }(0.25)\\
+		\midrule
+		\text{Kiosks} & 25 & 12 & -1\\
+		\text{Pop-up stalls} & 23 & 14 & 5\\
+		\bottomrule
+	\end{array}
+	\]
+	
+	\textbf{Question.} Apply the maximum opportunity criterion and then compare with Maximax, Maximin, and Expected Value.
+	
+	\textbf{Solution.}
+	
+	\textbf{(C6) Maximum opportunity criterion (minimax regret).} Best payoff in each state:
+	\[
+	\begin{aligned}
+		\text{High: } &\max\{25, 23\} = 25\\
+		\text{Medium: } &\max\{12, 14\} = 14\\
+		\text{Low: } &\max\{-1, 5\} = 5
+	\end{aligned}
+	\]
+	
+	Regret table (best payoff $-$ payoff):
+	\[
+	\begin{array}{lcccc}
+		\toprule
+		\text{Alternative} & \text{High} & \text{Medium} & \text{Low} & \text{Maximum regret}\\
+		\midrule
+		\text{Kiosks} & 25-25=0 & 14-12=2 & 5-(-1)=6 & 6\\
+		\text{Pop-up stalls} & 25-23=2 & 14-14=0 & 5-5=0 & 2\\
+		\bottomrule
+	\end{array}
+	\]
+	
+	Minimax regret choice: \emph{Pop-up stalls}, since its maximum regret is $2$ (smaller than $6$).
+	
+	\textbf{Comparison with other criteria.}
+	\begin{itemize}
+		\item \textbf{Maximax:} Choose \emph{Kiosks} since its best payoff is $25$ (greater than $23$).
+		\item \textbf{Maximin:} Choose \emph{Pop-up stalls} since its worst payoff is $5$ (greater than $-1$).
+		\item \textbf{Expected Value:} Favors \emph{Pop-up stalls} because the medium and low outcomes have substantial probabilities and higher payoffs than kiosks in those states.
+	\end{itemize}
+	
+	
+	\ExamSection{C7 Uses probabilities and expected value to analyze a decision-making problem.}
+	
 	\begin{ExamProblems}
 		\item
 		\subsection*{Problem 1 — Single Project under Uncertainty}
