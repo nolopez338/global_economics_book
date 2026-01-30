@@ -1,0 +1,342 @@
+\input{../../preamble/preamble_exams.tex}
+\begin{document}
+	\ExamTitleBlock{10th grade}{Learning evidence T2 L2 Decision analysis supplementary solutions}{}
+	
+	\ExamSection{Problems}
+	\begin{ExamProblems}
+		\item
+		\subsection*{Problem 1 — Single Project under Uncertainty}
+		
+		\textbf{Problem.}
+		A firm considers launching a project. Profit depends on the state of nature.
+		
+		\[
+		\begin{array}{lcc}
+		\hline
+		 & S_1 & S_2 \\
+		\hline
+		\text{Project} & 18 & -4 \\
+		\hline
+		\end{array}
+		\]
+		
+		Let \(p\) be the probability of state \(S_1\), and \(1-p\) the probability of state \(S_2\).  
+		Determine for which values of \(p\) the project is profitable using Expected Value.
+		
+		\textbf{Solution.}
+		\[
+		EV = 18p + (-4)(1-p) = 22p - 4
+		\]
+		Profitability condition:
+		\[
+		EV>0 \Rightarrow 22p-4>0
+		\]
+		
+		\item
+		\subsection*{Problem 2 — Technology Upgrade}
+		
+		\textbf{Problem.}
+		A company considers upgrading its technology. Profit depends on the state of nature.
+		
+		\[
+		\begin{array}{lcc}
+		\hline
+		 & S_1 & S_2 \\
+		\hline
+		\text{Upgrade} & 25 & -10 \\
+		\hline
+		\end{array}
+		\]
+		
+		Let \(p\) be the probability of state \(S_1\).  
+		Determine for which values of \(p\) the upgrade is profitable.
+		
+		\textbf{Solution.}
+		\[
+		EV = 25p + (-10)(1-p) = 35p - 10
+		\]
+		Profitability condition:
+		\[
+		EV>0 \Rightarrow 35p-10>0
+		\]
+		
+		\item
+		\subsection*{Problem 3 — Two Investment Alternatives}
+		
+		\textbf{Problem.}
+		Two investment options depend on the state of nature.
+		
+		\[
+		\begin{array}{lcc}
+		\hline
+		 & S_1 & S_2 \\
+		\hline
+		A & 22 & 6 \\
+		B & 16 & 10 \\
+		\hline
+		\end{array}
+		\]
+		
+		Let \(p\) be the probability of state \(S_1\).  
+		When is option A better than option B using Expected Value.
+		
+		\textbf{Solution.}
+		\[
+		EV(A)=22p+6(1-p)=16p+6
+		\]
+		\[
+		EV(B)=16p+10(1-p)=6p+10
+		\]
+		Decision condition:
+		\[
+		EV(A)-EV(B)>0
+		\]
+		\[
+		(16p+6)-(6p+10)>0 \Rightarrow 10p-4>0
+		\]
+		
+		\item
+		\subsection*{Problem 4 — Three Production Plans}
+		
+		\textbf{Problem.}
+		A firm must choose among three production plans.
+		
+		\[
+		\begin{array}{lcc}
+		\hline
+		 & S_1 & S_2 \\
+		\hline
+		A & 30 & 0 \\
+		B & 20 & 8 \\
+		C & 14 & 12 \\
+		\hline
+		\end{array}
+		\]
+		
+		Let \(p\) be the probability of state \(S_1\).  
+		Determine for which values of \(p\) each plan is optimal.
+		
+		\textbf{Solution.}
+		\[
+		EV(A)=30p,\quad
+		EV(B)=20p+8(1-p)=12p+8,\quad
+		EV(C)=14p+12(1-p)=2p+12
+		\]
+		
+		Pairwise comparison conditions in \(>0\) form:
+		\[
+		EV(A)-EV(B)>0 \Rightarrow 30p-(12p+8)>0 \Rightarrow 18p-8>0
+		\]
+		\[
+		EV(B)-EV(C)>0 \Rightarrow (12p+8)-(2p+12)>0 \Rightarrow 10p-4>0
+		\]
+		\[
+		EV(A)-EV(C)>0 \Rightarrow 30p-(2p+12)>0 \Rightarrow 28p-12>0
+		\]
+		
+		\item
+		\subsection*{Problem 5 — Two Alternatives with Three States}
+		
+		\textbf{Problem.}
+		Two strategies depend on three states of nature.
+		
+		\[
+		\begin{array}{lccc}
+		\hline
+		 & S_1 & S_2 & S_3 \\
+		\hline
+		A & 20 & 10 & -5 \\
+		B & 12 & 14 & 0 \\
+		\hline
+		\end{array}
+		\]
+		
+		Let \(p_1=P(S_1)\), \(p_2=P(S_2)\), and \(1-p_1-p_2=P(S_3)\).  
+		When is strategy A better than strategy B using Expected Value.
+		
+		\textbf{Solution.}
+		\[
+		EV(A)=20p_1+10p_2-5(1-p_1-p_2)=25p_1+15p_2-5
+		\]
+		\[
+		EV(B)=12p_1+14p_2
+		\]
+		Decision condition:
+		\[
+		EV(A)-EV(B)>0
+		\Rightarrow (25p_1+15p_2-5)-(12p_1+14p_2)>0
+		\Rightarrow 13p_1+p_2-5>0
+		\]
+		
+		\item
+		\subsection*{Problem 6 — Policy Choice under Three States}
+		
+		\textbf{Problem.}
+		A government compares two policies under three states of nature.
+		
+		\[
+		\begin{array}{lccc}
+		\hline
+		 & S_1 & S_2 & S_3 \\
+		\hline
+		A & 18 & 8 & -6 \\
+		B & 10 & 12 & 2 \\
+		\hline
+		\end{array}
+		\]
+		
+		Let \(p_1=P(S_1)\), \(p_2=P(S_2)\), and \(1-p_1-p_2=P(S_3)\).  
+		When is policy A better than policy B.
+		
+		\textbf{Solution.}
+		\[
+		EV(A)=18p_1+8p_2-6(1-p_1-p_2)=24p_1+14p_2-6
+		\]
+		\[
+		EV(B)=10p_1+12p_2+2(1-p_1-p_2)=8p_1+10p_2+2
+		\]
+		Decision condition:
+		\[
+		EV(A)-EV(B)>0
+		\Rightarrow (24p_1+14p_2-6)-(8p_1+10p_2+2)>0
+		\Rightarrow 16p_1+4p_2-8>0
+		\]
+		Equivalently:
+		\[
+		4p_1+p_2-2>0
+		\]
+		
+		\item
+		\subsection*{Problem 7 — New Service Platform Launch}
+		
+		\textbf{Problem.}
+		A company considers launching a digital service. Profit depends on two independent factors:
+		customer adoption and system reliability.
+		
+		\[
+		\begin{array}{lcc}
+		\hline
+		 & \text{Stable} & \text{Unstable} \\
+		\hline
+		\text{High adoption} & 28 & 6 \\
+		\text{Low adoption} & -4 & -12 \\
+		\hline
+		\end{array}
+		\]
+		
+		Let \(p\) be the probability of high adoption and \(q\) the probability of system stability.  
+		Find \(EV(p,q)\) and determine when launching is profitable.
+		
+		\textbf{Solution.}
+		\[
+		EV(p,q)=16pq+18p+8q-12
+		\]
+		Profitability condition:
+		\[
+		EV>0 \Rightarrow 16pq+18p+8q-12>0
+		\]
+		
+		\item
+		\subsection*{Problem 8 — Regional Store Opening}
+		
+		\textbf{Problem.}
+		A retailer evaluates opening a new store. Profit depends on demand and competitor response.
+		
+		\[
+		\begin{array}{lcc}
+		\hline
+		 & \text{Mild} & \text{Aggressive} \\
+		\hline
+		\text{Strong demand} & 35 & 12 \\
+		\text{Weak demand} & -5 & -20 \\
+		\hline
+		\end{array}
+		\]
+		
+		Let \(p\) be the probability of strong demand and \(q\) the probability of a mild response.  
+		Determine when opening the store is profitable.
+		
+		\textbf{Solution.}
+		\[
+		EV(p,q)=28pq+32p+15q-20
+		\]
+		Profitability condition:
+		\[
+		EV>0 \Rightarrow 28pq+32p+15q-20>0
+		\]
+		
+		\item
+		\subsection*{Problem 9 — Marketing Strategy Choice}
+		
+		\textbf{Problem.}
+		A firm must choose between two marketing strategies. Outcomes depend on market interest
+		and campaign execution.
+		
+		\[
+		\begin{array}{lcc}
+		\hline
+		\text{State of nature} & A & B \\
+		\hline
+		\text{High interest, Effective} & 30 & 22 \\
+		\text{High interest, Ineffective} & 10 & 14 \\
+		\text{Low interest, Effective} & -6 & 4 \\
+		\text{Low interest, Ineffective} & -14 & -8 \\
+		\hline
+		\end{array}
+		\]
+		
+		Let \(p\) be the probability of high interest and \(q\) the probability of effective execution.  
+		When is strategy A better than strategy B.
+		
+		\textbf{Solution.}
+		\[
+		EV_A(p,q)=20pq+16p+8q-14
+		\]
+		\[
+		EV_B(p,q)=10pq+18p+12q-8
+		\]
+		Decision condition:
+		\[
+		EV_A-EV_B>0
+		\Rightarrow (20pq+16p+8q-14)-(10pq+18p+12q-8)>0
+		\Rightarrow 10pq-2p-4q-6>0
+		\]
+		
+		\item
+		\subsection*{Problem 10 — Investment Portfolio Selection}
+		
+		\textbf{Problem.}
+		An investor must choose between two portfolios. Outcomes depend on economic growth
+		and interest rates.
+		
+		\[
+		\begin{array}{lcc}
+		\hline
+		\text{State of nature} & X & Y \\
+		\hline
+		\text{Strong growth, Low rates} & 26 & 20 \\
+		\text{Strong growth, High rates} & 12 & 16 \\
+		\text{Weak growth, Low rates} & 2 & 6 \\
+		\text{Weak growth, High rates} & -10 & -4 \\
+		\hline
+		\end{array}
+		\]
+		
+		Let \(p\) be the probability of strong growth and \(q\) the probability of low interest rates.  
+		When is portfolio X better than portfolio Y.
+		
+		\textbf{Solution.}
+		\[
+		EV_X(p,q)=22pq+14p+12q-10
+		\]
+		\[
+		EV_Y(p,q)=14pq+20p+10q-4
+		\]
+		Decision condition:
+		\[
+		EV_X-EV_Y>0
+		\Rightarrow (22pq+14p+12q-10)-(14pq+20p+10q-4)>0
+		\Rightarrow 8pq-6p+2q-6>0
+		\]
+	\end{ExamProblems}
+\end{document}
