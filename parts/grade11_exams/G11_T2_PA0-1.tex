@@ -1,0 +1,319 @@
+% --------------------------------------------------
+% Confidence Intervals and Estimation — Problems with Solutions
+% Single context, 10 criteria-aligned problems
+% --------------------------------------------------
+
+\subsection*{Common context}
+
+A financial analytics team is studying the hourly revenue generated (in USD) by a chain of urban coffee shops during peak hours. The objective is to estimate population parameters and quantify uncertainty for economic and financial decision making.
+
+% --------------------------------------------------
+% Problem 1
+% --------------------------------------------------
+
+\subsection*{Problem 1 — Mean and standard deviation in sample and population}
+
+Two datasets of hourly revenues are available
+
+\begin{itemize}
+	\item Dataset A contains the hourly revenues of \emph{all} stores in the chain for a specific day
+	\item Dataset B contains the hourly revenues of a random sample of $n = 40$ stores on another day
+\end{itemize}
+
+\begin{enumerate}
+	\item Identify which dataset represents a population and which represents a sample
+	\item Explain what the mean and standard deviation represent in each case
+	\item Indicate whether the symbols $(\mu,\sigma)$ or $(\bar{x},s)$ are appropriate for each dataset
+\end{enumerate}
+
+\subsubsection*{Solution 1}
+
+\begin{enumerate}
+	\item Dataset A represents a population for that specific day because it includes all stores. Dataset B represents a sample because it includes only $40$ randomly selected stores.
+	\item For Dataset A, the mean represents the true average hourly revenue of all stores that day, and the standard deviation represents the true spread of hourly revenues across all stores that day.
+	
+	For Dataset B, the mean represents the average hourly revenue in the sampled stores, and the standard deviation represents the spread of hourly revenues in the sampled stores. These are used to learn about the corresponding population quantities for the day being studied.
+	\item For Dataset A, use population notation $(\mu,\sigma)$. For Dataset B, use sample notation $(\bar{x}, s)$.
+\end{enumerate}
+
+% --------------------------------------------------
+% Problem 2
+% --------------------------------------------------
+
+\subsection*{Problem 2 — Population parameter vs. sample statistic}
+
+Management wants to know the true average hourly revenue of all stores during peak hours over an entire month.
+
+\begin{enumerate}
+	\item Explain why the true monthly average revenue is a population parameter
+	\item Explain why the average computed from a sample of stores is a statistic
+	\item Describe the role of the sample statistic in estimating the population parameter
+\end{enumerate}
+
+\subsubsection*{Solution 2}
+
+\begin{enumerate}
+	\item The true monthly average hourly revenue across all stores and all peak-hour observations in the month is a fixed (but unknown) numerical characteristic of the entire population of interest. Therefore it is a population parameter, typically denoted $\mu$.
+	\item Any average computed from only a subset of stores or observations is calculated from a sample, so it is a sample statistic, typically denoted $\bar{x}$.
+	\item The statistic $\bar{x}$ is used as an estimator of $\mu$. Because of sampling variability, $\bar{x}$ changes from sample to sample, so it provides information about $\mu$ but is not guaranteed to equal $\mu$.
+\end{enumerate}
+
+% --------------------------------------------------
+% Problem 3
+% --------------------------------------------------
+
+\subsection*{Problem 3 — Point estimation vs. interval estimation}
+
+From a random sample of stores, the average hourly revenue is found to be $\bar{x} = 215$ USD.
+
+\begin{enumerate}
+	\item Identify $\bar{x} = 215$ as a point estimate or an interval estimate
+	\item Explain one limitation of relying only on this value for decision making
+	\item Explain how an interval estimate improves the estimation of a population parameter
+\end{enumerate}
+
+\subsubsection*{Solution 3}
+
+\begin{enumerate}
+	\item $\bar{x} = 215$ is a point estimate of the population mean $\mu$.
+	\item Limitation. It provides no explicit information about uncertainty. Two different samples could produce different values, so a single number can hide how imprecise the estimate might be.
+	\item An interval estimate gives a range of plausible values for $\mu$ and quantifies uncertainty through a confidence level. This helps decisions because it indicates how far the true mean could reasonably be from the point estimate.
+\end{enumerate}
+
+% --------------------------------------------------
+% Problem 4
+% --------------------------------------------------
+
+\subsection*{Problem 4 — Interpretation of a confidence interval}
+
+A $95\%$ confidence interval for the mean hourly revenue is
+\[
+(205,\;225).
+\]
+
+\begin{enumerate}
+	\item Interpret this interval in the context of coffee shop revenues
+	\item Explain the meaning of the $95\%$ confidence level in terms of repeated sampling
+	\item Describe how a financial manager could use this interval for planning
+\end{enumerate}
+
+\subsubsection*{Solution 4}
+
+\begin{enumerate}
+	\item Interpretation. A reasonable statement is that the population mean hourly revenue $\mu$ is estimated to lie between $205$ and $225$ USD.
+	\item Meaning of $95\%$. If the same sampling and interval-construction method were repeated many times, about $95\%$ of the intervals produced would contain the true mean $\mu$. This does not mean there is a $95\%$ probability that $\mu$ lies in this particular computed interval.
+	\item Planning use. A manager can compare the interval to targets or budgets. For example, if a break-even benchmark is $210$ USD per hour, the interval indicates whether typical performance is plausibly above, near, or below the benchmark, supporting staffing and pricing decisions.
+\end{enumerate}
+
+% --------------------------------------------------
+% Problem 5
+% --------------------------------------------------
+
+\subsection*{Problem 5 — Confidence interval for the mean with known variance}
+
+Assume the population standard deviation is known to be $\sigma = 40$ USD. A random sample of $n = 64$ stores has mean revenue $\bar{x} = 210$ USD.
+
+Construct a $95\%$ confidence interval for $\mu$ and interpret it.
+
+\subsubsection*{Solution 5}
+
+Known $\sigma$ implies a $z$ interval
+\[
+\bar{x} \pm z_{\alpha/2}\frac{\sigma}{\sqrt{n}}.
+\]
+For $95\%$, $\alpha = 0.05$, so $z_{\alpha/2} = z_{0.025} \approx 1.96$.
+
+Compute the standard error
+\[
+\frac{\sigma}{\sqrt{n}} = \frac{40}{\sqrt{64}} = \frac{40}{8} = 5.
+\]
+Margin of error
+\[
+E = 1.96(5) = 9.8.
+\]
+Confidence interval
+\[
+210 \pm 9.8 = (210 - 9.8,\;210 + 9.8) = (200.2,\;219.8).
+\]
+
+Interpretation. The mean hourly revenue $\mu$ is estimated to be between $200.2$ and $219.8$ USD at the $95\%$ confidence level.
+
+% --------------------------------------------------
+% Problem 6
+% --------------------------------------------------
+
+\subsection*{Problem 6 — Sample size determination}
+
+Management wants to estimate the mean hourly revenue with a maximum error of $E = 5$ USD at a $95\%$ confidence level. Assume $\sigma = 40$ USD.
+
+Determine the minimum sample size $n$.
+
+\subsubsection*{Solution 6}
+
+For known $\sigma$, the margin of error is
+\[
+E = z_{\alpha/2}\frac{\sigma}{\sqrt{n}}.
+\]
+Solve for $n$
+\[
+n = \left(\frac{z_{\alpha/2}\sigma}{E}\right)^2.
+\]
+With $z_{\alpha/2} \approx 1.96$, $\sigma = 40$, $E = 5$
+\[
+n = \left(\frac{1.96(40)}{5}\right)^2
+= \left(\frac{78.4}{5}\right)^2
+= (15.68)^2
+= 245.8624.
+\]
+Sample size must be an integer and must meet the error requirement, so round up
+\[
+n = 246.
+\]
+
+% --------------------------------------------------
+% Problem 7
+% --------------------------------------------------
+
+\subsection*{Problem 7 — Confidence interval for a proportion}
+
+The team studies the proportion of stores whose hourly revenue exceeds $250$ USD. In a sample of $n = 200$ stores, $x = 54$ stores exceed $250$.
+
+Construct a $95\%$ confidence interval for the population proportion $p$ and interpret it.
+
+\subsubsection*{Solution 7}
+
+Sample proportion
+\[
+\hat{p} = \frac{x}{n} = \frac{54}{200} = 0.27.
+\]
+For a large-sample proportion interval
+\[
+\hat{p} \pm z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}.
+\]
+For $95\%$, $z_{\alpha/2} \approx 1.96$.
+
+Compute the standard error
+\[
+\sqrt{\frac{0.27(1-0.27)}{200}}
+= \sqrt{\frac{0.27(0.73)}{200}}
+= \sqrt{\frac{0.1971}{200}}
+= \sqrt{0.0009855}
+\approx 0.0314.
+\]
+Margin of error
+\[
+E = 1.96(0.0314) \approx 0.0615.
+\]
+Confidence interval
+\[
+0.27 \pm 0.0615 = (0.2085,\;0.3315).
+\]
+
+Interpretation. The proportion of stores exceeding $250$ USD per peak hour is estimated to be between about $0.209$ and $0.332$ at the $95\%$ confidence level.
+
+% --------------------------------------------------
+% Problem 8
+% --------------------------------------------------
+
+\subsection*{Problem 8 — Confidence interval using the t-student distribution}
+
+A smaller sample of $n = 18$ stores has sample mean $\bar{x} = 220$ USD and sample standard deviation $s = 45$ USD. The population variance is unknown.
+
+Construct a $95\%$ confidence interval for $\mu$ and interpret it.
+
+\subsubsection*{Solution 8}
+
+Because $\sigma$ is unknown and $n$ is small, use the $t$ interval
+\[
+\bar{x} \pm t_{\alpha/2,\;n-1}\frac{s}{\sqrt{n}}.
+\]
+Degrees of freedom
+\[
+df = n-1 = 17.
+\]
+For $95\%$, $t_{\alpha/2,17} = t_{0.025,17} \approx 2.11$ (table value).
+
+Compute the standard error
+\[
+\frac{s}{\sqrt{n}} = \frac{45}{\sqrt{18}}.
+\]
+Since $\sqrt{18} \approx 4.2426$
+\[
+\frac{45}{4.2426} \approx 10.61.
+\]
+Margin of error
+\[
+E \approx 2.11(10.61) \approx 22.39.
+\]
+Confidence interval
+\[
+220 \pm 22.39 = (197.61,\;242.39).
+\]
+
+Interpretation. The mean hourly revenue $\mu$ is estimated to be between about $197.6$ and $242.4$ USD at the $95\%$ confidence level.
+
+% --------------------------------------------------
+% Problem 9
+% --------------------------------------------------
+
+\subsection*{Problem 9 — Mean confidence interval with unknown variance}
+
+In a different city, a sample of $n = 25$ stores yields $\bar{x} = 198$ USD and $s = 38$ USD.
+
+Estimate a $90\%$ confidence interval for $\mu$ and comment on interval width.
+
+\subsubsection*{Solution 9}
+
+Variance is unknown, so use a $t$ interval
+\[
+\bar{x} \pm t_{\alpha/2,\;n-1}\frac{s}{\sqrt{n}}.
+\]
+For $90\%$, $\alpha = 0.10$, so $\alpha/2 = 0.05$, and $df = 24$.
+From a $t$ table
+\[
+t_{0.05,24} \approx 1.711.
+\]
+Standard error
+\[
+\frac{s}{\sqrt{n}} = \frac{38}{\sqrt{25}} = \frac{38}{5} = 7.6.
+\]
+Margin of error
+\[
+E = 1.711(7.6) \approx 13.0036.
+\]
+Confidence interval
+\[
+198 \pm 13.0036 = (184.9964,\;211.0036).
+\]
+Rounded to two decimals
+\[
+(185.00,\;211.00).
+\]
+
+Comment on width. If $n$ increases, $\frac{s}{\sqrt{n}}$ decreases, so the margin of error decreases and the interval becomes narrower, assuming similar variability.
+
+% --------------------------------------------------
+% Problem 10
+% --------------------------------------------------
+
+\subsection*{Problem 10 — Conclusion about a statistical parameter}
+
+A financial benchmark states that an average hourly revenue below $200$ USD indicates underperformance.
+
+Use the $95\%$ confidence interval from Problem 5, $(200.2,\;219.8)$, to decide whether the data support the claim that $\mu < 200$. Justify the conclusion and explain an implication.
+
+\subsubsection*{Solution 10}
+
+The claim is
+\[
+\mu < 200.
+\]
+The $95\%$ confidence interval from Problem 5 is
+\[
+(200.2,\;219.8).
+\]
+Because the entire interval is greater than $200$ (its lower bound is $200.2$), values $\mu < 200$ are not supported by this interval.
+
+Conclusion. At the $95\%$ confidence level, the data do not support the underperformance claim $\mu < 200$.
+
+Implication. Planning decisions based on average peak-hour revenue should not assume underperformance. For example, budget cuts justified only by the claim $\mu < 200$ would not be statistically supported at this confidence level.
