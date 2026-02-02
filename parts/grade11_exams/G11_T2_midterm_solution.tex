@@ -1,0 +1,345 @@
+\input{../../preamble/preamble_exams.tex}
+\begin{document}
+	\ExamTitleBlock{11th grade}{Term 2 Midterm: Confidence Interval Planning (Solutions)}{}
+	
+	\ExamSection{Evaluated criteria}
+	\begin{ExamCriteria}
+		\item C1: Compute the sample mean and sample standard deviation.
+		\item C2: Distinguish between sample statistics and population parameters.
+		\item C3: Explain why interval estimation is preferred over a single point estimate.
+		\item C4: Interpret the meaning of a X\% confidence interval in context.
+		\item C5: Construct a X\% confidence interval using known population standard deviation.
+		\item C6: Determine the required sample size to achieve a target margin of error.
+		\item C7: Construct and interpret a confidence interval for a population proportion.
+	\end{ExamCriteria}
+
+	\ExamSection{Problems}
+	\begin{ExamProblems}
+		\newpage
+		\item
+		\subsection*{Problem description}
+		A regional transit office studies the average weekday fare collected per rider for two pilot corridors.
+		The two samples are distinct random samples drawn from the same population of fare amounts.
+		The grouped fare data (USD) are below.
+
+		\textbf{Sample A (12 riders):}
+		\begin{itemize}
+			\item 40 USD occurred in 4 riders.
+			\item 50 USD occurred in 3 riders.
+			\item 65 USD occurred in 5 riders.
+		\end{itemize}
+
+		\textbf{Sample B (13 riders):}
+		\begin{itemize}
+			\item 40 USD occurred in 5 riders.
+			\item 50 USD occurred in 2 riders.
+			\item 65 USD occurred in 6 riders.
+		\end{itemize}
+
+		Long-run audits show the population standard deviation is $\sigma = 12$ USD.
+		For classroom purposes, suppose the true population mean fare is $\mu = 53$ USD.
+		Construct and interpret 95\% confidence intervals for the population mean in each corridor.
+		At the end, determine how many additional observations are required in each sample group to reach a margin of error target of $E = 3.5$ USD.
+
+		\subsection*{C1}
+		\textbf{Sample A:}
+		\[
+		\sum f x = 4(40) + 3(50) + 5(65) = 160 + 150 + 325 = 635
+		\]
+		\[
+		\bar{x}_A = \frac{635}{12} \approx 52.92
+		\]
+		\[
+		\sum f(x-\bar{x}_A)^2 = 4(40-52.92)^2 + 3(50-52.92)^2 + 5(65-52.92)^2 \approx 1422.92
+		\]
+		\[
+		s_A^2 = \frac{1422.92}{12-1} \approx 129.36, \qquad s_A = \sqrt{129.36} \approx 11.37
+		\]
+		\textbf{Sample B:}
+		\[
+		\sum f x = 5(40) + 2(50) + 6(65) = 200 + 100 + 390 = 690
+		\]
+		\[
+		\bar{x}_B = \frac{690}{13} \approx 53.08
+		\]
+		\[
+		\sum f(x-\bar{x}_B)^2 = 5(40-53.08)^2 + 2(50-53.08)^2 + 6(65-53.08)^2 \approx 1726.92
+		\]
+		\[
+		s_B^2 = \frac{1726.92}{13-1} \approx 143.91, \qquad s_B = \sqrt{143.91} \approx 12.00
+		\]
+
+		\subsection*{C5}
+		Use the known population standard deviation to build 95\% confidence intervals for each sample.
+		\[
+		SE_A = \frac{\sigma}{\sqrt{12}} \approx 3.46, \qquad E_A = 1.96(3.46) \approx 6.79
+		\]
+		\[
+		\mu \in \bar{x}_A \pm E_A \Rightarrow 52.92 \pm 6.79 = [46.13,\ 59.71]
+		\]
+		\[
+		SE_B = \frac{\sigma}{\sqrt{13}} \approx 3.33, \qquad E_B = 1.96(3.33) \approx 6.52
+		\]
+		\[
+		\mu \in \bar{x}_B \pm E_B \Rightarrow 53.08 \pm 6.52 = [46.56,\ 59.60]
+		\]
+		Interpretation: we are 95\% confident the true mean fare lies between about 46.13 and 59.71 USD based on Sample A, and between about 46.56 and 59.60 USD based on Sample B. The intervals overlap and both contain the classroom value $\mu = 53$ USD, so the two pilot corridors support similar mean fares.
+
+		\subsection*{C6}
+		This subsection establishes the required sample size so the margin of error does not exceed the target amount.
+
+		Step 1: Use the target error and confidence level. The target margin of error is $E = 3.5$ USD and for 95\% confidence, $z^* = 1.96$.
+
+		Step 2: Compute the required sample size.
+		\[
+		n_{\text{required}} = \left(\frac{z^*\,\sigma}{E}\right)^2
+		= \left(\frac{1.96 \cdot 12}{3.5}\right)^2
+		= \left(6.72\right)^2
+		\approx 45.16
+		\]
+		Step 3: Determine additional observations. Round up to $n_{\text{required}} = 46$.
+		Additional observations needed: Sample A needs $46 - 12 = 34$ more riders, and Sample B needs $46 - 13 = 33$ more riders.
+
+		Conclusion. Each corridor should collect enough data to reach a total of 46 riders to ensure the margin of error is at most 3.5 USD.
+
+		\newpage
+		\item
+		\subsection*{Problem description}
+		A campus dining service compares average lunch checkout times (minutes) at two kiosks.
+		The two samples are distinct random samples with sizes $n_1 = 3$ and $n_2 = 4$ drawn from the same population of checkout times.
+
+		\textbf{Sample 1:} 18, 22, 20.
+
+		\textbf{Sample 2:} 19, 21, 23, 20.
+
+		Operational logs indicate the population standard deviation is $\sigma = 3.6$ minutes.
+		Construct 95\% confidence intervals for the population mean checkout time at each kiosk.
+		At the end, determine how many additional observations are required in each kiosk sample to reach a margin of error target of $E = 2.0$ minutes.
+
+		\subsection*{C1}
+		First, compute the sample means.
+		\[
+		\bar{x}_1 = \frac{18 + 22 + 20}{3} = 20.00
+		\qquad
+		\bar{x}_2 = \frac{19 + 21 + 23 + 20}{4} = 20.75
+		\]
+		Second, compute the sample variances and sample standard deviations.
+		\[
+		s_1^2 = \frac{(18-20)^2 + (22-20)^2 + (20-20)^2}{3-1} = \frac{8}{2} = 4.00,
+		\qquad s_1 = 2.00
+		\]
+		\[
+		s_2^2 = \frac{(19-20.75)^2 + (21-20.75)^2 + (23-20.75)^2 + (20-20.75)^2}{4-1} \approx 2.92,
+		\qquad s_2 \approx 1.71
+		\]
+
+		\subsection*{C5}
+		With known $\sigma = 3.6$ and 95\% confidence, $z_{0.025}=1.96$.
+		\[
+		SE_1 = \frac{3.6}{\sqrt{3}} \approx 2.08, \qquad E_1 = 1.96(2.08) \approx 4.07
+		\]
+		\[
+		\mu \in \bar{x}_1 \pm E_1 \Rightarrow 20.00 \pm 4.07 = [15.93,\ 24.07]
+		\]
+		\[
+		SE_2 = \frac{3.6}{\sqrt{4}} = 1.80, \qquad E_2 = 1.96(1.80) \approx 3.53
+		\]
+		\[
+		\mu \in \bar{x}_2 \pm E_2 \Rightarrow 20.75 \pm 3.53 = [17.22,\ 24.28]
+		\]
+		Interpretation: we are 95\% confident the true mean checkout time lies between about 15.93 and 24.07 minutes for Kiosk 1, and between about 17.22 and 24.28 minutes for Kiosk 2.
+
+		\subsection*{C6}
+		This subsection establishes the required sample size so the margin of error does not exceed the target amount.
+
+		Step 1: Use the target error and confidence level. The target margin of error is $E = 2.0$ minutes and for 95\% confidence, $z^* = 1.96$.
+
+		Step 2: Compute the required sample size.
+		\[
+		n_{\text{required}} = \left(\frac{z^*\,\sigma}{E}\right)^2
+		= \left(\frac{1.96 \cdot 3.6}{2.0}\right)^2
+		= \left(3.53\right)^2
+		\approx 12.44
+		\]
+		Step 3: Determine additional observations. Round up to $n_{\text{required}} = 13$.
+		Additional observations needed: Kiosk 1 needs $13 - 3 = 10$ more observations, and Kiosk 2 needs $13 - 4 = 9$ more observations.
+
+		Conclusion. Each kiosk should collect enough data to reach a total of 13 observations to ensure the margin of error is at most 2.0 minutes.
+
+		\newpage
+		\item
+		\subsection*{Problem description}
+		A public finance office studies monthly utility reimbursements (USD) for two district teams.
+		The two samples are distinct random samples with different sizes drawn from the same population of reimbursements.
+
+		\textbf{Sample A (40 reimbursements):}
+		\begin{itemize}
+			\item 80 USD occurred in 12 reimbursements.
+			\item 95 USD occurred in 10 reimbursements.
+			\item 110 USD occurred in 9 reimbursements.
+			\item 130 USD occurred in 9 reimbursements.
+		\end{itemize}
+
+		\textbf{Sample B (28 reimbursements):}
+		\begin{itemize}
+			\item 80 USD occurred in 7 reimbursements.
+			\item 95 USD occurred in 8 reimbursements.
+			\item 110 USD occurred in 6 reimbursements.
+			\item 130 USD occurred in 7 reimbursements.
+		\end{itemize}
+
+		Long-run accounting records show the population standard deviation is $\sigma = 20$ USD.
+		In each sample, the office also records how many reimbursements are flagged for expedited approval.
+		Sample A has $x_A = 24$ expedited reimbursements, and Sample B has $x_B = 18$ expedited reimbursements.
+
+		Construct 95\% confidence intervals for the population mean reimbursement using each sample and construct 95\% confidence intervals for the proportion of expedited reimbursements in each sample.
+		At the end, determine how many additional observations are required in each sample group to reach a margin of error target of $E = 3.0$ USD for the mean reimbursement.
+
+		\subsection*{C1}
+		\textbf{Sample A:}
+		\[
+		\sum f x = 12(80) + 10(95) + 9(110) + 9(130) = 4070
+		\]
+		\[
+		\bar{x}_A = \frac{4070}{40} = 101.75
+		\]
+		\[
+		\sum f(x-\bar{x}_A)^2 = 12(80-101.75)^2 + 10(95-101.75)^2 + 9(110-101.75)^2 + 9(130-101.75)^2 = 13927.50
+		\]
+		\[
+		s_A^2 = \frac{13927.50}{40-1} \approx 357.12, \qquad s_A = \sqrt{357.12} \approx 18.90
+		\]
+		\textbf{Sample B:}
+		\[
+		\sum f x = 7(80) + 8(95) + 6(110) + 7(130) = 2890
+		\]
+		\[
+		\bar{x}_B = \frac{2890}{28} \approx 103.21
+		\]
+		\[
+		\sum f(x-\bar{x}_B)^2 = 7(80-103.21)^2 + 8(95-103.21)^2 + 6(110-103.21)^2 + 7(130-103.21)^2 \approx 9610.71
+		\]
+		\[
+		s_B^2 = \frac{9610.71}{28-1} \approx 355.95, \qquad s_B = \sqrt{355.95} \approx 18.87
+		\]
+
+		\subsection*{C5 and C7}
+		\textbf{C5:} Use the known population standard deviation to build 95\% confidence intervals for the mean.
+		\[
+		SE_A = \frac{\sigma}{\sqrt{40}} \approx 3.16, \qquad E_A = 1.96(3.16) \approx 6.20
+		\]
+		\[
+		\mu \in \bar{x}_A \pm E_A \Rightarrow 101.75 \pm 6.20 = [95.55,\ 107.95]
+		\]
+		\[
+		SE_B = \frac{\sigma}{\sqrt{28}} \approx 3.78, \qquad E_B = 1.96(3.78) \approx 7.41
+		\]
+		\[
+		\mu \in \bar{x}_B \pm E_B \Rightarrow 103.21 \pm 7.41 = [95.81,\ 110.62]
+		\]
+
+		\textbf{C7:} Construct confidence intervals for the expedited approval proportion in each sample.
+		\[
+		\hat{p}_A = \frac{24}{40} = 0.60, \qquad \hat{p}_B = \frac{18}{28} \approx 0.64
+		\]
+		\[
+		n_A\hat{p}_A = 24 \ge 10, \quad n_A(1-\hat{p}_A) = 16 \ge 10
+		\]
+		\[
+		n_B\hat{p}_B = 18 \ge 10, \quad n_B(1-\hat{p}_B) = 10 \ge 10
+		\]
+		\[
+		SE_{p_A} = \sqrt{\frac{0.60(0.40)}{40}} \approx 0.0775, \qquad E_{p_A} = 1.96(0.0775) \approx 0.1518
+		\]
+		\[
+		\hat{p}_A \pm E_{p_A} = 0.60 \pm 0.1518 \Rightarrow [0.448,\ 0.752]
+		\]
+		\[
+		SE_{p_B} = \sqrt{\frac{0.64(0.36)}{28}} \approx 0.0906, \qquad E_{p_B} = 1.96(0.0906) \approx 0.1775
+		\]
+		\[
+		\hat{p}_B \pm E_{p_B} \approx 0.64 \pm 0.1775 \Rightarrow [0.465,\ 0.820]
+		\]
+		Interpretation: the mean reimbursement intervals overlap substantially, and the proportion intervals suggest the expedited share is plausibly between about 0.45 and 0.75 in Sample A and between about 0.47 and 0.82 in Sample B.
+
+		\subsection*{C6}
+		This subsection establishes the required sample size so the margin of error does not exceed the target amount.
+
+		Step 1: Use the target error and confidence level. The target margin of error is $E = 3.0$ USD and for 95\% confidence, $z^* = 1.96$.
+
+		Step 2: Compute the required sample size.
+		\[
+		n_{\text{required}} = \left(\frac{z^*\,\sigma}{E}\right)^2
+		= \left(\frac{1.96 \cdot 20}{3.0}\right)^2
+		= \left(13.07\right)^2
+		\approx 170.74
+		\]
+		Step 3: Determine additional observations. Round up to $n_{\text{required}} = 171$.
+		Additional observations needed: Sample A needs $171 - 40 = 131$ more observations, and Sample B needs $171 - 28 = 143$ more observations.
+
+		Conclusion. Each district team should collect enough data to reach a total of 171 reimbursements to ensure the margin of error is at most 3.0 USD.
+
+		\newpage
+		\item
+		\subsection*{Problem description}
+		A municipal purchasing office analyzes average invoice amounts for two audit samples drawn from the same population.
+		Population parameters are reported as $\mu = 420$ USD and $\sigma = 55$ USD.
+		The two audit samples produce the following confidence intervals for the mean invoice amount:
+
+		\begin{itemize}
+			\item Sample A (90\% CI): [402, 438] USD.
+			\item Sample B (90\% CI): [395, 445] USD.
+		\end{itemize}
+
+		Explain which values are population parameters versus sample estimates, describe point versus interval estimation, and interpret the two intervals for the audit team.
+
+		\subsection*{C2}
+		The population parameters are $\mu = 420$ USD and $\sigma = 55$ USD. The two confidence intervals are based on sample statistics (each sample mean and the known $\sigma$), which estimate the population mean. The intervals are not population values; they summarize uncertainty from each sample.
+
+		\subsection*{C3}
+		A point estimate would be a single sample mean for each audit. The intervals [402, 438] and [395, 445] are interval estimates that add a margin of error to the sample means. Interval estimation is preferred because it captures sampling variability and gives a range of plausible values for $\mu$.
+
+		\subsection*{C4}
+		At 90\% confidence, the office can be confident the true mean invoice amount lies between 402 and 438 USD for Sample A and between 395 and 445 USD for Sample B. The overlap indicates the two audits are consistent with similar invoice averages, and the confidence level means that in repeated sampling about 90\% of such intervals would contain $\mu$.
+
+		\newpage
+		\item
+		\subsection*{Problem description}
+		An agricultural finance board compares average loan sizes from two different populations: rural cooperatives and urban cooperatives.
+		The rural population has parameters $\mu_R = 310$ USD and $\sigma_R = 40$ USD, while the urban population has parameters $\mu_U = 350$ USD and $\sigma_U = 55$ USD.
+		Analysts report the following confidence intervals for the mean loan size:
+
+		\begin{itemize}
+			\item Rural sample (95\% CI): [295, 325] USD.
+			\item Urban sample (95\% CI): [330, 370] USD.
+		\end{itemize}
+
+		Explain which values are population parameters versus sample estimates, describe point versus interval estimation, and interpret the comparison between the two populations.
+
+		\subsection*{C2}
+		The population parameters are $\mu_R = 310$ USD, $\sigma_R = 40$ USD, $\mu_U = 350$ USD, and $\sigma_U = 55$ USD. The reported intervals come from sample statistics that estimate each population mean. The interval endpoints are sample-based estimates, not population parameters.
+
+		\subsection*{C3}
+		A point estimate would report a single sample mean for each cooperative type. The intervals [295, 325] and [330, 370] provide ranges of plausible values for $\mu_R$ and $\mu_U$ by adding margins of error. Interval estimation is preferred because it reflects sampling uncertainty when comparing different populations.
+
+		\subsection*{C4}
+		At 95\% confidence, the rural mean loan size is expected to fall between 295 and 325 USD, while the urban mean is expected to fall between 330 and 370 USD. The intervals do not overlap, so the data support a higher average loan size in urban cooperatives. The confidence level means that in repeated sampling about 95\% of such intervals would capture the true means for their respective populations.
+
+		\newpage
+		\item
+		\subsection*{Problem description}
+		A financial regulator studies the proportion of households using a new mobile savings platform.
+		The population parameter is the proportion $p$ and a prior benchmark reports $p \approx 0.55$ with population variance $p(1-p) \approx 0.2475$.
+		Two samples are drawn from the same population, and one survey report states a 90\% confidence interval for the population proportion is [0.49, 0.61].
+		Explain which values are population parameters versus sample estimates, describe point versus interval estimation for proportions, and interpret the confidence interval in context.
+
+		\subsection*{C2}
+		The population parameter is the proportion $p$ (with benchmark variance $p(1-p)$). The interval [0.49, 0.61] is based on a sample proportion $\hat{p}$ and represents an estimate of the unknown $p$. The interval endpoints are sample-based estimates, not population values.
+
+		\subsection*{C3}
+		A point estimate for this context would be the sample proportion $\hat{p}$ from the survey. The interval [0.49, 0.61] is an interval estimate that adds a margin of error, which is preferred because it reflects sampling uncertainty when estimating a population proportion.
+
+		\subsection*{C4}
+		At 90\% confidence, the regulator can be confident that the true share of households using the platform lies between 0.49 and 0.61. The confidence level means that in repeated sampling about 90\% of such intervals would contain $p$, and it supports the benchmark that the platform share is around 0.55 while still allowing moderate variation.
+	\end{ExamProblems}
+\end{document}
