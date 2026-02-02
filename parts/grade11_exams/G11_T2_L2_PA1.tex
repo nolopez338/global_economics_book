@@ -1,0 +1,78 @@
+\input{../../preamble/preamble_exams.tex}
+\begin{document}
+	\ExamTitleBlock{11th grade}{Term 2 Learning Evidence 2: Number of samples estimation}{}
+	
+	\ExamSection{Evaluated criteria}
+	\begin{ExamCriteria}
+		\item C5: Construct a X\% confidence interval using known population standard deviation.
+		\item C6: Determine the required sample size to achieve a target margin of error.
+	\end{ExamCriteria}
+	
+	\ExamSection{Problems}
+	\begin{ExamProblems}
+		\item
+		\subsection*{Problem description}
+		A regional logistics agency wants to estimate the mean time (in minutes) for cargo to clear port inspections. Historical monitoring shows the population standard deviation is $\sigma = 12$ minutes. The agency wants a 95\% confidence estimate with a maximum error of $E = 3$ minutes. Determine the minimum sample size needed.
+		
+		\subsection*{C6}
+		This solution establishes the sample size so the error will not exceed a specified amount by identifying $E$, selecting $z^*$, substituting into the formula, and rounding up to the minimum integer sample size.
+		
+		Step 1: Identify the target error and confidence level. The maximum error is $E = 3$ minutes and the confidence level is 95\%, so $z^* = 1.96$.
+		
+		Step 2: Apply the sample size formula.
+		\[
+		n = \left(\frac{z^*\,\sigma}{E}\right)^2
+		= \left(\frac{1.96 \cdot 12}{3}\right)^2
+		= \left(7.84\right)^2
+		= 61.47
+		\]
+		
+		Step 3: Round up and verify Criterion 6. Because the sample size must ensure the error does not exceed $E$, we round up: $n = 62$. With $n=62$, the margin of error is at most 3 minutes, satisfying Criterion 6.
+		
+		\item
+		\subsection*{Problem description}
+		An inflation monitoring team wants to estimate the mean price of a staple food basket (in dollars) across markets. They know the population standard deviation is $\sigma = 0.60$ dollars and the current sample mean is $\bar{x} = 2.85$ dollars. The team has collected $n_{\text{current}} = 36$ market prices and wants a 90\% confidence interval.
+		
+		(a) Construct the confidence interval for the mean price.
+		
+		(b) How many additional observations are required to reduce the margin of error to $E = 0.12$ dollars?
+		
+		\subsection*{C5}
+		This solution calculates the confidence interval for the mean with known variance using the current sample information.
+		
+		Step 1: Compute the standard error.
+		\[
+		SE = \frac{\sigma}{\sqrt{n_{\text{current}}}}
+		= \frac{0.60}{\sqrt{36}}
+		= 0.10
+		\]
+		
+		Step 2: Construct the confidence interval. For 90\% confidence, $z^* = 1.645$.
+		\[
+		\bar{x} \pm z^* SE = 2.85 \pm 1.645(0.10)
+		= 2.85 \pm 0.16
+		= (2.69,\ 3.01)
+		\]
+		
+		Conclusion. The 90\% confidence interval is $(2.69,\ 3.01)$ dollars.
+		
+		\subsection*{C6}
+		This subsection establishes the required sample size so the margin of error does not exceed the target amount.
+		
+		Step 1: Use the target error and confidence level. The target margin of error is $E = 0.12$ dollars and for 90\% confidence, $z^* = 1.645$.
+		
+		Step 2: Compute the required sample size.
+		\[
+		n_{\text{required}} = \left(\frac{z^*\,\sigma}{E}\right)^2
+		= \left(\frac{1.645 \cdot 0.60}{0.12}\right)^2
+		= \left(8.225\right)^2
+		\approx 67.65
+		\]
+		
+		Step 3: Determine additional observations. Round up to $n_{\text{required}} = 68$. The additional observations needed are $68 - 36 = 32$.
+		
+		Conclusion. The team needs 32 more observations so the error will not exceed 0.12 dollars.
+		
+		
+	\end{ExamProblems}
+\end{document}
