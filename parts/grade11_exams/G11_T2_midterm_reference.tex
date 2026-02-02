@@ -4,7 +4,7 @@
 	
 	\begin{ExamProblems}
 		\item
-		\subsection*{Problem description}
+		\subsection*{Comparing Processing Costs Using Grouped Sample Data}
 		\textbf{Context:} A logistics startup studies processing costs (USD) using two grouped random samples drawn from the same shipment population.
 		
 		\textbf{Sample A (30 shipments):} The processing costs fall into these classes:
@@ -124,7 +124,7 @@
 
 		
 		\item
-		\subsection*{Problem description}
+		\subsection*{Estimating Average Delivery Time from a Small Sample}
 		\textbf{Context:} A food court tracks lunch delivery times (in minutes) for a random sample of \textbf{12 orders} during the weekday rush.
 		
 		\textbf{Recorded times:}
@@ -181,7 +181,7 @@
 		At 90\% confidence, managers can be 90\% confident the true mean delivery time is between 29.17 and 31.17 minutes; the 95\% and 98\% intervals widen to reflect higher confidence. Higher confidence means a wider interval, so the 98\% interval provides the most conservative planning buffer for staffing and dispatch.
 		
 		\item
-		\subsection*{Problem description}
+		\subsection*{Estimating a Population Proportion from Survey Data}
 		A policy team surveys \textbf{200 households} across a region to estimate the share that approve a proposed renewable energy subsidy. In the sample, \textbf{128 households} say they approve.
 		
 		Construct and interpret a \textbf{90\% confidence interval} for the population proportion of households that approve the subsidy.
@@ -211,6 +211,51 @@
 		\]
 		
 		We are 90\% confident that between approximately 58.4\% and 69.6\% of all households in the region approve the renewable energy subsidy.
+		
+		\item
+		\subsection*{Estimating the Mean Price of a Staple Food Basket}
+		An inflation monitoring team wants to estimate the mean price of a staple food basket (in dollars) across markets.
+		
+		They know the population standard deviation is $\sigma = 0.60$ dollars and the current sample mean is $\bar{x} = 2.85$ dollars.
+		
+		The team has collected $n_{\text{current}} = 36$ market prices and wants a 90\% confidence interval.
+		
+		(a) Construct the confidence interval for the mean price.
+		
+		(b) How many additional observations are required to reduce the margin of error to $E = 0.12$ dollars?
+		
+		\subsection*{C5}
+		This solution calculates the confidence interval for the mean with known variance using the current sample information.
+		
+		Step 1: Compute the standard error.
+		\[
+		SE = \frac{\sigma}{\sqrt{n_{\text{current}}}}
+		= \frac{0.60}{\sqrt{36}}
+		= 0.10
+		\]
+		Step 2: Construct the confidence interval. For 90\% confidence, $z^* = 1.645$.
+		\[
+		\bar{x} \pm z^* SE = 2.85 \pm 1.645(0.10)
+		= 2.85 \pm 0.16
+		= (2.69,\ 3.01)
+		\]
+		Conclusion. The 90\% confidence interval is $(2.69,\ 3.01)$ dollars.
+		
+	\subsection*{C6}
+		This subsection establishes the required sample size so the margin of error does not exceed the target amount.
+		
+		Step 1: Use the target error and confidence level. The target margin of error is $E = 0.12$ dollars and for 90\% confidence, $z^* = 1.645$.
+		
+		Step 2: Compute the required sample size.
+		\[
+		n_{\text{required}} = \left(\frac{z^*\,\sigma}{E}\right)^2
+		= \left(\frac{1.645 \cdot 0.60}{0.12}\right)^2
+		= \left(8.225\right)^2
+		\approx 67.65
+		\]
+		Step 3: Determine additional observations. Round up to $n_{\text{required}} = 68$. The additional observations needed are $68 - 36 = 32$.
+		
+		Conclusion. The team needs 32 more observations so the error will not exceed 0.12 dollars.
 		
 	\end{ExamProblems}
 	
