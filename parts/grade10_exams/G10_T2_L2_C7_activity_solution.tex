@@ -1,0 +1,297 @@
+\input{../../preamble/preamble_exams.tex}
+\begin{document}
+	\ExamTitleBlock{10th grade}{Learning evidence T2 L2 C7 activity solutions}{}
+	
+	\ExamSection{Problems}
+	\begin{ExamProblems}
+		\item
+		\subsection*{Problem description}
+		A city lab considers a pilot program. Profit depends on the state of nature.
+
+		\[
+		\begin{array}{lcc}
+			\hline
+			& S_1\,(p) & S_2\,(1-p) \\
+			\hline
+			\text{Pilot} & 15 & -5 \\
+			\hline
+		\end{array}
+		\]
+
+		Let $p$ be the probability of state $S_1$. Determine for which values of $p$ the pilot is profitable using expected value.
+
+		\subsection*{C7}
+		Expected value is
+		\[
+		EV = 15\cdot p + (-5)\cdot(1-p)
+		\]
+		Expand and simplify.
+		\[
+		EV = 15p - 5 + 5p = 20p - 5
+		\]
+		Profitability condition is
+		\[
+		EV>0 \Rightarrow 20p-5>0
+		\]
+		Solve.
+		\[
+		20p>5 \Rightarrow p>\frac{1}{4}
+		\]
+		So the pilot is profitable when $p>\frac{1}{4}$.
+
+		\item
+		\subsection*{Problem description}
+		A museum considers an audio guide upgrade. Profit depends on the state of nature.
+
+		\[
+		\begin{array}{lcc}
+			\hline
+			& S_1\,(p) & S_2\,(1-p) \\
+			\hline
+			\text{Upgrade} & 21 & -9 \\
+			\hline
+		\end{array}
+		\]
+
+		Let $p$ be the probability of state $S_1$. Determine for which values of $p$ the upgrade is profitable.
+
+		\subsection*{C7}
+		Expected value is
+		\[
+		EV = 21\cdot p + (-9)\cdot(1-p)
+		\]
+		Expand and simplify.
+		\[
+		EV = 21p - 9 + 9p = 30p - 9
+		\]
+		Profitability condition is
+		\[
+		EV>0 \Rightarrow 30p-9>0
+		\]
+		Solve.
+		\[
+		30p>9 \Rightarrow p>\frac{3}{10}
+		\]
+		So the upgrade is profitable when $p>\frac{3}{10}$.
+
+		\item
+		\subsection*{Problem description}
+		Two shipping options depend on the state of nature.
+
+		\[
+		\begin{array}{lcc}
+			\hline
+			& S_1\,(p) & S_2\,(1-p) \\
+			\hline
+			A & 18 & 4 \\
+			B & 12 & 9 \\
+			\hline
+		\end{array}
+		\]
+
+		Let $p$ be the probability of state $S_1$. When is option A better than option B using expected value.
+
+		\subsection*{C7}
+		Compute expected value of A.
+		\[
+		EV(A)=18\cdot p + 4\cdot(1-p)
+		\]
+		Expand and simplify.
+		\[
+		EV(A)=18p + 4 - 4p = 14p+4
+		\]
+		Compute expected value of B.
+		\[
+		EV(B)=12\cdot p + 9\cdot(1-p)
+		\]
+		Expand and simplify.
+		\[
+		EV(B)=12p + 9 - 9p = 3p+9
+		\]
+		A is better than B when
+		\[
+		EV(A)-EV(B)>0
+		\]
+		Substitute.
+		\[
+		(14p+4)-(3p+9)>0
+		\]
+		Simplify.
+		\[
+		11p-5>0
+		\]
+		So option A is better when $p>\frac{5}{11}$.
+
+		\item
+		\subsection*{Problem description}
+		A studio must choose among three publishing plans.
+
+		\[
+		\begin{array}{lcc}
+			\hline
+			& S_1\,(p) & S_2\,(1-p) \\
+			\hline
+			A & 28 & 2 \\
+			B & 18 & 10 \\
+			C & 12 & 12 \\
+			\hline
+		\end{array}
+		\]
+
+		Let $p$ be the probability of state $S_1$. Determine for which values of $p$ each plan is optimal.
+
+		\subsection*{C7}
+		Compute expected value of each plan.
+
+		Plan A.
+		\[
+		EV(A)=28\cdot p + 2\cdot(1-p)=26p+2
+		\]
+
+		Plan B.
+		\[
+		EV(B)=18\cdot p + 10\cdot(1-p)
+		\]
+		Expand.
+		\[
+		EV(B)=18p + 10 - 10p = 8p+10
+		\]
+
+		Plan C.
+		\[
+		EV(C)=12\cdot p + 12\cdot(1-p)=12
+		\]
+
+		Now compare pairwise.
+
+		A better than B.
+		\[
+		EV(A)-EV(B)>0 \Rightarrow (26p+2)-(8p+10)>0
+		\]
+		Simplify.
+		\[
+		18p-8>0 \Rightarrow p>\frac{4}{9}
+		\]
+
+		B better than C.
+		\[
+		EV(B)-EV(C)>0 \Rightarrow (8p+10)-12>0
+		\]
+		Simplify.
+		\[
+		8p-2>0 \Rightarrow p>\frac{1}{4}
+		\]
+
+		A better than C.
+		\[
+		EV(A)-EV(C)>0 \Rightarrow (26p+2)-12>0
+		\]
+		Simplify.
+		\[
+		26p-10>0 \Rightarrow p>\frac{5}{13}
+		\]
+
+		Determine the optimal plan by intervals.
+		\begin{itemize}
+			\item If $p<\frac{1}{4}$, then plan C is optimal.
+			\item If $\frac{1}{4}<p<\frac{4}{9}$, then plan B is optimal.
+			\item If $p>\frac{4}{9}$, then plan A is optimal.
+		\end{itemize}
+
+		\item
+		\subsection*{Problem description}
+		Two grant proposals depend on three states of nature.
+
+		\[
+		\begin{array}{lccc}
+			\hline
+			& S_1\,(p_1) & S_2\,(p_2) & S_3\,(1-p_1-p_2) \\
+			\hline
+			A & 16 & 8 & -4 \\
+			B & 10 & 12 & 2 \\
+			\hline
+		\end{array}
+		\]
+
+		Let $p_1=P(S_1)$, $p_2=P(S_2)$, and $1-p_1-p_2=P(S_3)$. When is proposal A better than proposal B using expected value.
+
+		\subsection*{C7}
+		Compute expected value of A.
+		\[
+		EV(A)=16p_1 + 8p_2 + (-4)(1-p_1-p_2)
+		\]
+		Expand.
+		\[
+		EV(A)=16p_1 + 8p_2 -4 + 4p_1 + 4p_2 = 20p_1 + 12p_2 - 4
+		\]
+		Compute expected value of B.
+		\[
+		EV(B)=10p_1 + 12p_2 + 2(1-p_1-p_2)
+		\]
+		Expand.
+		\[
+		EV(B)=10p_1 + 12p_2 + 2 - 2p_1 - 2p_2 = 8p_1 + 10p_2 + 2
+		\]
+		A is better than B when
+		\[
+		EV(A)-EV(B)>0
+		\]
+		Substitute.
+		\[
+		(20p_1+12p_2-4)-(8p_1+10p_2+2)>0
+		\]
+		Simplify.
+		\[
+		12p_1+2p_2-6>0
+		\]
+		So proposal A is better when $6p_1+p_2-3>0$.
+
+		\item
+		\subsection*{Problem description}
+		Two staffing policies depend on three states of nature.
+
+		\[
+		\begin{array}{lccc}
+			\hline
+			& S_1\,(p_1) & S_2\,(p_2) & S_3\,(1-p_1-p_2) \\
+			\hline
+			A & 14 & 6 & -8 \\
+			B & 8 & 10 & 1 \\
+			\hline
+		\end{array}
+		\]
+
+		Let $p_1=P(S_1)$, $p_2=P(S_2)$, and $1-p_1-p_2=P(S_3)$. When is policy A better than policy B.
+
+		\subsection*{C7}
+		Compute expected value of A.
+		\[
+		EV(A)=14p_1 + 6p_2 + (-8)(1-p_1-p_2)
+		\]
+		Expand.
+		\[
+		EV(A)=14p_1 + 6p_2 - 8 + 8p_1 + 8p_2 = 22p_1 + 14p_2 - 8
+		\]
+		Compute expected value of B.
+		\[
+		EV(B)=8p_1 + 10p_2 + 1(1-p_1-p_2)
+		\]
+		Expand.
+		\[
+		EV(B)=8p_1 + 10p_2 + 1 - p_1 - p_2 = 7p_1 + 9p_2 + 1
+		\]
+		A is better than B when
+		\[
+		EV(A)-EV(B)>0
+		\]
+		Substitute.
+		\[
+		(22p_1+14p_2-8)-(7p_1+9p_2+1)>0
+		\]
+		Simplify.
+		\[
+		15p_1+5p_2-9>0
+		\]
+		So policy A is better when $3p_1+p_2-\frac{9}{5}>0$.
+	\end{ExamProblems}
+\end{document}
