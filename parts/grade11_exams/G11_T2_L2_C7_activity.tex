@@ -1,0 +1,144 @@
+\documentclass[12pt]{article}
+
+% Page size and tighter margins
+\usepackage[a4paper,left=1.2cm,right=1.2cm,top=1.5cm,bottom=1.5cm]{geometry}
+
+% Core packages
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.15}
+
+% Column types
+\newcolumntype{Y}{>{\raggedright\arraybackslash}m{\dimexpr0.30\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
+\newcolumntype{Z}{>{\raggedright\arraybackslash}m{\dimexpr0.70\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+% Gray subsection header box
+\newcommand{\SubsectionBox}[1]{%
+	\noindent\colorbox{gray!30}{%
+		\parbox{\linewidth}{\textbf{#1}}%
+	}\par\vspace{0.35cm}%
+}
+
+% Centered multi-line cell helper
+\newcommand{\CellCenter}[1]{%
+	\parbox{\linewidth}{\centering #1}%
+}
+
+\begin{document}
+
+	% =========================
+	% HEADER BOX (3 COLUMNS)
+	% =========================
+	\noindent
+	\begin{tabularx}{\textwidth}{|C{2.8cm}|C{\dimexpr\textwidth-6cm-4\tabcolsep-4\arrayrulewidth\relax}|C{2.8cm}|}
+		\hline
+		\centering
+		\vspace{3mm}
+		\includegraphics[width=2.5cm]{../../preamble/logo.png}
+		&
+		\CellCenter{%
+			\vspace{-5mm}
+			\textbf{GLOBAL ECONOMICS}\par
+			\textbf{GRADE: 11TH}\par
+			\textbf{LEARNING EVIDENCE 2}\par
+			\textbf{C7 ACTIVITY}\par
+			\textbf{TEACHER'S NAME: Nicolás López Cuéllar}
+		}
+		&
+		\CellCenter{%
+			\textbf{SECOND TERM}\par
+			\textbf{2025--2026}%
+		}
+		\\
+		\hline
+	\end{tabularx}
+
+	\vspace{0.5cm}
+
+	% =========================
+	% OBJECTIVE + CRITERIA
+	% =========================
+	\noindent
+	\begin{tabular}{|Y|Z|}
+		\hline
+		{\small
+			\textbf{Learning objective:} Compute and interpret confidence intervals for population means using known population standard deviation.
+		}
+		&
+		{\footnotesize
+			\textbf{Assessment criteria:}\par
+			C1: Compute the sample mean and sample standard deviation.\par
+			C2: Distinguish between sample statistics and population parameters.\par
+			C3: Explain why interval estimation is preferred over a single point estimate.\par
+			C5: Construct a X\% confidence interval using known population standard deviation.\par
+			C4: Interpret the meaning of a X\% confidence interval in context.\par
+		}
+		\\
+		\hline
+	\end{tabular}
+
+	\vspace{0.4cm}
+
+	% =========================
+	% STUDENT LINE
+	% =========================
+	\noindent
+	\textbf{Student's name:} \rule{7cm}{0.4pt}\hfill
+	\textbf{Group:} \rule{2cm}{0.4pt}\hfill
+	\textbf{Date:} \rule{3cm}{0.4pt}
+
+	% =========================
+	% EXAM BODY
+	% =========================
+	\begin{multicols}{2}
+		\SubsectionBox{Criteria assessment}\vspace{-0.25cm}
+		Each assessment criterion is evaluated across the three problems. A criterion is considered passed when it is correctly activated in at least two of the three problems.
+		
+		\vspace{0.25cm}
+		\SubsectionBox{1. Community Water Pricing Support}\vspace{-0.25cm}
+		A city council surveys \textbf{220 households} about support for a new water pricing plan. In the sample, \textbf{143 households} say they support the plan.
+		
+		Construct and interpret a \textbf{95\% confidence interval} for the population proportion of households that support the plan.
+
+		\vspace{0.25cm}
+		\SubsectionBox{2. Coastal Ferry Reliability}\vspace{-0.25cm}
+		A transport board reviews \textbf{180 ferry trips} and finds that \textbf{45} arrived at least fifteen minutes late. The board wants a proportion estimate for the late arrival rate.
+		
+		Construct and interpret a \textbf{90\% confidence interval} for the population proportion of late ferry trips.
+
+		\vspace{0.25cm}
+		\SubsectionBox{3. Small Business Grant Renewals}\vspace{-0.25cm}
+		A development agency tracks \textbf{360 grants} issued to small businesses. During the renewal period, \textbf{54 grants} were not renewed.
+		
+		Construct and interpret \textbf{90\% and 95\% confidence intervals} for the population proportion of grants that are not renewed.
+
+		\vspace{0.25cm}
+		\SubsectionBox{4. Household Digital Banking Use}\vspace{-0.25cm}
+		A financial inclusion survey studies \textbf{160 households} and finds that \textbf{104 households} use digital banking services.
+		
+		Construct and interpret \textbf{90\%, 95\%, and 99\% confidence intervals} for the population proportion of households that use digital banking services.
+
+		\vspace{0.25cm}
+		\SubsectionBox{5. Port Inspection Compliance}\vspace{-0.25cm}
+		A port authority evaluates compliance with a new inspection checklist. Sample A includes \textbf{250 inspections} with \textbf{170} compliant. Sample B includes \textbf{180 inspections} with \textbf{110} compliant. Assume both samples are drawn from the same population of inspections.
+		
+		Construct and interpret a \textbf{95\% confidence interval} for the population proportion of compliant inspections for each sample.
+
+		\vspace{0.25cm}
+		\SubsectionBox{6. Public Market Vendor Licensing}\vspace{-0.25cm}
+		A city reviews vendor licensing in two districts. Sample A includes \textbf{300 vendors} with \textbf{96} licensed. Sample B includes \textbf{210 vendors} with \textbf{60} licensed.
+		
+		Construct and interpret \textbf{90\% and 98\% confidence intervals} for the population proportion of licensed vendors for each sample.
+
+	\end{multicols}
+
+\end{document}
