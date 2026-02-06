@@ -1,0 +1,326 @@
+\input{../../preamble/preamble_exams.tex}
+\begin{document}
+	\ExamTitleBlock{10th grade}{Learning evidence 2.3: Analysis of Decisions (Lesson 3 Material)}{}
+	
+	\ExamSection{Evaluated criteria}
+	This exam evaluates the following criteria. Each criterion is evaluated across the items below. A student passes a criterion if it is correctly applied in the solution.
+	\begin{ExamCriteria}
+		\item C8 Compares the Bayes, Maximin, and Minimax Regret strategies on the same dataset.
+		\item C9 Establishes a decision tree for a decision-making problem.
+		\item C10 Evaluates all possibilities in a decision-making problem using the strategies presented.
+	\end{ExamCriteria}
+	
+	\ExamSection{Problems}
+	\begin{ExamProblems}
+		\item
+		\subsection*{Portfolio Selection Under Market Conditions}
+		An investment club must choose one of three portfolio mixes for the next quarter: Portfolio A (growth), Portfolio B (balanced), or Portfolio C (income).
+		The market can be strong, stable, or weak with probabilities $0.50$, $0.30$, and $0.20$. Payoffs are measured in thousands of dollars.
+		If the market is strong, Portfolio A yields $90$, Portfolio B yields $70$, and Portfolio C yields $50$.
+		If the market is stable, Portfolio A yields $50$, Portfolio B yields $60$, and Portfolio C yields $40$.
+		If the market is weak, Portfolio A yields $-10$, Portfolio B yields $20$, and Portfolio C yields $30$.
+		Use Bayes, Maximin, and Minimax Regret to select a portfolio.
+		
+		\subsection*{C8}
+		\begin{center}
+			\textit{Payoff table} \\
+			\begin{tabular}{l c c c c}
+				\toprule
+				State of nature & Probability & Portfolio A & Portfolio B & Portfolio C \\
+				\midrule
+				Strong market & 0.50 & 90 & 70 & 50 \\
+				Stable market & 0.30 & 50 & 60 & 40 \\
+				Weak market & 0.20 & -10 & 20 & 30 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		
+		\textit{Bayes (Expected value) calculations}
+		\[
+		\begin{aligned}
+		EV_A &= 0.50(90)+0.30(50)+0.20(-10)=45+15-2=58,\\
+		EV_B &= 0.50(70)+0.30(60)+0.20(20)=35+18+4=57,\\
+		EV_C &= 0.50(50)+0.30(40)+0.20(30)=25+12+6=43.
+		\end{aligned}
+		\]
+		Bayes selects Portfolio A because $EV_A=58$ is the largest expected payoff.
+		
+		\textit{Maximin calculations}
+		\[
+		\begin{aligned}
+		\min(A) &= \min\{90,50,-10\} = -10,\\
+		\min(B) &= \min\{70,60,20\} = 20,\\
+		\min(C) &= \min\{50,40,30\} = 30.
+		\end{aligned}
+		\]
+		\[
+		\max\{\min(A),\min(B),\min(C)\}=\max\{-10,20,30\}=30.
+		\]
+		Maximin selects Portfolio C because it has the largest worst-case payoff.
+		
+		\textit{Minimax regret calculations}
+		Best payoff in each state:
+		\[
+		\begin{aligned}
+		\text{Strong: } &\max\{90,70,50\}=90,\\
+		\text{Stable: } &\max\{50,60,40\}=60,\\
+		\text{Weak: } &\max\{-10,20,30\}=30.
+		\end{aligned}
+		\]
+		Regret table (best payoff $-$ payoff):
+		\begin{center}
+			\begin{tabular}{l c c c c}
+				\toprule
+				Alternative & Strong $(0.50)$ & Stable $(0.30)$ & Weak $(0.20)$ & Maximum regret \\
+				\midrule
+				Portfolio A & $90-90=0$ & $60-50=10$ & $30-(-10)=40$ & 40 \\
+				Portfolio B & $90-70=20$ & $60-60=0$ & $30-20=10$ & 20 \\
+				Portfolio C & $90-50=40$ & $60-40=20$ & $30-30=0$ & 40 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Minimax regret selects Portfolio B because it has the smallest maximum regret $(20)$.
+		
+		\textit{Comparison}
+		Bayes selects Portfolio A (highest expected value), Maximin selects Portfolio C (largest worst-case payoff), and Minimax Regret selects Portfolio B (smallest maximum regret).
+		The strategies differ because Bayes weights outcomes by probabilities, Maximin focuses on the worst-case outcome, and Minimax Regret minimizes the largest opportunity loss across states.
+		
+		\item
+		\subsection*{Distribution Channel Decision Tree}
+		A publisher must choose a distribution channel for a new product: Channel A (direct) or Channel B (retail).
+		Demand can be high or low with probabilities $0.55$ and $0.45$. Payoffs are measured in thousands of dollars.
+		If demand is high, Channel A yields $120$ and Channel B yields $100$. If demand is low, Channel A yields $40$ and Channel B yields $60$.
+		Establish a decision tree that matches the numerical data.
+		
+		\subsection*{C9}
+		\begin{center}
+			\textit{Decision tree node list} \\
+			\begin{tabular}{l l p{0.6\linewidth}}
+				\toprule
+				Node ID & Type & Description \\
+				\midrule
+				$D_1$ & Decision & Choose Channel A or Channel B \\
+				$C_A$ & Chance & Demand outcome after choosing Channel A \\
+				$C_B$ & Chance & Demand outcome after choosing Channel B \\
+				$T_{AH}$ & Terminal & Payoff for Channel A under high demand \\
+				$T_{AL}$ & Terminal & Payoff for Channel A under low demand \\
+				$T_{BH}$ & Terminal & Payoff for Channel B under high demand \\
+				$T_{BL}$ & Terminal & Payoff for Channel B under low demand \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		
+		\begin{center}
+			\textit{Decision tree branch list (parent $\rightarrow$ child)} \\
+			\begin{tabular}{l l c l}
+				\toprule
+				Parent node & Branch label & Probability & Next node / Payoff \\
+				\midrule
+				$D_1$ & Channel A & --- & $C_A$ \\
+				$D_1$ & Channel B & --- & $C_B$ \\
+				$C_A$ & High demand & 0.55 & $T_{AH}$ with payoff $120$ \\
+				$C_A$ & Low demand & 0.45 & $T_{AL}$ with payoff $40$ \\
+				$C_B$ & High demand & 0.55 & $T_{BH}$ with payoff $100$ \\
+				$C_B$ & Low demand & 0.45 & $T_{BL}$ with payoff $60$ \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		This node and branch list fully specifies the tree structure in a format that can be directly stored as JavaScript objects.
+		
+		\item
+		\subsection*{Warehouse Automation Alternatives}
+		A logistics firm must choose one automation plan for a warehouse: Manual (M), Semi-automated (S), or Fully automated (F).
+		Demand can be high, moderate, or low with probabilities $0.40$, $0.35$, and $0.25$. Payoffs are measured in thousands of dollars.
+		The payoff table is shown below. Evaluate all possibilities using Bayes, Maximin, and Minimax Regret.
+		
+		\subsection*{C10}
+		\begin{center}
+			\textit{Payoff table} \\
+			\begin{tabular}{l c c c c}
+				\toprule
+				State of nature & Probability & Manual (M) & Semi (S) & Full (F) \\
+				\midrule
+				High demand & 0.40 & 80 & 110 & 140 \\
+				Moderate demand & 0.35 & 70 & 90 & 85 \\
+				Low demand & 0.25 & 50 & 40 & -10 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		
+		\textit{Enumerated decision paths (alternative, state, probability, payoff)}
+		\begin{center}
+			\begin{tabular}{l l c c}
+				\toprule
+				Alternative & State & Probability & Payoff \\
+				\midrule
+				M & High & 0.40 & 80 \\
+				M & Moderate & 0.35 & 70 \\
+				M & Low & 0.25 & 50 \\
+				S & High & 0.40 & 110 \\
+				S & Moderate & 0.35 & 90 \\
+				S & Low & 0.25 & 40 \\
+				F & High & 0.40 & 140 \\
+				F & Moderate & 0.35 & 85 \\
+				F & Low & 0.25 & -10 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		
+		\textit{Bayes (Expected value) calculations}
+		\[
+		\begin{aligned}
+		EV_M &= 0.40(80)+0.35(70)+0.25(50)=32+24.5+12.5=69,\\
+		EV_S &= 0.40(110)+0.35(90)+0.25(40)=44+31.5+10=85.5,\\
+		EV_F &= 0.40(140)+0.35(85)+0.25(-10)=56+29.75-2.5=83.25.
+		\end{aligned}
+		\]
+		Bayes selects Semi-automated because $85.5$ is the largest expected payoff.
+		
+		\textit{Maximin calculations}
+		\[
+		\begin{aligned}
+		\min(M) &= \min\{80,70,50\}=50,\\
+		\min(S) &= \min\{110,90,40\}=40,\\
+		\min(F) &= \min\{140,85,-10\}=-10.
+		\end{aligned}
+		\]
+		\[
+		\max\{\min(M),\min(S),\min(F)\}=\max\{50,40,-10\}=50.
+		\]
+		Maximin selects Manual because it has the largest worst-case payoff.
+		
+		\textit{Minimax regret calculations}
+		Best payoff in each state:
+		\[
+		\begin{aligned}
+		\text{High: } &\max\{80,110,140\}=140,\\
+		\text{Moderate: } &\max\{70,90,85\}=90,\\
+		\text{Low: } &\max\{50,40,-10\}=50.
+		\end{aligned}
+		\]
+		Regret table (best payoff $-$ payoff):
+		\begin{center}
+			\begin{tabular}{l c c c c}
+				\toprule
+				Alternative & High $(0.40)$ & Moderate $(0.35)$ & Low $(0.25)$ & Maximum regret \\
+				\midrule
+				M & $140-80=60$ & $90-70=20$ & $50-50=0$ & 60 \\
+				S & $140-110=30$ & $90-90=0$ & $50-40=10$ & 30 \\
+				F & $140-140=0$ & $90-85=5$ & $50-(-10)=60$ & 60 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Minimax regret selects Semi-automated because it has the smallest maximum regret $(30)$.
+		
+		\textit{Summary of strategy selections}
+		\begin{center}
+			\begin{tabular}{l l}
+				\toprule
+				Strategy & Selected alternative \\
+				\midrule
+				Bayes (Expected value) & Semi-automated (S) \\
+				Maximin & Manual (M) \\
+				Minimax Regret & Semi-automated (S) \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		
+		\item
+		\subsection*{Renewable Energy Project Selection}
+		A regional utility must choose one project: Wind, Solar, or Biomass.
+		Government policy can be strong, moderate, or weak with probabilities $0.50$, $0.30$, and $0.20$.
+		Payoffs are measured in millions of dollars. The payoff table is shown below. Evaluate all possibilities using Bayes, Maximin, and Minimax Regret.
+		
+		\subsection*{C10}
+		\begin{center}
+			\textit{Payoff table} \\
+			\begin{tabular}{l c c c c}
+				\toprule
+				State of nature & Probability & Wind & Solar & Biomass \\
+				\midrule
+				Strong policy & 0.50 & 120 & 100 & 90 \\
+				Moderate policy & 0.30 & 70 & 80 & 60 \\
+				Weak policy & 0.20 & 20 & 30 & 50 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		
+		\textit{Enumerated decision paths (alternative, state, probability, payoff)}
+		\begin{center}
+			\begin{tabular}{l l c c}
+				\toprule
+				Alternative & State & Probability & Payoff \\
+				\midrule
+				Wind & Strong & 0.50 & 120 \\
+				Wind & Moderate & 0.30 & 70 \\
+				Wind & Weak & 0.20 & 20 \\
+				Solar & Strong & 0.50 & 100 \\
+				Solar & Moderate & 0.30 & 80 \\
+				Solar & Weak & 0.20 & 30 \\
+				Biomass & Strong & 0.50 & 90 \\
+				Biomass & Moderate & 0.30 & 60 \\
+				Biomass & Weak & 0.20 & 50 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		
+		\textit{Bayes (Expected value) calculations}
+		\[
+		\begin{aligned}
+		EV_{\text{Wind}} &= 0.50(120)+0.30(70)+0.20(20)=60+21+4=85,\\
+		EV_{\text{Solar}} &= 0.50(100)+0.30(80)+0.20(30)=50+24+6=80,\\
+		EV_{\text{Biomass}} &= 0.50(90)+0.30(60)+0.20(50)=45+18+10=73.
+		\end{aligned}
+		\]
+		Bayes selects Wind because $85$ is the largest expected payoff.
+		
+		\textit{Maximin calculations}
+		\[
+		\begin{aligned}
+		\min(\text{Wind}) &= \min\{120,70,20\}=20,\\
+		\min(\text{Solar}) &= \min\{100,80,30\}=30,\\
+		\min(\text{Biomass}) &= \min\{90,60,50\}=50.
+		\end{aligned}
+		\]
+		\[
+		\max\{\min(\text{Wind}),\min(\text{Solar}),\min(\text{Biomass})\}=\max\{20,30,50\}=50.
+		\]
+		Maximin selects Biomass because it has the largest worst-case payoff.
+		
+		\textit{Minimax regret calculations}
+		Best payoff in each state:
+		\[
+		\begin{aligned}
+		\text{Strong: } &\max\{120,100,90\}=120,\\
+		\text{Moderate: } &\max\{70,80,60\}=80,\\
+		\text{Weak: } &\max\{20,30,50\}=50.
+		\end{aligned}
+		\]
+		Regret table (best payoff $-$ payoff):
+		\begin{center}
+			\begin{tabular}{l c c c c}
+				\toprule
+				Alternative & Strong $(0.50)$ & Moderate $(0.30)$ & Weak $(0.20)$ & Maximum regret \\
+				\midrule
+				Wind & $120-120=0$ & $80-70=10$ & $50-20=30$ & 30 \\
+				Solar & $120-100=20$ & $80-80=0$ & $50-30=20$ & 20 \\
+				Biomass & $120-90=30$ & $80-60=20$ & $50-50=0$ & 30 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Minimax regret selects Solar because it has the smallest maximum regret $(20)$.
+		
+		\textit{Summary of strategy selections}
+		\begin{center}
+			\begin{tabular}{l l}
+				\toprule
+				Strategy & Selected alternative \\
+				\midrule
+				Bayes (Expected value) & Wind \\
+				Maximin & Biomass \\
+				Minimax Regret & Solar \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+	\end{ExamProblems}
+\end{document}
