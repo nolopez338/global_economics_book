@@ -168,11 +168,11 @@ Construct and interpret a \textbf{99\% confidence interval} for the population p
 	\textbf{Step 5: Interpretation and decision.}
 	Because 0.60 lies within the confidence interval, the data do not contradict the board’s statement at the 99\% confidence level.
 	
-\section*{6. Regional Health Insurance Coverage}
-
-A health ministry needs an estimate of the proportion of all adults in the region who have health insurance to guide funding and policy decisions. It surveys \textbf{600 adults}, and \textbf{312} report having health insurance.
-
-Construct and interpret a \textbf{98\% confidence interval} for the population proportion of insured adults, and explain why using a high confidence level is appropriate in this policy context.
+	\section*{6. Regional Health Insurance Coverage}
+	
+	A health ministry needs an estimate of the proportion of all adults in the region who have health insurance to guide funding and policy decisions. It surveys \textbf{600 adults}, and \textbf{312} report having health insurance.
+	
+	Construct and interpret \textbf{90\%, 95\%, and 98\% confidence intervals} for the population proportion of insured adults, and explain how the confidence level affects the precision of the estimate in this policy context.
 	
 	\subsubsection*{(C7) Constructs the confidence interval for a proportion}
 	
@@ -180,25 +180,41 @@ Construct and interpret a \textbf{98\% confidence interval} for the population p
 	\[
 	\hat{p} = \frac{312}{600} = 0.52
 	\]
+	Large-sample conditions:
+	\[
+	n\hat{p} = 312 \ge 10, \qquad n(1-\hat{p}) = 288 \ge 10
+	\]
 	
 	\textbf{Step 2: Standard error.}
 	\[
 	SE = \sqrt{\frac{0.52(0.48)}{600}} \approx 0.0204
 	\]
 	
-	\textbf{Step 3: Margin of error (98\%, \(z^* = 2.326\)).}
+	\textbf{Step 3: Margins of error.}
 	\[
-	E \approx 0.0474
+	E_{90} = 1.645(0.0204) \approx 0.0336
+	\]
+	\[
+	E_{95} = 1.96(0.0204) \approx 0.0400
+	\]
+	\[
+	E_{98} = 2.326(0.0204) \approx 0.0474
 	\]
 	
-	\textbf{Step 4: Confidence interval.}
+	\textbf{Step 4: Confidence intervals.}
 	\[
-	[0.473,\ 0.567]
+	90\%:\ [0.52 \pm 0.0336] \Rightarrow [0.486,\ 0.554]
+	\]
+	\[
+	95\%:\ [0.52 \pm 0.0400] \Rightarrow [0.480,\ 0.560]
+	\]
+	\[
+	98\%:\ [0.52 \pm 0.0474] \Rightarrow [0.473,\ 0.567]
 	\]
 	
 	\textbf{Step 5: Interpretation and justification.}
-	A high confidence level is appropriate because health coverage estimates inform public policy. The wider interval reflects increased certainty at the cost of precision.
-	
+	As the confidence level increases from 90\% to 98\%, the confidence interval becomes wider. This reflects greater certainty that the interval contains the true population proportion, which is appropriate in a public policy context where underestimating or overestimating health insurance coverage can have significant consequences.
+
 	\section*{7. Food Safety Inspection Compliance}
 	
 	A national agency inspects \textbf{850 facilities} and finds \textbf{102} noncompliant. A previous inspection one year earlier found \textbf{120 noncompliant facilities out of 900}.
