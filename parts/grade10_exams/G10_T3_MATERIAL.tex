@@ -6,48 +6,57 @@
 	\section*{Contents}
 	\noindent\textbf{C1 Describes probabilities in continuous variables as a density function.}
 	\begin{itemize}
-		\item \hyperlink{c1-ex1}{Problem 1 — Rainfall Depth Model}
-		\item \hyperlink{c1-ex2}{Problem 2 — Cooling Time Distribution}
+		\item \hyperlink{c1-ex1}{Problem 1 — Factory Dust Model}
+		\item \hyperlink{c1-ex2}{Problem 2 — Cooling Time Density}
+		\item \hyperlink{c1-ex3}{Problem 3 — River Flow Index}
 	\end{itemize}
 	\noindent\textbf{C2 Explains how a uniform random variable works.}
 	\begin{itemize}
 		\item \hyperlink{c2-ex1}{Problem 1 — Bus Arrival Wait Time}
-		\item \hyperlink{c2-ex2}{Problem 2 — Random Placement in a Pool}
+		\item \hyperlink{c2-ex2}{Problem 2 — Random Phone Call Time}
+		\item \hyperlink{c2-ex3}{Problem 3 — Choosing a Seat Row}
 	\end{itemize}
 	\noindent\textbf{C3 Expresses how to work with distributions that have a linear behaviour.}
 	\begin{itemize}
 		\item \hyperlink{c3-ex1}{Problem 1 — Battery Life with Increasing Density}
 		\item \hyperlink{c3-ex2}{Problem 2 — Package Weights with Decreasing Density}
+		\item \hyperlink{c3-ex3}{Problem 3 — Temperature Drift}
 	\end{itemize}
 	\noindent\textbf{C4 Interprets the concept of variance and standard deviation of a probability function.}
 	\begin{itemize}
 		\item \hyperlink{c4-ex1}{Problem 1 — Uniform Ticket Refunds}
-		\item \hyperlink{c4-ex2}{Problem 2 — Triangular Delivery Times}
+		\item \hyperlink{c4-ex2}{Problem 2 — Normal Battery Voltage}
+		\item \hyperlink{c4-ex3}{Problem 3 — Uniform Download Time}
 	\end{itemize}
 	\noindent\textbf{C5 Uses the normal standard distribution and its tables to calculate probabilities in context situations.}
 	\begin{itemize}
-		\item \hyperlink{c5-ex1}{Problem 1 — Bottled Water Fill Volumes}
-		\item \hyperlink{c5-ex2}{Problem 2 — Daily Study Time}
+		\item \hyperlink{c5-ex1}{Problem 1 — Standard Normal Table Practice I}
+		\item \hyperlink{c5-ex2}{Problem 2 — Standard Normal Table Practice II}
+		\item \hyperlink{c5-ex3}{Problem 3 — Standard Normal Table Practice III}
 	\end{itemize}
 	\noindent\textbf{C6 Employs the standardisation of the normal variable in real-life problems.}
 	\begin{itemize}
 		\item \hyperlink{c6-ex1}{Problem 1 — Test Scores Standardisation}
 		\item \hyperlink{c6-ex2}{Problem 2 — Fruit Mass Quality Control}
+		\item \hyperlink{c6-ex3}{Problem 3 — Shipping Times}
 	\end{itemize}
 	\noindent\textbf{C7 Solves problems through the concept of inverse normal distribution.}
 	\begin{itemize}
 		\item \hyperlink{c7-ex1}{Problem 1 — Top 5\% Cable Lengths}
 		\item \hyperlink{c7-ex2}{Problem 2 — Bottom 10\% Commute Times}
+		\item \hyperlink{c7-ex3}{Problem 3 — Middle 90\% Tire Lifetimes}
 	\end{itemize}
 	\noindent\textbf{C8 Summarizes the elements and characteristics that an investment portfolio may have.}
 	\begin{itemize}
-		\item \hyperlink{c8-ex1}{Problem 1 — Building a Student Savings Portfolio}
-		\item \hyperlink{c8-ex2}{Problem 2 — Comparing Two Club Funds}
+		\item \hyperlink{c8-ex1}{Problem 1 — Portfolio Returns as a Uniform Model}
+		\item \hyperlink{c8-ex2}{Problem 2 — Mixing Two Return Distributions}
+		\item \hyperlink{c8-ex3}{Problem 3 — Interpreting a Normal Return Model}
 	\end{itemize}
 	\noindent\textbf{C9 Establishes that the risk of a portfolio is determined by its probability distribution.}
 	\begin{itemize}
 		\item \hyperlink{c9-ex1}{Problem 1 — Two Portfolios with the Same Expected Return}
-		\item \hyperlink{c9-ex2}{Problem 2 — Diversified vs. Concentrated Returns}
+		\item \hyperlink{c9-ex2}{Problem 2 — Comparing Spread in Continuous Models}
+		\item \hyperlink{c9-ex3}{Problem 3 — Shape and Tail Risk}
 	\end{itemize}
 	\noindent\textbf{C10 Evaluates finance-context situations with normal distribution and other continuous random variables.}
 	\begin{itemize}
@@ -61,69 +70,93 @@
 		
 		\hypertarget{c1-ex1}{}
 		\item
-		\subsection*{Problem 1 — Rainfall Depth Model}
+		\subsection*{Problem 1 — Factory Dust Model}
 		
 		\textbf{Problem.}
-		A town models the daily rainfall depth (in millimeters) on a rainy day with a continuous random variable
-		\(X\) supported on \([0, 10]\). The density is defined as
+		A factory models the amount of dust (in grams) collected in a filter per hour by a continuous random variable
+		\(X\) supported on \([0,5]\). The density is defined as
 		\[
-		f(x)=k x,\quad 0\le x\le 10.
+		f(x)=k,\quad 0\le x\le 5.
 		\]
 		
-		\textbf{Question.} Find the constant \(k\), then compute the probability that the rainfall is between
-		\(3\) mm and \(7\) mm. Interpret the result.
+		\textbf{Question.} Find the constant \(k\) that makes \(f(x)\) a valid density. Then compute
+		\(P(1\le X\le 4)\). Interpret the result.
 		
 		\textbf{Solution.}
-		A density must integrate to 1 over its support, so
+		A density must integrate to 1 over its support:
 		\[
-		\int_0^{10} kx\,dx = 1.
+		\int_0^{5} k\,dx=1.
 		\]
-		Compute the integral:
+		Compute:
 		\[
-		k\left[\frac{x^2}{2}\right]_0^{10}=k\cdot\frac{100}{2}=50k.
+		k[ x ]_0^{5}=5k=1\Rightarrow k=\frac{1}{5}.
 		\]
-		Thus \(50k=1\Rightarrow k=\frac{1}{50}.\)
-		
-		Now compute the requested probability:
+		Now
 		\[
-		P(3\le X\le 7)=\int_3^7 \frac{1}{50}x\,dx
-		=\frac{1}{50}\left[\frac{x^2}{2}\right]_3^7
-		=\frac{1}{100}(49-9)=\frac{40}{100}=0.40.
+		P(1\le X\le 4)=\int_1^4 \frac{1}{5}\,dx=\frac{3}{5}=0.60.
 		\]
-		\textbf{Interpretation.} There is a \(40\%\) chance that rainfall on a rainy day is between 3 mm and 7 mm.
+		\textbf{Interpretation.} There is a 60\% chance the dust amount is between 1 g and 4 g.
 		
 		% --------------------------------------------------
 		
 		\hypertarget{c1-ex2}{}
 		\item
-		\subsection*{Problem 2 — Cooling Time Distribution}
+		\subsection*{Problem 2 — Cooling Time Density}
 		
 		\textbf{Problem.}
 		A science class observes the cooling time (in minutes) of a heated metal rod. The random variable
 		\(T\) is continuous on \([2, 8]\) with density
 		\[
-		f(t)=\frac{1}{12}(t-2),\quad 2\le t\le 8.
+		f(t)=k(t-2),\quad 2\le t\le 8.
 		\]
 		
-		\textbf{Question.} Verify that \(f(t)\) is a valid density, then find \(P(T>6)\). Interpret the result.
+		\textbf{Question.} Find \(k\) so that \(f(t)\) is a valid density, then find \(P(T>6)\).
 		
 		\textbf{Solution.}
-		Check the total area:
+		Use the area condition:
 		\[
-		\int_2^8 \frac{1}{12}(t-2)\,dt
-		=\frac{1}{12}\left[\frac{(t-2)^2}{2}\right]_2^8
-		=\frac{1}{12}\cdot\frac{36}{2}=\frac{1}{12}\cdot 18=1.
+		\int_2^8 k(t-2)\,dt=1.
 		\]
-		So the density is valid.
-		
+		Compute:
+		\[
+		k\left[\frac{(t-2)^2}{2}\right]_2^8=k\cdot\frac{36}{2}=18k=1\Rightarrow k=\frac{1}{18}.
+		\]
 		Now compute the probability:
 		\[
-		P(T>6)=\int_6^8 \frac{1}{12}(t-2)\,dt
-		=\frac{1}{12}\left[\frac{(t-2)^2}{2}\right]_6^8
-		=\frac{1}{12}\cdot\frac{36-16}{2}
-		=\frac{1}{12}\cdot 10=\frac{5}{6}.
+		P(T>6)=\int_6^8 \frac{1}{18}(t-2)\,dt=\frac{1}{18}\left[\frac{(t-2)^2}{2}\right]_6^8
+		=\frac{1}{18}\cdot\frac{36-16}{2}=\frac{1}{18}\cdot 10=\frac{5}{9}.
 		\]
-		\textbf{Interpretation.} About \(83\%\) of the time, cooling takes longer than 6 minutes.
+		\textbf{Interpretation.} About 55.6\% of the rods take longer than 6 minutes to cool.
+		
+		% --------------------------------------------------
+		
+		\hypertarget{c1-ex3}{}
+		\item
+		\subsection*{Problem 3 — River Flow Index}
+		
+		\textbf{Problem.}
+		A river flow index \(F\) (unitless) is modeled on \([0,3]\) with density
+		\[
+		f(x)=k x^2,\quad 0\le x\le 3.
+		\]
+		
+		\textbf{Question.} Find \(k\) so that \(f(x)\) is a valid density, then compute \(P(F\le 2)\).
+		
+		\textbf{Solution.}
+		Set the total area to 1:
+		\[
+		\int_0^3 kx^2\,dx=1.
+		\]
+		Compute:
+		\[
+		k\left[\frac{x^3}{3}\right]_0^3=k\cdot\frac{27}{3}=9k=1\Rightarrow k=\frac{1}{9}.
+		\]
+		Then
+		\[
+		P(F\le 2)=\int_0^2 \frac{1}{9}x^2\,dx=\frac{1}{9}\left[\frac{x^3}{3}\right]_0^2
+		=\frac{1}{9}\cdot\frac{8}{3}=\frac{8}{27}\approx 0.296.
+		\]
+		\textbf{Interpretation.} There is about a 29.6\% chance the index is at most 2.
 		
 	\end{ExamProblems}
 	
@@ -163,27 +196,54 @@
 		
 		\hypertarget{c2-ex2}{}
 		\item
-		\subsection*{Problem 2 — Random Placement in a Pool}
+		\subsection*{Problem 2 — Random Phone Call Time}
 		
 		\textbf{Problem.}
-		A swimmer chooses a random depth along a sloped pool between 1 m and 3 m.
-		Let \(D\sim\text{Uniform}(1,3)\).
+		A student receives a phone call at a random time between 18:00 and 19:00.
+		Let \(T\sim\text{Uniform}(0,60)\) be the minutes after 18:00 when the call arrives.
 		
-		\textbf{Question.} Find \(P(D>2.5)\) and the expected depth \(E[D]\). Interpret both results.
+		\textbf{Question.} Find \(P(10\le T\le 25)\) and \(P(T<10\ \text{or}\ T>50)\).
 		
 		\textbf{Solution.}
-		The density is \(f(d)=\frac{1}{3-1}=\frac{1}{2}\) for \(1\le d\le 3\).
+		The density is constant: \(f(t)=\frac{1}{60}\) for \(0\le t\le 60\).
 		
-		Probability:
+		First probability:
 		\[
-		P(D>2.5)=\int_{2.5}^3 \frac{1}{2}\,dd=\frac{0.5}{2}=0.25.
+		P(10\le T\le 25)=\frac{25-10}{60}=\frac{15}{60}=0.25.
 		\]
-		Expected value for a uniform \([a,b]\) is \(E[D]=\frac{a+b}{2}\), so
+		For the union of intervals:
 		\[
-		E[D]=\frac{1+3}{2}=2.
+		P(T<10\ \text{or}\ T>50)=\frac{10}{60}+\frac{10}{60}=\frac{20}{60}=\frac{1}{3}.
 		\]
-		\textbf{Interpretation.} There is a 25\% chance the depth exceeds 2.5 m, and the average
-		chosen depth is 2 m.
+		\textbf{Interpretation.} There is a 25\% chance the call arrives between 18:10 and 18:25,
+		and a one-third chance it arrives in the first 10 minutes or last 10 minutes.
+		
+		% --------------------------------------------------
+		
+		\hypertarget{c2-ex3}{}
+		\item
+		\subsection*{Problem 3 — Choosing a Seat Row}
+		
+		\textbf{Problem.}
+		A theater row is numbered from 1 to 20, and a random seat is chosen uniformly along the row.
+		Let \(S\sim\text{Uniform}(1,20)\) represent the seat number (treated as continuous for modelling).
+		
+		\textbf{Question.} Find \(P(5\le S\le 12)\) and \(P(S\le 4\ \text{or}\ 16\le S\le 20)\).
+		
+		\textbf{Solution.}
+		The uniform density is \(f(s)=\frac{1}{19}\) for \(1\le s\le 20\).
+		
+		First probability:
+		\[
+		P(5\le S\le 12)=\frac{12-5}{19}=\frac{7}{19}\approx 0.368.
+		\]
+		Second probability:
+		\[
+		P(S\le 4\ \text{or}\ 16\le S\le 20)=\frac{4-1}{19}+\frac{20-16}{19}
+		=\frac{3}{19}+\frac{4}{19}=\frac{7}{19}.
+		\]
+		\textbf{Interpretation.} The chance of a seat between rows 5 and 12 is about 36.8\%,
+		and the same chance for the extreme front or back rows.
 		
 	\end{ExamProblems}
 	
@@ -258,6 +318,45 @@
 		\]
 		\textbf{Interpretation.} About 50\% of packages weigh between 1 kg and 3 kg.
 		
+		% --------------------------------------------------
+		
+		\hypertarget{c3-ex3}{}
+		\item
+		\subsection*{Problem 3 — Temperature Drift}
+		
+		\textbf{Problem.}
+		A sensor records a temperature drift \(Y\) (\(^\circ\)C) over an hour, modeled on \([0,4]\) by
+		\[
+		f(y)=a+by,\quad 0\le y\le 4,
+		\]
+		with \(f(0)=\frac{1}{8}\) and \(f(4)=\frac{3}{8}\).
+		
+		\textbf{Question.} Find \(a\) and \(b\), then compare \(P(0\le Y\le 1)\) with \(P(3\le Y\le 4)\).
+		
+		\textbf{Solution.}
+		The conditions give \(a=\frac{1}{8}\) and \(\frac{1}{8}+4b=\frac{3}{8}\Rightarrow b=\frac{1}{16}\).
+		So
+		\[
+		f(y)=\frac{1}{8}+\frac{1}{16}y.
+		\]
+		Check the total area:
+		\[
+		\int_0^4 \left(\frac{1}{8}+\frac{1}{16}y\right)dy
+		=\left[\frac{y}{8}+\frac{y^2}{32}\right]_0^4=\frac{4}{8}+\frac{16}{32}=0.5+0.5=1.
+		\]
+		Compute probabilities:
+		\[
+		P(0\le Y\le 1)=\int_0^1 \left(\frac{1}{8}+\frac{1}{16}y\right)dy
+		=\left[\frac{y}{8}+\frac{y^2}{32}\right]_0^1=\frac{1}{8}+\frac{1}{32}=\frac{5}{32}.
+		\]
+		\[
+		P(3\le Y\le 4)=\int_3^4 \left(\frac{1}{8}+\frac{1}{16}y\right)dy
+		=\left[\frac{y}{8}+\frac{y^2}{32}\right]_3^4
+		=\left(\frac{4}{8}+\frac{16}{32}\right)-\left(\frac{3}{8}+\frac{9}{32}\right)
+		=1-\frac{21}{32}=\frac{11}{32}.
+		\]
+		\textbf{Interpretation.} The interval \([3,4]\) is more likely because the density increases with \(y\).
+		
 	\end{ExamProblems}
 	
 	\ExamSection{C4 Interprets the concept of variance and standard deviation of a probability function.}
@@ -287,103 +386,160 @@
 		\[
 		\sigma=\sqrt{\frac{100}{3}}\approx 5.77.
 		\]
-		\textbf{Interpretation.} The average refund is \$10, and the typical variation is about \$5.77
-		over or under the mean.
+		\textbf{Interpretation.} The variance \(\frac{100}{3}\) measures the average squared spread around \(10\),
+		while the standard deviation of about \$5.77 is the typical distance from the mean in dollars.
 		
 		% --------------------------------------------------
 		
 		\hypertarget{c4-ex2}{}
 		\item
-		\subsection*{Problem 2 — Triangular Delivery Times}
+		\subsection*{Problem 2 — Normal Battery Voltage}
 		
 		\textbf{Problem.}
-		Delivery time (hours) for a local service is modeled by
-		\[
-		f(t)=\frac{1}{8}t,\quad 0\le t\le 4.
-		\]
+		The voltage of a battery cell is approximately normal with mean 1.5 V and standard deviation 0.08 V.
+		Let \(V\sim N(1.5,0.08^2)\).
 		
-		\textbf{Question.} Compute \(E[T]\), \(\mathrm{Var}(T)\), and the standard deviation. Interpret the result.
+		\textbf{Question.} State the variance and standard deviation. Explain what each tells you
+		about voltage variability.
 		
 		\textbf{Solution.}
-		First compute the mean:
+		For a normal distribution, the variance is \(\sigma^2\) and the standard deviation is \(\sigma\).
+		Here
 		\[
-		E[T]=\int_0^4 t\cdot \frac{1}{8}t\,dt=\frac{1}{8}\int_0^4 t^2\,dt
-		=\frac{1}{8}\left[\frac{t^3}{3}\right]_0^4=\frac{1}{8}\cdot\frac{64}{3}=\frac{8}{3}.
+		\mathrm{Var}(V)=0.08^2=0.0064,\qquad \sigma=0.08\text{ V}.
 		\]
-		Next compute \(E[T^2]\):
+		\textbf{Interpretation.} The variance (0.0064) describes the average squared deviation from 1.5 V,
+		while the standard deviation (0.08 V) is the typical size of a voltage fluctuation in volts.
+		
+		% --------------------------------------------------
+		
+		\hypertarget{c4-ex3}{}
+		\item
+		\subsection*{Problem 3 — Uniform Download Time}
+		
+		\textbf{Problem.}
+		A file download time \(T\) (minutes) is uniformly distributed between 6 and 14 minutes.
+		Let \(T\sim\text{Uniform}(6,14)\).
+		
+		\textbf{Question.} Compute the variance and standard deviation, and explain what they mean
+		about the consistency of download times.
+		
+		\textbf{Solution.}
+		For a uniform \([a,b]\),
 		\[
-		E[T^2]=\int_0^4 t^2\cdot \frac{1}{8}t\,dt=\frac{1}{8}\int_0^4 t^3\,dt
-		=\frac{1}{8}\left[\frac{t^4}{4}\right]_0^4=\frac{1}{8}\cdot\frac{256}{4}=8.
+		\mathrm{Var}(T)=\frac{(b-a)^2}{12}.
 		\]
-		Variance is
+		Here \(b-a=8\), so
 		\[
-		\mathrm{Var}(T)=E[T^2]-(E[T])^2=8-\left(\frac{8}{3}\right)^2
-		=8-\frac{64}{9}=\frac{8}{9}.
+		\mathrm{Var}(T)=\frac{8^2}{12}=\frac{64}{12}=\frac{16}{3}.
 		\]
-		Standard deviation:
+		The standard deviation is
 		\[
-		\sigma=\sqrt{\frac{8}{9}}=\frac{2\sqrt{2}}{3}\approx 0.94.
+		\sigma=\sqrt{\frac{16}{3}}\approx 2.31\text{ minutes}.
 		\]
-		\textbf{Interpretation.} Average delivery time is \(\frac{8}{3}\) hours (about 2.67 h) with
-		a typical spread of about 0.94 hours.
+		\textbf{Interpretation.} The variance \(\frac{16}{3}\) measures squared spread around the mean,
+		while the standard deviation of about 2.31 minutes tells us typical variation in actual time.
 		
 	\end{ExamProblems}
 	
 	\ExamSection{C5 Uses the normal standard distribution and its tables to calculate probabilities in context situations.}
 	
+	\noindent\textbf{Standard normal table (values of \(\Phi(z)\)).} Use this same table for all problems in this section.
+	\begin{center}
+	\begin{tabular}{c|cccccccccc}
+		\toprule
+		$z$ & 0.00 & 0.01 & 0.02 & 0.03 & 0.04 & 0.05 & 0.06 & 0.07 & 0.08 & 0.09 \\
+		\midrule
+		0.0 & 0.5000 & 0.5040 & 0.5080 & 0.5120 & 0.5160 & 0.5199 & 0.5239 & 0.5279 & 0.5319 & 0.5359 \\
+		0.1 & 0.5398 & 0.5438 & 0.5478 & 0.5517 & 0.5557 & 0.5596 & 0.5636 & 0.5675 & 0.5714 & 0.5753 \\
+		0.2 & 0.5793 & 0.5832 & 0.5871 & 0.5910 & 0.5948 & 0.5987 & 0.6026 & 0.6064 & 0.6103 & 0.6141 \\
+		0.3 & 0.6179 & 0.6217 & 0.6255 & 0.6293 & 0.6331 & 0.6368 & 0.6406 & 0.6443 & 0.6480 & 0.6517 \\
+		0.4 & 0.6554 & 0.6591 & 0.6628 & 0.6664 & 0.6700 & 0.6736 & 0.6772 & 0.6808 & 0.6844 & 0.6879 \\
+		0.5 & 0.6915 & 0.6950 & 0.6985 & 0.7019 & 0.7054 & 0.7088 & 0.7123 & 0.7157 & 0.7190 & 0.7224 \\
+		0.6 & 0.7257 & 0.7291 & 0.7324 & 0.7357 & 0.7389 & 0.7422 & 0.7454 & 0.7486 & 0.7517 & 0.7549 \\
+		0.7 & 0.7580 & 0.7611 & 0.7642 & 0.7673 & 0.7704 & 0.7734 & 0.7764 & 0.7794 & 0.7823 & 0.7852 \\
+		0.8 & 0.7881 & 0.7910 & 0.7939 & 0.7967 & 0.7995 & 0.8023 & 0.8051 & 0.8078 & 0.8106 & 0.8133 \\
+		0.9 & 0.8159 & 0.8186 & 0.8212 & 0.8238 & 0.8264 & 0.8289 & 0.8315 & 0.8340 & 0.8365 & 0.8389 \\
+		1.0 & 0.8413 & 0.8438 & 0.8461 & 0.8485 & 0.8508 & 0.8531 & 0.8554 & 0.8577 & 0.8599 & 0.8621 \\
+		1.1 & 0.8643 & 0.8665 & 0.8686 & 0.8708 & 0.8729 & 0.8749 & 0.8770 & 0.8790 & 0.8810 & 0.8830 \\
+		1.2 & 0.8849 & 0.8869 & 0.8888 & 0.8907 & 0.8925 & 0.8944 & 0.8962 & 0.8980 & 0.8997 & 0.9015 \\
+		1.3 & 0.9032 & 0.9049 & 0.9066 & 0.9082 & 0.9099 & 0.9115 & 0.9131 & 0.9147 & 0.9162 & 0.9177 \\
+		1.4 & 0.9192 & 0.9207 & 0.9222 & 0.9236 & 0.9251 & 0.9265 & 0.9279 & 0.9292 & 0.9306 & 0.9319 \\
+		1.5 & 0.9332 & 0.9345 & 0.9357 & 0.9370 & 0.9382 & 0.9394 & 0.9406 & 0.9418 & 0.9429 & 0.9441 \\
+		1.6 & 0.9452 & 0.9463 & 0.9474 & 0.9484 & 0.9495 & 0.9505 & 0.9515 & 0.9525 & 0.9535 & 0.9545 \\
+		1.7 & 0.9554 & 0.9564 & 0.9573 & 0.9582 & 0.9591 & 0.9599 & 0.9608 & 0.9616 & 0.9625 & 0.9633 \\
+		1.8 & 0.9641 & 0.9649 & 0.9656 & 0.9664 & 0.9671 & 0.9678 & 0.9686 & 0.9693 & 0.9699 & 0.9706 \\
+		1.9 & 0.9713 & 0.9719 & 0.9726 & 0.9732 & 0.9738 & 0.9744 & 0.9750 & 0.9756 & 0.9761 & 0.9767 \\
+		2.0 & 0.9772 & 0.9778 & 0.9783 & 0.9788 & 0.9793 & 0.9798 & 0.9803 & 0.9808 & 0.9812 & 0.9817 \\
+		\bottomrule
+	\end{tabular}
+	\end{center}
+	
 	\begin{ExamProblems}
 		
 		\hypertarget{c5-ex1}{}
 		\item
-		\subsection*{Problem 1 — Bottled Water Fill Volumes}
+		\subsection*{Problem 1 — Standard Normal Table Practice I}
 		
 		\textbf{Problem.}
-		A bottling machine fills bottles with a mean of 500 mL and standard deviation of 8 mL.
-		Assume fill volume \(X\sim N(500,8^2)\).
+		Let \(Z\sim N(0,1)\).
 		
-		\textbf{Question.} Use the standard normal table to find \(P(X<512)\). Interpret the result.
+		\textbf{Question.} Use the standard normal table to find \(P(Z<1.25)\) and \(P(Z>0.60)\).
 		
 		\textbf{Solution.}
-		Standardize:
-		\[
-		Z=\frac{X-\mu}{\sigma}=\frac{X-500}{8}.
-		\]
+		From the table, \(\Phi(1.25)=0.8944\).
 		So
 		\[
-		P(X<512)=P\left(Z<\frac{512-500}{8}\right)=P(Z<1.5).
+		P(Z<1.25)=0.8944.
 		\]
-		From the standard normal table, \(\Phi(1.50)\approx 0.9332\).
-		\textbf{Interpretation.} About 93.3\% of bottles are filled with less than 512 mL.
+		Also \(\Phi(0.60)=0.7257\), so
+		\[
+		P(Z>0.60)=1-\Phi(0.60)=1-0.7257=0.2743.
+		\]
+		\textbf{Interpretation.} About 89.4\% of values lie below 1.25, and 27.4\% lie above 0.60.
 		
 		% --------------------------------------------------
 		
 		\hypertarget{c5-ex2}{}
 		\item
-		\subsection*{Problem 2 — Daily Study Time}
+		\subsection*{Problem 2 — Standard Normal Table Practice II}
 		
 		\textbf{Problem.}
-		Daily study time for a group of students is approximately normal with mean 2.5 hours
-		and standard deviation 0.6 hours. Let \(X\sim N(2.5,0.6^2)\).
+		Let \(Z\sim N(0,1)\).
 		
-		\textbf{Question.} Use the standard normal table to find \(P(2.0\le X\le 3.2)\).
+		\textbf{Question.} Use the table to compute \(P(-0.40\le Z\le 1.10)\).
 		
 		\textbf{Solution.}
-		Standardize the endpoints:
+		From the table, \(\Phi(1.10)=0.8643\) and \(\Phi(0.40)=0.6554\).
+		Because \(\Phi(-0.40)=1-\Phi(0.40)=0.3446\),
 		\[
-		Z_1=\frac{2.0-2.5}{0.6}=-0.83\quad\text{(approx)},\qquad
-		Z_2=\frac{3.2-2.5}{0.6}=1.17\quad\text{(approx)}.
+		P(-0.40\le Z\le 1.10)=\Phi(1.10)-\Phi(-0.40)=0.8643-0.3446=0.5197.
+		\]
+		\textbf{Interpretation.} About 52.0\% of standard normal values lie between -0.40 and 1.10.
+		
+		% --------------------------------------------------
+		
+		\hypertarget{c5-ex3}{}
+		\item
+		\subsection*{Problem 3 — Standard Normal Table Practice III}
+		
+		\textbf{Problem.}
+		Let \(Z\sim N(0,1)\).
+		
+		\textbf{Question.} Use the table to find \(P(Z\le -1.30\ \text{or}\ Z\ge 0.80)\).
+		
+		\textbf{Solution.}
+		From the table, \(\Phi(1.30)=0.9032\) and \(\Phi(0.80)=0.7881\).
+		So
+		\[
+		P(Z\le -1.30)=1-\Phi(1.30)=0.0968,
+		\qquad P(Z\ge 0.80)=1-\Phi(0.80)=0.2119.
 		\]
 		Thus
 		\[
-		P(2.0\le X\le 3.2)=P(-0.83\le Z\le 1.17)
-		=\Phi(1.17)-\Phi(-0.83).
+		P(Z\le -1.30\ \text{or}\ Z\ge 0.80)=0.0968+0.2119=0.3087.
 		\]
-		From the table, \(\Phi(1.17)\approx 0.8790\) and \(\Phi(-0.83)=1-\Phi(0.83)\approx 1-0.7967=0.2033\).
-		Therefore
-		\[
-		P(2.0\le X\le 3.2)\approx 0.8790-0.2033=0.6757.
-		\]
-		\textbf{Interpretation.} About 67.6\% of students study between 2.0 and 3.2 hours per day.
+		\textbf{Interpretation.} About 30.9\% of values lie in the two tails outside [-1.30, 0.80].
 		
 	\end{ExamProblems}
 	
@@ -445,6 +601,35 @@
 		\]
 		\textbf{Interpretation.} About 4.8\% of apples are large.
 		
+		% --------------------------------------------------
+		
+		\hypertarget{c6-ex3}{}
+		\item
+		\subsection*{Problem 3 — Shipping Times}
+		
+		\textbf{Problem.}
+		Shipping times for a package are normally distributed with mean 3.4 days and
+		standard deviation 0.5 days.
+		
+		\textbf{Question.} Find the probability that a package arrives between 3 and 4 days.
+		Show the standardisation step before using the table.
+		
+		\textbf{Solution.}
+		Let \(X\) be shipping time. Standardize the endpoints:
+		\[
+		Z_1=\frac{3-3.4}{0.5}=-0.8,\qquad Z_2=\frac{4-3.4}{0.5}=1.2.
+		\]
+		Thus
+		\[
+		P(3\le X\le 4)=P(-0.8\le Z\le 1.2)=\Phi(1.2)-\Phi(-0.8).
+		\]
+		From the table, \(\Phi(1.2)=0.8849\) and \(\Phi(-0.8)=1-\Phi(0.8)=1-0.7881=0.2119\).
+		So
+		\[
+		P(3\le X\le 4)=0.8849-0.2119=0.6730.
+		\]
+		\textbf{Interpretation.} About 67.3\% of packages arrive between 3 and 4 days.
+		
 	\end{ExamProblems}
 	
 	\ExamSection{C7 Solves problems through the concept of inverse normal distribution.}
@@ -505,6 +690,34 @@
 		\]
 		\textbf{Interpretation.} About 10\% of students arrive in 17.3 minutes or less.
 		
+		% --------------------------------------------------
+		
+		\hypertarget{c7-ex3}{}
+		\item
+		\subsection*{Problem 3 — Middle 90\% Tire Lifetimes}
+		
+		\textbf{Problem.}
+		A tire model has lifetimes \(L\sim N(40{,}000\text{ km}, 4{,}000^2\text{ km}^2)\).
+		
+		\textbf{Question.} Find the interval of lifetimes that contains the middle 90\% of tires.
+		
+		\textbf{Solution.}
+		The middle 90\% leaves 5\% in each tail, so we need the 5th and 95th percentiles.
+		Let \(a\) be the 5th percentile and \(b\) the 95th percentile. Then
+		\[
+		P(L\le a)=0.05,\qquad P(L\le b)=0.95.
+		\]
+		From inverse normal values, \(z_{0.05}\approx -1.645\) and \(z_{0.95}\approx 1.645\).
+		Standardize:
+		\[
+		\frac{a-40{,}000}{4{,}000}=-1.645,\qquad \frac{b-40{,}000}{4{,}000}=1.645.
+		\]
+		So
+		\[
+		a=40{,}000-1.645(4{,}000)=33{,}420\text{ km},\qquad b=40{,}000+1.645(4{,}000)=46{,}580\text{ km}.
+		\]
+		\textbf{Interpretation.} About 90\% of tires last between roughly 33{,}400 km and 46{,}600 km.
+		
 	\end{ExamProblems}
 	
 	\ExamSection{C8 Summarizes the elements and characteristics that an investment portfolio may have.}
@@ -513,55 +726,79 @@
 		
 		\hypertarget{c8-ex1}{}
 		\item
-		\subsection*{Problem 1 — Building a Student Savings Portfolio}
+		\subsection*{Problem 1 — Portfolio Returns as a Uniform Model}
 		
 		\textbf{Problem.}
-		A student club invests \(\$10{,}000\) in three assets: a savings account (40\%), a government bond (35\%),
-		and a stock fund (25\%). Expected annual returns are 2\%, 4\%, and 8\%, respectively.
+		A student savings portfolio has monthly returns modeled as a uniform distribution
+		between -1\% and 5\%. Let \(R\sim\text{Uniform}(-0.01,0.05)\).
 		
-		\textbf{Question.} Compute the expected portfolio return and describe the portfolio's
-		elements (assets, weights, and risk characteristics) in words.
+		\textbf{Question.} Find the probability of a non-negative return and describe what the uniform model
+		says about the portfolio's variability.
 		
 		\textbf{Solution.}
-		Expected portfolio return is the weighted average:
+		The density is constant on the interval, so
 		\[
-		E[R]=0.40(0.02)+0.35(0.04)+0.25(0.08).
+		P(R\ge 0)=\frac{0.05-0}{0.05-(-0.01)}=\frac{0.05}{0.06}=\frac{5}{6}\approx 0.833.
 		\]
-		Compute:
-		\[
-		E[R]=0.008+0.014+0.020=0.042=4.2\%.
-		\]
-		\textbf{Interpretation.} The portfolio mixes low-risk savings with medium-risk bonds and higher-risk
-		stocks. The weights show more money in safer assets, so the expected return is moderate (4.2\%).
-		It has diversification, some liquidity (savings), and some growth potential (stocks).
+		\textbf{Interpretation.} The uniform model treats all returns between -1\% and 5\% as equally likely,
+		so variability is spread evenly across that range. About 83.3\% of months are non-negative.
 		
 		% --------------------------------------------------
 		
 		\hypertarget{c8-ex2}{}
 		\item
-		\subsection*{Problem 2 — Comparing Two Club Funds}
+		\subsection*{Problem 2 — Mixing Two Return Distributions}
 		
 		\textbf{Problem.}
-		Two school clubs invest in different portfolios:
-		\begin{itemize}
-			\item Portfolio A: 60\% bonds, 40\% stocks (expected returns 4\% and 9\%).
-			\item Portfolio B: 30\% bonds, 70\% stocks (same expected returns).
-		\end{itemize}
+		A club invests in two funds. Fund A has returns modeled by a linear density on \([0\%,8\%]\)
+		with \(f_A(r)=kr\). Fund B has returns modeled by \(N(4\%,2\%^2)\).
 		
-		\textbf{Question.} Compute expected returns and summarize how the asset mix affects risk and return.
+		\textbf{Question.} For Fund A, find \(k\) so the density is valid, and compute \(P(0.02\le R_A\le 0.06)\).
+		Then explain qualitatively how the two distributions differ in shape and what that means for the portfolio.
 		
 		\textbf{Solution.}
-		Portfolio A expected return:
+		For Fund A,
 		\[
-		E[R_A]=0.60(0.04)+0.40(0.09)=0.024+0.036=0.060=6.0\%.
+		\int_0^{0.08} kr\,dr=1\Rightarrow k\left[\frac{r^2}{2}\right]_0^{0.08}=k\cdot\frac{0.0064}{2}=0.0032k=1,
 		\]
-		Portfolio B expected return:
+		so \(k=312.5\). Then
 		\[
-		E[R_B]=0.30(0.04)+0.70(0.09)=0.012+0.063=0.075=7.5\%.
+		P(0.02\le R_A\le 0.06)=\int_{0.02}^{0.06} 312.5r\,dr
+		=312.5\left[\frac{r^2}{2}\right]_{0.02}^{0.06}
+		=312.5\cdot\frac{0.0036-0.0004}{2}=312.5\cdot 0.0016=0.50.
 		\]
-		\textbf{Interpretation.} Portfolio B has higher expected return because it holds more stocks, but
-		stocks are typically more volatile. Portfolio A is more conservative with a larger bond share,
-		so it has lower expected return and lower risk.
+		\textbf{Interpretation.} Fund A has a linear density that rises with return, so higher returns are more likely.
+		Fund B is bell-shaped around 4\%, so most outcomes cluster near the mean with fewer extreme values.
+		The portfolio elements differ in shape and spread, affecting both expected outcomes and variability.
+		
+		% --------------------------------------------------
+		
+		\hypertarget{c8-ex3}{}
+		\item
+		\subsection*{Problem 3 — Interpreting a Normal Return Model}
+		
+		\textbf{Problem.}
+		A scholarship fund models annual returns as \(R\sim N(0.06,0.03^2)\).
+		
+		\textbf{Question.} Estimate the probability that the return is between 3\% and 9\%, and explain
+		what the standard deviation tells you about the portfolio.
+		
+		\textbf{Solution.}
+		Standardize:
+		\[
+		Z_1=\frac{0.03-0.06}{0.03}=-1,\qquad Z_2=\frac{0.09-0.06}{0.03}=1.
+		\]
+		Thus
+		\[
+		P(0.03\le R\le 0.09)=P(-1\le Z\le 1)=\Phi(1)-\Phi(-1).
+		\]
+		From the table, \(\Phi(1)=0.8413\) and \(\Phi(-1)=1-\Phi(1)=0.1587\).
+		So
+		\[
+		P(0.03\le R\le 0.09)=0.8413-0.1587=0.6826.
+		\]
+		\textbf{Interpretation.} About 68\% of returns fall within one standard deviation of the mean,
+		so the standard deviation (3\%) summarizes typical yearly variation for this portfolio.
 		
 	\end{ExamProblems}
 	
@@ -625,55 +862,64 @@
 		
 		\hypertarget{c9-ex2}{}
 		\item
-		\subsection*{Problem 2 — Diversified vs. Concentrated Returns}
+		\subsection*{Problem 2 — Comparing Spread in Continuous Models}
 		
 		\textbf{Problem.}
-		A diversified portfolio (D) and a concentrated portfolio (C) have the following distributions:
-		\[
-		\begin{array}{lccc}
-		\toprule
-		\text{Return} & -8\% & 5\% & 18\% \\
-		\midrule
-		\text{Portfolio D} & 0.20 & 0.60 & 0.20 \\
-		\text{Portfolio C} & 0.35 & 0.30 & 0.35 \\
-		\bottomrule
-		\end{array}
-		\]
+		Portfolio C has returns modeled as \(R_C\sim\text{Uniform}(-0.02,0.08)\).
+		Portfolio D has returns modeled as \(R_D\sim N(0.03,0.02^2)\).
 		
-		\textbf{Question.} Compute the variance for each portfolio and explain how the distribution
-		relates to risk.
+		\textbf{Question.} Compute the variance for each portfolio and explain which one is riskier
+		based on distributional spread.
 		
 		\textbf{Solution.}
-		Compute expected returns:
+		For Portfolio C (uniform),
 		\[
-		E[R_D]=0.20(-0.08)+0.60(0.05)+0.20(0.18)=-0.016+0.030+0.036=0.050.
+		\mathrm{Var}(R_C)=\frac{(0.08-(-0.02))^2}{12}=\frac{0.10^2}{12}=\frac{0.01}{12}\approx 0.000833.
 		\]
-		\[
-		E[R_C]=0.35(-0.08)+0.30(0.05)+0.35(0.18)=-0.028+0.015+0.063=0.050.
-		\]
-		Both have expected return 5\%.
+		For Portfolio D (normal), the variance is \(\sigma^2=0.02^2=0.0004\).
 		
-		Compute variances.
-		For D:
+		\textbf{Interpretation.} Portfolio C has a larger variance, so its distribution is wider.
+		That wider spread means more variability in returns, which indicates higher risk.
+		
+		% --------------------------------------------------
+		
+		\hypertarget{c9-ex3}{}
+		\item
+		\subsection*{Problem 3 — Shape and Tail Risk}
+		
+		\textbf{Problem.}
+		Two portfolios have continuous return models on \([-5\%,15\%]\).
+		Portfolio E has a linear density that increases with return:
+		\(f_E(r)=k(r+0.05)\).
+		Portfolio F has a linear density that decreases with return:
+		\(f_F(r)=k(0.15-r)\).
+		
+		\textbf{Question.} Find \(k\) for each density, then compare the probability of a loss
+		(\(R<0\)) for the two portfolios. Explain what this says about risk.
+		
+		\textbf{Solution.}
+		For Portfolio E, set the area to 1:
 		\[
-		E[R_D^2]=0.20(0.08^2)+0.60(0.05^2)+0.20(0.18^2)
-		=0.20(0.0064)+0.60(0.0025)+0.20(0.0324)
-		=0.00128+0.00150+0.00648=0.00926.
+		\int_{-0.05}^{0.15} k(r+0.05)\,dr=1.
 		\]
+		Let \(u=r+0.05\), so \(u\) runs from 0 to 0.20:
 		\[
-		\mathrm{Var}(R_D)=0.00926-(0.05)^2=0.00926-0.0025=0.00676.
+		k\int_0^{0.20} u\,du=k\left[\frac{u^2}{2}\right]_0^{0.20}=k\cdot 0.02=1\Rightarrow k=50.
 		\]
-		For C:
+		For Portfolio F, by symmetry the same calculation applies, so \(k=50\).
+		
+		Loss probability for E:
 		\[
-		E[R_C^2]=0.35(0.08^2)+0.30(0.05^2)+0.35(0.18^2)
-		=0.35(0.0064)+0.30(0.0025)+0.35(0.0324)
-		=0.00224+0.00075+0.01134=0.01433.
+		P(R<0)=\int_{-0.05}^{0} 50(r+0.05)\,dr=50\left[\frac{(r+0.05)^2}{2}\right]_{-0.05}^{0}
+		=50\cdot\frac{0.05^2}{2}=50\cdot 0.00125=0.0625.
 		\]
+		Loss probability for F:
 		\[
-		\mathrm{Var}(R_C)=0.01433-(0.05)^2=0.01433-0.0025=0.01183.
+		P(R<0)=\int_{-0.05}^{0} 50(0.15-r)\,dr=50\left[0.15r-\frac{r^2}{2}\right]_{-0.05}^{0}
+		=50\left(0-\left(-0.0075-0.00125\right)\right)=50\cdot 0.00875=0.4375.
 		\]
-		\textbf{Interpretation.} Portfolio C has the larger variance because its distribution puts more
-		probability on extreme returns. A wider distribution means higher risk.
+		\textbf{Interpretation.} Portfolio F puts more probability on low returns and has a much higher chance
+		of a loss. The shape of the distribution (increasing vs. decreasing) directly affects risk.
 		
 	\end{ExamProblems}
 	
