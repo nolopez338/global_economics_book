@@ -1,317 +1,264 @@
 \input{../../preamble/preamble_exams.tex}
 \begin{document}
-	\ExamTitleBlock{11th grade}{Term 2 Learning Evidence 2: C7 Activity Solutions}{}
+	\ExamTitleBlock{11th grade}{Term 2 Learning Evidence 2: C7 Activity Solution}{}
 	
-	\section*{1. Community Water Pricing Support}
+	\section*{1. Local Transport Satisfaction}
 		
-	A city council surveys \textbf{220 households} about support for a new water pricing plan. In the sample, \textbf{143 households} say they support the plan.
+	A city transport office surveys \textbf{100 commuters} about whether they are satisfied with the reliability of the bus system. In the sample, \textbf{58 commuters} report being satisfied.
 	
-	Construct and interpret a \textbf{95\% confidence interval} for the population proportion of households that support the plan.
-	
-	\subsubsection*{(C7) Constructs the confidence interval for a proportion}
-	To construct the confidence interval for a proportion, we identify \(x\) and \(n\) and compute \(\hat{p}\), check normal approximation conditions \(n\hat{p} \ge 10\) and \(n(1-\hat{p}) \ge 10\), choose the correct \(z^*\) for the confidence level, compute \(SE\) and the margin of error, construct and report the confidence interval, and interpret the interval in context.
-	
-	\textbf{Step 1: Sample proportion.}
-	\[
-	\hat{p} = \frac{x}{n} = \frac{143}{220} = 0.65
-	\]
-	
-	\textbf{Step 2: Large-sample conditions.}
-	\[
-	n\hat{p} = 220(0.65) = 143 \ge 10, \qquad n(1-\hat{p}) = 220(0.35) = 77 \ge 10
-	\]
-	
-	\textbf{Step 3: Standard error.}
-	\[
-	SE = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.65(0.35)}{220}} \approx 0.0322
-	\]
-	
-	\textbf{Step 4: Margin of error (95\% confidence, \(z^* = 1.96\)).}
-	\[
-	E = z^* \cdot SE = 1.96(0.0322) \approx 0.0631
-	\]
-	
-	\textbf{Step 5: Confidence interval.}
-	\[
-	\hat{p} \pm E = 0.65 \pm 0.0631 \Rightarrow [0.587,\ 0.713]
-	\]
-	
-	\textbf{Interpretation.}
-	We are 95\% confident that between about 58.7\% and 71.3\% of households in the city support the water pricing plan.
-	
-	\section*{2. Coastal Ferry Reliability}
-	
-	A transport board reviews \textbf{180 ferry trips} and finds that \textbf{45} arrived at least fifteen minutes late. The board wants a proportion estimate for the late arrival rate.
-	
-	Construct and interpret a \textbf{90\% confidence interval} for the population proportion of late ferry trips.
+	Construct and interpret a \textbf{90\% confidence interval} for the population proportion of commuters who are satisfied with the bus system.
 	
 	\subsubsection*{(C7) Constructs the confidence interval for a proportion}
-	To construct the confidence interval for a proportion, we identify \(x\) and \(n\) and compute \(\hat{p}\), check normal approximation conditions \(n\hat{p} \ge 10\) and \(n(1-\hat{p}) \ge 10\), choose the correct \(z^*\) for the confidence level, compute \(SE\) and the margin of error, construct and report the confidence interval, and interpret the interval in context.
+	To construct the confidence interval for a proportion, we identify the population proportion, compute \(\hat{p}\), verify large-sample conditions, select the correct \(z^*\), compute \(SE\) and the margin of error, construct the interval, and interpret the result in context.
 	
-	\textbf{Step 1: Sample proportion.}
+	\textbf{Step 1: Identify the population parameter and the sample proportion.}
+	Let \(p\) be the population proportion of commuters who are satisfied. The sample proportion is
 	\[
-	\hat{p} = \frac{x}{n} = \frac{45}{180} = 0.25
+	\hat{p} = \frac{x}{n} = \frac{58}{100} = 0.58
+	\]
+	Large-sample conditions:
+	\[
+	n\hat{p} = 100(0.58) = 58 \ge 10, \qquad n(1-\hat{p}) = 100(0.42) = 42 \ge 10
 	\]
 	
-	\textbf{Step 2: Large-sample conditions.}
+	\textbf{Step 2: Compute the standard error of the proportion.}
 	\[
-	n\hat{p} = 180(0.25) = 45 \ge 10, \qquad n(1-\hat{p}) = 180(0.75) = 135 \ge 10
+	SE = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.58(0.42)}{100}} \approx 0.0494
 	\]
 	
-	\textbf{Step 3: Standard error.}
+	\textbf{Step 3: Compute the margin of error (90\% confidence, \(z^* = 1.645\)).}
 	\[
-	SE = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.25(0.75)}{180}} \approx 0.0323
+	E = z^* \cdot SE = 1.645(0.0494) \approx 0.0812
 	\]
 	
-	\textbf{Step 4: Margin of error (90\% confidence, \(z^* = 1.645\)).}
+	\textbf{Step 4: Construct the confidence interval.}
 	\[
-	E = z^* \cdot SE = 1.645(0.0323) \approx 0.0531
+	\hat{p} \pm E = 0.58 \pm 0.0812 \Rightarrow [0.499,\ 0.661]
 	\]
 	
-	\textbf{Step 5: Confidence interval.}
-	\[
-	\hat{p} \pm E = 0.25 \pm 0.0531 \Rightarrow [0.197,\ 0.303]
-	\]
+	\textbf{Step 5: Interpret the confidence interval in context.}
+	We are 90\% confident that between about 49.9\% and 66.1\% of all commuters in the city are satisfied with the bus system.
 	
-	\textbf{Interpretation.}
-	We are 90\% confident that between about 19.7\% and 30.3\% of ferry trips arrive at least fifteen minutes late.
+	\section*{2. Digital Payment Adoption}
+		
+	A business association surveys \textbf{180 small retailers} about whether they accept digital payments. In the sample, \textbf{81 retailers} accept digital payments.
 	
-	\section*{3. Small Business Grant Renewals}
-	
-	A development agency tracks \textbf{360 grants} issued to small businesses. During the renewal period, \textbf{54 grants} were not renewed.
-	
-	Construct and interpret \textbf{90\% and 95\% confidence intervals} for the population proportion of grants that are not renewed.
+	Construct and interpret a \textbf{95\% confidence interval} for the population proportion of small retailers who accept digital payments.
 	
 	\subsubsection*{(C7) Constructs the confidence interval for a proportion}
-	To construct the confidence interval for a proportion, we identify \(x\) and \(n\) and compute \(\hat{p}\), check normal approximation conditions \(n\hat{p} \ge 10\) and \(n(1-\hat{p}) \ge 10\), choose the correct \(z^*\) for the confidence level, compute \(SE\) and the margin of error, construct and report the confidence interval, and interpret the interval in context.
+	To construct the confidence interval for a proportion, we identify the population proportion, compute \(\hat{p}\), verify large-sample conditions, select the correct \(z^*\), compute \(SE\) and the margin of error, construct the interval, and interpret the result in context.
 	
-	\textbf{Step 1: Sample proportion.}
+	\textbf{Step 1: Identify the population parameter and the sample proportion.}
+	Let \(p\) be the population proportion of small retailers who accept digital payments. The sample proportion is
 	\[
-	\hat{p} = \frac{x}{n} = \frac{54}{360} = 0.15
+	\hat{p} = \frac{x}{n} = \frac{81}{180} = 0.45
+	\]
+	Large-sample conditions:
+	\[
+	n\hat{p} = 180(0.45) = 81 \ge 10, \qquad n(1-\hat{p}) = 180(0.55) = 99 \ge 10
 	\]
 	
-	\textbf{Step 2: Large-sample conditions.}
+	\textbf{Step 2: Compute the standard error of the proportion.}
 	\[
-	n\hat{p} = 360(0.15) = 54 \ge 10, \qquad n(1-\hat{p}) = 360(0.85) = 306 \ge 10
+	SE = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.45(0.55)}{180}} \approx 0.0371
 	\]
 	
-	\textbf{Step 3: Standard error.}
+	\textbf{Step 3: Compute the margin of error (95\% confidence, \(z^* = 1.96\)).}
 	\[
-	SE = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.15(0.85)}{360}} \approx 0.0188
+	E = z^* \cdot SE = 1.96(0.0371) \approx 0.0727
 	\]
 	
-	\textbf{Step 4: Margin of error and confidence interval for 90\% confidence.}
+	\textbf{Step 4: Construct the confidence interval.}
 	\[
-	E_{90} = z^* \cdot SE = 1.645(0.0188) \approx 0.0309
-	\]
-	\[
-	\hat{p} \pm E_{90} = 0.15 \pm 0.0309 \Rightarrow [0.119,\ 0.181]
+	\hat{p} \pm E = 0.45 \pm 0.0727 \Rightarrow [0.377,\ 0.523]
 	\]
 	
-	\textbf{Step 5: Margin of error and confidence interval for 95\% confidence.}
-	\[
-	E_{95} = z^* \cdot SE = 1.96(0.0188) \approx 0.0369
-	\]
-	\[
-	\hat{p} \pm E_{95} = 0.15 \pm 0.0369 \Rightarrow [0.113,\ 0.187]
-	\]
+	\textbf{Step 5: Interpret the confidence interval in context.}
+	We are 95\% confident that between about 37.7\% and 52.3\% of all small retailers accept digital payments.
 	
-	\textbf{Interpretation.}
-	We are 90\% confident that between about 11.9\% and 18.1\% of grants are not renewed, and we are 95\% confident that between about 11.3\% and 18.7\% are not renewed.
+	\section*{3. Water-Saving Appliance Use}
+		
+	An environmental agency surveys \textbf{250 households} to estimate the share that use water-saving appliances. In the sample, \textbf{190 households} report using such appliances.
 	
-	\section*{4. Household Digital Banking Use}
-	
-	A financial inclusion survey studies \textbf{160 households} and finds that \textbf{104 households} use digital banking services.
-	
-	Construct and interpret \textbf{90\%, 95\%, and 99\% confidence intervals} for the population proportion of households that use digital banking services.
+	Construct and interpret a \textbf{95\% confidence interval} for the population proportion of households using water-saving appliances.
 	
 	\subsubsection*{(C7) Constructs the confidence interval for a proportion}
-	To construct the confidence interval for a proportion, we identify \(x\) and \(n\) and compute \(\hat{p}\), check normal approximation conditions \(n\hat{p} \ge 10\) and \(n(1-\hat{p}) \ge 10\), choose the correct \(z^*\) for the confidence level, compute \(SE\) and the margin of error, construct and report the confidence interval, and interpret the interval in context.
+	To construct the confidence interval for a proportion, we identify the population proportion, compute \(\hat{p}\), verify large-sample conditions, select the correct \(z^*\), compute \(SE\) and the margin of error, construct the interval, and interpret the result in context.
 	
-	\textbf{Step 1: Sample proportion.}
+	\textbf{Step 1: Identify the population parameter and the sample proportion.}
+	Let \(p\) be the population proportion of households that use water-saving appliances. The sample proportion is
 	\[
-	\hat{p} = \frac{x}{n} = \frac{104}{160} = 0.65
+	\hat{p} = \frac{x}{n} = \frac{190}{250} = 0.76
+	\]
+	Large-sample conditions:
+	\[
+	n\hat{p} = 250(0.76) = 190 \ge 10, \qquad n(1-\hat{p}) = 250(0.24) = 60 \ge 10
 	\]
 	
-	\textbf{Step 2: Large-sample conditions.}
+	\textbf{Step 2: Compute the standard error of the proportion.}
 	\[
-	n\hat{p} = 160(0.65) = 104 \ge 10, \qquad n(1-\hat{p}) = 160(0.35) = 56 \ge 10
+	SE = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.76(0.24)}{250}} \approx 0.0270
 	\]
 	
-	\textbf{Step 3: Standard error.}
+	\textbf{Step 3: Compute the margin of error (95\% confidence, \(z^* = 1.96\)).}
 	\[
-	SE = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.65(0.35)}{160}} \approx 0.0377
+	E = z^* \cdot SE = 1.96(0.0270) \approx 0.0529
 	\]
 	
-	\textbf{Step 4: Margin of error and confidence interval for 90\% confidence.}
+	\textbf{Step 4: Construct the confidence interval.}
 	\[
-	E_{90} = z^* \cdot SE = 1.645(0.0377) \approx 0.0620
-	\]
-	\[
-	\hat{p} \pm E_{90} = 0.65 \pm 0.0620 \Rightarrow [0.588,\ 0.712]
+	\hat{p} \pm E = 0.76 \pm 0.0529 \Rightarrow [0.707,\ 0.813]
 	\]
 	
-	\textbf{Step 5: Margin of error and confidence interval for 95\% confidence.}
-	\[
-	E_{95} = z^* \cdot SE = 1.96(0.0377) \approx 0.0739
-	\]
-	\[
-	\hat{p} \pm E_{95} = 0.65 \pm 0.0739 \Rightarrow [0.576,\ 0.724]
-	\]
+	\textbf{Step 5: Interpret the confidence interval in context.}
+	We are 95\% confident that between about 70.7\% and 81.3\% of households use water-saving appliances.
 	
-	\textbf{Step 6: Margin of error and confidence interval for 99\% confidence.}
-	\[
-	E_{99} = z^* \cdot SE = 2.576(0.0377) \approx 0.0972
-	\]
-	\[
-	\hat{p} \pm E_{99} = 0.65 \pm 0.0972 \Rightarrow [0.553,\ 0.747]
-	\]
+	\section*{4. Export Quality Compliance}
+		
+	A trade ministry inspects \textbf{320 export shipments} and finds that \textbf{68} fail to meet a quality standard. The ministry wants to estimate the proportion of shipments that fail the standard.
 	
-	\textbf{Interpretation.}
-	We are 90\% confident that between about 58.8\% and 71.2\% of households use digital banking services. We are 95\% confident that between about 57.6\% and 72.4\% use digital banking services. We are 99\% confident that between about 55.3\% and 74.7\% use digital banking services.
-	
-	\section*{5. Port Inspection Compliance}
-	
-	A port authority evaluates compliance with a new inspection checklist. Sample A includes \textbf{250 inspections} with \textbf{170} compliant. Sample B includes \textbf{180 inspections} with \textbf{110} compliant. Assume both samples are drawn from the same population of inspections.
-	
-	Construct and interpret a \textbf{95\% confidence interval} for the population proportion of compliant inspections for each sample.
+	Construct and interpret a \textbf{98\% confidence interval} for the population proportion of export shipments that fail the quality standard.
 	
 	\subsubsection*{(C7) Constructs the confidence interval for a proportion}
-	To construct the confidence interval for a proportion, we identify \(x\) and \(n\) and compute \(\hat{p}\), check normal approximation conditions \(n\hat{p} \ge 10\) and \(n(1-\hat{p}) \ge 10\), choose the correct \(z^*\) for the confidence level, compute \(SE\) and the margin of error, construct and report the confidence interval, and interpret the interval in context.
+	To construct the confidence interval for a proportion, we identify the population proportion, compute \(\hat{p}\), verify large-sample conditions, select the correct \(z^*\), compute \(SE\) and the margin of error, construct the interval, and interpret the result in context.
 	
-	\textbf{Sample A}
-	
-	\textbf{Step 1: Sample proportion.}
+	\textbf{Step 1: Identify the population parameter and the sample proportion.}
+	Let \(p\) be the population proportion of export shipments that fail the quality standard. The sample proportion is
 	\[
-	\hat{p}_A = \frac{x}{n} = \frac{170}{250} = 0.68
+	\hat{p} = \frac{x}{n} = \frac{68}{320} = 0.2125
+	\]
+	Large-sample conditions:
+	\[
+	n\hat{p} = 320(0.2125) = 68 \ge 10, \qquad n(1-\hat{p}) = 320(0.7875) = 252 \ge 10
 	\]
 	
-	\textbf{Step 2: Large-sample conditions.}
+	\textbf{Step 2: Compute the standard error of the proportion.}
 	\[
-	n\hat{p}_A = 250(0.68) = 170 \ge 10, \qquad n(1-\hat{p}_A) = 250(0.32) = 80 \ge 10
+	SE = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.2125(0.7875)}{320}} \approx 0.0229
 	\]
 	
-	\textbf{Step 3: Standard error.}
+	\textbf{Step 3: Compute the margin of error (98\% confidence, \(z^* = 2.326\)).}
 	\[
-	SE_A = \sqrt{\frac{\hat{p}_A(1-\hat{p}_A)}{n}} = \sqrt{\frac{0.68(0.32)}{250}} \approx 0.0295
+	E = z^* \cdot SE = 2.326(0.0229) \approx 0.0532
 	\]
 	
-	\textbf{Step 4: Margin of error (95\% confidence, \(z^* = 1.96\)).}
+	\textbf{Step 4: Construct the confidence interval.}
 	\[
-	E_A = z^* \cdot SE_A = 1.96(0.0295) \approx 0.0578
+	\hat{p} \pm E = 0.2125 \pm 0.0532 \Rightarrow [0.159,\ 0.266]
 	\]
 	
-	\textbf{Step 5: Confidence interval.}
-	\[
-	\hat{p}_A \pm E_A = 0.68 \pm 0.0578 \Rightarrow [0.622,\ 0.738]
-	\]
+	\textbf{Step 5: Interpret the confidence interval in context.}
+	We are 98\% confident that between about 15.9\% and 26.6\% of all export shipments fail the quality standard.
 	
-	\textbf{Sample B}
+	\section*{5. Financial Literacy Completion}
+		
+	A national education board evaluates \textbf{500 students} who completed a financial literacy module. In the sample, \textbf{275 students} pass the final assessment.
 	
-	\textbf{Step 1: Sample proportion.}
-	\[
-	\hat{p}_B = \frac{x}{n} = \frac{110}{180} \approx 0.611
-	\]
-	
-	\textbf{Step 2: Large-sample conditions.}
-	\[
-	n\hat{p}_B = 180(0.611) \approx 110 \ge 10, \qquad n(1-\hat{p}_B) = 180(0.389) \approx 70 \ge 10
-	\]
-	
-	\textbf{Step 3: Standard error.}
-	\[
-	SE_B = \sqrt{\frac{\hat{p}_B(1-\hat{p}_B)}{n}} = \sqrt{\frac{0.611(0.389)}{180}} \approx 0.0363
-	\]
-	
-	\textbf{Step 4: Margin of error (95\% confidence, \(z^* = 1.96\)).}
-	\[
-	E_B = z^* \cdot SE_B = 1.96(0.0363) \approx 0.0711
-	\]
-	
-	\textbf{Step 5: Confidence interval.}
-	\[
-	\hat{p}_B \pm E_B \approx 0.611 \pm 0.0711 \Rightarrow [0.540,\ 0.682]
-	\]
-	
-	\textbf{Interpretation.}
-	We are 95\% confident that the compliance rate is between about 62.2\% and 73.8\% for Sample A, and between about 54.0\% and 68.2\% for Sample B.
-	
-	\section*{6. Public Market Vendor Licensing}
-	
-	A city reviews vendor licensing in two districts. Sample A includes \textbf{300 vendors} with \textbf{96} licensed. Sample B includes \textbf{210 vendors} with \textbf{60} licensed.
-	
-	Construct and interpret \textbf{90\% and 98\% confidence intervals} for the population proportion of licensed vendors for each sample.
+	Construct and interpret a \textbf{99\% confidence interval} for the population proportion of students who pass the assessment.
 	
 	\subsubsection*{(C7) Constructs the confidence interval for a proportion}
-	To construct the confidence interval for a proportion, we identify \(x\) and \(n\) and compute \(\hat{p}\), check normal approximation conditions \(n\hat{p} \ge 10\) and \(n(1-\hat{p}) \ge 10\), choose the correct \(z^*\) for the confidence level, compute \(SE\) and the margin of error, construct and report the confidence interval, and interpret the interval in context.
+	To construct the confidence interval for a proportion, we identify the population proportion, compute \(\hat{p}\), verify large-sample conditions, select the correct \(z^*\), compute \(SE\) and the margin of error, construct the interval, and interpret the result in context.
 	
-	\textbf{Sample A}
-	
-	\textbf{Step 1: Sample proportion.}
+	\textbf{Step 1: Identify the population parameter and the sample proportion.}
+	Let \(p\) be the population proportion of students who pass the assessment. The sample proportion is
 	\[
-	\hat{p}_A = \frac{x}{n} = \frac{96}{300} = 0.32
+	\hat{p} = \frac{x}{n} = \frac{275}{500} = 0.55
 	\]
-	
-	\textbf{Step 2: Large-sample conditions.}
+	Large-sample conditions:
 	\[
-	n\hat{p}_A = 300(0.32) = 96 \ge 10, \qquad n(1-\hat{p}_A) = 300(0.68) = 204 \ge 10
+	n\hat{p} = 500(0.55) = 275 \ge 10, \qquad n(1-\hat{p}) = 500(0.45) = 225 \ge 10
 	\]
 	
-	\textbf{Step 3: Standard error.}
+	\textbf{Step 2: Compute the standard error of the proportion.}
 	\[
-	SE_A = \sqrt{\frac{\hat{p}_A(1-\hat{p}_A)}{n}} = \sqrt{\frac{0.32(0.68)}{300}} \approx 0.0269
+	SE = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.55(0.45)}{500}} \approx 0.0222
 	\]
 	
-	\textbf{Step 4: Margin of error and confidence interval for 90\% confidence.}
+	\textbf{Step 3: Compute the margin of error (99\% confidence, \(z^* = 2.576\)).}
 	\[
-	E_{A,90} = z^* \cdot SE_A = 1.645(0.0269) \approx 0.0442
-	\]
-	\[
-	\hat{p}_A \pm E_{A,90} = 0.32 \pm 0.0442 \Rightarrow [0.276,\ 0.364]
+	E = z^* \cdot SE = 2.576(0.0222) \approx 0.0573
 	\]
 	
-	\textbf{Step 5: Margin of error and confidence interval for 98\% confidence.}
+	\textbf{Step 4: Construct the confidence interval.}
 	\[
-	E_{A,98} = z^* \cdot SE_A = 2.326(0.0269) \approx 0.0626
-	\]
-	\[
-	\hat{p}_A \pm E_{A,98} = 0.32 \pm 0.0626 \Rightarrow [0.257,\ 0.383]
+	\hat{p} \pm E = 0.55 \pm 0.0573 \Rightarrow [0.493,\ 0.607]
 	\]
 	
-	\textbf{Sample B}
+	\textbf{Step 5: Interpret the confidence interval in context.}
+	We are 99\% confident that between about 49.3\% and 60.7\% of all students pass the financial literacy assessment.
 	
-	\textbf{Step 1: Sample proportion.}
-	\[
-	\hat{p}_B = \frac{x}{n} = \frac{60}{210} \approx 0.286
-	\]
+	\section*{6. Regional Health Insurance Coverage}
+		
+	A health ministry combines survey results from two regions and finds that \textbf{312 of 600 adults} report having health insurance. The ministry wants to estimate the overall coverage proportion for adults in the country.
 	
-	\textbf{Step 2: Large-sample conditions.}
-	\[
-	n\hat{p}_B = 210(0.286) \approx 60 \ge 10, \qquad n(1-\hat{p}_B) = 210(0.714) \approx 150 \ge 10
-	\]
+	Construct and interpret a \textbf{98\% confidence interval} for the population proportion of adults with health insurance.
 	
-	\textbf{Step 3: Standard error.}
-	\[
-	SE_B = \sqrt{\frac{\hat{p}_B(1-\hat{p}_B)}{n}} = \sqrt{\frac{0.286(0.714)}{210}} \approx 0.0312
-	\]
+	\subsubsection*{(C7) Constructs the confidence interval for a proportion}
+	To construct the confidence interval for a proportion, we identify the population proportion, compute \(\hat{p}\), verify large-sample conditions, select the correct \(z^*\), compute \(SE\) and the margin of error, construct the interval, and interpret the result in context.
 	
-	\textbf{Step 4: Margin of error and confidence interval for 90\% confidence.}
+	\textbf{Step 1: Identify the population parameter and the sample proportion.}
+	Let \(p\) be the population proportion of adults with health insurance. The sample proportion is
 	\[
-	E_{B,90} = z^* \cdot SE_B = 1.645(0.0312) \approx 0.0514
+	\hat{p} = \frac{x}{n} = \frac{312}{600} = 0.52
 	\]
+	Large-sample conditions:
 	\[
-	\hat{p}_B \pm E_{B,90} \approx 0.286 \pm 0.0514 \Rightarrow [0.234,\ 0.337]
+	n\hat{p} = 600(0.52) = 312 \ge 10, \qquad n(1-\hat{p}) = 600(0.48) = 288 \ge 10
 	\]
 	
-	\textbf{Step 5: Margin of error and confidence interval for 98\% confidence.}
+	\textbf{Step 2: Compute the standard error of the proportion.}
 	\[
-	E_{B,98} = z^* \cdot SE_B = 2.326(0.0312) \approx 0.0727
-	\]
-	\[
-	\hat{p}_B \pm E_{B,98} \approx 0.286 \pm 0.0727 \Rightarrow [0.213,\ 0.358]
+	SE = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.52(0.48)}{600}} \approx 0.0204
 	\]
 	
-	\textbf{Interpretation.}
-	We are 90\% confident that between about 27.6\% and 36.4\% of vendors are licensed in Sample A and between about 23.4\% and 33.7\% are licensed in Sample B. We are 98\% confident that between about 25.7\% and 38.3\% of vendors are licensed in Sample A and between about 21.3\% and 35.8\% are licensed in Sample B.
+	\textbf{Step 3: Compute the margin of error (98\% confidence, \(z^* = 2.326\)).}
+	\[
+	E = z^* \cdot SE = 2.326(0.0204) \approx 0.0474
+	\]
+	
+	\textbf{Step 4: Construct the confidence interval.}
+	\[
+	\hat{p} \pm E = 0.52 \pm 0.0474 \Rightarrow [0.473,\ 0.567]
+	\]
+	
+	\textbf{Step 5: Interpret the confidence interval in context.}
+	We are 98\% confident that between about 47.3\% and 56.7\% of all adults in the country have health insurance.
+	
+	\section*{7. Food Safety Inspection Compliance}
+		
+	A national agency inspects \textbf{850 food processing facilities} to determine compliance with a new safety standard. In the sample, \textbf{102 facilities} are found to be noncompliant.
+	
+	Construct and interpret a \textbf{99\% confidence interval} for the population proportion of facilities that are noncompliant with the safety standard.
+	
+	\subsubsection*{(C7) Constructs the confidence interval for a proportion}
+	To construct the confidence interval for a proportion, we identify the population proportion, compute \(\hat{p}\), verify large-sample conditions, select the correct \(z^*\), compute \(SE\) and the margin of error, construct the interval, and interpret the result in context.
+	
+	\textbf{Step 1: Identify the population parameter and the sample proportion.}
+	Let \(p\) be the population proportion of facilities that are noncompliant. The sample proportion is
+	\[
+	\hat{p} = \frac{x}{n} = \frac{102}{850} = 0.12
+	\]
+	Large-sample conditions:
+	\[
+	n\hat{p} = 850(0.12) = 102 \ge 10, \qquad n(1-\hat{p}) = 850(0.88) = 748 \ge 10
+	\]
+	
+	\textbf{Step 2: Compute the standard error of the proportion.}
+	\[
+	SE = \sqrt{\frac{\hat{p}(1-\hat{p})}{n}} = \sqrt{\frac{0.12(0.88)}{850}} \approx 0.0111
+	\]
+	
+	\textbf{Step 3: Compute the margin of error (99\% confidence, \(z^* = 2.576\)).}
+	\[
+	E = z^* \cdot SE = 2.576(0.0111) \approx 0.0287
+	\]
+	
+	\textbf{Step 4: Construct the confidence interval.}
+	\[
+	\hat{p} \pm E = 0.12 \pm 0.0287 \Rightarrow [0.091,\ 0.149]
+	\]
+	
+	\textbf{Step 5: Interpret the confidence interval in context.}
+	We are 99\% confident that between about 9.1\% and 14.9\% of all food processing facilities are noncompliant with the safety standard.
 	
 \end{document}
