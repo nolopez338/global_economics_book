@@ -17,8 +17,8 @@
 \renewcommand{\arraystretch}{1.15}
 
 % Column types
-\newcolumntype{Y}{>{\raggedright\arraybackslash}m{\dimexpr0.40\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
-\newcolumntype{Z}{>{\raggedright\arraybackslash}m{\dimexpr0.60\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}m{\dimexpr0.25\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
+\newcolumntype{Z}{>{\raggedright\arraybackslash}m{\dimexpr0.75\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 
 % Gray subsection header box
@@ -94,10 +94,10 @@
 	% =========================
 	\begin{multicols}{2}
 		\SubsectionBox{Criteria assessment}\vspace{-0.25cm}
-		Criteria C1 through C7 are evaluated across the full mock midterm.
+		To pass a criterion, Criteria C1–C6 must each be correctly applied in at least two problems. Criterion C7 must be correctly applied in at least one problem.
 
 		\vspace{0.25cm}
-		\SubsectionBox{1. Metropolitan Transit Fare Study}\vspace{-0.25cm}
+		\SubsectionBox{(C1,C5,C6) 1. Metropolitan Transit Fare Study}\vspace{-0.25cm}
 		A metropolitan transit authority studies the average weekday fare collected per rider for two expanded pilot corridors.
 		The two samples are distinct random samples drawn from the same population of fare amounts.
 		The grouped fare data (USD) are below.
@@ -130,7 +130,7 @@
 		At the end, determine how many additional observations are required in each sample group to reach a margin of error target of $E = 2.8$ USD for 95\% confidence, 90\% confidence, and 99\% confidence.
 
 		\vspace{0.25cm}
-		\SubsectionBox{2. University Dining Checkout Times}\vspace{-0.25cm}
+		\SubsectionBox{(C1,C5,C6) 2. University Dining Checkout Times}\vspace{-0.25cm}
 		A university dining analytics team compares average lunch checkout times (minutes) at two larger kiosks during peak hours.
 		The two samples are distinct random samples with sizes $n_1 = 8$ and $n_2 = 10$ drawn from the same population of checkout times.
 
@@ -143,7 +143,7 @@
 		At the end, determine how many additional observations are required in each kiosk sample to reach a margin of error target of $E = 1.6$ minutes for 95\%, 90\%, and 99\% confidence.
 
 		\vspace{0.25cm}
-		\SubsectionBox{3. Utility Reimbursement Proportions}\vspace{-0.25cm}
+		\SubsectionBox{(C7) 3. Utility Reimbursement Proportions}\vspace{-0.25cm}
 		A national public finance office studies the proportion of quarterly utility reimbursements that are flagged for expedited approval in two expanded district networks.
 		The two samples are distinct random samples with different sizes drawn from the same population of reimbursements.
 
@@ -157,7 +157,7 @@
 		At the end, determine how many additional observations are required in each sample group to reach margin-of-error targets of $E = 0.04$ and $E = 0.03$ for 95\% confidence, using each sample estimated proportion.
 
 		\vspace{0.25cm}
-		\SubsectionBox{4. Municipal Invoice Monitoring}\vspace{-0.25cm}
+		\SubsectionBox{(C2,C3,C4) 4. Municipal Invoice Monitoring}\vspace{-0.25cm}
 		A municipal purchasing authority now monitors invoice amounts across three departments (transport, maintenance, and health procurement) using a unified benchmark system. From long-term records covering all municipal purchases, invoices are known to have a typical average value of 445 USD and a typical spread of 62 USD around that average. These values summarize how invoice amounts behave across the full purchasing process over time.
 
 		To assess current activity, two independent audits are conducted using recent invoices from all three departments combined. In Sample A, the invoices reviewed produce a 90\% confidence interval from 418 USD to 452 USD, and the variability within this audit is summarized by a variance of 3025 (USD)$^2$. In Sample B, the invoices reviewed produce a 90\% confidence interval from 432 USD to 476 USD, and the variability within this audit is summarized by a variance of 4096 (USD)$^2$.
@@ -165,7 +165,7 @@
 		In both audits, the authority requires a clear judgment about whether current behavior is centered near the benchmark and whether observed spread appears operationally aligned with long-run variation.
 
 		\vspace{0.25cm}
-		\SubsectionBox{5. Cooperative Loan Size Comparison}\vspace{-0.25cm}
+		\SubsectionBox{(C2,C3,C4) 5. Cooperative Loan Size Comparison}\vspace{-0.25cm}
 		An agricultural finance board compares average loan sizes issued by two cooperative systems: rural cooperatives and urban cooperatives, across an expanded national program that includes seasonal credit lines and emergency refinancing windows. From long-term financial records covering all loans issued in each system, rural cooperatives are known to have a typical loan size of 318 USD with a usual spread of 46 USD, while urban cooperatives are known to have a typical loan size of 362 USD with a usual spread of 58 USD.
 
 		To assess current lending activity, analysts examine recent loans from each system under the expanded program. The rural sample produces a 95\% confidence interval from 300 USD to 334 USD, and the urban sample produces a 95\% confidence interval from 345 USD to 383 USD.
@@ -173,7 +173,7 @@
 		The board must assess not only whether current means differ, but also whether the degree of uncertainty still supports a stable policy distinction between rural and urban systems.
 
 		\vspace{0.25cm}
-		\SubsectionBox{6. Mobile Savings Platform Adoption}\vspace{-0.25cm}
+		\SubsectionBox{(C2,C3,C4) 6. Mobile Savings Platform Adoption}\vspace{-0.25cm}
 		A financial regulator studies the share of households using a mobile savings platform under a new nationwide rollout that now includes urban districts, peri-urban zones, and remote rural communities. From prior nationwide records, the regulator has a benchmark indicating that about 57\% of households use the platform, with corresponding long-run variability of approximately 0.2451.
 
 		To assess current usage under the expanded rollout, two large survey waves are combined, and analysts report a 90\% confidence interval for the share of households using the platform from 0.52 to 0.62.
