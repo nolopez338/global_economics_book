@@ -66,6 +66,7 @@
 		
 		Step 3: Round up and verify Criterion 6. Round up to $n = 55$. With $n=55$, the margin of error is at most 1 ton per hectare, satisfying Criterion 6.
 		
+		\item
 		\subsection*{Additional Sample Size Needed to Reduce Margin of Error for a Mean}
 		A utilities department wants to estimate the mean monthly electricity bill (in dollars). The population standard deviation is $\sigma = 5.2$ dollars, and $n_{\text{current}} = 49$ bills have been recorded. From these 49 bills, a sample mean of $\bar{x} = 120.5$ dollars and a sample standard deviation of $s = 5.0$ dollars were obtained. How many additional observations are required to reduce the margin of error to $E = 1.0$ dollar at 95\% confidence?
 		
@@ -129,4 +130,58 @@
 		Conclusion. The authority needs 71 more observations so the error will not exceed 4 liters.
 		
 	\end{ExamProblems}
+
+	\section*{Summary}
+	\begin{enumerate}
+		\item \textbf{Sample Size Determination for Estimating a Mean Commute Time}
+		\[
+		n = \left(\frac{z^*\sigma}{E}\right)^2
+		= \left(\frac{2.576\cdot 8}{2}\right)^2
+		= 106.18,
+		\qquad \boxed{n=107}
+		\]
+
+		\item \textbf{Sample Size Determination for Estimating a Mean Weekly Wage}
+		\[
+		n = \left(\frac{z^*\sigma}{E}\right)^2
+		= \left(\frac{1.96\cdot 15}{3}\right)^2
+		= 96.04,
+		\qquad \boxed{n=97}
+		\]
+
+		\item \textbf{Sample Size Determination for Estimating Mean Crop Yield}
+		\[
+		n = \left(\frac{z^*\sigma}{E}\right)^2
+		= \left(\frac{1.645\cdot 4.5}{1}\right)^2
+		= 54.80,
+		\qquad \boxed{n=55}
+		\]
+
+		\item \textbf{Additional Sample Size Needed to Reduce Margin of Error for a Mean}
+		\[
+		n_{\text{required}} = \left(\frac{z^*\sigma}{E}\right)^2
+		= \left(\frac{1.96\cdot 5.2}{1.0}\right)^2
+		\approx 103.88,
+		\qquad \boxed{n_{\text{required}}=104},
+		\qquad \boxed{104-49=55\text{ additional}}
+		\]
+
+		\item \textbf{Additional Sample Size Needed to Reduce Margin of Error for a Mean Exam Score}
+		\[
+		n_{\text{required}} = \left(\frac{z^*\sigma}{E}\right)^2
+		= \left(\frac{1.645\cdot 6}{1.2}\right)^2
+		\approx 67.65,
+		\qquad \boxed{n_{\text{required}}=68},
+		\qquad \boxed{68-25=43\text{ additional}}
+		\]
+
+		\item \textbf{Additional Sample Size Needed to Reduce Margin of Error for Mean Water Use}
+		\[
+		n_{\text{required}} = \left(\frac{z^*\sigma}{E}\right)^2
+		= \left(\frac{2.576\cdot 18}{4}\right)^2
+		\approx 134.36,
+		\qquad \boxed{n_{\text{required}}=135},
+		\qquad \boxed{135-64=71\text{ additional}}
+		\]
+	\end{enumerate}
 \end{document}
