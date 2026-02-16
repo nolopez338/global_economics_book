@@ -274,7 +274,7 @@
 		\subsection*{Problem description}
 		A commercial bank tracks daily net fee revenue (thousand USD) from a new SME payments package for 16 days:
 		\[
-		11.8,\ 12.4,\ 13.1,\ 12.7,\ 11.9,\ 13.5,\ 12.2,\ 12.9,\ 13.3,\ 12.0,\ 12.6,\ 13.0,\ 12.8,\ 11.7,\ 13.4,\ 12.5
+		12,\ 13,\ 14,\ 13,\ 12,\ 14,\ 13,\ 13,\ 14,\ 12,\ 13,\ 14,\ 13,\ 12,\ 14,\ 13
 		\]
 		Use these raw data to construct a 95\% confidence interval for the population mean daily net fee revenue.
 		Management claims that the true mean equals 12.90 thousand USD.
@@ -286,10 +286,10 @@
 		\mu=\text{population mean daily net fee revenue},\qquad n=16
 		\]
 		\[
-		\bar{x}=\frac{\sum x_i}{n}=\frac{201.8}{16}=12.6125
+		\bar{x}=\frac{\sum x_i}{n}=\frac{209}{16}=13.0625
 		\]
 		\[
-		s^2=\frac{\sum (x_i-\bar{x})^2}{n-1}=0.3332,\qquad s=\sqrt{0.3332}=0.5772
+		s^2=\frac{\sum (x_i-\bar{x})^2}{n-1}=0.5958,\qquad s=\sqrt{0.5958}=0.7719
 		\]
 		Step 2 -- Degrees of freedom and critical value
 		\[
@@ -297,18 +297,18 @@
 		\]
 		Step 3 -- Standard error
 		\[
-		SE=\frac{s}{\sqrt{n}}=\frac{0.5772}{\sqrt{16}}=0.1443
+		SE=\frac{s}{\sqrt{n}}=\frac{0.7719}{\sqrt{16}}=0.1930
 		\]
 		Step 4 -- Margin of error
 		\[
-		E=t^*\cdot SE=2.131(0.1443)=0.3075
+		E=t^*\cdot SE=2.131(0.1930)=0.4113
 		\]
 		Step 5 -- Confidence interval
 		\[
-		\mu\in \bar{x}\pm E=12.6125\pm 0.3075=[12.3050,\,12.9200]
+		\mu\in \bar{x}\pm E=13.0625\pm 0.4113=[12.6512,\,13.4738]
 		\]
 		Step 6 -- Interpretation
-		With 95\% confidence, the bank's mean daily net fee revenue from this package is between 12.305 and 12.920 thousand USD.
+		With 95\% confidence, the bank's mean daily net fee revenue from this package is between 12.651 and 13.474 thousand USD.
 		Step 7 -- Conclusion about the parameter
 		The managerial claim $\mu=12.90$ lies inside the interval, so it is plausible given this sample.
 		However, the interval also supports nearby values, so the claim is not proven as the unique true mean.
@@ -375,15 +375,15 @@
 		\begin{itemize}
 			\item Individual observations (8 tickets):
 			\[
-			2.8,\ 3.1,\ 2.9,\ 3.3,\ 3.0,\ 2.7,\ 3.2,\ 3.4
+			3,\ 3,\ 4,\ 3,\ 3,\ 2,\ 4,\ 4
 			\]
 			\item Additional tickets summarized in grouped form:
 			\[
 			\begin{array}{c|c}
 			\text{Class interval} & \text{Frequency}\\ \hline
-			\text{[2.4,2.8)} & 3\\
-			\text{[2.8,3.2)} & 5\\
-			\text{[3.2,3.6)} & 4
+			\text{[2,3)} & 3\\
+			\text{[3,4)} & 5\\
+			\text{[4,5)} & 4
 			\end{array}
 			\]
 		\end{itemize}
@@ -399,14 +399,14 @@
 		n_2=3+5+4=12,\quad n=n_1+n_2=20
 		\]
 		\[
-		\sum x_{\text{raw}}=24.4,\qquad
-		\sum x_{\text{grouped}}\approx 3(2.6)+5(3.0)+4(3.4)=36.4
+		\sum x_{\text{raw}}=26,\qquad
+		\sum x_{\text{grouped}}\approx 3(2.5)+5(3.5)+4(4.5)=43
 		\]
 		\[
-		\bar{x}=\frac{24.4+36.4}{20}=3.04\text{ hours}
+		\bar{x}=\frac{26+43}{20}=3.45\text{ hours}
 		\]
 		\[
-		s^2\approx\frac{\sum (x_i-\bar{x})^2}{n-1}=0.0804,\qquad s\approx\sqrt{0.0804}=0.2836\text{ hours}
+		s^2\approx\frac{\sum (x_i-\bar{x})^2}{n-1}=0.5763,\qquad s\approx\sqrt{0.5763}=0.7592\text{ hours}
 		\]
 		Step 2 -- Degrees of freedom and critical value
 		\[
@@ -414,20 +414,20 @@
 		\]
 		Step 3 -- Standard error
 		\[
-		SE=\frac{s}{\sqrt{n}}=\frac{0.2836}{\sqrt{20}}\approx 0.0634
+		SE=\frac{s}{\sqrt{n}}=\frac{0.7592}{\sqrt{20}}\approx 0.1698
 		\]
 		Step 4 -- Margin of error
 		\[
-		E=t^*\cdot SE=1.729(0.0634)\approx 0.1096
+		E=t^*\cdot SE=1.729(0.1698)\approx 0.2936
 		\]
 		Step 5 -- Confidence interval
 		\[
-		\mu\in 3.04\pm 0.1096=[2.930,\,3.150]\text{ hours}
+		\mu\in 3.45\pm 0.2936=[3.156,\,3.744]\text{ hours}
 		\]
 		Step 6 -- Interpretation
-		With 90\% confidence, the mean ticket-resolution time is between 2.930 and 3.150 hours.
+		With 90\% confidence, the mean ticket-resolution time is between 3.156 and 3.744 hours.
 		Step 7 -- Conclusion about the parameter
-		The claim $\mu=3.10$ hours is plausible because it lies inside the interval.
-		But a stronger statement that the process already secures a mean below 3.00 hours is not justified, since 3.00 is also inside the interval and the upper bound is above 3.00.
+		The claim $\mu=3.10$ hours is not supported because 3.10 is below the lower bound of the interval.
+		A target below 3.00 hours is also not secured, since the entire interval is above 3.00 hours.
 	\end{ExamProblems}
 \end{document}
