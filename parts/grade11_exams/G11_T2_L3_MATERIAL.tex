@@ -272,112 +272,162 @@
 	\begin{ExamProblems}
 		\item
 		\subsection*{Problem description}
-		A microfinance institution records approval times (days) for 15 recent small-business loan applications:
+		A commercial bank tracks daily net fee revenue (thousand USD) from a new SME payments package for 16 days:
 		\[
-		4.2,\ 5.1,\ 4.8,\ 6.0,\ 5.4,\ 4.9,\ 5.7,\ 4.5,\ 5.0,\ 6.2,\ 4.7,\ 5.3,\ 5.6,\ 4.4,\ 5.8
+		11.8,\ 12.4,\ 13.1,\ 12.7,\ 11.9,\ 13.5,\ 12.2,\ 12.9,\ 13.3,\ 12.0,\ 12.6,\ 13.0,\ 12.8,\ 11.7,\ 13.4,\ 12.5
 		\]
-		Construct a 95\% confidence interval for the population mean approval time and provide an economic conclusion for operations planning.
+		Use these raw data to construct a 95\% confidence interval for the population mean daily net fee revenue.
+		Management claims that the true mean equals 12.90 thousand USD.
+		Evaluate this claim in context.
 		
 		\subsection*{C10}
-		Step 1: Organize raw data and compute descriptive statistics
+		Step 1 -- Identify parameter and compute statistics
 		\[
-		n=15,\qquad \bar{x}=\frac{\sum x_i}{n}=\frac{77.6}{15}=5.17\text{ days}
+		\mu=\text{population mean daily net fee revenue},\qquad n=16
 		\]
 		\[
-		s=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n-1}}\approx 0.61\text{ days}
+		\bar{x}=\frac{\sum x_i}{n}=\frac{201.8}{16}=12.6125
 		\]
-		Step 2: Identify parameter and distributional assumptions
 		\[
-		\mu=\text{population mean loan approval time}
+		s^2=\frac{\sum (x_i-\bar{x})^2}{n-1}=0.3332,\qquad s=\sqrt{0.3332}=0.5772
 		\]
-		Because $\sigma$ is unknown, use the t distribution with
+		Step 2 -- Degrees of freedom and critical value
 		\[
-		df=n-1=14.
+		df=n-1=16-1=15,\qquad t^*=t_{0.025,15}\approx 2.131
 		\]
-		Step 3: Compute standard error and critical value
+		Step 3 -- Standard error
 		\[
-		SE=\frac{s}{\sqrt{n}}=\frac{0.61}{\sqrt{15}}\approx 0.16,\qquad t^*=t_{0.025,14}\approx 2.145
+		SE=\frac{s}{\sqrt{n}}=\frac{0.5772}{\sqrt{16}}=0.1443
 		\]
-		Step 4: Construct the confidence interval
+		Step 4 -- Margin of error
 		\[
-		\mu\in \bar{x}\pm t^*SE=5.17\pm 2.145(0.16)=5.17\pm 0.34=[4.83,\,5.51]
+		E=t^*\cdot SE=2.131(0.1443)=0.3075
 		\]
-		Step 5: Economic/financial interpretation and conclusion
-		With 95\% confidence, the institution's mean approval time is between 4.83 and 5.51 days.
-		Operationally, staffing and customer communication should be based on an expected approval time near 5 days, not below 4 days.
+		Step 5 -- Confidence interval
+		\[
+		\mu\in \bar{x}\pm E=12.6125\pm 0.3075=[12.3050,\,12.9200]
+		\]
+		Step 6 -- Interpretation
+		With 95\% confidence, the bank's mean daily net fee revenue from this package is between 12.305 and 12.920 thousand USD.
+		Step 7 -- Conclusion about the parameter
+		The managerial claim $\mu=12.90$ lies inside the interval, so it is plausible given this sample.
+		However, the interval also supports nearby values, so the claim is not proven as the unique true mean.
 		
 		\newpage
 		\item
 		\subsection*{Problem description}
-		An investment desk records daily return rates (\%) for 18 trading days of a balanced fund:
+		An export firm groups daily freight insurance cost (USD per shipment) into classes for 30 days:
 		\[
-		0.32,\ 0.41,\ 0.28,\ 0.36,\ 0.39,\ 0.44,\ 0.35,\ 0.31,\ 0.47,\ 0.40,\ 0.38,\ 0.33,\ 0.42,\ 0.29,\ 0.37,\ 0.45,\ 0.34,\ 0.43
+		\begin{array}{c|c}
+		\text{Class interval} & \text{Frequency}\\\hline
+		[80,90) & 3\\
+		[90,100) & 7\\
+		[100,110) & 9\\
+		[110,120) & 6\\
+		[120,130) & 5
+		\end{array}
 		\]
-		Construct a 90\% confidence interval for the population mean daily return and conclude for portfolio communication.
+		Using class midpoints, construct an approximate 95\% t-confidence interval for the population mean daily insurance cost.
+		The finance director uses 112 USD as the benchmark mean.
+		Assess whether this benchmark is supported.
 		
 		\subsection*{C10}
-		Step 1: Organize raw data and compute descriptive statistics
+		Step 1 -- Identify parameter and compute statistics
 		\[
-		n=18,\qquad \bar{x}=\frac{\sum x_i}{n}=\frac{6.74\%}{18}=0.374\%
+		\mu=\text{population mean daily freight insurance cost},\qquad n=3+7+9+6+5=30
 		\]
 		\[
-		s=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n-1}}\approx 0.056\%
+		\text{Midpoints }m_i:\ 85,\ 95,\ 105,\ 115,\ 125
 		\]
-		Step 2: Identify parameter and distributional assumptions
 		\[
-		\mu=\text{population mean daily return of the fund}
+		\bar{x}\approx\frac{\sum f_im_i}{n}=\frac{3(85)+7(95)+9(105)+6(115)+5(125)}{30}=106.00
 		\]
-		The population standard deviation is unknown, so we use a t interval with
 		\[
-		df=n-1=17.
+		s^2\approx\frac{\sum f_i(m_i-\bar{x})^2}{n-1}=154.14,\qquad s\approx\sqrt{154.14}=12.42
 		\]
-		Step 3: Compute standard error and critical value
+		Step 2 -- Degrees of freedom and critical value
 		\[
-		SE=\frac{0.056\%}{\sqrt{18}}\approx 0.013\%,\qquad t^*=t_{0.05,17}\approx 1.740
+		df=n-1=29,\qquad t^*=t_{0.025,29}\approx 2.045
 		\]
-		Step 4: Construct the confidence interval
+		Step 3 -- Standard error
 		\[
-		\mu\in 0.374\%\pm 1.740(0.013\%)=0.374\%\pm 0.023\%=[0.351\%,\,0.397\%]
+		SE=\frac{s}{\sqrt{n}}=\frac{12.42}{\sqrt{30}}\approx 2.27
 		\]
-		Step 5: Economic/financial interpretation and conclusion
-		With 90\% confidence, the mean daily return is between 0.351\% and 0.397\%.
-		For communication with investors, a central expectation near 0.37\% per day is supported by these data.
+		Step 4 -- Margin of error
+		\[
+		E=t^*\cdot SE=2.045(2.27)\approx 4.64
+		\]
+		Step 5 -- Confidence interval
+		\[
+		\mu\in 106.00\pm 4.64=[101.36,\,110.64]\text{ USD}
+		\]
+		Step 6 -- Interpretation
+		With 95\% confidence, the firm's mean daily freight insurance cost is between 101.36 and 110.64 USD per shipment.
+		Step 7 -- Conclusion about the parameter
+		The benchmark value 112 USD is outside the interval, so the data do not support that benchmark for the population mean.
+		A lower budgeting baseline, close to 106 USD, is more consistent with observed costs.
 		
 		\newpage
 		\item
 		\subsection*{Problem description}
-		A digital payments company records merchant transaction fees (USD) for 12 recent transactions:
-		\[
-		2.10,\ 2.35,\ 2.28,\ 2.42,\ 2.18,\ 2.50,\ 2.31,\ 2.27,\ 2.46,\ 2.22,\ 2.39,\ 2.33
-		\]
-		Construct a 99\% confidence interval for the population mean transaction fee and conclude for pricing policy.
+		A fintech support unit studies the mean ticket-resolution time (hours).
+		It has two data sources in the same month:
+		\begin{itemize}
+			\item Individual observations (8 tickets):
+			\[
+			2.8,\ 3.1,\ 2.9,\ 3.3,\ 3.0,\ 2.7,\ 3.2,\ 3.4
+			\]
+			\item Additional tickets summarized in grouped form:
+			\[
+			\begin{array}{c|c}
+			\text{Class interval} & \text{Frequency}\\\hline
+			[2.4,2.8) & 3\\
+			[2.8,3.2) & 5\\
+			[3.2,3.6) & 4
+			\end{array}
+			\]
+		\end{itemize}
+		Use midpoint approximations for the grouped part, combine all information, and construct a 90\% t-confidence interval for the population mean resolution time.
+		The operations team claims the true mean is 3.10 hours; evaluate this claim and discuss whether a target below 3.00 hours is secured.
 		
 		\subsection*{C10}
-		Step 1: Organize raw data and compute descriptive statistics
+		Step 1 -- Identify parameter and compute statistics
 		\[
-		n=12,\qquad \bar{x}=\frac{\sum x_i}{n}=\frac{27.81}{12}=2.318\ \text{USD}
+		\mu=\text{population mean ticket-resolution time},\qquad n_1=8
 		\]
 		\[
-		s=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n-1}}\approx 0.117\ \text{USD}
+		n_2=3+5+4=12,\quad n=n_1+n_2=20
 		\]
-		Step 2: Identify parameter and distributional assumptions
 		\[
-		\mu=\text{population mean transaction fee}
+		\sum x_{\text{raw}}=24.4,\qquad
+		\sum x_{\text{grouped}}\approx 3(2.6)+5(3.0)+4(3.4)=36.4
 		\]
-		Since the population variance is unknown, use the t distribution with
 		\[
-		df=n-1=11.
+		\bar{x}=\frac{24.4+36.4}{20}=3.04\text{ hours}
 		\]
-		Step 3: Compute standard error and critical value
 		\[
-		SE=\frac{0.117}{\sqrt{12}}\approx 0.034,\qquad t^*=t_{0.005,11}\approx 3.106
+		s^2\approx\frac{\sum (x_i-\bar{x})^2}{n-1}=0.0804,\qquad s\approx\sqrt{0.0804}=0.2836\text{ hours}
 		\]
-		Step 4: Construct the confidence interval
+		Step 2 -- Degrees of freedom and critical value
 		\[
-		\mu\in 2.318\pm 3.106(0.034)=2.318\pm 0.105=[2.213,\,2.423]\ \text{USD}
+		df=n-1=19,\qquad t^*=t_{0.05,19}\approx 1.729
 		\]
-		Step 5: Economic/financial interpretation and conclusion
-		With 99\% confidence, the mean merchant fee is between 2.213 and 2.423 USD.
-		For pricing policy, the estimate is centered near 2.32 USD and suggests average fees are close to the upper end of the firm's current pricing band.
+		Step 3 -- Standard error
+		\[
+		SE=\frac{s}{\sqrt{n}}=\frac{0.2836}{\sqrt{20}}\approx 0.0634
+		\]
+		Step 4 -- Margin of error
+		\[
+		E=t^*\cdot SE=1.729(0.0634)\approx 0.1096
+		\]
+		Step 5 -- Confidence interval
+		\[
+		\mu\in 3.04\pm 0.1096=[2.930,\,3.150]\text{ hours}
+		\]
+		Step 6 -- Interpretation
+		With 90\% confidence, the mean ticket-resolution time is between 2.930 and 3.150 hours.
+		Step 7 -- Conclusion about the parameter
+		The claim $\mu=3.10$ hours is plausible because it lies inside the interval.
+		But a stronger statement that the process already secures a mean below 3.00 hours is not justified, since 3.00 is also inside the interval and the upper bound is above 3.00.
 	\end{ExamProblems}
 \end{document}
