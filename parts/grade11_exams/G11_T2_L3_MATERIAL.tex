@@ -144,270 +144,240 @@
 	\begin{ExamProblems}
 		\item
 		\subsection*{Problem description}
-		A customer-service unit studies the average response time (minutes) for premium support tickets.
-		The population variance is unknown.
-		A random sample of 10 tickets gives the following response times:
-		\[
-		14,\ 16,\ 15,\ 13,\ 17,\ 18,\ 16,\ 14,\ 15,\ 17
-		\]
-		Construct and interpret a 95\% confidence interval for the population mean response time.
+		A retail bank studies the mean monthly card spending (hundreds of USD) of new digital-account clients.
+		From a large random sample, the summary statistics are: $n=36$, $\bar{x}=52.40$, $s=8.10$.
+		Construct both a 95\% t-confidence interval and a 95\% z-confidence interval for the population mean, then compare them.
 		
 		\subsection*{C9}
-		Step 1.
-		Compute the sample mean.
+		Step 1: Identify parameter and statistics
 		\[
-		\bar{x}=\frac{14+16+15+13+17+18+16+14+15+17}{10}=\frac{155}{10}=15.50
+		\mu=\text{population mean monthly card spending},\quad n=36,\quad \bar{x}=52.40,\quad s=8.10
 		\]
-		Step 2.
-		Compute the sample standard deviation.
 		\[
-		s^2=\frac{\sum (x_i-\bar{x})^2}{n-1}=\frac{22.50}{9}=2.50,
-		\qquad s=\sqrt{2.50}\approx 1.58
+		df=n-1=35,\quad n\ge 30\text{ (large sample)}
 		\]
-		Step 3.
-		State degrees of freedom and the critical value.
+		Step 2: Construct t-interval
 		\[
-		df=10-1=9,\qquad t^*=t_{0.025,9}\approx 2.262
+		SE=\frac{s}{\sqrt{n}}=\frac{8.10}{\sqrt{36}}=1.35,\qquad t^*=t_{0.025,35}\approx 2.030
 		\]
-		Step 4.
-		Compute the standard error.
 		\[
-		SE=\frac{s}{\sqrt{n}}=\frac{1.58}{\sqrt{10}}\approx 0.50
+		\mu\in \bar{x}\pm t^*SE=52.40\pm 2.030(1.35)=52.40\pm 2.74=[49.66,\,55.14]
 		\]
-		Step 5.
-		Compute the margin of error.
+		Step 3: Construct z-interval
 		\[
-		E=t^*\cdot SE=2.262(0.50)\approx 1.13
+		z^*=z_{0.025}=1.960,\qquad \mu\in \bar{x}\pm z^*SE=52.40\pm 1.960(1.35)=52.40\pm 2.65=[49.75,\,55.05]
 		\]
-		Step 6.
-		Construct the confidence interval.
+		Step 4: Numerical comparison
 		\[
-		\mu\in 15.50\pm 1.13=[14.37,\,16.63]
+		t^*=2.030>1.960=z^*,\quad E_t=2.74>2.65=E_z
 		\]
-		Step 7.
-		Interpretation.
-		With 95\% confidence, the mean response time for premium tickets lies between 14.37 and 16.63 minutes.
+		\[
+		\text{Width}_t=2(2.74)=5.48,\qquad \text{Width}_z=2(2.65)=5.30
+		\]
+		The t-interval is slightly wider.
+		Step 5: Conceptual explanation of convergence
+		Because $df=35$ is large, the t distribution is very close to the standard normal distribution.
+		As $df$ increases, $t(df)\to N(0,1)$, so the t and z intervals become very similar.
+		The normal approximation is reasonable here, while the t-interval remains the exact method for unknown variance.
+		Step 6: Interpretation in economic/financial context
+		Both intervals indicate that the bank's mean monthly card spending is around 50 to 55 hundred USD.
+		Using the exact t method, a 95\% confidence interval is $[49.66,55.14]$ hundred USD.
 		
 		\newpage
 		\item
 		\subsection*{Problem description}
-		A local retail store estimates mean daily sales (thousand USD) for a new product line.
-		The population variance is unknown.
-		A random sample of 8 days gives:
-		\[
-		52,\ 49,\ 55,\ 47,\ 50,\ 54,\ 51,\ 48
-		\]
-		Construct and interpret a 90\% confidence interval for the population mean daily sales.
+		An import company estimates the mean daily shipping cost per container (thousand USD).
+		From a large random sample, the summary statistics are: $n=64$, $\bar{x}=1.84$, $s=0.56$.
+		Construct both a 90\% t-confidence interval and a 90\% z-confidence interval for the population mean, then compare them.
 		
 		\subsection*{C9}
-		Step 1.
-		Compute the sample mean.
+		Step 1: Identify parameter and statistics
 		\[
-		\bar{x}=\frac{52+49+55+47+50+54+51+48}{8}=\frac{406}{8}=50.75
+		\mu=\text{population mean daily shipping cost per container},\quad n=64,\quad \bar{x}=1.84,\quad s=0.56
 		\]
-		Step 2.
-		Compute the sample standard deviation.
 		\[
-		s^2=\frac{\sum (x_i-\bar{x})^2}{n-1}=\frac{55.50}{7}\approx 7.93,
-		\qquad s\approx \sqrt{7.93}=2.82
+		df=63,\quad n\ge 30\text{ (large sample)}
 		\]
-		Step 3.
-		State degrees of freedom and the critical value.
+		Step 2: Construct t-interval
 		\[
-		df=8-1=7,\qquad t^*=t_{0.05,7}\approx 1.895
+		SE=\frac{0.56}{\sqrt{64}}=0.07,\qquad t^*=t_{0.05,63}\approx 1.669
 		\]
-		Step 4.
-		Compute the standard error.
 		\[
-		SE=\frac{2.82}{\sqrt{8}}\approx 1.00
+		\mu\in 1.84\pm 1.669(0.07)=1.84\pm 0.117=[1.723,\,1.957]
 		\]
-		Step 5.
-		Compute the margin of error.
+		Step 3: Construct z-interval
 		\[
-		E=1.895(1.00)\approx 1.90
+		z^*=z_{0.05}=1.645,\qquad \mu\in 1.84\pm 1.645(0.07)=1.84\pm 0.115=[1.725,\,1.955]
 		\]
-		Step 6.
-		Construct the confidence interval.
+		Step 4: Numerical comparison
 		\[
-		\mu\in 50.75\pm 1.90=[48.85,\,52.65]
+		t^*=1.669>1.645=z^*,\quad E_t=0.117>0.115=E_z
 		\]
-		Step 7.
-		Interpretation.
-		With 90\% confidence, the population mean daily sales are between 48.85 and 52.65 thousand USD.
+		\[
+		\text{Width}_t=0.234,\qquad \text{Width}_z=0.230
+		\]
+		The t-interval is slightly wider.
+		Step 5: Conceptual explanation of convergence
+		With $df=63$, the t critical value is already very close to the z critical value.
+		This reflects convergence: as $df$ increases, $t(df)$ converges to $N(0,1)$.
+		Therefore, the normal approximation is reasonable in this large-sample setting.
+		Step 6: Interpretation in economic/financial context
+		The company can estimate mean shipping cost at about 1.72 to 1.96 thousand USD per container.
+		Using the exact t method, the 90\% confidence interval is $[1.723,1.957]$ thousand USD.
 		
 		\newpage
 		\item
 		\subsection*{Problem description}
-		An energy analyst estimates mean monthly electricity cost (USD) for small stores in one district.
-		The population variance is unknown.
-		A random sample of 12 stores gives:
-		\[
-		31,\ 29,\ 34,\ 33,\ 30,\ 32,\ 35,\ 28,\ 31,\ 33,\ 30,\ 34
-		\]
-		Construct and interpret a 95\% confidence interval for the population mean monthly cost.
+		An economist estimates the mean monthly fuel expense (thousand USD) for urban delivery firms.
+		From a large random sample, the summary statistics are: $n=49$, $\bar{x}=27.30$, $s=4.90$.
+		Construct both a 99\% t-confidence interval and a 99\% z-confidence interval for the population mean, then compare them.
 		
 		\subsection*{C9}
-		Step 1.
-		Compute the sample mean.
+		Step 1: Identify parameter and statistics
 		\[
-		\bar{x}=\frac{380}{12}\approx 31.67
+		\mu=\text{population mean monthly fuel expense},\quad n=49,\quad \bar{x}=27.30,\quad s=4.90
 		\]
-		Step 2.
-		Compute the sample standard deviation.
 		\[
-		s^2=\frac{52.67}{11}\approx 4.79,
-		\qquad s\approx\sqrt{4.79}=2.19
+		df=48,\quad n\ge 30\text{ (large sample)}
 		\]
-		Step 3.
-		State degrees of freedom and the critical value.
+		Step 2: Construct t-interval
 		\[
-		df=12-1=11,\qquad t^*=t_{0.025,11}\approx 2.201
+		SE=\frac{4.90}{\sqrt{49}}=0.70,\qquad t^*=t_{0.005,48}\approx 2.682
 		\]
-		Step 4.
-		Compute the standard error.
 		\[
-		SE=\frac{2.19}{\sqrt{12}}\approx 0.63
+		\mu\in 27.30\pm 2.682(0.70)=27.30\pm 1.88=[25.42,\,29.18]
 		\]
-		Step 5.
-		Compute the margin of error.
+		Step 3: Construct z-interval
 		\[
-		E=2.201(0.63)\approx 1.39
+		z^*=z_{0.005}=2.576,\qquad \mu\in 27.30\pm 2.576(0.70)=27.30\pm 1.80=[25.50,\,29.10]
 		\]
-		Step 6.
-		Construct the confidence interval.
+		Step 4: Numerical comparison
 		\[
-		\mu\in 31.67\pm 1.39=[30.28,\,33.06]
+		t^*=2.682>2.576=z^*,\quad E_t=1.88>1.80=E_z
 		\]
-		Step 7.
-		Interpretation.
-		With 95\% confidence, the district mean monthly electricity cost for small stores is between 30.28 and 33.06 USD.
+		\[
+		\text{Width}_t=3.76,\qquad \text{Width}_z=3.60
+		\]
+		The t-interval is slightly wider.
+		Step 5: Conceptual explanation of convergence
+		Even at 99\% confidence, the two intervals are close because the sample is large.
+		As degrees of freedom increase, the t distribution converges to the standard normal distribution, $t(df)\to N(0,1)$.
+		So the z interval is a reasonable approximation, while the t interval remains the exact choice when $\sigma$ is unknown.
+		Step 6: Interpretation in economic/financial context
+		The estimated mean monthly fuel expense is around 25.4 to 29.2 thousand USD.
+		Using the exact method, the 99\% t-confidence interval is $[25.42,29.18]$ thousand USD.
 	\end{ExamProblems}
 
 	\ExamSection{C10: Conclusions about a mean parameter in finance and economy}
 	\begin{ExamProblems}
 		\item
 		\subsection*{Problem description}
-		A microfinance institution evaluates the mean approval time (days) for small-business loans.
-		Managers claim the true mean approval time is 4.0 days.
-		A random sample gives $n=15$, $\bar{x}=4.80$ days, and $s=1.20$ days.
-		The population variance is unknown.
-		Construct a 95\% t-confidence interval for the population mean approval time and conclude whether the 4.0-day claim is plausible.
+		A microfinance institution records approval times (days) for 15 recent small-business loan applications:
+		\[
+		4.2,\ 5.1,\ 4.8,\ 6.0,\ 5.4,\ 4.9,\ 5.7,\ 4.5,\ 5.0,\ 6.2,\ 4.7,\ 5.3,\ 5.6,\ 4.4,\ 5.8
+		\]
+		Construct a 95\% confidence interval for the population mean approval time and provide an economic conclusion for operations planning.
 		
 		\subsection*{C10}
-		Step 1.
-		Identify the parameter and sample statistics.
+		Step 1: Organize raw data and compute descriptive statistics
 		\[
-		\mu=\text{population mean approval time},\quad n=15,\quad \bar{x}=4.80,\quad s=1.20
+		n=15,\qquad \bar{x}=\frac{\sum x_i}{n}=\frac{77.6}{15}=5.17\text{ days}
 		\]
-		Step 2.
-		State degrees of freedom and critical value.
 		\[
-		df=15-1=14,\qquad t^*=t_{0.025,14}\approx 2.145
+		s=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n-1}}\approx 0.61\text{ days}
 		\]
-		Step 3.
-		Compute the standard error.
+		Step 2: Identify parameter and distributional assumptions
 		\[
-		SE=\frac{1.20}{\sqrt{15}}\approx 0.31
+		\mu=\text{population mean loan approval time}
 		\]
-		Step 4.
-		Compute the margin of error.
+		Because $\sigma$ is unknown, use the t distribution with
 		\[
-		E=2.145(0.31)\approx 0.66
+		df=n-1=14.
 		\]
-		Step 5.
-		Construct the confidence interval.
+		Step 3: Compute standard error and critical value
 		\[
-		\mu\in 4.80\pm 0.66=[4.14,\,5.46]
+		SE=\frac{s}{\sqrt{n}}=\frac{0.61}{\sqrt{15}}\approx 0.16,\qquad t^*=t_{0.025,14}\approx 2.145
 		\]
-		Step 6.
-		Interpretation in context.
-		With 95\% confidence, the institution's mean approval time is between 4.14 and 5.46 days.
-		Step 7.
-		Conclusion about the parameter.
-		Because 4.0 days is outside the interval, the managerial claim is not supported by this sample evidence.
+		Step 4: Construct the confidence interval
+		\[
+		\mu\in \bar{x}\pm t^*SE=5.17\pm 2.145(0.16)=5.17\pm 0.34=[4.83,\,5.51]
+		\]
+		Step 5: Economic/financial interpretation and conclusion
+		With 95\% confidence, the institution's mean approval time is between 4.83 and 5.51 days.
+		Operationally, staffing and customer communication should be based on an expected approval time near 5 days, not below 4 days.
 		
 		\newpage
 		\item
 		\subsection*{Problem description}
-		An investment team estimates the mean daily return (\%) of a balanced fund.
-		A promotional report states that the true mean return is 0.30\% per day.
-		From a random sample of $n=20$ trading days, $\bar{x}=0.42\%$ and $s=0.18\%$.
-		The population variance is unknown.
-		Construct a 90\% t-confidence interval and conclude whether the reported value is plausible.
+		An investment desk records daily return rates (\%) for 18 trading days of a balanced fund:
+		\[
+		0.32,\ 0.41,\ 0.28,\ 0.36,\ 0.39,\ 0.44,\ 0.35,\ 0.31,\ 0.47,\ 0.40,\ 0.38,\ 0.33,\ 0.42,\ 0.29,\ 0.37,\ 0.45,\ 0.34,\ 0.43
+		\]
+		Construct a 90\% confidence interval for the population mean daily return and conclude for portfolio communication.
 		
 		\subsection*{C10}
-		Step 1.
-		Identify the parameter and sample statistics.
+		Step 1: Organize raw data and compute descriptive statistics
 		\[
-		\mu=\text{population mean daily return},\quad n=20,\quad \bar{x}=0.42\%,\quad s=0.18\%
+		n=18,\qquad \bar{x}=\frac{\sum x_i}{n}=\frac{6.74\%}{18}=0.374\%
 		\]
-		Step 2.
-		State degrees of freedom and critical value.
 		\[
-		df=20-1=19,\qquad t^*=t_{0.05,19}\approx 1.729
+		s=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n-1}}\approx 0.056\%
 		\]
-		Step 3.
-		Compute the standard error.
+		Step 2: Identify parameter and distributional assumptions
 		\[
-		SE=\frac{0.18\%}{\sqrt{20}}\approx 0.04\%
+		\mu=\text{population mean daily return of the fund}
 		\]
-		Step 4.
-		Compute the margin of error.
+		The population standard deviation is unknown, so we use a t interval with
 		\[
-		E=1.729(0.04\%)\approx 0.07\%
+		df=n-1=17.
 		\]
-		Step 5.
-		Construct the confidence interval.
+		Step 3: Compute standard error and critical value
 		\[
-		\mu\in 0.42\%\pm 0.07\%=[0.35\%,\,0.49\%]
+		SE=\frac{0.056\%}{\sqrt{18}}\approx 0.013\%,\qquad t^*=t_{0.05,17}\approx 1.740
 		\]
-		Step 6.
-		Interpretation in context.
-		With 90\% confidence, the mean daily return is between 0.35\% and 0.49\%.
-		Step 7.
-		Conclusion about the parameter.
-		Since 0.30\% is outside the interval, the reported mean appears too low for this sample period.
+		Step 4: Construct the confidence interval
+		\[
+		\mu\in 0.374\%\pm 1.740(0.013\%)=0.374\%\pm 0.023\%=[0.351\%,\,0.397\%]
+		\]
+		Step 5: Economic/financial interpretation and conclusion
+		With 90\% confidence, the mean daily return is between 0.351\% and 0.397\%.
+		For communication with investors, a central expectation near 0.37\% per day is supported by these data.
 		
 		\newpage
 		\item
 		\subsection*{Problem description}
-		A digital payments company estimates the mean transaction fee (USD) charged to merchants.
-		The pricing team states that the long-run mean fee is 2.20 USD and should remain below 2.40 USD.
-		A random sample of $n=9$ transactions gives $\bar{x}=2.35$ USD and $s=0.41$ USD.
-		The population variance is unknown.
-		Construct a 99\% t-confidence interval for the population mean fee and conclude about the pricing statement.
+		A digital payments company records merchant transaction fees (USD) for 12 recent transactions:
+		\[
+		2.10,\ 2.35,\ 2.28,\ 2.42,\ 2.18,\ 2.50,\ 2.31,\ 2.27,\ 2.46,\ 2.22,\ 2.39,\ 2.33
+		\]
+		Construct a 99\% confidence interval for the population mean transaction fee and conclude for pricing policy.
 		
 		\subsection*{C10}
-		Step 1.
-		Identify the parameter and sample statistics.
+		Step 1: Organize raw data and compute descriptive statistics
 		\[
-		\mu=\text{population mean fee},\quad n=9,\quad \bar{x}=2.35,\quad s=0.41
+		n=12,\qquad \bar{x}=\frac{\sum x_i}{n}=\frac{27.81}{12}=2.318\ \text{USD}
 		\]
-		Step 2.
-		State degrees of freedom and critical value.
 		\[
-		df=9-1=8,\qquad t^*=t_{0.005,8}\approx 3.355
+		s=\sqrt{\frac{\sum (x_i-\bar{x})^2}{n-1}}\approx 0.117\ \text{USD}
 		\]
-		Step 3.
-		Compute the standard error.
+		Step 2: Identify parameter and distributional assumptions
 		\[
-		SE=\frac{0.41}{\sqrt{9}}=0.14
+		\mu=\text{population mean transaction fee}
 		\]
-		Step 4.
-		Compute the margin of error.
+		Since the population variance is unknown, use the t distribution with
 		\[
-		E=3.355(0.14)\approx 0.46
+		df=n-1=11.
 		\]
-		Step 5.
-		Construct the confidence interval.
+		Step 3: Compute standard error and critical value
 		\[
-		\mu\in 2.35\pm 0.46=[1.89,\,2.81]
+		SE=\frac{0.117}{\sqrt{12}}\approx 0.034,\qquad t^*=t_{0.005,11}\approx 3.106
 		\]
-		Step 6.
-		Interpretation in context.
-		With 99\% confidence, the population mean transaction fee lies between 1.89 and 2.81 USD.
-		Step 7.
-		Conclusion about the parameter.
-		The value 2.20 USD is plausible because it lies inside the interval, but the interval also includes values above 2.40 USD, so the ``below 2.40 USD'' condition is not guaranteed at 99\% confidence with this sample.
+		Step 4: Construct the confidence interval
+		\[
+		\mu\in 2.318\pm 3.106(0.034)=2.318\pm 0.105=[2.213,\,2.423]\ \text{USD}
+		\]
+		Step 5: Economic/financial interpretation and conclusion
+		With 99\% confidence, the mean merchant fee is between 2.213 and 2.423 USD.
+		For pricing policy, the estimate is centered near 2.32 USD and suggests average fees are close to the upper end of the firm's current pricing band.
 	\end{ExamProblems}
 \end{document}
