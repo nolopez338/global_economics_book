@@ -1,0 +1,413 @@
+\input{../../preamble/preamble_exams.tex}
+\begin{document}
+	\ExamTitleBlock{11th grade}{Term 2 -- Lesson 3 MATERIAL: t-Confidence Intervals for Means (Worked Solutions)}{}
+	
+	\ExamSection{Evaluated criteria}
+	\begin{ExamCriteria}
+		\item C8: Calculates confidence intervals applying the t-student distribution in context situations.
+		\item C9: Estimates the confidence interval for the mean when the variance is unknown in context situations.
+		\item C10: Concludes about a statistical parameter in situations in finance and economy.
+	\end{ExamCriteria}
+
+	\ExamSection{C8: t-student confidence intervals in context situations}
+	\begin{ExamProblems}
+		\item
+		\subsection*{Problem description}
+		A logistics center wants to estimate the mean loading time (minutes) for trucks in a new dispatch lane.
+		A random sample of $n=12$ trucks gives $\bar{x}=84.60$ minutes and sample standard deviation $s=6.80$ minutes.
+		The population variance is unknown, and the sample size is small, so a t-interval is required.
+		Construct and interpret a 95\% confidence interval for the population mean loading time.
+		
+		\subsection*{C8}
+		Step 1.
+		Identify the parameter and sample statistics.
+		\[
+		\mu=\text{population mean loading time},\quad n=12,\quad \bar{x}=84.60,\quad s=6.80
+		\]
+		Step 2.
+		State degrees of freedom.
+		\[
+		df=n-1=12-1=11
+		\]
+		Step 3.
+		Identify the t critical value for 95\% confidence.
+		\[
+		t^*=t_{0.025,11}\approx 2.201
+		\]
+		Step 4.
+		Compute the standard error.
+		\[
+		SE=\frac{s}{\sqrt{n}}=\frac{6.80}{\sqrt{12}}\approx 1.96
+		\]
+		Step 5.
+		Compute the margin of error.
+		\[
+		E=t^*\cdot SE=2.201(1.96)\approx 4.31
+		\]
+		Step 6.
+		Construct the confidence interval.
+		\[
+		\mu\in\bar{x}\pm E\Rightarrow 84.60\pm 4.31=[80.29,\,88.91]
+		\]
+		Step 7.
+		Interpretation.
+		With 95\% confidence, the mean loading time in the new lane is between 80.29 and 88.91 minutes.
+		
+		\newpage
+		\item
+		\subsection*{Problem description}
+		An agricultural exporter tracks the average customs processing time (hours) for a new shipping route.
+		A random sample of $n=18$ shipments gives $\bar{x}=42.30$ hours and $s=5.10$ hours.
+		Because the population variance is unknown and the sample is moderate, use a t-interval.
+		Construct and interpret a 90\% confidence interval for the population mean processing time.
+		
+		\subsection*{C8}
+		Step 1.
+		Identify the parameter and sample statistics.
+		\[
+		\mu=\text{population mean processing time},\quad n=18,\quad \bar{x}=42.30,\quad s=5.10
+		\]
+		Step 2.
+		State degrees of freedom.
+		\[
+		df=18-1=17
+		\]
+		Step 3.
+		Identify the t critical value for 90\% confidence.
+		\[
+		t^*=t_{0.05,17}\approx 1.740
+		\]
+		Step 4.
+		Compute the standard error.
+		\[
+		SE=\frac{5.10}{\sqrt{18}}\approx 1.20
+		\]
+		Step 5.
+		Compute the margin of error.
+		\[
+		E=1.740(1.20)\approx 2.09
+		\]
+		Step 6.
+		Construct the confidence interval.
+		\[
+		\mu\in 42.30\pm 2.09=[40.21,\,44.39]
+		\]
+		Step 7.
+		Interpretation.
+		With 90\% confidence, the true mean customs processing time for this route lies between 40.21 and 44.39 hours.
+		
+		\newpage
+		\item
+		\subsection*{Problem description}
+		A school cafeteria estimates the mean daily demand (kg) for a new meal plan ingredient.
+		A random sample of $n=25$ school days gives $\bar{x}=73.50$ kg and $s=8.40$ kg.
+		The population variance is unknown.
+		Construct and interpret a 99\% confidence interval for the population mean daily demand.
+		
+		\subsection*{C8}
+		Step 1.
+		Identify the parameter and sample statistics.
+		\[
+		\mu=\text{population mean daily demand},\quad n=25,\quad \bar{x}=73.50,\quad s=8.40
+		\]
+		Step 2.
+		State degrees of freedom.
+		\[
+		df=25-1=24
+		\]
+		Step 3.
+		Identify the t critical value for 99\% confidence.
+		\[
+		t^*=t_{0.005,24}\approx 2.797
+		\]
+		Step 4.
+		Compute the standard error.
+		\[
+		SE=\frac{8.40}{\sqrt{25}}=1.68
+		\]
+		Step 5.
+		Compute the margin of error.
+		\[
+		E=2.797(1.68)\approx 4.70
+		\]
+		Step 6.
+		Construct the confidence interval.
+		\[
+		\mu\in 73.50\pm 4.70=[68.80,\,78.20]
+		\]
+		Step 7.
+		Interpretation.
+		With 99\% confidence, the population mean daily demand is between 68.80 kg and 78.20 kg.
+	\end{ExamProblems}
+
+	\ExamSection{C9: Confidence interval for the mean when variance is unknown}
+	\begin{ExamProblems}
+		\item
+		\subsection*{Problem description}
+		A customer-service unit studies the average response time (minutes) for premium support tickets.
+		The population variance is unknown.
+		A random sample of 10 tickets gives the following response times:
+		\[
+		14,\ 16,\ 15,\ 13,\ 17,\ 18,\ 16,\ 14,\ 15,\ 17
+		\]
+		Construct and interpret a 95\% confidence interval for the population mean response time.
+		
+		\subsection*{C9}
+		Step 1.
+		Compute the sample mean.
+		\[
+		\bar{x}=\frac{14+16+15+13+17+18+16+14+15+17}{10}=\frac{155}{10}=15.50
+		\]
+		Step 2.
+		Compute the sample standard deviation.
+		\[
+		s^2=\frac{\sum (x_i-\bar{x})^2}{n-1}=\frac{22.50}{9}=2.50,
+		\qquad s=\sqrt{2.50}\approx 1.58
+		\]
+		Step 3.
+		State degrees of freedom and the critical value.
+		\[
+		df=10-1=9,\qquad t^*=t_{0.025,9}\approx 2.262
+		\]
+		Step 4.
+		Compute the standard error.
+		\[
+		SE=\frac{s}{\sqrt{n}}=\frac{1.58}{\sqrt{10}}\approx 0.50
+		\]
+		Step 5.
+		Compute the margin of error.
+		\[
+		E=t^*\cdot SE=2.262(0.50)\approx 1.13
+		\]
+		Step 6.
+		Construct the confidence interval.
+		\[
+		\mu\in 15.50\pm 1.13=[14.37,\,16.63]
+		\]
+		Step 7.
+		Interpretation.
+		With 95\% confidence, the mean response time for premium tickets lies between 14.37 and 16.63 minutes.
+		
+		\newpage
+		\item
+		\subsection*{Problem description}
+		A local retail store estimates mean daily sales (thousand USD) for a new product line.
+		The population variance is unknown.
+		A random sample of 8 days gives:
+		\[
+		52,\ 49,\ 55,\ 47,\ 50,\ 54,\ 51,\ 48
+		\]
+		Construct and interpret a 90\% confidence interval for the population mean daily sales.
+		
+		\subsection*{C9}
+		Step 1.
+		Compute the sample mean.
+		\[
+		\bar{x}=\frac{52+49+55+47+50+54+51+48}{8}=\frac{406}{8}=50.75
+		\]
+		Step 2.
+		Compute the sample standard deviation.
+		\[
+		s^2=\frac{\sum (x_i-\bar{x})^2}{n-1}=\frac{55.50}{7}\approx 7.93,
+		\qquad s\approx \sqrt{7.93}=2.82
+		\]
+		Step 3.
+		State degrees of freedom and the critical value.
+		\[
+		df=8-1=7,\qquad t^*=t_{0.05,7}\approx 1.895
+		\]
+		Step 4.
+		Compute the standard error.
+		\[
+		SE=\frac{2.82}{\sqrt{8}}\approx 1.00
+		\]
+		Step 5.
+		Compute the margin of error.
+		\[
+		E=1.895(1.00)\approx 1.90
+		\]
+		Step 6.
+		Construct the confidence interval.
+		\[
+		\mu\in 50.75\pm 1.90=[48.85,\,52.65]
+		\]
+		Step 7.
+		Interpretation.
+		With 90\% confidence, the population mean daily sales are between 48.85 and 52.65 thousand USD.
+		
+		\newpage
+		\item
+		\subsection*{Problem description}
+		An energy analyst estimates mean monthly electricity cost (USD) for small stores in one district.
+		The population variance is unknown.
+		A random sample of 12 stores gives:
+		\[
+		31,\ 29,\ 34,\ 33,\ 30,\ 32,\ 35,\ 28,\ 31,\ 33,\ 30,\ 34
+		\]
+		Construct and interpret a 95\% confidence interval for the population mean monthly cost.
+		
+		\subsection*{C9}
+		Step 1.
+		Compute the sample mean.
+		\[
+		\bar{x}=\frac{380}{12}\approx 31.67
+		\]
+		Step 2.
+		Compute the sample standard deviation.
+		\[
+		s^2=\frac{52.67}{11}\approx 4.79,
+		\qquad s\approx\sqrt{4.79}=2.19
+		\]
+		Step 3.
+		State degrees of freedom and the critical value.
+		\[
+		df=12-1=11,\qquad t^*=t_{0.025,11}\approx 2.201
+		\]
+		Step 4.
+		Compute the standard error.
+		\[
+		SE=\frac{2.19}{\sqrt{12}}\approx 0.63
+		\]
+		Step 5.
+		Compute the margin of error.
+		\[
+		E=2.201(0.63)\approx 1.39
+		\]
+		Step 6.
+		Construct the confidence interval.
+		\[
+		\mu\in 31.67\pm 1.39=[30.28,\,33.06]
+		\]
+		Step 7.
+		Interpretation.
+		With 95\% confidence, the district mean monthly electricity cost for small stores is between 30.28 and 33.06 USD.
+	\end{ExamProblems}
+
+	\ExamSection{C10: Conclusions about a mean parameter in finance and economy}
+	\begin{ExamProblems}
+		\item
+		\subsection*{Problem description}
+		A microfinance institution evaluates the mean approval time (days) for small-business loans.
+		Managers claim the true mean approval time is 4.0 days.
+		A random sample gives $n=15$, $\bar{x}=4.80$ days, and $s=1.20$ days.
+		The population variance is unknown.
+		Construct a 95\% t-confidence interval for the population mean approval time and conclude whether the 4.0-day claim is plausible.
+		
+		\subsection*{C10}
+		Step 1.
+		Identify the parameter and sample statistics.
+		\[
+		\mu=\text{population mean approval time},\quad n=15,\quad \bar{x}=4.80,\quad s=1.20
+		\]
+		Step 2.
+		State degrees of freedom and critical value.
+		\[
+		df=15-1=14,\qquad t^*=t_{0.025,14}\approx 2.145
+		\]
+		Step 3.
+		Compute the standard error.
+		\[
+		SE=\frac{1.20}{\sqrt{15}}\approx 0.31
+		\]
+		Step 4.
+		Compute the margin of error.
+		\[
+		E=2.145(0.31)\approx 0.66
+		\]
+		Step 5.
+		Construct the confidence interval.
+		\[
+		\mu\in 4.80\pm 0.66=[4.14,\,5.46]
+		\]
+		Step 6.
+		Interpretation in context.
+		With 95\% confidence, the institution's mean approval time is between 4.14 and 5.46 days.
+		Step 7.
+		Conclusion about the parameter.
+		Because 4.0 days is outside the interval, the managerial claim is not supported by this sample evidence.
+		
+		\newpage
+		\item
+		\subsection*{Problem description}
+		An investment team estimates the mean daily return (\%) of a balanced fund.
+		A promotional report states that the true mean return is 0.30\% per day.
+		From a random sample of $n=20$ trading days, $\bar{x}=0.42\%$ and $s=0.18\%$.
+		The population variance is unknown.
+		Construct a 90\% t-confidence interval and conclude whether the reported value is plausible.
+		
+		\subsection*{C10}
+		Step 1.
+		Identify the parameter and sample statistics.
+		\[
+		\mu=\text{population mean daily return},\quad n=20,\quad \bar{x}=0.42\%,\quad s=0.18\%
+		\]
+		Step 2.
+		State degrees of freedom and critical value.
+		\[
+		df=20-1=19,\qquad t^*=t_{0.05,19}\approx 1.729
+		\]
+		Step 3.
+		Compute the standard error.
+		\[
+		SE=\frac{0.18\%}{\sqrt{20}}\approx 0.04\%
+		\]
+		Step 4.
+		Compute the margin of error.
+		\[
+		E=1.729(0.04\%)\approx 0.07\%
+		\]
+		Step 5.
+		Construct the confidence interval.
+		\[
+		\mu\in 0.42\%\pm 0.07\%=[0.35\%,\,0.49\%]
+		\]
+		Step 6.
+		Interpretation in context.
+		With 90\% confidence, the mean daily return is between 0.35\% and 0.49\%.
+		Step 7.
+		Conclusion about the parameter.
+		Since 0.30\% is outside the interval, the reported mean appears too low for this sample period.
+		
+		\newpage
+		\item
+		\subsection*{Problem description}
+		A digital payments company estimates the mean transaction fee (USD) charged to merchants.
+		The pricing team states that the long-run mean fee is 2.20 USD and should remain below 2.40 USD.
+		A random sample of $n=9$ transactions gives $\bar{x}=2.35$ USD and $s=0.41$ USD.
+		The population variance is unknown.
+		Construct a 99\% t-confidence interval for the population mean fee and conclude about the pricing statement.
+		
+		\subsection*{C10}
+		Step 1.
+		Identify the parameter and sample statistics.
+		\[
+		\mu=\text{population mean fee},\quad n=9,\quad \bar{x}=2.35,\quad s=0.41
+		\]
+		Step 2.
+		State degrees of freedom and critical value.
+		\[
+		df=9-1=8,\qquad t^*=t_{0.005,8}\approx 3.355
+		\]
+		Step 3.
+		Compute the standard error.
+		\[
+		SE=\frac{0.41}{\sqrt{9}}=0.14
+		\]
+		Step 4.
+		Compute the margin of error.
+		\[
+		E=3.355(0.14)\approx 0.46
+		\]
+		Step 5.
+		Construct the confidence interval.
+		\[
+		\mu\in 2.35\pm 0.46=[1.89,\,2.81]
+		\]
+		Step 6.
+		Interpretation in context.
+		With 99\% confidence, the population mean transaction fee lies between 1.89 and 2.81 USD.
+		Step 7.
+		Conclusion about the parameter.
+		The value 2.20 USD is plausible because it lies inside the interval, but the interval also includes values above 2.40 USD, so the ``below 2.40 USD'' condition is not guaranteed at 99\% confidence with this sample.
+	\end{ExamProblems}
+\end{document}
