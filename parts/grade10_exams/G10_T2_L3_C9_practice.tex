@@ -1,0 +1,123 @@
+\input{../../preamble/preamble_exams.tex}
+\begin{document}
+	\ExamTitleBlock{10th grade}{Term 2 -- Lesson 3 MATERIAL: Decision Analysis with Bayes, Maximin, and Minimax Regret (Worked Solutions)}{}
+	
+	\ExamSection{C9: Decision trees with staged filtering rules}
+	\begin{ExamProblems}
+		\item
+		\subsection*{Problem description}
+		A city logistics office must choose one policy among $B_1,B_2,B_3,B_4,B_5,B_6$.
+		Payoffs (thousand USD) and probabilities are:
+		\begin{center}
+			\begin{tabular}{l c c c c c c c}
+				\toprule
+				State & Probability & $B_1$ & $B_2$ & $B_3$ & $B_4$ & $B_5$ & $B_6$ \\
+				\midrule
+				$T_1$ & 0.50 & 95 & 90 & 110 & 85 & 100 & 92 \\
+				$T_2$ & 0.30 & 70 & 75 & 60 & 80 & 65 & 78 \\
+				$T_3$ & 0.20 & 30 & 40 & 10 & 55 & 35 & 20 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Ordered criterion results (already computed):
+		\[
+		\text{EV ranking: }B_4(77.50)>B_5(76.50)>B_2(75.50)>B_3(75.00)>B_1(74.50)>B_6(73.40).
+		\]
+		\[
+		\text{Maximin ranking: }B_4(55)>B_2(40)>B_5(35)>B_1(30)>B_6(20)>B_3(10).
+		\]
+		\[
+		\text{Minimax Regret ranking: }B_2(20)=B_5(20)>B_1(25)=B_4(25)>B_6(35)>B_3(45).
+		\]
+		Filtering rule:
+		(1) keep the best 4 EV options;
+		(2) from those, keep the best 2 Maximin options;
+		(3) from those, choose the smallest Minimax Regret.
+
+		\subsection*{C9}
+		Step 1. Reconfirm ordered lists.
+		\begin{itemize}
+			\item EV top 4: $\{B_4,B_5,B_2,B_3\}$.
+			\item On this subset, Maximin values are $B_4(55),\ B_2(40),\ B_5(35),\ B_3(10)$, so top 2 are $\{B_4,B_2\}$.
+			\item On $\{B_4,B_2\}$, Max regrets are $B_4(25),\ B_2(20)$.
+		\end{itemize}
+
+		Step 2. Decision tree for staged filtering.
+		\begin{center}
+			\begin{tabular}{l}
+				\toprule
+				Decision tree (filtering nodes and leaves) \\
+				\midrule
+				Root decision node $D_0$: All alternatives $\{B_1,B_2,B_3,B_4,B_5,B_6\}$ \\
+				$\rightarrow$ Node $D_1$ (EV filter): keep $\{B_4,B_5,B_2,B_3\}$ \\
+				$\rightarrow$ Node $D_2$ (Maximin filter): keep $\{B_4,B_2\}$ \\
+				$\rightarrow$ Node $D_3$ (Minimax Regret filter): choose smallest max regret \\
+				Leaves: $B_2$ (20), $B_4$ (25) \\
+				Final leaf selected: $B_2$ \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+
+		Step 3. Final decision.
+		The decision tree selects $B_2$.
+
+		\newpage
+		\item
+		\subsection*{Problem description}
+		A regional distributor must choose one expansion plan among $X_1,X_2,X_3,X_4,X_5,X_6$.
+		Payoffs (thousand USD) and probabilities are:
+		\begin{center}
+			\begin{tabular}{l c c c c c c c}
+				\toprule
+				State & Probability & $X_1$ & $X_2$ & $X_3$ & $X_4$ & $X_5$ & $X_6$ \\
+				\midrule
+				$U_1$ & 0.30 & 130 & 120 & 140 & 110 & 125 & 118 \\
+				$U_2$ & 0.25 & 90 & 95 & 80 & 100 & 88 & 92 \\
+				$U_3$ & 0.25 & 60 & 70 & 55 & 85 & 65 & 75 \\
+				$U_4$ & 0.20 & 20 & 40 & 10 & 60 & 45 & 35 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Ordered criterion results (already computed):
+		\[
+		\text{EV ranking: }X_4(91.25)>X_2(85.25)>X_5(84.75)>X_6(84.15)>X_1(80.50)>X_3(77.75).
+		\]
+		\[
+		\text{Maximin ranking: }X_4(60)>X_5(45)>X_2(40)>X_6(35)>X_1(20)>X_3(10).
+		\]
+		\[
+		\text{Minimax Regret ranking: }X_2(20)=X_5(20)>X_6(25)>X_4(30)>X_1(40)>X_3(50).
+		\]
+		Filtering rule:
+		(1) keep the best 3 EV options;
+		(2) from those, keep the best 2 Minimax Regret options;
+		(3) from those, choose the best Maximin option.
+
+		\subsection*{C9}
+		Step 1. Reconfirm ordered lists and filtering sets.
+		\begin{itemize}
+			\item EV top 3: $\{X_4,X_2,X_5\}$.
+			\item In this subset, Minimax Regret values are $X_2(20),X_5(20),X_4(30)$, so keep $\{X_2,X_5\}$.
+			\item In $\{X_2,X_5\}$, Maximin values are $X_2(40),X_5(45)$.
+		\end{itemize}
+
+		Step 2. Decision tree for staged filtering.
+		\begin{center}
+			\begin{tabular}{l}
+				\toprule
+				Decision tree (filtering nodes and leaves) \\
+				\midrule
+				Root decision node $D_0$: $\{X_1,X_2,X_3,X_4,X_5,X_6\}$ \\
+				$\rightarrow$ Node $D_1$ (EV filter): keep $\{X_4,X_2,X_5\}$ \\
+				$\rightarrow$ Node $D_2$ (Minimax Regret filter): keep $\{X_2,X_5\}$ \\
+				$\rightarrow$ Node $D_3$ (Maximin choice) \\
+				Leaves: $X_2$ (min $=40$), $X_5$ (min $=45$) \\
+				Final leaf selected: $X_5$ \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+
+		Step 3. Final decision.
+		The decision tree selects $X_5$.
+	\end{ExamProblems}
+\end{document}
