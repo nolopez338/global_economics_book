@@ -213,14 +213,26 @@
 		\textbf{How to conclude C9 using C8 result}\par
 		Second-stage uncertainty for the tree:
 		stable regulation (0.60, adjustment $+12$) and tightened regulation (0.40, adjustment $-18$).
-		Program-assisted branch table:
+
+		Step 1. Reconfirm branch outcomes for the C8-selected alternative.
+		\[
+		\text{Stable branch}=118.70+12=130.70,
+		\qquad
+		\text{Tightened branch}=118.70-18=100.70.
+		\]
+
+		Step 3. Final decision.
 		\begin{center}
-			\begin{tabular}{l c c}
+			\begin{tabular}{l}
 				\hline
-				Branch & Probability & Adjusted payoff ($A_2$) \\
+				Decision tree summary \\
 				\hline
-				Stable & 0.60 & 130.70 \\
-				Tightened & 0.40 & 100.70 \\
+				$D_0$: choose C8-recommended strategy $A_2$ \\
+				$\rightarrow C_1$: regulation stable (0.60) $\to 130.70$ \\
+				$\rightarrow C_2$: regulation tightens (0.40) $\to 100.70$ \\
+				Equivalent value at the chance node: $EV_{tree}(A_2)=0.60(130.70)+0.40(100.70)=118.70$ \\
+				Root equivalent value: $118.70$ \\
+				Final leaf selected: $A_2$ \\
 				\hline
 			\end{tabular}
 		\end{center}
@@ -280,14 +292,26 @@
 		
 		\textbf{How to conclude C9 using C8 result}\par
 		Second-stage uncertainty for $D_4$: stable fuel (0.55, $+11$) and fuel spike (0.45, $-14$).
-		Program-assisted branch table:
+
+		Step 1. Reconfirm branch outcomes for the C8-selected alternative.
+		\[
+		\text{Stable fuel}=119.90+11=130.90,
+		\qquad
+		\text{Fuel spike}=119.90-14=105.90.
+		\]
+
+		Step 3. Final decision.
 		\begin{center}
-			\begin{tabular}{l c c}
+			\begin{tabular}{l}
 				\hline
-				Branch & Prob. & Adjusted payoff from $D_4$ \\
+				Decision tree summary \\
 				\hline
-				Stable fuel & 0.55 & 130.90 \\
-				Fuel spike & 0.45 & 105.90 \\
+				$D_0$: choose $D_4$ from C8 \\
+				$\rightarrow C_1$: stable fuel (0.55) $\to 130.90$ \\
+				$\rightarrow C_2$: fuel spike (0.45) $\to 105.90$ \\
+				Equivalent value at the chance node: $EV_{tree}(D_4)=0.55(130.90)+0.45(105.90)=119.65$ \\
+				Root equivalent value: $119.65$ \\
+				Final leaf selected: $D_4$ \\
 				\hline
 			\end{tabular}
 		\end{center}
