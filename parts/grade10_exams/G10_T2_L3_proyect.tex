@@ -1,0 +1,186 @@
+\input{../../preamble/preamble_exams.tex}
+\begin{document}
+	\ExamTitleBlock{10th grade}{Term 2 -- Lesson 3 PROYECT: JavaScript Decision Analysis Project (C10 evidence)}{}
+	
+	\ExamSection{Project brief}
+	\subsection*{Introduction}
+	This programming project asks students to implement a JavaScript tool that automates C8 decision-analysis outputs (Bayes/EV, Maximin, Minimax Regret) and then uses those outputs to support a C9 decision-tree conclusion.
+	Presenting and defending this program is the evidence for Criterion 10.
+
+	\subsection*{Input specification}
+	The program receives one payoff table with:
+	\begin{itemize}
+		\item States of nature and their probabilities.
+		\item Alternatives.
+		\item Payoff value for every alternative-state pair.
+	\end{itemize}
+	Example input format (values in thousand USD):
+	\begin{center}
+		\begin{tabular}{l c c c c}
+			\toprule
+			State of nature & Probability & $A_1$ & $A_2$ & $A_3$ \\
+			\midrule
+			$S_1$ & 0.40 & 140 & 130 & 155 \\
+			$S_2$ & 0.35 & 95 & 105 & 90 \\
+			$S_3$ & 0.25 & 60 & 80 & 45 \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+
+	\subsection*{Output specification}
+	For each alternative, the program must return:
+	\begin{itemize}
+		\item maximum payoff,
+		\item minimum payoff,
+		\item expected value (using provided probabilities),
+		\item maximum regret.
+	\end{itemize}
+	The output format is free, but it must be consistent and readable.
+	A recommended summary table is:
+	\begin{center}
+		\begin{tabular}{l c c c c}
+			\toprule
+			Alternative & Max payoff & Min payoff & EV & Max regret \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+
+	\subsection*{Workflow requirement (C8 to C9)}
+	\begin{enumerate}
+		\item Run the JavaScript program and generate tables.
+		\item Use those tables to conclude C8 rankings (Bayes, Maximin, Minimax Regret).
+		\item Use the C8 recommendation as input for a C9 decision tree with second-stage uncertainty.
+	\end{enumerate}
+	After presenting the program, the student may proceed to solve the project problems in \texttt{G10\_T2\_L3\_proyect\_problems.tex}.
+
+	\ExamSection{Solved example 1 (program-output guided)}
+	\subsection*{Base payoff table}
+	\begin{center}
+		\begin{tabular}{l c c c c}
+			\toprule
+			State & Probability & $A_1$ & $A_2$ & $A_3$ \\
+			\midrule
+			$H$ & 0.45 & 150 & 142 & 165 \\
+			$M$ & 0.35 & 98 & 112 & 90 \\
+			$L$ & 0.20 & 52 & 78 & 35 \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+
+	\subsection*{Program-produced regret table}
+	\begin{center}
+		\begin{tabular}{l c c c c}
+			\toprule
+			Alternative & $H$ regret & $M$ regret & $L$ regret & Max regret \\
+			\midrule
+			$A_1$ & 15 & 14 & 26 & 26 \\
+			$A_2$ & 23 & 0 & 0 & 23 \\
+			$A_3$ & 0 & 22 & 43 & 43 \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+
+	\subsection*{Program-produced C8 summary table}
+	\begin{center}
+		\begin{tabular}{l c c c c}
+			\toprule
+			Alternative & Max payoff & Min payoff & EV & Max regret \\
+			\midrule
+			$A_1$ & 150 & 52 & 112.20 & 26 \\
+			$A_2$ & 142 & 78 & 118.70 & 23 \\
+			$A_3$ & 165 & 35 & 112.75 & 43 \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+
+	\subsection*{How to conclude C8 using program outputs}
+	From the summary table:
+	\begin{itemize}
+		\item Bayes (EV) selects $A_2$.
+		\item Maximin (largest minimum) selects $A_2$.
+		\item Minimax Regret (smallest max regret) selects $A_2$.
+	\end{itemize}
+	So the C8 recommendation is $A_2$.
+
+	\subsection*{How to conclude C9 using C8 result}
+	Second-stage uncertainty for the tree:
+	stable regulation (0.60, adjustment $+12$) and tightened regulation (0.40, adjustment $-18$).
+	Program-assisted branch table:
+	\begin{center}
+		\begin{tabular}{l c c}
+			\toprule
+			Branch & Probability & Adjusted payoff from $A_2$ \\
+			\midrule
+			Stable regulation & 0.60 & 130.70 \\
+			Tightened regulation & 0.40 & 100.70 \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	The decision tree therefore confirms $A_2$ as final recommendation.
+
+	\ExamSection{Solved example 2 (program-output guided)}
+	\subsection*{Base payoff table}
+	\begin{center}
+		\begin{tabular}{l c c c c c}
+			\toprule
+			State & Probability & $D_1$ & $D_2$ & $D_3$ & $D_4$ \\
+			\midrule
+			$P_1$ & 0.35 & 155 & 146 & 170 & 140 \\
+			$P_2$ & 0.40 & 100 & 118 & 88 & 122 \\
+			$P_3$ & 0.25 & 45 & 86 & 22 & 94 \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+
+	\subsection*{Program-produced regret table}
+	\begin{center}
+		\begin{tabular}{l c c c c}
+			\toprule
+			Alternative & $P_1$ regret & $P_2$ regret & $P_3$ regret & Max regret \\
+			\midrule
+			$D_1$ & 15 & 22 & 49 & 49 \\
+			$D_2$ & 24 & 4 & 8 & 24 \\
+			$D_3$ & 0 & 34 & 72 & 72 \\
+			$D_4$ & 30 & 0 & 0 & 30 \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+
+	\subsection*{Program-produced C8 summary table}
+	\begin{center}
+		\begin{tabular}{l c c c c}
+			\toprule
+			Alternative & Max payoff & Min payoff & EV & Max regret \\
+			\midrule
+			$D_1$ & 155 & 45 & 106.50 & 49 \\
+			$D_2$ & 146 & 86 & 118.00 & 24 \\
+			$D_3$ & 170 & 22 & 98.30 & 72 \\
+			$D_4$ & 140 & 94 & 119.90 & 30 \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+
+	\subsection*{How to conclude C8 using program outputs}
+	From the summary table:
+	\begin{itemize}
+		\item Bayes (EV) selects $D_4$.
+		\item Maximin selects $D_4$.
+		\item Minimax Regret selects $D_2$.
+	\end{itemize}
+	Using the project rule ``prioritize Bayes with consistency in floor performance'', the C8 action forwarded to C9 is $D_4$.
+
+	\subsection*{How to conclude C9 using C8 result}
+	Second-stage uncertainty for $D_4$: stable fuel (0.55, $+11$) and fuel spike (0.45, $-14$).
+	Program-assisted branch table:
+	\begin{center}
+		\begin{tabular}{l c c}
+			\toprule
+			Branch & Probability & Adjusted payoff from $D_4$ \\
+			\midrule
+			Stable fuel & 0.55 & 130.90 \\
+			Fuel spike & 0.45 & 105.90 \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	The decision tree concludes with $D_4$ as final recommendation under the two-stage process.
+\end{document}
