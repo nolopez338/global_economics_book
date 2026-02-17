@@ -1,17 +1,46 @@
-\input{../../preamble/preamble_exams.tex}
+\documentclass[12pt]{article}
 
-% Column types for header/criteria blocks (midterm-style layout)
-\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+% Page size and tighter margins
+\usepackage[a4paper,left=1.2cm,right=1.2cm,top=1.5cm,bottom=1.5cm]{geometry}
+
+% Core packages
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.15}
+
+% Column types
 \newcolumntype{Y}{>{\raggedright\arraybackslash}m{\dimexpr0.30\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
 \newcolumntype{Z}{>{\raggedright\arraybackslash}m{\dimexpr0.70\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
-\newcommand{\CellCenter}[1]{\parbox{\linewidth}{\centering #1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+% Gray subsection header box
+\newcommand{\SubsectionBox}[1]{%
+	\noindent\colorbox{gray!30}{%
+		\parbox{\linewidth}{\textbf{#1}}%
+	}\par\vspace{0.35cm}%
+}
+
+% Centered multi-line cell helper
+\newcommand{\CellCenter}[1]{%
+	\parbox{\linewidth}{\centering #1}%
+}
 
 \begin{document}
-	\setlength{\tabcolsep}{6pt}
-	\renewcommand{\arraystretch}{1.15}
-
+	
+	% =========================
+	% HEADER BOX (3 COLUMNS)
+	% =========================
 	\noindent
-	\begin{tabularx}{\textwidth}{|M{2.8cm}|M{\dimexpr\textwidth-6cm-4\tabcolsep-4\arrayrulewidth\relax}|M{2.8cm}|}
+	\begin{tabularx}{\textwidth}{|C{2.8cm}|C{\dimexpr\textwidth-6cm-4\tabcolsep-4\arrayrulewidth\relax}|C{2.8cm}|}
 		\hline
 		\centering
 		\vspace{3mm}
@@ -33,9 +62,12 @@
 		\\
 		\hline
 	\end{tabularx}
-
+	
 	\vspace{0.5cm}
-
+	
+	% =========================
+	% OBJECTIVE + CRITERIA
+	% =========================
 	\noindent
 	\begin{tabular}{|Y|Z|}
 		\hline
@@ -51,16 +83,23 @@
 		\\
 		\hline
 	\end{tabular}
-
+	
 	\vspace{0.4cm}
-
+	
+	% =========================
+	% STUDENT LINE
+	% =========================
 	\noindent
 	\textbf{Student's name:} \rule{7cm}{0.4pt}\hfill
 	\textbf{Group:} \rule{2cm}{0.4pt}\hfill
 	\textbf{Date:} \rule{3cm}{0.4pt}
-
-	\ExamSection{Project problems}
-	\begin{ExamProblems}
+	
+	\vspace{0.4cm}
+	
+	% =========================
+	% EXAM BODY
+	% =========================
+	\begin{enumerate}
 		\item
 		\subsection*{Problem statement}
 		A coffee-export startup must choose one logistics model for the next season: 
@@ -187,5 +226,6 @@
 			\end{itemize}
 			Construct and evaluate the decision tree and state the final recommendation.
 		\end{enumerate}
-	\end{ExamProblems}
+	\end{enumerate}
+
 \end{document}
