@@ -1,0 +1,389 @@
+\input{../../preamble/preamble_exams.tex}
+\begin{document}
+	\ExamTitleBlock{10th grade}{Term 2 -- Lesson 3 PROYECT: Project Problems with Worked Solutions (C8 + C9, evidence path to C10)}{}
+	
+	\ExamSection{Project problems with full solutions}
+	\begin{ExamProblems}
+		\item
+		\subsection*{Problem description}
+		A coffee-export startup must choose one logistics model for the next season: 
+		$A_1$ (outsourced shipping), $A_2$ (mixed model), or $A_3$ (own fleet).
+		The team estimates three demand states:
+		\[
+		H:0.45,\quad M:0.35,\quad L:0.20.
+		\]
+		Payoffs are in thousand USD.
+		After the first decision, international freight regulation may change, so management wants a second-stage decision tree to verify if the C8 recommendation remains robust under this extra uncertainty.
+
+		\subsection*{C8}
+		Step 1. Payoff table.
+		\begin{center}
+			\begin{tabular}{l c c c c}
+				\toprule
+				State of nature & Probability & $A_1$ & $A_2$ & $A_3$ \\
+				\midrule
+				$H$ & 0.45 & 150 & 142 & 165 \\
+				$M$ & 0.35 & 98 & 112 & 90 \\
+				$L$ & 0.20 & 52 & 78 & 35 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+
+		Step 2. Bayes criterion (EV).
+		\[
+		\begin{aligned}
+		EV(A_1)&=0.45(150)+0.35(98)+0.20(52)=112.20,\\
+		EV(A_2)&=0.45(142)+0.35(112)+0.20(78)=118.70,\\
+		EV(A_3)&=0.45(165)+0.35(90)+0.20(35)=112.75.
+		\end{aligned}
+		\]
+		EV ranking:
+		\[
+		A_2(118.70)>A_3(112.75)>A_1(112.20).
+		\]
+
+		Step 3. Maximin criterion.
+		\[
+		\min(A_1)=52,\quad \min(A_2)=78,\quad \min(A_3)=35.
+		\]
+		Maximin ranking:
+		\[
+		A_2(78)>A_1(52)>A_3(35).
+		\]
+
+		Step 4. Minimax Regret criterion.
+		State best payoffs:
+		\[
+		\max(H)=165,\quad \max(M)=112,\quad \max(L)=78.
+		\]
+		\begin{center}
+			\begin{tabular}{l c c c c}
+				\toprule
+				Alternative & $H$ & $M$ & $L$ & Max regret \\
+				\midrule
+				$A_1$ & $165-150=15$ & $112-98=14$ & $78-52=26$ & 26 \\
+				$A_2$ & $165-142=23$ & $112-112=0$ & $78-78=0$ & 23 \\
+				$A_3$ & $165-165=0$ & $112-90=22$ & $78-35=43$ & 43 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Minimax Regret ranking (lower is better):
+		\[
+		A_2(23)<A_1(26)<A_3(43).
+		\]
+
+		Step 5. C8 conclusion.
+		All three criteria select $A_2$ as the strongest first-stage strategy.
+
+		\subsection*{C9 transition and decision tree}
+		Because $A_2$ is selected in C8, managers now evaluate a regulation event after implementation:
+		\begin{itemize}
+			\item Rule stays stable (probability $0.60$): payoff adjustment $+12$.
+			\item Rule tightens (probability $0.40$): payoff adjustment $-18$.
+		\end{itemize}
+		Build and evaluate the decision tree rooted at the C8 recommendation.
+
+		Step 1. Branch outcomes for $A_2$.
+		\[
+		\text{Stable branch}=118.70+12=130.70,
+		\]
+		\[
+		\text{Tightened branch}=118.70-18=100.70.
+		\]
+
+		Step 2. Tree expected value at the chance node.
+		\[
+		EV_{tree}(A_2)=0.60(130.70)+0.40(100.70)=118.70.
+		\]
+
+		Step 3. Decision tree statement.
+		\begin{center}
+			\begin{tabular}{l}
+				\toprule
+				Decision tree summary \\
+				\midrule
+				$D_0$: choose C8-recommended strategy $A_2$ \\
+				$\rightarrow C_1$: regulation stable (0.60) $\to 130.70$ \\
+				$\rightarrow C_2$: regulation tightens (0.40) $\to 100.70$ \\
+				Root equivalent value: $118.70$ \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+
+		Step 4. Final C9 conclusion.
+		The decision tree confirms keeping $A_2$ as final recommendation.
+
+		\newpage
+		\item
+		\subsection*{Problem description}
+		A textile manufacturer must choose one production policy for a new line:
+		$B_1$ (premium fabrics), $B_2$ (balanced mix), $B_3$ (mass volume), $B_4$ (contract manufacturing).
+		States for market acceptance are:
+		\[
+		S_1:0.40,\quad S_2:0.40,\quad S_3:0.20.
+		\]
+		Payoffs are in thousand USD.
+		After selecting the best C8 alternative, the firm must model a second-stage quality-audit result, so a decision tree is required.
+
+		\subsection*{C8}
+		Step 1. Payoff table.
+		\begin{center}
+			\begin{tabular}{l c c c c c}
+				\toprule
+				State of nature & Probability & $B_1$ & $B_2$ & $B_3$ & $B_4$ \\
+				\midrule
+				$S_1$ & 0.40 & 145 & 138 & 160 & 130 \\
+				$S_2$ & 0.40 & 95 & 110 & 88 & 112 \\
+				$S_3$ & 0.20 & 42 & 70 & 28 & 85 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+
+		Step 2. EV table and ranking.
+		\[
+		\begin{aligned}
+		EV(B_1)&=104.80,\\
+		EV(B_2)&=113.20,\\
+		EV(B_3)&=104.00,\\
+		EV(B_4)&=113.80.
+		\end{aligned}
+		\]
+		EV ranking:
+		\[
+		B_4(113.80)>B_2(113.20)>B_1(104.80)>B_3(104.00).
+		\]
+
+		Step 3. Maximin ranking.
+		\[
+		\min(B_1)=42,\ \min(B_2)=70,\ \min(B_3)=28,\ \min(B_4)=85.
+		\]
+		Maximin ranking:
+		\[
+		B_4(85)>B_2(70)>B_1(42)>B_3(28).
+		\]
+
+		Step 4. Regret table and Minimax Regret ranking.
+		State best payoffs: $\max(S_1)=160$, $\max(S_2)=112$, $\max(S_3)=85$.
+		\begin{center}
+			\begin{tabular}{l c c c c}
+				\toprule
+				Alternative & $S_1$ & $S_2$ & $S_3$ & Max regret \\
+				\midrule
+				$B_1$ & 15 & 17 & 43 & 43 \\
+				$B_2$ & 22 & 2 & 15 & 22 \\
+				$B_3$ & 0 & 24 & 57 & 57 \\
+				$B_4$ & 30 & 0 & 0 & 30 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Minimax Regret ranking:
+		\[
+		B_2(22)<B_4(30)<B_1(43)<B_3(57).
+		\]
+
+		Step 5. C8 conclusion.
+		Bayes and Maximin select $B_4$, while Minimax Regret selects $B_2$.
+		Given that production continuity is the priority, the team keeps $B_4$ as baseline for the second stage.
+
+		\subsection*{C9 transition and decision tree}
+		If $B_4$ is implemented, a quality audit can be:
+		\begin{itemize}
+			\item Passed (probability $0.70$), giving bonus $+9$.
+			\item Failed (probability $0.30$), causing penalty $-21$.
+		\end{itemize}
+		Use a decision tree to evaluate this second-stage uncertainty.
+
+		\[
+		\text{Pass branch}=113.80+9=122.80,
+		\qquad
+		\text{Fail branch}=113.80-21=92.80.
+		\]
+		\[
+		EV_{tree}(B_4)=0.70(122.80)+0.30(92.80)=113.80.
+		\]
+		\begin{center}
+			\begin{tabular}{l}
+				\toprule
+				Decision tree summary \\
+				\midrule
+				$D_0$: choose $B_4$ from C8 \\
+				$\rightarrow C_1$: audit pass (0.70) $\to 122.80$ \\
+				$\rightarrow C_2$: audit fail (0.30) $\to 92.80$ \\
+				Root equivalent value: $113.80$ \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Final C9 conclusion: keep $B_4$ as the recommended policy.
+
+		\newpage
+		\item
+		\subsection*{Problem description}
+		A digital-learning company must choose one platform launch strategy:
+		$C_1$ (fast launch), $C_2$ (guided rollout), or $C_3$ (institutional partnership).
+		Enrollment states are:
+		\[
+		E_1:0.30,\quad E_2:0.45,\quad E_3:0.25.
+		\]
+		Payoffs are in thousand USD.
+		After C8, the selected strategy must face a second-stage cybersecurity uncertainty; therefore, a decision tree is required.
+
+		\subsection*{C8}
+		Step 1. Payoff table.
+		\begin{center}
+			\begin{tabular}{l c c c c}
+				\toprule
+				State of nature & Probability & $C_1$ & $C_2$ & $C_3$ \\
+				\midrule
+				$E_1$ & 0.30 & 168 & 150 & 158 \\
+				$E_2$ & 0.45 & 92 & 118 & 106 \\
+				$E_3$ & 0.25 & 30 & 84 & 74 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+
+		Step 2. Bayes EV.
+		\[
+		EV(C_1)=100.80,\quad EV(C_2)=116.10,\quad EV(C_3)=114.20.
+		\]
+		EV ranking: $C_2>C_3>C_1$.
+
+		Step 3. Maximin.
+		\[
+		\min(C_1)=30,\quad \min(C_2)=84,\quad \min(C_3)=74.
+		\]
+		Maximin ranking: $C_2>C_3>C_1$.
+
+		Step 4. Minimax Regret.
+		State best payoffs: $\max(E_1)=168$, $\max(E_2)=118$, $\max(E_3)=84$.
+		\begin{center}
+			\begin{tabular}{l c c c c}
+				\toprule
+				Alternative & $E_1$ & $E_2$ & $E_3$ & Max regret \\
+				\midrule
+				$C_1$ & 0 & 26 & 54 & 54 \\
+				$C_2$ & 18 & 0 & 0 & 18 \\
+				$C_3$ & 10 & 12 & 10 & 12 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Minimax Regret ranking: $C_3(12)<C_2(18)<C_1(54)$.
+
+		Step 5. C8 conclusion.
+		C8 identifies $C_2$ as best by EV and Maximin, while $C_3$ has the lowest maximum regret.
+		Because the board prioritizes expected performance with acceptable floor, $C_2$ is forwarded to C9.
+
+		\subsection*{C9 transition and decision tree}
+		If $C_2$ is launched, a cyber incident can be:
+		\begin{itemize}
+			\item Controlled quickly (probability $0.75$), impact $+8$.
+			\item Major outage (probability $0.25$), impact $-24$.
+		\end{itemize}
+		\[
+		\text{Controlled}=116.10+8=124.10,
+		\qquad
+		\text{Outage}=116.10-24=92.10.
+		\]
+		\[
+		EV_{tree}(C_2)=0.75(124.10)+0.25(92.10)=116.10.
+		\]
+		\begin{center}
+			\begin{tabular}{l}
+				\toprule
+				Decision tree summary \\
+				\midrule
+				$D_0$: choose $C_2$ after C8 \\
+				$\rightarrow C_1$: controlled incident (0.75) $\to 124.10$ \\
+				$\rightarrow C_2$: major outage (0.25) $\to 92.10$ \\
+				Root equivalent value: $116.10$ \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Final C9 conclusion: keep $C_2$ as final recommendation.
+
+		\newpage
+		\item
+		\subsection*{Problem description}
+		A health-supply distributor must choose one inventory strategy:
+		$D_1$ (aggressive stock), $D_2$ (balanced stock), $D_3$ (just-in-time), or $D_4$ (regional micro-warehouses).
+		Demand-pressure states are:
+		\[
+		P_1:0.35,\quad P_2:0.40,\quad P_3:0.25.
+		\]
+		Payoffs are in thousand USD.
+		After C8, fuel volatility introduces a second-stage risk, so a decision tree is needed before the final recommendation.
+
+		\subsection*{C8}
+		Step 1. Payoff table.
+		\begin{center}
+			\begin{tabular}{l c c c c c}
+				\toprule
+				State of nature & Probability & $D_1$ & $D_2$ & $D_3$ & $D_4$ \\
+				\midrule
+				$P_1$ & 0.35 & 155 & 146 & 170 & 140 \\
+				$P_2$ & 0.40 & 100 & 118 & 88 & 122 \\
+				$P_3$ & 0.25 & 45 & 86 & 22 & 94 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+
+		Step 2. Bayes EV.
+		\[
+		EV(D_1)=106.50,\quad EV(D_2)=118.00,\quad EV(D_3)=98.30,\quad EV(D_4)=119.90.
+		\]
+		EV ranking: $D_4>D_2>D_1>D_3$.
+
+		Step 3. Maximin.
+		\[
+		\min(D_1)=45,\ \min(D_2)=86,\ \min(D_3)=22,\ \min(D_4)=94.
+		\]
+		Maximin ranking: $D_4>D_2>D_1>D_3$.
+
+		Step 4. Minimax Regret.
+		State best payoffs: $\max(P_1)=170$, $\max(P_2)=122$, $\max(P_3)=94$.
+		\begin{center}
+			\begin{tabular}{l c c c c}
+				\toprule
+				Alternative & $P_1$ & $P_2$ & $P_3$ & Max regret \\
+				\midrule
+				$D_1$ & 15 & 22 & 49 & 49 \\
+				$D_2$ & 24 & 4 & 8 & 24 \\
+				$D_3$ & 0 & 34 & 72 & 72 \\
+				$D_4$ & 30 & 0 & 0 & 30 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Minimax Regret ranking: $D_2(24)<D_4(30)<D_1(49)<D_3(72)$.
+
+		Step 5. C8 conclusion.
+		Bayes and Maximin select $D_4$, while Minimax Regret favors $D_2$.
+		Given service-level constraints, management carries $D_4$ into C9.
+
+		\subsection*{C9 transition and decision tree}
+		For $D_4$, fuel-cost evolution is:
+		\begin{itemize}
+			\item Stable fuel (probability $0.55$), impact $+11$.
+			\item Fuel spike (probability $0.45$), impact $-14$.
+		\end{itemize}
+		\[
+		\text{Stable fuel}=119.90+11=130.90,
+		\qquad
+		\text{Fuel spike}=119.90-14=105.90.
+		\]
+		\[
+		EV_{tree}(D_4)=0.55(130.90)+0.45(105.90)=119.65.
+		\]
+		\begin{center}
+			\begin{tabular}{l}
+				\toprule
+				Decision tree summary \\
+				\midrule
+				$D_0$: choose $D_4$ from C8 \\
+				$\rightarrow C_1$: stable fuel (0.55) $\to 130.90$ \\
+				$\rightarrow C_2$: fuel spike (0.45) $\to 105.90$ \\
+				Root equivalent value: $119.65$ \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Final C9 conclusion: the tree still supports $D_4$ as final decision.
+	\end{ExamProblems}
+\end{document}

@@ -1,0 +1,134 @@
+\input{../../preamble/preamble_exams.tex}
+\begin{document}
+	\ExamTitleBlock{10th grade}{Term 2 -- Lesson 3 PROYECT: Project Problems (C8 + C9)}{}
+	
+	\ExamSection{Project problems}
+	\begin{ExamProblems}
+		\item
+		\subsection*{Problem statement}
+		A coffee-export startup must choose one logistics model for the next season: 
+		$A_1$ (outsourced shipping), $A_2$ (mixed model), or $A_3$ (own fleet).
+		Demand states and probabilities are:
+		\[
+		H:0.45,\quad M:0.35,\quad L:0.20.
+		\]
+		Payoffs are in thousand USD.
+		\begin{center}
+			\begin{tabular}{l c c c c}
+				\toprule
+				State of nature & Probability & $A_1$ & $A_2$ & $A_3$ \\
+				\midrule
+				$H$ & 0.45 & 150 & 142 & 165 \\
+				$M$ & 0.35 & 98 & 112 & 90 \\
+				$L$ & 0.20 & 52 & 78 & 35 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		\begin{enumerate}
+			\item Apply C8: compute and rank alternatives by Bayes (EV), Maximin, and Minimax Regret.
+			\item Build any intermediate tables needed (EV summary and regret table).
+			\item After selecting the strategy from C8, evaluate this second-stage uncertainty with C9:
+			\begin{itemize}
+				\item Rule stays stable (probability $0.60$): payoff adjustment $+12$.
+				\item Rule tightens (probability $0.40$): payoff adjustment $-18$.
+			\end{itemize}
+			Construct and evaluate the decision tree and state the final recommendation.
+		\end{enumerate}
+
+		\newpage
+		\item
+		\subsection*{Problem statement}
+		A textile manufacturer must choose one production policy:
+		$B_1$ (premium fabrics), $B_2$ (balanced mix), $B_3$ (mass volume), $B_4$ (contract manufacturing).
+		Market acceptance states and probabilities are:
+		\[
+		S_1:0.40,\quad S_2:0.40,\quad S_3:0.20.
+		\]
+		Payoffs are in thousand USD.
+		\begin{center}
+			\begin{tabular}{l c c c c c}
+				\toprule
+				State of nature & Probability & $B_1$ & $B_2$ & $B_3$ & $B_4$ \\
+				\midrule
+				$S_1$ & 0.40 & 145 & 138 & 160 & 130 \\
+				$S_2$ & 0.40 & 95 & 110 & 88 & 112 \\
+				$S_3$ & 0.20 & 42 & 70 & 28 & 85 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		\begin{enumerate}
+			\item Apply C8: compute and rank alternatives by Bayes (EV), Maximin, and Minimax Regret.
+			\item Include intermediate tables required for C8.
+			\item Use the C8 recommendation as the first-stage choice. Then apply C9 with this second-stage uncertainty:
+			\begin{itemize}
+				\item Audit pass (probability $0.70$), payoff adjustment $+9$.
+				\item Audit fail (probability $0.30$), payoff adjustment $-21$.
+			\end{itemize}
+			Construct and evaluate the decision tree and state the final recommendation.
+		\end{enumerate}
+
+		\newpage
+		\item
+		\subsection*{Problem statement}
+		A digital-learning company must choose one platform launch strategy:
+		$C_1$ (fast launch), $C_2$ (guided rollout), or $C_3$ (institutional partnership).
+		Enrollment states and probabilities are:
+		\[
+		E_1:0.30,\quad E_2:0.45,\quad E_3:0.25.
+		\]
+		Payoffs are in thousand USD.
+		\begin{center}
+			\begin{tabular}{l c c c c}
+				\toprule
+				State of nature & Probability & $C_1$ & $C_2$ & $C_3$ \\
+				\midrule
+				$E_1$ & 0.30 & 168 & 150 & 158 \\
+				$E_2$ & 0.45 & 92 & 118 & 106 \\
+				$E_3$ & 0.25 & 30 & 84 & 74 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		\begin{enumerate}
+			\item Apply C8: compute and rank alternatives by Bayes (EV), Maximin, and Minimax Regret.
+			\item Build the intermediate summary table(s) and regret table.
+			\item After deciding from C8, apply C9 with this second-stage uncertainty:
+			\begin{itemize}
+				\item Controlled incident (probability $0.75$), payoff adjustment $+8$.
+				\item Major outage (probability $0.25$), payoff adjustment $-24$.
+			\end{itemize}
+			Construct and evaluate the decision tree and report the final recommendation.
+		\end{enumerate}
+
+		\newpage
+		\item
+		\subsection*{Problem statement}
+		A health-supply distributor must choose one inventory strategy:
+		$D_1$ (aggressive stock), $D_2$ (balanced stock), $D_3$ (just-in-time), or $D_4$ (regional micro-warehouses).
+		Demand-pressure states and probabilities are:
+		\[
+		P_1:0.35,\quad P_2:0.40,\quad P_3:0.25.
+		\]
+		Payoffs are in thousand USD.
+		\begin{center}
+			\begin{tabular}{l c c c c c}
+				\toprule
+				State of nature & Probability & $D_1$ & $D_2$ & $D_3$ & $D_4$ \\
+				\midrule
+				$P_1$ & 0.35 & 155 & 146 & 170 & 140 \\
+				$P_2$ & 0.40 & 100 & 118 & 88 & 122 \\
+				$P_3$ & 0.25 & 45 & 86 & 22 & 94 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		\begin{enumerate}
+			\item Apply C8: compute and rank alternatives by Bayes (EV), Maximin, and Minimax Regret.
+			\item Include intermediate tables needed for EV and regret analysis.
+			\item Use the C8 recommendation as the first-stage action and then apply C9 with this second-stage uncertainty:
+			\begin{itemize}
+				\item Stable fuel (probability $0.55$), payoff adjustment $+11$.
+				\item Fuel spike (probability $0.45$), payoff adjustment $-14$.
+			\end{itemize}
+			Construct and evaluate the decision tree and state the final recommendation.
+		\end{enumerate}
+	\end{ExamProblems}
+\end{document}
