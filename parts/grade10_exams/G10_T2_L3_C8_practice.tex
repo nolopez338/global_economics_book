@@ -1,0 +1,178 @@
+\input{../../preamble/preamble_exams.tex}
+\begin{document}
+	\ExamTitleBlock{10th grade}{Term 2 -- Lesson 3 MATERIAL: Decision Analysis with Bayes, Maximin, and Minimax Regret (Worked Solutions)}{}
+	
+	\ExamSection{C8: Comparison of Bayes, Maximin, and Minimax Regret on the same dataset}
+	\begin{ExamProblems}
+		\item
+		\subsection*{Problem description}
+		A manufacturing cooperative must choose one production plan for the next month: Plan $A_1$, Plan $A_2$, or Plan $A_3$.
+		There are six market-cost states with probabilities:
+		\[
+		S_1:0.18,\ S_2:0.17,\ S_3:0.16,\ S_4:0.15,\ S_5:0.19,\ S_6:0.15,
+		\]
+		which sum to $1.00$.
+		Payoffs are in thousand USD. Apply Bayes (EV), Maximin, and Minimax Regret.
+
+		\subsection*{C8}
+		Step 1. Build the payoff table.
+		\begin{center}
+			\textit{Payoff table} \\
+			\begin{tabular}{l c c c c}
+				\toprule
+				State of nature & Probability & $A_1$ & $A_2$ & $A_3$ \\
+				\midrule
+				$S_1$ & 0.18 & 120 & 110 & 140 \\
+				$S_2$ & 0.17 & 95 & 100 & 90 \\
+				$S_3$ & 0.16 & 80 & 85 & 70 \\
+				$S_4$ & 0.15 & 60 & 70 & 65 \\
+				$S_5$ & 0.19 & 40 & 55 & 35 \\
+				$S_6$ & 0.15 & 20 & 30 & 25 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+
+		Step 2. Bayes criterion (Expected Value) using $EV(A_i)=\sum p_j\cdot x_{ij}$.
+		\[
+		\begin{aligned}
+		EV(A_1) &= 0.18(120)+0.17(95)+0.16(80)+0.15(60)+0.19(40)+0.15(20)\\
+		&=21.60+16.15+12.80+9.00+7.60+3.00=70.15,\\
+		EV(A_2) &= 0.18(110)+0.17(100)+0.16(85)+0.15(70)+0.19(55)+0.15(30)\\
+		&=19.80+17.00+13.60+10.50+10.45+4.50=75.85,\\
+		EV(A_3) &= 0.18(140)+0.17(90)+0.16(70)+0.15(65)+0.19(35)+0.15(25)\\
+		&=25.20+15.30+11.20+9.75+6.65+3.75=71.85.
+		\end{aligned}
+		\]
+		EV ranking (best $\to$ worst):
+		\[
+		A_2\,(75.85) > A_3\,(71.85) > A_1\,(70.15).
+		\]
+
+		Step 3. Maximin criterion.
+		\[
+		\begin{aligned}
+		\min(A_1)&=\min\{120,95,80,60,40,20\}=20,\\
+		\min(A_2)&=\min\{110,100,85,70,55,30\}=30,\\
+		\min(A_3)&=\min\{140,90,70,65,35,25\}=25.
+		\end{aligned}
+		\]
+		Maximin ranking (best $\to$ worst):
+		\[
+		A_2\,(\min=30) > A_3\,(\min=25) > A_1\,(\min=20).
+		\]
+
+		Step 4. Minimax Regret criterion.
+		Find the best payoff in each state:
+		\[
+		\begin{aligned}
+		\max(S_1)&=140,\ \max(S_2)=100,\ \max(S_3)=85,\\
+		\max(S_4)&=70,\ \max(S_5)=55,\ \max(S_6)=30.
+		\end{aligned}
+		\]
+		Build regret table using $r_{ij}=\max(S_j)-x_{ij}$.
+		\begin{center}
+			\begin{tabular}{l c c c c c c c}
+				\toprule
+				Alternative & $S_1$ & $S_2$ & $S_3$ & $S_4$ & $S_5$ & $S_6$ & Max regret \\
+				\midrule
+				$A_1$ & $140-120=20$ & $100-95=5$ & $85-80=5$ & $70-60=10$ & $55-40=15$ & $30-20=10$ & 20 \\
+				$A_2$ & $140-110=30$ & $100-100=0$ & $85-85=0$ & $70-70=0$ & $55-55=0$ & $30-30=0$ & 30 \\
+				$A_3$ & $140-140=0$ & $100-90=10$ & $85-70=15$ & $70-65=5$ & $55-35=20$ & $30-25=5$ & 20 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Minimax Regret ranking (best $\to$ worst, lower is better):
+		\[
+		A_1\,(20)=A_3\,(20) > A_2\,(30).
+		\]
+		There is a tie between $A_1$ and $A_3$ under Minimax Regret.
+
+		Step 5. Conclusion.
+		Bayes and Maximin both select $A_2$.
+		Minimax Regret gives a tie between $A_1$ and $A_3$.
+		The ordered lists show why strategies may disagree even on the same payoff table.
+
+		\newpage
+		\item
+		\subsection*{Problem description}
+		A transport company must choose one fleet plan among six alternatives: $B_1,B_2,B_3,B_4,B_5,B_6$.
+		There are three fuel-demand states with probabilities:
+		\[
+		T_1:0.50,\quad T_2:0.30,\quad T_3:0.20,
+		\]
+		and $0.50+0.30+0.20=1.00$.
+		Payoffs are in thousand USD. Apply Bayes (EV), Maximin, and Minimax Regret.
+
+		\subsection*{C8}
+		Step 1. Build the payoff table.
+		\begin{center}
+			\textit{Payoff table} \\
+			\begin{tabular}{l c c c c c c c}
+				\toprule
+				State of nature & Probability & $B_1$ & $B_2$ & $B_3$ & $B_4$ & $B_5$ & $B_6$ \\
+				\midrule
+				$T_1$ & 0.50 & 95 & 90 & 110 & 85 & 100 & 92 \\
+				$T_2$ & 0.30 & 70 & 75 & 60 & 80 & 65 & 78 \\
+				$T_3$ & 0.20 & 30 & 40 & 10 & 55 & 35 & 20 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+
+		Step 2. Bayes criterion (Expected Value).
+		\[
+		\begin{aligned}
+		EV(B_1)&=0.50(95)+0.30(70)+0.20(30)=74.50,\\
+		EV(B_2)&=0.50(90)+0.30(75)+0.20(40)=75.50,\\
+		EV(B_3)&=0.50(110)+0.30(60)+0.20(10)=75.00,\\
+		EV(B_4)&=0.50(85)+0.30(80)+0.20(55)=77.50,\\
+		EV(B_5)&=0.50(100)+0.30(65)+0.20(35)=76.50,\\
+		EV(B_6)&=0.50(92)+0.30(78)+0.20(20)=73.40.
+		\end{aligned}
+		\]
+		EV ranking (best $\to$ worst):
+		\[
+		B_4\,(77.50)>B_5\,(76.50)>B_2\,(75.50)>B_3\,(75.00)>B_1\,(74.50)>B_6\,(73.40).
+		\]
+
+		Step 3. Maximin criterion.
+		\[
+		\begin{aligned}
+		\min(B_1)&=30,\ \min(B_2)=40,\ \min(B_3)=10,\\
+		\min(B_4)&=55,\ \min(B_5)=35,\ \min(B_6)=20.
+		\end{aligned}
+		\]
+		Maximin ranking (best $\to$ worst):
+		\[
+		B_4\,(55)>B_2\,(40)>B_5\,(35)>B_1\,(30)>B_6\,(20)>B_3\,(10).
+		\]
+
+		Step 4. Minimax Regret criterion.
+		Best payoff in each state:
+		\[
+		\max(T_1)=110,\quad \max(T_2)=80,\quad \max(T_3)=55.
+		\]
+		Regret table:
+		\begin{center}
+			\begin{tabular}{l c c c c}
+				\toprule
+				Alternative & $T_1$ & $T_2$ & $T_3$ & Max regret \\
+				\midrule
+				$B_1$ & $110-95=15$ & $80-70=10$ & $55-30=25$ & 25 \\
+				$B_2$ & $110-90=20$ & $80-75=5$ & $55-40=15$ & 20 \\
+				$B_3$ & $110-110=0$ & $80-60=20$ & $55-10=45$ & 45 \\
+				$B_4$ & $110-85=25$ & $80-80=0$ & $55-55=0$ & 25 \\
+				$B_5$ & $110-100=10$ & $80-65=15$ & $55-35=20$ & 20 \\
+				$B_6$ & $110-92=18$ & $80-78=2$ & $55-20=35$ & 35 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
+		Minimax Regret ranking (best $\to$ worst, lower is better):
+		\[
+		B_2\,(20)=B_5\,(20)>B_1\,(25)=B_4\,(25)>B_6\,(35)>B_3\,(45).
+		\]
+		Ties are explicit between $(B_2,B_5)$ and between $(B_1,B_4)$.
+
+		Step 5. Conclusion.
+		The three criteria lead to different priority orders, so decision choice depends on risk attitude.
+	\end{ExamProblems}
+\end{document}
