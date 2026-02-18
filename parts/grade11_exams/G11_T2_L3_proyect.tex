@@ -153,12 +153,11 @@
 			\item A scenario comparison view with at least two scenarios, supported by dashboard and/or macro outputs.
 		\end{itemize}
 		
-		\textbf{1.6 Suggested workflow (C10 $\rightarrow$ C8/C9)}\par
+		\textbf{1.6 Suggested workflow}\par
 		\begin{enumerate}
 			\item Import or paste raw data and define metadata and confidence level.
 			\item Execute workbook calculations to obtain CI outputs.
 			\item Use dashboard filters and scenario selectors to compare contexts and justify conclusions.
-			\item Use a macro to save the current scenario and repeat for another case.
 		\end{enumerate}
 		
 		\SubsectionBox{2. Solved Example 1}
@@ -200,12 +199,6 @@
 		\textbf{Conclusion}\par
 		With 95\% confidence, the mean daily spread for the selected week is between 49.46 and 51.59 basis points. This interval supports the estimate of the operational spread parameter used in short-term trading decisions.
 		
-		\textbf{Dashboard justification}\par
-		The confidence-level dropdown and scenario selector update the CI band chart and the KPI cards ($\bar{x}$, $ME$, interval bounds). The visual overlap of daily values with the CI band justifies the conclusion reported to the desk manager.
-		
-		\textbf{Macro use}\par
-		A \texttt{SnapshotScenario()} macro stores the current scenario, confidence level, and CI outputs in the comparison table. This allows immediate repetition for an alternative week without reformatting the workbook.
-		
 		\SubsectionBox{3. Solved Example 2}
 		
 		\textbf{Economic context: import shipping cost per container}\par
@@ -245,12 +238,6 @@
 		
 		\textbf{Conclusion}\par
 		With 90\% confidence, the mean shipping cost parameter for this route is between 1.814 and 1.875 thousand USD per container. The interval supports budgeting and contract negotiation decisions for the next cycle.
-		
-		\textbf{Dashboard justification}\par
-		A scenario slicer compares \textit{Port A -- Q2} vs. \textit{Port B -- Q2}. The CI comparison chart and KPI tiles show interval width and center for each route, supporting a justified scenario-based conclusion.
-		
-		\textbf{Macro use}\par
-		A \texttt{ResetAndRecompute()} macro clears the input range, imports the next scenario block, recalculates outputs, and logs both CI results in a comparison table for rapid reporting.
 		
 	\end{multicols}
 	
