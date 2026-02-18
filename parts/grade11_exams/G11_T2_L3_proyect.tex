@@ -12,6 +12,8 @@
 \usepackage{amsmath}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+
 
 \setlength{\parindent}{0pt}
 \setlength{\tabcolsep}{6pt}
@@ -110,7 +112,7 @@
 		
 		\textbf{1.2 Computational Thinking Background}\par
 		Before this proyect, students have already worked with:
-		\begin{itemize}
+		\begin{itemize}[noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt]
 			\item C1: Integrates external data sources into Excel.
 			\item C2: Understands array formulas in spreadsheets.
 			\item C3: Uses array formulas in spreadsheets.
@@ -160,10 +162,11 @@
 		\begin{enumerate}
 			\item Import or paste raw data and define metadata and confidence level.
 			\item Execute workbook calculations to obtain both t-based and z-based outputs.
-			\item Use a dashboard toggle or side-by-side view for t vs z values, including explicit visualization of both intervals (comparison table, interval bars, or dual error bars on the same mean marker).
+			\item Use a dashboard toggle or side-by-side view for t vs z values, including explicit visualization of both intervals.
 			\item Report $ME_t-ME_z$ and/or interval-width difference, and use scenario selectors to compare contexts and justify conclusions.
 		\end{enumerate}
 		
+		\newpage
 		\SubsectionBox{2. Solved Example 1}
 		
 		\textbf{Financial context: daily exchange-rate spread in a broker desk}\par
@@ -208,9 +211,7 @@
 		\textbf{Conclusion}\par
 		With 95\% confidence, using the preferred t-based method for unknown variance, the mean daily spread for the selected week is between 49.46 and 51.59 basis points. The z-approximation interval is 49.57 to 51.47 basis points, which is close but slightly narrower.
 		
-		\textbf{Dashboard justification}\par
-		The dashboard shows $CI_t$ and $CI_z$ side-by-side for the Base week using a shared mean marker with two interval bars and a comparison field for $ME_t-ME_z$. This view justifies the t-based conclusion while making the z approximation directly visible.
-		
+		\vspace{1cm}
 		\SubsectionBox{3. Solved Example 2}
 		
 		\textbf{Economic context: import shipping cost per container}\par
@@ -255,9 +256,6 @@
 		
 		\textbf{Conclusion}\par
 		With 90\% confidence, using the preferred t-based method for unknown variance, the mean shipping cost parameter for this route is between 1.814 and 1.874 thousand USD per container. The z-approximation interval is 1.816 to 1.872 thousand USD, very close to the t-based result in this case.
-		
-		\textbf{Dashboard justification}\par
-		The dashboard presents a side-by-side t-vs-z comparison for Port A -- Q2 with both intervals visualized and a displayed $ME_t-ME_z$ field. This evidence supports the final t-based conclusion and shows that the z approximation is consistent for this sample size.
 		
 	\end{multicols}
 	
