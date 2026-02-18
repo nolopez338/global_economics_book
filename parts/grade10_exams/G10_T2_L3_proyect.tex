@@ -9,12 +9,14 @@
 \usepackage{array}
 \usepackage{tabularx}
 \usepackage{multicol}
+\usepackage{amsmath}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
 \setlength{\parindent}{0pt}
 \setlength{\tabcolsep}{6pt}
 \renewcommand{\arraystretch}{1.15}
+\setlength{\emergencystretch}{3em}
 
 % Column types
 \newcolumntype{Y}{>{\raggedright\arraybackslash}m{\dimexpr0.30\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
@@ -48,10 +50,11 @@
 		\CellCenter{%
 			\vspace{-5mm}
 			\textbf{GLOBAL ECONOMICS}\par
+			\textbf{COMPUTATIONAL THINKING}\par
 			\textbf{GRADE: 10TH}\par
-			\textbf{TERM 2 -- LESSON 3 PROJECT}\par
+			\textbf{TERM 2 -- PROJECT}\par
 			\textbf{JAVASCRIPT DECISION ANALYSIS PROJECT}\par
-			\textbf{TEACHER'S NAME: Nicolás López Cuéllar}
+			\textbf{Nicolás López Cuéllar, Jaime David Navarrete}
 		}
 		&
 		\CellCenter{%
@@ -93,38 +96,32 @@
 	% =========================
 	% STUDENT LINE
 	% =========================
-	\noindent
-	\textbf{Student’s name:} \rule{7cm}{0.4pt}\hfill
-	\textbf{Group:} \rule{2cm}{0.4pt}\hfill
-	\textbf{Date:} \rule{3cm}{0.4pt}
 	
-	
-	% =========================
-	% EXAM BODY
-	% =========================
 	\begin{multicols}{2}
-		\SubsectionBox{Criteria assessment}\vspace{-0.25cm}
-		Presenting and defending the JavaScript program is the evidence for Criterion 10.
 		
 		\vspace{0.25cm}
 		\SubsectionBox{1. Project brief}\vspace{-0.25cm}
-		\textbf{Introduction}\par
-		This programming project asks students to implement a JavaScript tool that automates C8 decision-analysis outputs (Bayes/EV, Maximin, Minimax Regret) and then uses those outputs to support a C9 decision-tree conclusion.
-		Presenting and defending this program is the evidence for Criterion 10.
+		
+		\textbf{1.1 Purpose of the project}\par
+		This programming project requires students to design and implement a JavaScript tool that automates C8 decision-analysis calculations (Bayes/Expected Value, Maximin, and Minimax Regret).  
+		The results produced by this tool must then be used to support a C9 decision-tree conclusion.  
+		The presentation and defense of the implemented program constitute the evidence for Criterion C10.
 		
 		\vspace{0.25cm}
-		\textbf{Input specification}\par
-		The program receives one payoff table with:
+		\textbf{1.2 Input specification}\par
+		The program must accept a single payoff table containing:
 		\begin{itemize}
-			\item States of nature and their probabilities.
-			\item Alternatives.
-			\item Payoff value for every alternative-state pair.
+			\item States of nature with their corresponding probabilities.
+			\item A set of decision alternatives.
+			\item The payoff for each alternative–state pair.
 		\end{itemize}
+		
 		Example input format (values in thousand USD):
+		
 		\begin{center}
 			\begin{tabular}{l c c c c}
 				\hline
-				State of nature & Probability & $A_1$ & $A_2$ & $A_3$ \\
+				State & Probability & $A_1$ & $A_2$ & $A_3$ \\
 				\hline
 				$S_1$ & 0.40 & 140 & 130 & 155 \\
 				$S_2$ & 0.35 & 95 & 105 & 90 \\
@@ -133,38 +130,49 @@
 			\end{tabular}
 		\end{center}
 		
-		\textbf{Output specification}\par
-		For each alternative, the program must return:
+		\vspace{0.25cm}
+		\textbf{1.3 Required Outputs}\par
+		For each alternative, the program must compute:
+		
 		\begin{itemize}
-			\item maximum payoff,
-			\item minimum payoff,
-			\item expected value (using provided probabilities),
-			\item maximum regret.
+			\item Maximum payoff (for Maximax).
+			\item Minimum payoff (for Maximin).
+			\item Expected value using the given probabilities (Bayes criterion).
+			\item Maximum regret (Minimax Regret criterion).
 		\end{itemize}
-		The output format is free, but it must be consistent and readable.
-		A recommended summary table is:
-		\hspace{-5mm}
+		
+		The results must be displayed in a structured summary table such as:
 		\begin{center}
 			\begin{tabular}{l c c c c}
 				\hline
-				Alt. & Max payoff & Min payoff & EV & Max regret \\
+				Alt. & Max P. & Min P. & EV & Max Regret \\
+				\hline
+				$A_1$ & $\max P(A_1)$ & $\min P(A_1)$ & $EV(A_1)$ & $\max R(A_1)$ \\
+				$A_2$ & $\max P(A_2)$ & $\min P(A_2)$ & $EV(A_2)$ & $\max R(A_2)$ \\
+				$A_3$ & $\max P(A_3)$ & $\min P(A_3)$ & $EV(A_3)$ & $\max R(A_3)$ \\
 				\hline
 			\end{tabular}
 		\end{center}
 		
-		\textbf{Workflow requirement (C8 to C9)}\par
+		\vspace{0.25cm}
+		\textbf{1.4 Decision workflow (C10 → C8 → C9)}\par
+		
 		\begin{enumerate}
-			\item Run the JavaScript program and generate tables.
-			\item Use those tables to conclude C8 rankings (Bayes, Maximin, Minimax Regret).
-			\item Use the C8 recommendation as input for a C9 decision tree with second-stage uncertainty.
+			\item \textbf{(C10)} Execute the JavaScript program to generate the structured summary table.
+			\item \textbf{(C8)} Identify and justify recommendations using the computed results.
+			\item \textbf{(C9)} Use the selected C8 recommendations as the basis for constructing the C9 decision tree.
 		\end{enumerate}
-		After presenting the program, the student may proceed to solve the project problems in \texttt{G10\_T2\_L3\_proyect\allowbreak\_problems.tex}.
+		
+		After presenting the program and its outputs, students must apply this workflow to the assigned project problems in order to activate Criteria C8 and C9.
 		
 		\vspace{0.25cm}
-		\SubsectionBox{2. Solved example 1 (program-output guided)}\vspace{-0.25cm}
-		\textbf{Base payoff table}\par
+		\SubsectionBox{2. Solved Example 1}
+		
+		\textbf{1. Program-Based Ranking and Structured Decision Refinement}\par
+		A firm must choose one strategy among $A_1,A_2,A_3$ under uncertain market conditions.
+		
 		\begin{center}
-			\begin{tabular}{l c c c c}
+			\begin{tabular}{l  c c c c}
 				\hline
 				State & Probability & $A_1$ & $A_2$ & $A_3$ \\
 				\hline
@@ -175,20 +183,13 @@
 			\end{tabular}
 		\end{center}
 		
-		\textbf{Program-produced regret table}\par
-		\begin{center}
-			\begin{tabular}{l c c c c}
-				\hline
-				Alt. & $H$ regret & $M$ regret & $L$ regret & Max regret \\
-				\hline
-				$A_1$ & 15 & 14 & 26 & 26 \\
-				$A_2$ & 23 & 0 & 0 & 23 \\
-				$A_3$ & 0 & 22 & 43 & 43 \\
-				\hline
-			\end{tabular}
-		\end{center}
+		After obtaining the C10 summary and computing the C8 results, apply the following structured C9 decision procedure:
+		\begin{itemize}
+			\item Step 1: Retain the top two alternatives according to Expected Value (EV).
+			\item Step 2: Within that subset, apply the Minimax Regret criterion and choose one.
+		\end{itemize}
 		
-		\textbf{Program-produced C8 summary table}\par
+		\textbf{C10 summary table (program output)}\par
 		\begin{center}
 			\begin{tabular}{l c c c c}
 				\hline
@@ -201,121 +202,82 @@
 			\end{tabular}
 		\end{center}
 		
-		\textbf{How to conclude C8 using program outputs}\par
-		From the summary table:
+		\textbf{C8 solution (ranking and recommendations)}\par
 		\begin{itemize}
-			\item Bayes (EV) selects $A_2$.
-			\item Maximin (largest minimum) selects $A_2$.
-			\item Minimax Regret (smallest max regret) selects $A_2$.
+			\item EV ranking: \par $A_2>A_3>A_1$.
+			\item Maximax ranking:\par $A_3>A_1>A_2$.
+			\item Maximin ranking: \par$A_2>A_1>A_3$.
+			\item Minimax Regret ranking:\par $A_2<A_1<A_3$.
 		\end{itemize}
-		So the C8 recommendation is $A_2$.
 		
-		\textbf{How to conclude C9 using C8 result}\par
-		Second-stage uncertainty for the tree:
-		stable regulation (0.60, adjustment $+12$) and tightened regulation (0.40, adjustment $-18$).
-
-		Step 1. Reconfirm branch outcomes for the C8-selected alternative.
-		\[
-		\text{Stable branch}=118.70+12=130.70,
-		\qquad
-		\text{Tightened branch}=118.70-18=100.70.
-		\]
-
-		Step 3. Final decision.
-		\begin{center}
-			\begin{tabular}{l}
-				\hline
-				Decision tree summary \\
-				\hline
-				$D_0$: choose C8-recommended strategy $A_2$ \\
-				$\rightarrow C_1$: regulation stable (0.60) $\to 130.70$ \\
-				$\rightarrow C_2$: regulation tightens (0.40) $\to 100.70$ \\
-				Equivalent value at the chance node: $EV_{tree}(A_2)=0.60(130.70)+0.40(100.70)=118.70$ \\
-				Root equivalent value: $118.70$ \\
-				Final leaf selected: $A_2$ \\
-				\hline
-			\end{tabular}
-		\end{center}
-		The decision tree therefore confirms $A_2$ as final recommendation.
+		\textbf{C9 solution (apply filters)}\par
+		\begin{itemize}
+			\item \textbf{(Step 1)} EV top 2: $\{A_2,A_3\}$.
+			\item \textbf{(Step 2)} Minimax Regret keeps $\{A_2\}$.
+			\item Final decision: $A_2$.
+		\end{itemize}
 		
-		\vspace{0.25cm}
-		\SubsectionBox{3. Solved example 2 (program-output guided)}\vspace{-0.25cm}
-		\textbf{Base payoff table}\par
+		
+		\SubsectionBox{3. Solved Example 2}
+		
+		\textbf{Multi-Criteria Filtering and Sequential Decision Selection}\par
+		An insurance broker considers six portfolio mixes $Y_1$ to $Y_6$ under four climate-risk states. 
+		Payoffs are in thousand USD.
+		
 		\begin{center}
-			\begin{tabular}{l c c c c c}
+			\begin{tabular}{l c c c c c c c}
 				\hline
-				State & Probability & $D_1$ & $D_2$ & $D_3$ & $D_4$ \\
+				State & Prob. & $Y_1$ & $Y_2$ & $Y_3$ & $Y_4$ & $Y_5$ & $Y_6$ \\
 				\hline
-				$P_1$ & 0.35 & 155 & 146 & 170 & 140 \\
-				$P_2$ & 0.40 & 100 & 118 & 88 & 122 \\
-				$P_3$ & 0.25 & 45 & 86 & 22 & 94 \\
+				$W_1$ & 0.30 & 136 & 126 & 146 & 116 & 130 & 121 \\
+				$W_2$ & 0.25 & 94 & 98 & 84 & 103 & 90 & 95 \\
+				$W_3$ & 0.25 & 66 & 74 & 58 & 88 & 69 & 77 \\
+				$W_4$ & 0.20 & 28 & 46 & 14 & 64 & 48 & 38 \\
 				\hline
 			\end{tabular}
 		\end{center}
 		
-		\textbf{Program-produced regret table}\par
+		After obtaining the C10 summary and computing the C8 results, apply the following structured C9 decision procedure:
+		\begin{itemize}
+			\item Step 1: Retain the top four alternatives according to Expected Value (EV).
+			\item Step 2: Within that subset, apply the Minimax Regret criterion and keep the top two performing options.
+			\item Step 3: Then, apply the Maximin criterion to determine the final choice.
+		\end{itemize}
+		
+		\textbf{C10 summary table (program output)}\par
 		\begin{center}
 			\begin{tabular}{l c c c c}
 				\hline
-				Alt. & $P_1$ regret & $P_2$ regret & $P_3$ regret & Max regret \\
+				Alt. & Max P. & Min P. & EV & Max regret \\
 				\hline
-				$D_1$ & 15 & 22 & 49 & 49 \\
-				$D_2$ & 24 & 4 & 8 & 24 \\
-				$D_3$ & 0 & 34 & 72 & 72 \\
-				$D_4$ & 30 & 0 & 0 & 30 \\
-				\hline
-			\end{tabular}
-		\end{center}
-		
-		\textbf{Program-produced C8 summary table}\par
-		\begin{center}
-			\begin{tabular}{l c c c c}
-				\hline
-				Alt. & Max payoff & Min payoff & EV & Max regret \\
-				\hline
-				$D_1$ & 155 & 45 & 106.50 & 49 \\
-				$D_2$ & 146 & 86 & 118.00 & 24 \\
-				$D_3$ & 170 & 22 & 98.30 & 72 \\
-				$D_4$ & 140 & 94 & 119.90 & 30 \\
+				$Y_1$ & 136 & 28 & 92.30 & 38 \\
+				$Y_2$ & 126 & 46 & 96.40 & 26 \\
+				$Y_3$ & 146 & 14 & 87.40 & 52 \\
+				$Y_4$ & 116 & 64 & 99.00 & 31 \\
+				$Y_5$ & 130 & 48 & 94.35 & 26 \\
+				$Y_6$ & 121 & 38 & 93.10 & 29 \\
 				\hline
 			\end{tabular}
 		\end{center}
 		
-		\textbf{How to conclude C8 using program outputs}\par
-		From the summary table:
+		\textbf{C8 solution (ranking and recommendations)}\par
 		\begin{itemize}
-			\item Bayes (EV) selects $D_4$.
-			\item Maximin selects $D_4$.
-			\item Minimax Regret selects $D_2$.
+			\item EV ranking: \par $Y_4>Y_2>Y_5>Y_6>Y_1>Y_3$
+			\item Maximax ranking: \par $Y_3>Y_1>Y_5>Y_2>Y_6>Y_4$.
+			\item Maximin ranking: \par $Y_4>Y_5>Y_2>Y_6>Y_1>Y_3$.
+			\item Minimax Regret ranking: \par $Y_2=Y_5<Y_6<Y_4<Y_1<Y_3$.
 		\end{itemize}
-		Using the project rule ``prioritize Bayes with consistency in floor performance'', the C8 action forwarded to C9 is $D_4$.
 		
-		\textbf{How to conclude C9 using C8 result}\par
-		Second-stage uncertainty for $D_4$: stable fuel (0.55, $+11$) and fuel spike (0.45, $-14$).
-
-		Step 1. Reconfirm branch outcomes for the C8-selected alternative.
-		\[
-		\text{Stable fuel}=119.90+11=130.90,
-		\qquad
-		\text{Fuel spike}=119.90-14=105.90.
-		\]
-
-		Step 3. Final decision.
-		\begin{center}
-			\begin{tabular}{l}
-				\hline
-				Decision tree summary \\
-				\hline
-				$D_0$: choose $D_4$ from C8 \\
-				$\rightarrow C_1$: stable fuel (0.55) $\to 130.90$ \\
-				$\rightarrow C_2$: fuel spike (0.45) $\to 105.90$ \\
-				Equivalent value at the chance node: $EV_{tree}(D_4)=0.55(130.90)+0.45(105.90)=119.65$ \\
-				Root equivalent value: $119.65$ \\
-				Final leaf selected: $D_4$ \\
-				\hline
-			\end{tabular}
-		\end{center}
-		The decision tree concludes with $D_4$ as final recommendation under the two-stage process.
+		\textbf{C9 solution (apply filters)}\par
+		\begin{itemize}
+			\item \textbf{(Step 1)} EV top 3: $\{Y_4,Y_2,Y_5,Y_6\}$.
+			\item \textbf{(Step 2)} Minimax Regret keeps $\{Y_2,Y_5\}$.
+			\item \textbf{(Step 3)} Maximin selects $Y_5$.
+			\item Final decision: $Y_5$.
+		\end{itemize}
+		
+		
+		
 	\end{multicols}
 	
 \end{document}
