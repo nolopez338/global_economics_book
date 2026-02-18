@@ -1,0 +1,257 @@
+\documentclass[12pt]{article}
+
+% Page size and tighter margins
+\usepackage[a4paper,left=1.2cm,right=1.2cm,top=1.5cm,bottom=1.5cm]{geometry}
+
+% Core packages
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.15}
+\setlength{\emergencystretch}{3em}
+
+% Column types
+\newcolumntype{Y}{>{\raggedright\arraybackslash}m{\dimexpr0.30\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
+\newcolumntype{Z}{>{\raggedright\arraybackslash}m{\dimexpr0.70\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+% Gray subsection header box
+\newcommand{\SubsectionBox}[1]{%
+	\noindent\colorbox{gray!30}{%
+		\parbox{\linewidth}{\textbf{#1}}%
+	}\par\vspace{0.35cm}%
+}
+
+% Centered multi-line cell helper
+\newcommand{\CellCenter}[1]{%
+	\parbox{\linewidth}{\centering #1}%
+}
+
+\begin{document}
+	
+	% =========================
+	% HEADER BOX (3 COLUMNS)
+	% =========================
+	\noindent
+	\begin{tabularx}{\textwidth}{|C{2.8cm}|C{\dimexpr\textwidth-6cm-4\tabcolsep-4\arrayrulewidth\relax}|C{2.8cm}|}
+		\hline
+		\centering
+		\vspace{3mm}
+		\includegraphics[width=2.5cm]{../../preamble/logo.png}
+		&
+		\CellCenter{%
+			\vspace{-5mm}
+			\textbf{GLOBAL ECONOMICS}\par
+			\textbf{COMPUTATIONAL THINKING}\par
+			\textbf{GRADE: 11TH}\par
+			\textbf{TERM 2 -- PROJECT}\par
+			\textbf{EXCEL t-STUDENT CONFIDENCE INTERVAL PROJECT}\par
+			\textbf{Nicolás López Cuéllar, Jaime David Navarrete}
+		}
+		&
+		\CellCenter{%
+			\textbf{SECOND TERM}\par
+			\textbf{2025--2026}%
+		}
+		\\
+		\hline
+	\end{tabularx}
+	
+	\vspace{0.5cm}
+	
+	% =========================
+	% OBJECTIVE + CRITERIA
+	% =========================
+	\noindent
+	\begin{tabular}{|Y|Z|}
+		\hline
+		{\small
+			\textbf{Learning objective:} Present and defend an Excel tool that estimates a confidence interval for the mean with unknown variance (t-student), using dashboards and simple macros to support contextual conclusions in finance and economy.
+		}
+		&
+		{\footnotesize
+			\textbf{Assessment criteria:}\par
+			\textbf{Global Economics}\par
+			C10: Concludes about a statistical parameter in situations in finance and economy.\par
+			\medskip
+			\textbf{Computational Thinking}\par
+			C8: Infers conclusions based on data analysis results.\par
+			C9: Justifies conclusions through interactive dashboards.\par
+			C10: Formulates solutions to different scenarios described by data using dashboards and simple macros.\par
+		}
+		\\
+		\hline
+	\end{tabular}
+	
+	\vspace{0.4cm}
+	
+	\begin{multicols}{2}
+		
+		\vspace{0.25cm}
+		\SubsectionBox{1. Project brief}\vspace{-0.25cm}
+		
+		\textbf{1.1 Purpose of the project}\par
+		This interdisciplinary proyect requires students to design and implement an Excel workbook that receives real economic or financial data and estimates confidence intervals for the population mean when variance is unknown.
+		The workbook must make the procedure simple, transparent, and repeatable through dashboards and short macros.
+		The presentation and defense of this proyect are the direct evidence for C10 in both subjects.
+		Presenting this proyect will also allow the student to present problems for:
+		\begin{itemize}
+			\item C8: Calculates confidence intervals applying t-student distribution in context situations.
+			\item C9: Estimates the confidence interval for the mean when the variance is unknown in context situations.
+		\end{itemize}
+		
+		\textbf{1.2 Computational Thinking Background}\par
+		Before this proyect, students have already worked with:
+		\begin{itemize}
+			\item C1: Integrates external data sources into Excel.
+			\item C2: Understands array formulas in spreadsheets.
+			\item C3: Uses array formulas in spreadsheets.
+			\item C4: Understands macros in spreadsheets.
+			\item C5: Uses macros to automate repetitive tasks in spreadsheets.
+			\item C6: Identifies Data Analysis tools in spreadsheets.
+			\item C7: Uses Data Analysis tools in spreadsheets.
+		\end{itemize}
+		
+		\textbf{1.3 Input specification}\par
+		The Excel workbook must receive:
+		\begin{itemize}
+			\item A dataset of numerical observations (raw data), typed, pasted, or imported from an external source.
+			\item Optional metadata: context label, units, date range, and scenario label.
+			\item A confidence level selector (for example 90\%, 95\%, or 99\%).
+		\end{itemize}
+		
+		\textbf{1.4 Processing requirements}\par
+		The workbook must:
+		\begin{itemize}
+			\item Compute sample size $n$, sample mean $\bar{x}$, and sample standard deviation $s$.
+			\item Compute standard error, select the t critical value, and calculate margin of error for unknown variance.
+			\item Output the confidence interval for the mean.
+			\item Provide a clear conclusion template in context language.
+			\item Use dashboards (dropdowns, slicers, scenario selectors, and charts) to justify conclusions.
+			\item Use simple macros to:
+			\begin{itemize}
+				\item clear or reset inputs,
+				\item recompute and snapshot outputs for different scenarios,
+				\item export or log scenario results in a comparison table.
+			\end{itemize}
+		\end{itemize}
+		
+		\textbf{1.5 Output specification}\par
+		The workbook output must include:
+		\begin{itemize}
+			\item Confidence interval lower and upper bounds.
+			\item Intermediate summaries: $n$, $\bar{x}$, $s$, $SE$, $t^*$, and $ME$.
+			\item Dashboard visuals supporting the justification.
+			\item A scenario comparison view with at least two scenarios, supported by dashboard and/or macro outputs.
+		\end{itemize}
+		
+		\textbf{1.6 Suggested workflow (C10 $\rightarrow$ C8/C9)}\par
+		\begin{enumerate}
+			\item Import or paste raw data and define metadata and confidence level.
+			\item Execute workbook calculations to obtain CI outputs.
+			\item Use dashboard filters and scenario selectors to compare contexts and justify conclusions.
+			\item Use a macro to save the current scenario and repeat for another case.
+		\end{enumerate}
+		
+		\SubsectionBox{2. Solved Example 1}
+		
+		\textbf{Financial context: daily exchange-rate spread in a broker desk}\par
+		A brokerage team analyzes the daily spread (basis points) observed in a currency operation window.
+		Raw data are entered as individual observations in Excel:
+		
+		\begin{center}
+			\begin{tabular}{l}
+				\hline
+				Spread data (bp) \\
+				\hline
+				49.2, 51.4, 47.8, 52.1, 50.5, 48.9,\\
+				53.0, 49.7, 50.9, 51.8, 48.6, 52.4 \\
+				\hline
+			\end{tabular}
+		\end{center}
+		The dashboard selector is set to \textbf{95\% confidence} and scenario \textbf{Base week}.
+		
+		\textbf{Workbook output}\par
+		\begin{center}
+			\begin{tabular}{l c}
+				\hline
+				Metric & Value \\
+				\hline
+				$n$ & 12 \\
+				$\bar{x}$ (bp) & 50.52 \\
+				$s$ (bp) & 1.68 \\
+				$SE$ & 0.484 \\
+				$t^*$ (95\%, $df=11$) & 2.201 \\
+				$ME$ & 1.06 \\
+				CI lower bound & 49.46 \\
+				CI upper bound & 51.59 \\
+				\hline
+			\end{tabular}
+		\end{center}
+		
+		\textbf{Conclusion}\par
+		With 95\% confidence, the mean daily spread for the selected week is between 49.46 and 51.59 basis points. This interval supports the estimate of the operational spread parameter used in short-term trading decisions.
+		
+		\textbf{Dashboard justification}\par
+		The confidence-level dropdown and scenario selector update the CI band chart and the KPI cards ($\bar{x}$, $ME$, interval bounds). The visual overlap of daily values with the CI band justifies the conclusion reported to the desk manager.
+		
+		\textbf{Macro use}\par
+		A \texttt{SnapshotScenario()} macro stores the current scenario, confidence level, and CI outputs in the comparison table. This allows immediate repetition for an alternative week without reformatting the workbook.
+		
+		\SubsectionBox{3. Solved Example 2}
+		
+		\textbf{Economic context: import shipping cost per container}\par
+		An import company records shipping cost per container (thousand USD) for one route.
+		Data are imported from CSV to Excel as individual observations:
+		
+		\begin{center}
+			\begin{tabular}{l}
+				\hline
+				Cost data (thousand USD) \\
+				\hline
+				1.72, 1.81, 1.75, 1.88, 1.93, 1.79,\\
+				1.85, 1.90, 1.77, 1.84, 1.96, 1.87,\\
+				1.80, 1.92, 1.74, 1.89, 1.83, 1.95 \\
+				\hline
+			\end{tabular}
+		\end{center}
+		The dashboard selector is set to \textbf{90\% confidence} and the route scenario \textbf{Port A -- Q2}.
+		
+		\textbf{Workbook output}\par
+		\begin{center}
+			\begin{tabular}{l c}
+				\hline
+				Metric & Value \\
+				\hline
+				$n$ & 18 \\
+				$\bar{x}$ (thousand USD) & 1.844 \\
+				$s$ (thousand USD) & 0.074 \\
+				$SE$ & 0.017 \\
+				$t^*$ (90\%, $df=17$) & 1.740 \\
+				$ME$ & 0.030 \\
+				CI lower bound & 1.814 \\
+				CI upper bound & 1.875 \\
+				\hline
+			\end{tabular}
+		\end{center}
+		
+		\textbf{Conclusion}\par
+		With 90\% confidence, the mean shipping cost parameter for this route is between 1.814 and 1.875 thousand USD per container. The interval supports budgeting and contract negotiation decisions for the next cycle.
+		
+		\textbf{Dashboard justification}\par
+		A scenario slicer compares \textit{Port A -- Q2} vs. \textit{Port B -- Q2}. The CI comparison chart and KPI tiles show interval width and center for each route, supporting a justified scenario-based conclusion.
+		
+		\textbf{Macro use}\par
+		A \texttt{ResetAndRecompute()} macro clears the input range, imports the next scenario block, recalculates outputs, and logs both CI results in a comparison table for rapid reporting.
+		
+	\end{multicols}
+	
+\end{document}
