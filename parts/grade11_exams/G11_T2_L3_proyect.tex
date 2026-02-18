@@ -131,33 +131,37 @@
 		\textbf{1.4 Processing requirements}\par
 		The workbook must:
 		\begin{itemize}
-			\item Compute sample size $n$, sample mean $\bar{x}$, and sample standard deviation $s$.
-			\item Compute standard error, select the t critical value, and calculate margin of error for unknown variance.
-			\item Output the confidence interval for the mean.
-			\item Provide a clear conclusion template in context language.
+			\item Compute sample size $n$, sample mean $\bar{x}$, sample standard deviation $s$, and standard error $SE=\frac{s}{\sqrt{n}}$.
+			\item For unknown variance, compute and report t-based outputs: t statistic/critical value used for the interval ($t^*$ or equivalent), margin of error $ME_t=t^*\cdot SE$, and confidence interval $CI_t=(\bar{x}-ME_t,\bar{x}+ME_t)$.
+			\item Compute and report z-based approximation outputs: z statistic/critical value used for the interval ($z^*$ or equivalent), margin of error $ME_z=z^*\cdot SE$, and confidence interval $CI_z=(\bar{x}-ME_z,\bar{x}+ME_z)$.
+			\item Provide a clear conclusion template in context language, prioritizing the t-based interval when variance is unknown.
 			\item Use dashboards (dropdowns, slicers, scenario selectors, and charts) to justify conclusions.
 			\item Use simple macros to:
 			\begin{itemize}
 				\item clear or reset inputs,
 				\item recompute and snapshot outputs for different scenarios,
-				\item export or log scenario results in a comparison table.
+				\item export or log scenario results in a comparison table that stores both $CI_t$ and $CI_z$.
 			\end{itemize}
 		\end{itemize}
 		
 		\textbf{1.5 Output specification}\par
-		The workbook output must include:
+		For each dataset and selected confidence level, the workbook output must include:
 		\begin{itemize}
-			\item Confidence interval lower and upper bounds.
-			\item Intermediate summaries: $n$, $\bar{x}$, $s$, $SE$, $t^*$, and $ME$.
+			\item \textbf{t-based outputs (variance unknown):} $n$, $\bar{x}$, $s$, $SE=\frac{s}{\sqrt{n}}$, $t^*$ (or equivalent t statistic), $ME_t=t^*\cdot SE$, and $CI_t=(\bar{x}-ME_t,\bar{x}+ME_t)$.
+			\item \textbf{z-based approximation outputs:} $z^*$ (or equivalent z statistic), $ME_z=z^*\cdot SE$, and $CI_z=(\bar{x}-ME_z,\bar{x}+ME_z)$.
 			\item Dashboard visuals supporting the justification.
 			\item A scenario comparison view with at least two scenarios, supported by dashboard and/or macro outputs.
 		\end{itemize}
 		
-		\textbf{1.6 Suggested workflow}\par
+		\textbf{1.6 Comparison requirement}\par
+		The dashboard must display $CI_t$ and $CI_z$ side-by-side and include a short interpretation comparing interval width differences, when both methods are close, and the role of sample size in reducing the t-vs-z gap.
+		
+		\textbf{1.7 Dashboard and workflow requirement}\par
 		\begin{enumerate}
 			\item Import or paste raw data and define metadata and confidence level.
-			\item Execute workbook calculations to obtain CI outputs.
-			\item Use dashboard filters and scenario selectors to compare contexts and justify conclusions.
+			\item Execute workbook calculations to obtain both t-based and z-based outputs.
+			\item Use a dashboard toggle or side-by-side view for t vs z values, including explicit visualization of both intervals (comparison table, interval bars, or dual error bars on the same mean marker).
+			\item Report $ME_t-ME_z$ and/or interval-width difference, and use scenario selectors to compare contexts and justify conclusions.
 		\end{enumerate}
 		
 		\SubsectionBox{2. Solved Example 1}
@@ -189,15 +193,23 @@
 				$s$ (bp) & 1.68 \\
 				$SE$ & 0.484 \\
 				$t^*$ (95\%, $df=11$) & 2.201 \\
-				$ME$ & 1.06 \\
-				CI lower bound & 49.46 \\
-				CI upper bound & 51.59 \\
+				$ME_t$ & 1.06 \\
+				$CI_t$ lower bound & 49.46 \\
+				$CI_t$ upper bound & 51.59 \\
+				$z^*$ (95\% normal approx.) & 1.960 \\
+				$ME_z$ & 0.95 \\
+				$CI_z$ lower bound & 49.57 \\
+				$CI_z$ upper bound & 51.47 \\
+				$ME_t-ME_z$ & 0.11 \\
 				\hline
 			\end{tabular}
 		\end{center}
 		
 		\textbf{Conclusion}\par
-		With 95\% confidence, the mean daily spread for the selected week is between 49.46 and 51.59 basis points. This interval supports the estimate of the operational spread parameter used in short-term trading decisions.
+		With 95\% confidence, using the preferred t-based method for unknown variance, the mean daily spread for the selected week is between 49.46 and 51.59 basis points. The z-approximation interval is 49.57 to 51.47 basis points, which is close but slightly narrower.
+		
+		\textbf{Dashboard justification}\par
+		The dashboard shows $CI_t$ and $CI_z$ side-by-side for the Base week using a shared mean marker with two interval bars and a comparison field for $ME_t-ME_z$. This view justifies the t-based conclusion while making the z approximation directly visible.
 		
 		\SubsectionBox{3. Solved Example 2}
 		
@@ -229,15 +241,23 @@
 				$s$ (thousand USD) & 0.074 \\
 				$SE$ & 0.017 \\
 				$t^*$ (90\%, $df=17$) & 1.740 \\
-				$ME$ & 0.030 \\
-				CI lower bound & 1.814 \\
-				CI upper bound & 1.875 \\
+				$ME_t$ & 0.030 \\
+				$CI_t$ lower bound & 1.814 \\
+				$CI_t$ upper bound & 1.874 \\
+				$z^*$ (90\% normal approx.) & 1.645 \\
+				$ME_z$ & 0.028 \\
+				$CI_z$ lower bound & 1.816 \\
+				$CI_z$ upper bound & 1.872 \\
+				$ME_t-ME_z$ & 0.002 \\
 				\hline
 			\end{tabular}
 		\end{center}
 		
 		\textbf{Conclusion}\par
-		With 90\% confidence, the mean shipping cost parameter for this route is between 1.814 and 1.875 thousand USD per container. The interval supports budgeting and contract negotiation decisions for the next cycle.
+		With 90\% confidence, using the preferred t-based method for unknown variance, the mean shipping cost parameter for this route is between 1.814 and 1.874 thousand USD per container. The z-approximation interval is 1.816 to 1.872 thousand USD, very close to the t-based result in this case.
+		
+		\textbf{Dashboard justification}\par
+		The dashboard presents a side-by-side t-vs-z comparison for Port A -- Q2 with both intervals visualized and a displayed $ME_t-ME_z$ field. This evidence supports the final t-based conclusion and shows that the z approximation is consistent for this sample size.
 		
 	\end{multicols}
 	
