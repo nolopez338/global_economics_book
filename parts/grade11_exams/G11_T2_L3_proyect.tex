@@ -21,8 +21,8 @@
 \setlength{\emergencystretch}{3em}
 
 % Column types
-\newcolumntype{Y}{>{\raggedright\arraybackslash}m{\dimexpr0.30\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
-\newcolumntype{Z}{>{\raggedright\arraybackslash}m{\dimexpr0.70\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}m{\dimexpr0.60\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
+\newcolumntype{Z}{>{\raggedright\arraybackslash}m{\dimexpr0.40\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 
 % Gray subsection header box
@@ -55,7 +55,7 @@
 			\textbf{GRADE: 11TH}\par
 			\textbf{TERM 2 -- PROYECT}\par
 			\textbf{AI WEBPAGE t-STUDENT CONFIDENCE INTERVAL PROYECT}\par
-			\textbf{Nicolás López Cuéllar, Jaime David Navarrete}
+			\textbf{TEACHER: Nicolás López Cuéllar}
 		}
 		&
 		\CellCenter{%
@@ -136,21 +136,20 @@
 		\newpage
 		\SubsectionBox{2. Solved Example 1}
 		
-		\textbf{Financial context: daily exchange-rate spread in a broker desk}\par
-		A brokerage team analyzes the daily spread (basis points) observed in a currency operation window.
-		Raw data are entered as individual observations in the web page:
+		\textbf{Financial context: weekly profit from an online sales project}\par
+		A university student runs a small online resale project and tracks the daily profit earned (in COP) to evaluate whether the activity is financially sustainable. To understand how stable the earnings are and to decide whether to scale the project, the student records the daily profit over one week. Raw data are entered as individual observations in the web page:
 		
 		\begin{center}
 			\begin{tabular}{l}
 				\hline
-				Spread data (bp) \\
+				Profit data (COP) \\
 				\hline
 				49.2, 51.4, 47.8, 52.1, 50.5, 48.9,\\
 				53.0, 49.7, 50.9, 51.8, 48.6, 52.4 \\
 				\hline
 			\end{tabular}
 		\end{center}
-		The confidence selector is set to \textbf{95\% confidence} and scenario \textbf{Base week}.
+		The confidence selector is set to \textbf{95\% confidence} and scenario \textbf{Week 1 performance}.
 		
 		\textbf{Web page output}\par
 		\begin{center}
@@ -159,8 +158,8 @@
 				Metric & Value \\
 				\hline
 				$n$ & 12 \\
-				$\bar{x}$ (bp) & 50.52 \\
-				$s$ (bp) & 1.68 \\
+				$\bar{x}$ (COP) & 50.52 \\
+				$s$ (COP) & 1.68 \\
 				$SE$ & 0.484 \\
 				$t^*$ (95\%, $df=11$) & 2.201 \\
 				$ME_t$ & 1.06 \\
@@ -176,27 +175,28 @@
 		\end{center}
 		
 		\textbf{Conclusion}\par
-		With 95\% confidence, using the preferred t-based method for unknown variance, the mean daily spread for the selected week is between 49.46 and 51.59 basis points. The z-approximation interval is 49.57 to 51.47 basis points, which is close but slightly narrower. In this finance context, the t-based interval is used for the final Global Economics conclusion.
+		With 95\% confidence, using the preferred t-based method for unknown variance, the mean daily profit for the selected week is between 49.46 and 51.59 COP. The z-approximation interval is 49.57 to 51.47 COP, which is close but slightly narrower. In this student business context, the t-based interval is used for the final conclusion because the population variance is unknown and the sample size is limited.
 		
-		\vspace{1cm}
+		
+		
+		\vspace{2cm}
 		\SubsectionBox{3. Solved Example 2}
 		
-		\textbf{Economic context: import shipping cost per container}\par
-		An import company records shipping cost per container (thousand USD) for one route.
-		Data are entered in the web page as individual observations:
+		\textbf{Financial context: daily revenue from a snack stand}\par
+		A group of people manage a small snack stand during events and records the daily revenue earned (thousand COP) to evaluate whether the project is financially viable and to plan future inventory purchases. To estimate the average daily revenue and understand how consistent their earnings are, they enter the observed values into the web page as individual observations:
 		
 		\begin{center}
 			\begin{tabular}{l}
 				\hline
-				Cost data (thousand USD) \\
+				Revenue data (thousand COP) \\
 				\hline
-				1.72, 1.81, 1.75, 1.88, 1.93, 1.79,\\
-				1.85, 1.90, 1.77, 1.84, 1.96, 1.87,\\
-				1.80, 1.92, 1.74, 1.89, 1.83, 1.95 \\
+				172, 181, 175, 188, 193, 179,\\
+				185, 190, 177, 184, 196, 187,\\
+				180, 192, 174, 189, 183, 195 \\
 				\hline
 			\end{tabular}
 		\end{center}
-		The confidence selector is set to \textbf{90\% confidence} and the route scenario \textbf{Port A -- Q2}.
+		The confidence selector is set to \textbf{90\% confidence} and the activity scenario \textbf{School event cycle}.
 		
 		\textbf{Web page output}\par
 		\begin{center}
@@ -205,24 +205,26 @@
 				Metric & Value \\
 				\hline
 				$n$ & 18 \\
-				$\bar{x}$ (thousand USD) & 1.844 \\
-				$s$ (thousand USD) & 0.074 \\
-				$SE$ & 0.017 \\
+				$\bar{x}$ (thousand COP) & 184.4 \\
+				$s$ (thousand COP) & 7.4 \\
+				$SE$ & 1.7 \\
 				$t^*$ (90\%, $df=17$) & 1.740 \\
-				$ME_t$ & 0.030 \\
-				$CI_t$ lower bound & 1.814 \\
-				$CI_t$ upper bound & 1.874 \\
+				$ME_t$ & 3.0 \\
+				$CI_t$ lower bound & 181.4 \\
+				$CI_t$ upper bound & 187.4 \\
 				$z^*$ (90\% normal approx.) & 1.645 \\
-				$ME_z$ & 0.028 \\
-				$CI_z$ lower bound & 1.816 \\
-				$CI_z$ upper bound & 1.872 \\
-				$ME_t-ME_z$ & 0.002 \\
+				$ME_z$ & 2.8 \\
+				$CI_z$ lower bound & 181.6 \\
+				$CI_z$ upper bound & 187.2 \\
+				$ME_t-ME_z$ & 0.2 \\
 				\hline
 			\end{tabular}
 		\end{center}
 		
 		\textbf{Conclusion}\par
-		With 90\% confidence, using the preferred t-based method for unknown variance, the mean shipping cost parameter for this route is between 1.814 and 1.874 thousand USD per container. The z-approximation interval is 1.816 to 1.872 thousand USD, very close to the t-based result in this case. In this economy context, the t-based interval supports the final Global Economics conclusion.
+		With 90\% confidence, using the preferred t-based method for unknown variance, the mean daily revenue for this project is between 181.4 and 187.4 thousand COP. The z-approximation interval is 181.6 to 187.2 thousand COP, very close to the t-based result in this case. In this student business context, the t-based interval supports the final conclusion because the population variance is unknown and the estimate is based on sample data.
+		
+		
 		
 	\end{multicols}
 
