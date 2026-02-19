@@ -167,12 +167,12 @@
 		
 		After presenting the program and its outputs, students must apply this workflow to the assigned project problems in order to activate Criteria C8 and C9.
 		
-		\vspace{0.25cm}
+		\newpage
 		\SubsectionBox{2. Solved Example 1}
 		
 		\textbf{1. Program-Based Ranking and Structured Decision Refinement}\par
 		A firm must choose one strategy among $A_1,A_2,A_3,A_4,A_5$ under uncertain market conditions.
-
+		
 		\begin{center}
 			\begin{tabular}{l  c c c c c c}
 				\hline
@@ -187,8 +187,9 @@
 		
 		After obtaining the C10 summary and computing the C8 results, apply the following structured C9 decision procedure:
 		\begin{itemize}
-			\item Step 1: Retain the top two alternatives according to Expected Value (EV).
-			\item Step 2: Within that subset, apply the Minimax Regret criterion and choose one.
+			\item Step 1: Retain the top three alternatives according to Expected Value (EV).
+			\item Step 2: Within that subset, eliminate the alternative with the highest Max regret.
+			\item Step 3: From the remaining alternatives, select the one with the highest minimum payoff (Maximin).
 		\end{itemize}
 		
 		\textbf{C10 summary table (program output)}\par
@@ -210,16 +211,18 @@
 		\begin{itemize}
 			\item EV ranking: \par $A_4>A_5>A_2>A_3>A_1$.
 			\item Maximax ranking:\par $A_3>A_4>A_1>A_5>A_2$.
-			\item Maximin ranking: \par$A_5>A_2>A_4>A_1>A_3$.
+			\item Maximin ranking: \par $A_5>A_2>A_4>A_1>A_3$.
 			\item Minimax Regret ranking:\par $A_5<A_4<A_2<A_1<A_3$.
 		\end{itemize}
 		
 		\textbf{C9 solution (apply filters)}\par
 		\begin{itemize}
-			\item \textbf{(Step 1)} EV top 2: $\{A_4,A_5\}$.
-			\item \textbf{(Step 2)} Minimax Regret keeps $\{A_5\}$.
+			\item \textbf{(Step 1)} EV top 3: $\{A_4,A_5,A_2\}$.
+			\item \textbf{(Step 2)} Lowest two regrets: $\{A_4,A_5\}$.
+			\item \textbf{(Step 3)} Maximin selects $A_5$.
 			\item Final decision: $A_5$.
 		\end{itemize}
+		
 		
 		
 		\SubsectionBox{3. Solved Example 2}
