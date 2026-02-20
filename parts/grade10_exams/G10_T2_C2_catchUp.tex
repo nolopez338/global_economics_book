@@ -12,6 +12,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{booktabs}
+\usepackage{amsmath}
 
 \setlength{\parindent}{0pt}
 \setlength{\tabcolsep}{6pt}
@@ -25,7 +26,7 @@
 % Gray subsection header box
 \newcommand{\SubsectionBox}[1]{%
 	\noindent\colorbox{gray!30}{%
-		\parbox{\linewidth}{\textbf{#1}}%
+		\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\textbf{#1}}%
 	}\par\vspace{0.35cm}%
 }
 
@@ -37,7 +38,7 @@
 \begin{document}
 
 	\noindent
-	\begin{tabularx}{\textwidth}{|C{2.8cm}|C{\dimexpr\textwidth-6cm-4\tabcolsep-4\arrayrulewidth\relax}|C{2.8cm}|}
+		\begin{tabularx}{\textwidth}{|C{2.8cm}|X|C{2.8cm}|}
 		\hline
 		\centering
 		\vspace{3mm}
