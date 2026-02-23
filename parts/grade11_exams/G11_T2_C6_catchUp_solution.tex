@@ -1,0 +1,322 @@
+\input{../../preamble/preamble_exams.tex}
+\begin{document}
+	\ExamTitleBlock{11th grade}{Term 2 Catch-Up: C6 Required Sample Size (Solutions)}{}
+
+	\ExamSection{Evaluated criteria}
+	\begin{ExamCriteria}
+		\item C6: Determine the required sample size to achieve a target margin of error.
+	\end{ExamCriteria}
+
+	\ExamSection{Problems}
+	\begin{ExamProblems}
+		\item
+		\subsection*{Problem description}
+		A delivery earnings study wants to estimate the mean weekly income of app riders in their 20s. From long-term platform records, the spread is modeled by $\sigma = 110$ USD. The team wants a 95\% confidence estimate with target margin of error $E = 20$ USD. Determine the minimum required sample size.
+
+		\subsection*{C6}
+		Step 1: Identify the target error and confidence level. Here $E = 20$ USD and confidence is 95\%, so $z^* = 1.96$.
+
+		Step 2: Substitute into the sample-size formula and solve.
+		\[
+		n = \left(\frac{z^*\sigma}{E}\right)^2
+		= \left(\frac{1.96 \cdot 110}{20}\right)^2
+		= \left(10.78\right)^2
+		= 116.2084
+		\]
+
+		Step 3: Round up to guarantee the target error is not exceeded. The minimum sample size is $n = 117$ riders. This verifies Criterion 6 because the computed and rounded sample size is sufficient for the stated margin of error and confidence level.
+
+		\item
+		\subsection*{Problem description}
+		A rent-estimation survey for studio apartments used by young adults has a known long-run spread of $\sigma = 260$ USD. The analyst needs a 90\% confidence estimate, and the interval width must be no more than $W = 80$ USD. Determine the minimum required sample size.
+
+		\subsection*{C6}
+		Step 1: Identify width and confidence level, then convert width to margin of error. Since $W = 2E$,
+		\[
+		E = \frac{W}{2} = \frac{80}{2} = 40
+		\]
+		The confidence level is 90\%, so $z^* = 1.645$.
+
+		Step 2: Substitute into the sample-size formula.
+		\[
+		n = \left(\frac{z^*\sigma}{E}\right)^2
+		= \left(\frac{1.645 \cdot 260}{40}\right)^2
+		= \left(10.6925\right)^2
+		= 114.3296
+		\]
+
+		Step 3: Round up to the next integer. The minimum sample size is $n = 115$ listings. This verifies Criterion 6 because the rounded sample size ensures the interval width target at the required confidence.
+
+		\item
+		\subsection*{Problem description}
+		A freelance project payment survey wants the mean payment per project. The platform reports a known long-run spread of $\sigma = 150$ USD. The manager also gives extra details: last month there were 12{,}400 posted projects and the highest observed payment was 3{,}800 USD. For planning, the team still needs a 95\% confidence estimate with margin of error $E = 18$ USD. Determine the minimum required sample size.
+
+		\subsection*{C6}
+		Step 1: Identify only the quantities needed for C6. The required values are $E = 18$ USD and 95\% confidence, so $z^* = 1.96$. The project-count and maximum-payment details are not used in this sample-size formula.
+
+		Step 2: Substitute into
+		\[
+		n = \left(\frac{z^*\sigma}{E}\right)^2
+		= \left(\frac{1.96 \cdot 150}{18}\right)^2
+		= \left(16.333\overline{3}\right)^2
+		= 266.777\overline{7}
+		\]
+
+		Step 3: Round up. The minimum sample size is $n = 267$ projects. This verifies Criterion 6 because the solution isolates the target error/confidence inputs and rounds upward to secure the required precision.
+
+		\item
+		\subsection*{Problem description}
+		A startup revenue tracker estimates mean monthly revenue for micro-startups run by young founders. Historical variability is summarized by $\sigma = 18{,}000$ USD. The target margin of error is fixed at $E = 3{,}000$ USD, but the team is deciding between 90\% and 95\% confidence. Compute both required sample sizes and compare.
+
+		\subsection*{C6}
+		Step 1: Identify the common error target and both confidence levels. Use $E = 3{,}000$ USD, with $z^* = 1.645$ for 90\% and $z^* = 1.96$ for 95\%.
+
+		Step 2: Compute $n$ for each confidence level.
+		\[
+		n_{90} = \left(\frac{1.645 \cdot 18{,}000}{3{,}000}\right)^2
+		= \left(9.87\right)^2
+		= 97.4169
+		\]
+		\[
+		n_{95} = \left(\frac{1.96 \cdot 18{,}000}{3{,}000}\right)^2
+		= \left(11.76\right)^2
+		= 138.2976
+		\]
+
+		Step 3: Round up and compare. The minimum sizes are $n_{90}=98$ and $n_{95}=139$. The 95\% plan needs more observations because the larger $z^*$ increases required sample size. This verifies Criterion 6 by calculating and validating sample sizes for both confidence options.
+
+		\item
+		\subsection*{Problem description}
+		A subscription-spending study already has $n_{\text{current}}=120$ users in their 20s. Long-run spread is estimated as $\sigma=42$ USD per month. The team now wants a 95\% confidence estimate with a tighter margin of error of $E_{\text{new}}=6$ USD. Find the required total sample size and additional observations needed.
+
+		\subsection*{C6}
+		Step 1: Identify the planning inputs. The target is $E_{\text{new}} = 6$ USD at 95\% confidence, so $z^* = 1.96$.
+
+		Step 2: Compute required total sample size.
+		\[
+		n_{\text{required}} = \left(\frac{z^*\sigma}{E_{\text{new}}}\right)^2
+		= \left(\frac{1.96 \cdot 42}{6}\right)^2
+		= \left(13.72\right)^2
+		= 188.2384
+		\]
+		Round up: $n_{\text{required}}=189$.
+
+		Step 3: Compute additional observations.
+		\[
+		n_{\text{additional}} = n_{\text{required}} - n_{\text{current}} = 189 - 120 = 69
+		\]
+		The study needs 69 additional users. This verifies Criterion 6 because the minimum total size is derived from the target margin of error and translated into additional data required.
+
+		\item
+		\subsection*{Problem description}
+		A travel-expense survey currently uses $n_{\text{current}}=100$ participants and has a 95\% confidence margin of error of $E_{\text{current}}=25$ USD for average weekend-trip cost. The long-run spread remains stable. The team now wants to reduce the margin of error by 20\%. Determine the new target margin, required total sample size, and additional observations.
+
+		\subsection*{C6}
+		Step 1: Identify reduction target and confidence level. A 20\% reduction means
+		\[
+		E_{\text{new}} = (1-r)E_{\text{current}} = (1-0.20)(25)=20
+		\]
+		Confidence remains 95\%, so $z^*=1.96$. Using the current design,
+		\[
+		E_{\text{current}} = z^*\frac{\sigma}{\sqrt{n_{\text{current}}}}
+		\Rightarrow \sigma = \frac{E_{\text{current}}\sqrt{n_{\text{current}}}}{z^*}
+		= \frac{25\sqrt{100}}{1.96}
+		= \frac{250}{1.96}
+		\approx 127.551
+		\]
+
+		Step 2: Compute the required new total sample size.
+		\[
+		n_{\text{required}} = \left(\frac{z^*\sigma}{E_{\text{new}}}\right)^2
+		= \left(\frac{1.96\cdot 127.551}{20}\right)^2
+		= \left(12.5\right)^2
+		= 156.25
+		\]
+		Round up: $n_{\text{required}}=157$.
+
+		Step 3: Compute additional observations.
+		\[
+		n_{\text{additional}} = 157 - 100 = 57
+		\]
+		So 57 more participants are needed. This verifies Criterion 6 because the percentage-reduction target is converted to a new error and then into a rounded-up required sample size.
+
+		\item
+		\subsection*{Problem description}
+		An investment-tracking class survey has $n_{\text{current}}=144$ records and currently reports a 90\% confidence margin of error of $E_{\text{current}}=15$ USD for mean monthly contribution. The instructor also notes the current sample mean is 310 USD, which is not needed for C6. The new goal is a 30\% reduction in margin of error. Find the new required sample size and additional records.
+
+		\subsection*{C6}
+		Step 1: Convert the reduction goal into a new margin of error and note the confidence level. With $r=0.30$,
+		\[
+		E_{\text{new}}=(1-r)E_{\text{current}}=(1-0.30)(15)=10.5
+		\]
+		At 90\% confidence, $z^*=1.645$. From the current setup,
+		\[
+		\sigma = \frac{E_{\text{current}}\sqrt{n_{\text{current}}}}{z^*}
+		= \frac{15\sqrt{144}}{1.645}
+		= \frac{180}{1.645}
+		\approx 109.423
+		\]
+
+		Step 2: Compute required total sample size.
+		\[
+		n_{\text{required}}=\left(\frac{1.645\cdot 109.423}{10.5}\right)^2
+		=\left(17.142857\right)^2
+		\approx 293.8776
+		\]
+		Round up carefully: $n_{\text{required}}=294$.
+
+		Step 3: Compute additional observations.
+		\[
+		n_{\text{additional}}=294-144=150
+		\]
+		The survey needs 150 additional records. This verifies Criterion 6 because the reduced error target is translated into the minimum integer sample size that meets the confidence requirement.
+
+		\item
+		\subsection*{Problem description}
+		A gig-income survey for part-time workers in their 20s currently uses $n_{\text{current}}=81$ with a 95\% confidence margin of error of $E_{\text{current}}=28$ USD. The policy team asks for two alternative improvements: a 25\% reduction and a 40\% reduction in margin of error. Determine both required sample sizes and the additional observations for each plan.
+
+		\subsection*{C6}
+		Step 1: Find the two new target margins and identify $z^*$. For 95\% confidence, $z^*=1.96$.
+		\[
+		E_{25\%}=(1-0.25)(28)=21
+		\]
+		\[
+		E_{40\%}=(1-0.40)(28)=16.8
+		\]
+		Use current information to recover $\sigma$:
+		\[
+		\sigma=\frac{E_{\text{current}}\sqrt{n_{\text{current}}}}{z^*}
+		=\frac{28\sqrt{81}}{1.96}
+		=\frac{252}{1.96}
+		\approx 128.571
+		\]
+
+		Step 2: Compute both required sample sizes.
+		\[
+		n_{25\%}=\left(\frac{1.96\cdot 128.571}{21}\right)^2
+		=\left(12\right)^2
+		=144
+		\]
+		\[
+		n_{40\%}=\left(\frac{1.96\cdot 128.571}{16.8}\right)^2
+		=\left(15\right)^2
+		=225
+		\]
+
+		Step 3: Convert to additional observations and note the relationship.
+		\[
+		n_{\text{add},25\%}=144-81=63
+		\]
+		\[
+		n_{\text{add},40\%}=225-81=144
+		\]
+		Required additions are 63 and 144, respectively. Because $n=\left(\frac{z^*\sigma}{E}\right)^2$, sample size grows with the inverse square of the margin of error, so stronger reductions require much larger samples. This verifies Criterion 6 through full multi-target sample-size determination.
+
+		\item
+		\subsection*{Problem description}
+		Two startup-revenue experiments are being expanded at 95\% confidence.
+		Experiment A currently has $n_A=100$ and margin of error $E_{A,\text{current}}=40$ USD.
+		Experiment B currently has $n_B=196$ and margin of error $E_{B,\text{current}}=30$ USD.
+		Each team wants a 35\% reduction in margin of error. Determine which experiment needs fewer additional observations.
+
+		\subsection*{C6}
+		Step 1: Compute each new target margin and identify $z^*$. Since $r=0.35$,
+		\[
+		E_{A,\text{new}}=(1-0.35)(40)=26
+		\]
+		\[
+		E_{B,\text{new}}=(1-0.35)(30)=19.5
+		\]
+		At 95\% confidence, $z^*=1.96$.
+
+		Step 2: Compute each required total sample size. First find each implied $\sigma$ from current designs.
+		\[
+		\sigma_A=\frac{E_{A,\text{current}}\sqrt{n_A}}{z^*}
+		=\frac{40\sqrt{100}}{1.96}
+		=\frac{400}{1.96}
+		\approx 204.082
+		\]
+		\[
+		\sigma_B=\frac{E_{B,\text{current}}\sqrt{n_B}}{z^*}
+		=\frac{30\sqrt{196}}{1.96}
+		=\frac{420}{1.96}
+		\approx 214.286
+		\]
+		Now apply
+		\[
+		n=\left(\frac{z^*\sigma}{E_{\text{new}}}\right)^2
+		\]
+		\[
+		n_{A,\text{required}}=\left(\frac{1.96\cdot 204.082}{26}\right)^2
+		=\left(15.3846\right)^2
+		\approx 236.6864\Rightarrow 237
+		\]
+		\[
+		n_{B,\text{required}}=\left(\frac{1.96\cdot 214.286}{19.5}\right)^2
+		=\left(21.5385\right)^2
+		\approx 463.9064\Rightarrow 464
+		\]
+
+		Step 3: Compute additions and compare.
+		\[
+		n_{A,\text{add}}=237-100=137
+		\]
+		\[
+		n_{B,\text{add}}=464-196=268
+		\]
+		Experiment A needs fewer additional observations (137 versus 268). This verifies Criterion 6 by fully determining and comparing required sample expansions under the same percentage-reduction target.
+
+		\item
+		\subsection*{Problem description}
+		A travel-budget analytics team currently has $n_{\text{current}}=225$ records and a 95\% confidence margin of error of $E_{\text{current}}=24$ USD for mean monthly travel spending by young professionals. Management requests three precision upgrades: 15\%, 30\%, and 50\% margin-of-error reductions. Compute each new margin, each required total sample size, and each additional amount needed.
+
+		\subsection*{C6}
+		Step 1: Identify confidence level and compute new target margins. For 95\% confidence, $z^*=1.96$.
+		\[
+		E_{15\%}=(1-0.15)(24)=20.4
+		\]
+		\[
+		E_{30\%}=(1-0.30)(24)=16.8
+		\]
+		\[
+		E_{50\%}=(1-0.50)(24)=12
+		\]
+		Recover the implied long-run spread from the current setup:
+		\[
+		\sigma=\frac{E_{\text{current}}\sqrt{n_{\text{current}}}}{z^*}
+		=\frac{24\sqrt{225}}{1.96}
+		=\frac{360}{1.96}
+		\approx 183.673
+		\]
+
+		Step 2: Compute required total sample sizes for all three targets.
+		\[
+		n_{15\%}=\left(\frac{1.96\cdot 183.673}{20.4}\right)^2
+		=\left(17.6471\right)^2
+		\approx 311.4187\Rightarrow 312
+		\]
+		\[
+		n_{30\%}=\left(\frac{1.96\cdot 183.673}{16.8}\right)^2
+		=\left(21.4286\right)^2
+		\approx 459.1840\Rightarrow 460
+		\]
+		\[
+		n_{50\%}=\left(\frac{1.96\cdot 183.673}{12}\right)^2
+		=\left(30\right)^2
+		=900
+		\]
+
+		Step 3: Compute additional observations and conclude conceptually.
+		\[
+		n_{\text{add},15\%}=312-225=87
+		\]
+		\[
+		n_{\text{add},30\%}=460-225=235
+		\]
+		\[
+		n_{\text{add},50\%}=900-225=675
+		\]
+		Additional observations required are 87, 235, and 675. The 50\% reduction (halving $E$) drives sample size close to four times larger, which follows the inverse-square rule in $n=\left(\frac{z^*\sigma}{E}\right)^2$. This verifies Criterion 6 by determining all target sample sizes and required additions for multiple advanced reduction goals.
+
+	\end{ExamProblems}
+\end{document}
