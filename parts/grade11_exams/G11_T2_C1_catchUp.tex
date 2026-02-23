@@ -4,14 +4,15 @@
 \usepackage{xcolor}
 \usepackage{array}
 \usepackage{tabularx}
+\usepackage{amsmath}
 \usepackage{multicol}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \setlength{\parindent}{0pt}
 \setlength{\tabcolsep}{6pt}
 \renewcommand{\arraystretch}{1.15}
-\newcolumntype{Y}{>{\raggedright\arraybackslash}m{\dimexpr0.30\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
-\newcolumntype{Z}{>{\raggedright\arraybackslash}m{\dimexpr0.70\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}m{\dimexpr0.55\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
+\newcolumntype{Z}{>{\raggedright\arraybackslash}m{\dimexpr0.45\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 \newcommand{\SubsectionBox}[1]{%
 \noindent\colorbox{gray!30}{\parbox{\linewidth}{\textbf{#1}}}\par\vspace{0.35cm}%
@@ -48,7 +49,12 @@
 A group of Grade 11 students manages a small digital-product studio that sells logo templates and social media packs. They tracked one random sample of \textbf{14 weekly net payouts} (USD) during a semester pilot to understand whether their business cash flow is stable enough to support reinvestment decisions.
 
 		\textbf{Sample data (USD):}
-		\[118,\ 124,\ 131,\ 127,\ 136,\ 142,\ 125,\ 139,\ 133,\ 121,\ 145,\ 129,\ 137,\ 126\]
+		\[
+		\begin{aligned}
+			118,\ 124,\ 131,\ 127,\ 136,\ 142,\ 125,\ 139,\\
+			133,\ 121,\ 145,\ 129,\ 137,\ 126
+		\end{aligned}
+		\]
 
 		Compute $\bar{x}$, $s^2$, and $s$. Then write a short interpretation of what the variability says about weekly income risk for this studio.
 
