@@ -1,0 +1,400 @@
+\input{../../preamble/preamble_exams.tex}
+\begin{document}
+\ExamTitleBlock{11th grade}{Term 2 Catch-up Solution: C7 (Mean Confidence Intervals with $t$)}{}
+
+\section*{Reference $t$-critical values used in this worksheet}
+\[
+\begin{array}{c|cccc}
+\text{df} & t_{0.05,\,df}\ (90\%) & t_{0.025,\,df}\ (95\%) & t_{0.01,\,df}\ (98\%) & t_{0.005,\,df}\ (99\%) \\
+\hline
+9  & 1.833 & 2.262 & 2.821 & 3.250 \\
+11 & 1.796 & 2.201 & 2.718 & 3.106 \\
+13 & 1.771 & 2.160 & 2.650 & 3.012 \\
+15 & 1.753 & 2.131 & 2.602 & 2.947 \\
+17 & 1.740 & 2.110 & 2.567 & 2.898 \\
+19 & 1.729 & 2.093 & 2.539 & 2.861 \\
+21 & 1.721 & 2.080 & 2.518 & 2.831 \\
+23 & 1.714 & 2.069 & 2.500 & 2.807 \\
+25 & 1.708 & 2.060 & 2.485 & 2.787 \\
+27 & 1.703 & 2.052 & 2.473 & 2.771 \\
+29 & 1.699 & 2.045 & 2.462 & 2.756
+\end{array}
+\]
+
+\subsection*{Problem 1}
+\subsection*{Problem description}
+A survey of 24 young adults who rent apartments in a large city recorded monthly rent payments. The sample average rent was \$1240, and the sample standard deviation was \$210. Construct a 95\% confidence interval for the mean monthly rent of similar young adult renters in that city.
+
+\subsection*{C7}
+We use the confidence interval for a population mean when the variance is unknown:
+\[
+\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\]
+Here, \(n=24\), so \(df=n-1=23\). From the table, for 95\% confidence and \(df=23\), \(t^*=2.069\).
+
+\[
+\bar{x}=1240,\quad s=210,\quad E=t^*\frac{s}{\sqrt{n}}=2.069\left(\frac{210}{\sqrt{24}}\right)\approx 88.69
+\]
+
+\[
+\text{CI}_{95\%}=1240\pm 88.69=[1151.31,\,1328.69]
+\]
+
+Interpretation: We are 95\% confident that the mean monthly rent for similar young adult renters in this city is between \$1151.31 and \$1328.69.
+
+\subsection*{Problem 2}
+\subsection*{Problem description}
+A sample of 18 freelance delivery riders reported weekly fuel spending. The sample average was \$520 and the sample standard deviation was \$95. Construct 90\%, 95\%, and 99\% confidence intervals for the mean weekly fuel spending.
+
+\subsection*{C7}
+Formula:
+\[
+\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\]
+Given \(n=18\), we have \(df=17\).
+
+\textbf{For 90\%:} \(t^*=1.740\)
+\[
+E_{90}=1.740\left(\frac{95}{\sqrt{18}}\right)\approx 38.96
+\]
+\[
+\text{CI}_{90\%}=520\pm 38.96=[481.04,\,558.96]
+\]
+Interpretation: We are 90\% confident the mean weekly fuel spending is between \$481.04 and \$558.96.
+
+\textbf{For 95\%:} \(t^*=2.110\)
+\[
+E_{95}=2.110\left(\frac{95}{\sqrt{18}}\right)\approx 47.24
+\]
+\[
+\text{CI}_{95\%}=520\pm 47.24=[472.76,\,567.24]
+\]
+Interpretation: We are 95\% confident the mean weekly fuel spending is between \$472.76 and \$567.24.
+
+\textbf{For 99\%:} \(t^*=2.898\)
+\[
+E_{99}=2.898\left(\frac{95}{\sqrt{18}}\right)\approx 64.88
+\]
+\[
+\text{CI}_{99\%}=520\pm 64.88=[455.12,\,584.88]
+\]
+Interpretation: We are 99\% confident the mean weekly fuel spending is between \$455.12 and \$584.88.
+
+\subsection*{Problem 3}
+\subsection*{Problem description}
+A platform surveyed 30 app-based tutors about their monthly side-hustle earnings. The sample average was \$860 and the sample standard deviation was \$140. Construct a 95\% confidence interval for the mean monthly earnings. Then evaluate whether a benchmark value of \$900 is plausible for the mean.
+
+\subsection*{C7}
+Formula:
+\[
+\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\]
+Here \(n=30\), so \(df=29\). For 95\% confidence, \(t^*=2.045\).
+
+\[
+E=2.045\left(\frac{140}{\sqrt{30}}\right)\approx 52.27
+\]
+\[
+\text{CI}_{95\%}=860\pm 52.27=[807.73,\,912.27]
+\]
+Interpretation: We are 95\% confident that the mean monthly tutoring side-hustle earnings are between \$807.73 and \$912.27.
+
+Analysis: Since \$900 lies inside the interval, \$900 is a plausible value for the population mean monthly earnings.
+
+\subsection*{Problem 4}
+\subsection*{Problem description}
+A streaming app sampled 16 young professionals and measured monthly spending on digital subscriptions. The sample average was \$310 and the sample standard deviation was \$70. Construct 90\% and 98\% confidence intervals for the mean monthly subscription spending. Then discuss whether the estimate is precise enough for a personal budget target near \$300.
+
+\subsection*{C7}
+Formula:
+\[
+\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\]
+With \(n=16\), \(df=15\).
+
+\textbf{90\% interval:} \(t^*=1.753\)
+\[
+E_{90}=1.753\left(\frac{70}{\sqrt{16}}\right)=1.753(17.5)\approx 30.68
+\]
+\[
+\text{CI}_{90\%}=310\pm 30.68=[279.32,\,340.68]
+\]
+Interpretation: We are 90\% confident the mean monthly subscription spending is between \$279.32 and \$340.68.
+
+\textbf{98\% interval:} \(t^*=2.602\)
+\[
+E_{98}=2.602\left(\frac{70}{\sqrt{16}}\right)=2.602(17.5)\approx 45.54
+\]
+\[
+\text{CI}_{98\%}=310\pm 45.54=[264.46,\,355.54]
+\]
+Interpretation: We are 98\% confident the mean monthly subscription spending is between \$264.46 and \$355.54.
+
+Analysis: Both intervals include \$300, so a budget target around \$300 is reasonable. The 90\% interval is narrower, while the 98\% interval gives more confidence but less precision.
+
+\subsection*{Problem 5}
+\subsection*{Problem description}
+An online store tracked monthly revenue from two independent recent samples of weeks during the same season.
+\begin{itemize}
+  \item Sample A: \(n=22\), sample average \$1450, sample standard deviation \$260.
+  \item Sample B: \(n=22\), sample average \$1580, sample standard deviation \$300.
+\end{itemize}
+Construct a 95\% confidence interval for each sample's mean weekly revenue, and compare the two intervals.
+
+\subsection*{C7}
+For each sample, use:
+\[
+\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\]
+Both have \(n=22\), so \(df=21\), and for 95\% confidence \(t^*=2.080\).
+
+\textbf{Sample A}
+\[
+E_A=2.080\left(\frac{260}{\sqrt{22}}\right)\approx 115.30
+\]
+\[
+\text{CI}_{A,95\%}=1450\pm 115.30=[1334.70,\,1565.30]
+\]
+Interpretation: We are 95\% confident the mean weekly revenue in period A is between \$1334.70 and \$1565.30.
+
+\textbf{Sample B}
+\[
+E_B=2.080\left(\frac{300}{\sqrt{22}}\right)\approx 133.04
+\]
+\[
+\text{CI}_{B,95\%}=1580\pm 133.04=[1446.96,\,1713.04]
+\]
+Interpretation: We are 95\% confident the mean weekly revenue in period B is between \$1446.96 and \$1713.04.
+
+Analysis: The intervals overlap, but period B is shifted upward and has a higher center. This suggests mean revenue in period B is likely higher, though there is still shared plausible range.
+
+\subsection*{Problem 6}
+\subsection*{Problem description}
+Two different groups were studied:
+\begin{itemize}
+  \item Group 1 (part-time delivery workers): \(n=20\), sample average monthly earnings \$680, sample standard deviation \$120.
+  \item Group 2 (part-time graphic designers): \(n=26\), sample average monthly earnings \$910, sample standard deviation \$180.
+\end{itemize}
+Construct a 95\% confidence interval for each population mean and decide which group appears to have the higher mean earnings, using only interval logic.
+
+\subsection*{C7}
+Formula for each group:
+\[
+\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\]
+
+\textbf{Group 1:} \(n=20\Rightarrow df=19\), \(t^*=2.093\)
+\[
+E_1=2.093\left(\frac{120}{\sqrt{20}}\right)\approx 56.16
+\]
+\[
+\text{CI}_{1,95\%}=680\pm 56.16=[623.84,\,736.16]
+\]
+Interpretation: We are 95\% confident delivery workers' mean monthly earnings are between \$623.84 and \$736.16.
+
+\textbf{Group 2:} \(n=26\Rightarrow df=25\), \(t^*=2.060\)
+\[
+E_2=2.060\left(\frac{180}{\sqrt{26}}\right)\approx 72.72
+\]
+\[
+\text{CI}_{2,95\%}=910\pm 72.72=[837.28,\,982.72]
+\]
+Interpretation: We are 95\% confident graphic designers' mean monthly earnings are between \$837.28 and \$982.72.
+
+Analysis: The two intervals do not overlap, and Group 2's entire interval is above Group 1's interval. Using interval logic, Group 2 appears to have the higher mean earnings.
+
+\subsection*{Problem 7}
+\subsection*{Problem description}
+A finance app measured monthly savings contributions from the same target population (young workers in one city) using two independent samples collected in different weeks.
+\begin{itemize}
+  \item Sample A: \(n=14\), sample average \$430, sample standard deviation \$85.
+  \item Sample B: \(n=14\), sample average \$470, sample standard deviation \$90.
+\end{itemize}
+For each sample, construct 90\% and 95\% confidence intervals. Then explain how confidence level affects decision certainty about whether average savings is above \$450.
+
+\subsection*{C7}
+Use:
+\[
+\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\]
+For both samples, \(n=14\Rightarrow df=13\).
+
+\textbf{Sample A (90\%):} \(t^*=1.771\)
+\[
+E_{A,90}=1.771\left(\frac{85}{\sqrt{14}}\right)\approx 40.23
+\]
+\[
+\text{CI}_{A,90\%}=[389.77,\,470.23]
+\]
+Interpretation: We are 90\% confident sample A's population mean monthly savings lies between \$389.77 and \$470.23.
+
+\textbf{Sample A (95\%):} \(t^*=2.160\)
+\[
+E_{A,95}=2.160\left(\frac{85}{\sqrt{14}}\right)\approx 49.07
+\]
+\[
+\text{CI}_{A,95\%}=[380.93,\,479.07]
+\]
+Interpretation: We are 95\% confident sample A's population mean monthly savings lies between \$380.93 and \$479.07.
+
+\textbf{Sample B (90\%):} \(t^*=1.771\)
+\[
+E_{B,90}=1.771\left(\frac{90}{\sqrt{14}}\right)\approx 42.60
+\]
+\[
+\text{CI}_{B,90\%}=[427.40,\,512.60]
+\]
+Interpretation: We are 90\% confident sample B's population mean monthly savings lies between \$427.40 and \$512.60.
+
+\textbf{Sample B (95\%):} \(t^*=2.160\)
+\[
+E_{B,95}=2.160\left(\frac{90}{\sqrt{14}}\right)\approx 51.96
+\]
+\[
+\text{CI}_{B,95\%}=[418.04,\,521.96]
+\]
+Interpretation: We are 95\% confident sample B's population mean monthly savings lies between \$418.04 and \$521.96.
+
+Analysis: Increasing confidence from 90\% to 95\% widens each interval. That gives stronger coverage certainty but weaker sharpness for decisions. For the \$450 benchmark, sample B looks more supportive than sample A at both levels, but neither level allows complete certainty because \$450 remains inside the intervals.
+
+\subsection*{Problem 8}
+\subsection*{Problem description}
+A budgeting coach tracks monthly local travel spending in the same population of young workers using two independent samples.
+\begin{itemize}
+  \item Sample A: \(n=28\), sample average \$260, sample standard deviation \$55.
+  \item Sample B: \(n=28\), sample average \$295, sample standard deviation \$60.
+\end{itemize}
+Use 95\% confidence intervals to evaluate whether a benchmark mean of \$280 is plausible for each sample.
+
+\subsection*{C7}
+Formula:
+\[
+\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\]
+For both samples, \(n=28\Rightarrow df=27\), and \(t^*=2.052\) for 95\% confidence.
+
+\textbf{Sample A}
+\[
+E_A=2.052\left(\frac{55}{\sqrt{28}}\right)\approx 21.33
+\]
+\[
+\text{CI}_{A,95\%}=260\pm 21.33=[238.67,\,281.33]
+\]
+Interpretation: We are 95\% confident the mean monthly travel spending for sample A's population is between \$238.67 and \$281.33.
+
+\textbf{Sample B}
+\[
+E_B=2.052\left(\frac{60}{\sqrt{28}}\right)\approx 23.27
+\]
+\[
+\text{CI}_{B,95\%}=295\pm 23.27=[271.73,\,318.27]
+\]
+Interpretation: We are 95\% confident the mean monthly travel spending for sample B's population is between \$271.73 and \$318.27.
+
+Analysis: The benchmark \$280 is plausible for both samples because it lies inside both confidence intervals.
+
+\subsection*{Problem 9}
+\subsection*{Problem description}
+A marketplace app collected three independent monthly samples from the same population of young creators and recorded side-hustle payouts.
+\begin{itemize}
+  \item Month 1: \(n=12\), sample average \$780, sample standard deviation \$130.
+  \item Month 2: \(n=12\), sample average \$840, sample standard deviation \$150.
+  \item Month 3: \(n=12\), sample average \$810, sample standard deviation \$140.
+\end{itemize}
+Construct a 95\% confidence interval for each month and comment on payout stability across the three months.
+
+\subsection*{C7}
+For each month:
+\[
+\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\]
+Each sample has \(n=12\), so \(df=11\), with \(t^*=2.201\) at 95\% confidence.
+
+\textbf{Month 1}
+\[
+E_1=2.201\left(\frac{130}{\sqrt{12}}\right)\approx 82.60
+\]
+\[
+\text{CI}_{1,95\%}=780\pm 82.60=[697.40,\,862.60]
+\]
+Interpretation: We are 95\% confident the Month 1 mean payout is between \$697.40 and \$862.60.
+
+\textbf{Month 2}
+\[
+E_2=2.201\left(\frac{150}{\sqrt{12}}\right)\approx 95.31
+\]
+\[
+\text{CI}_{2,95\%}=840\pm 95.31=[744.69,\,935.31]
+\]
+Interpretation: We are 95\% confident the Month 2 mean payout is between \$744.69 and \$935.31.
+
+\textbf{Month 3}
+\[
+E_3=2.201\left(\frac{140}{\sqrt{12}}\right)\approx 88.95
+\]
+\[
+\text{CI}_{3,95\%}=810\pm 88.95=[721.05,\,898.95]
+\]
+Interpretation: We are 95\% confident the Month 3 mean payout is between \$721.05 and \$898.95.
+
+Analysis: The three intervals overlap substantially, so the monthly mean payouts appear reasonably stable, with Month 2 slightly higher in center but not separated clearly from the other two months.
+
+\subsection*{Problem 10}
+\subsection*{Problem description}
+A personal finance platform reviewed subscription-cancelation savings in three independent samples from the same population of users.
+\begin{itemize}
+  \item Sample A: \(n=10\), sample average \$1120, sample standard deviation \$240.
+  \item Sample B: \(n=10\), sample average \$980, sample standard deviation \$210.
+  \item Sample C: \(n=10\), sample average \$1050, sample standard deviation \$260.
+\end{itemize}
+Construct 90\% and 99\% confidence intervals for each sample mean. Then provide one recommendation about which sample appears strongest if the platform wants to promote plans with mean savings above \$1000.
+
+\subsection*{C7}
+Use:
+\[
+\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\]
+All samples have \(n=10\), so \(df=9\). From the table: \(t^*=1.833\) for 90\% and \(t^*=3.250\) for 99\%.
+
+\textbf{Sample A}
+\[
+E_{A,90}=1.833\left(\frac{240}{\sqrt{10}}\right)\approx 139.11,
+\quad
+E_{A,99}=3.250\left(\frac{240}{\sqrt{10}}\right)\approx 246.66
+\]
+\[
+\text{CI}_{A,90\%}=[980.89,\,1259.11],
+\quad
+\text{CI}_{A,99\%}=[873.34,\,1366.66]
+\]
+Interpretation: At both levels, Sample A suggests a relatively high mean, but the interval still crosses \$1000 at 90\% and 99\%.
+
+\textbf{Sample B}
+\[
+E_{B,90}=1.833\left(\frac{210}{\sqrt{10}}\right)\approx 121.73,
+\quad
+E_{B,99}=3.250\left(\frac{210}{\sqrt{10}}\right)\approx 215.83
+\]
+\[
+\text{CI}_{B,90\%}=[858.27,\,1101.73],
+\quad
+\text{CI}_{B,99\%}=[764.17,\,1195.83]
+\]
+Interpretation: Sample B has a lower center, and both intervals include many values below \$1000.
+
+\textbf{Sample C}
+\[
+E_{C,90}=1.833\left(\frac{260}{\sqrt{10}}\right)\approx 150.71,
+\quad
+E_{C,99}=3.250\left(\frac{260}{\sqrt{10}}\right)\approx 267.21
+\]
+\[
+\text{CI}_{C,90\%}=[899.29,\,1200.71],
+\quad
+\text{CI}_{C,99\%}=[782.79,\,1317.21]
+\]
+Interpretation: Sample C has a center above \$1000 but high spread, so uncertainty is wide.
+
+Analysis and recommendation: Considering both confidence levels together, Sample A is the strongest option to promote for plans targeting mean savings above \$1000 because it has the highest center and the most favorable interval position relative to \$1000, especially compared with Samples B and C.
+
+\end{document}
