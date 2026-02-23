@@ -1,0 +1,211 @@
+\input{../../preamble/preamble_exams.tex}
+\begin{document}
+\ExamSection{C3 Catch-Up: Point Estimation vs Interval Estimation in Economic Contexts}
+\begin{ExamProblems}
+
+\item
+\subsection*{Problem 1}
+\subsection*{Problem description}
+A fintech company wants to estimate the average monthly subscription spending of young adults in their 20s. A random sample of users gives an average of \$46 per month.
+
+Explain which quantity is the population value and which quantity comes from the sample. Then explain why reporting only \$46 can be useful but limited.
+
+\subsection*{C3}
+The \emph{population parameter} is the true average monthly subscription spending for all young adults in their 20s in the target market. The \emph{sample statistic} is the sample average of \$46 computed from the selected users.
+
+The \emph{point estimate} is \$46, because it gives one single-number estimate of the unknown mean. An \emph{interval estimate} is not provided here, so uncertainty about how close \$46 is to the true mean is not quantified.
+
+Conceptually, interval estimation is better for uncertainty because it gives a plausible range for the population mean instead of one fixed value. For a budgeting app pricing decision, relying only on \$46 may lead to overconfident pricing choices.
+
+\newpage
+\item
+\subsection*{Problem 2}
+\subsection*{Problem description}
+A credit union studies the proportion of young clients who paid their credit card bill late last month. In a sample, 18\% were late.
+
+Identify the parameter and statistic, and explain the difference between an estimator and an estimate in this context.
+
+\subsection*{C3}
+The \emph{population parameter} is the true proportion of all young clients in their 20s who paid late last month. The \emph{sample statistic} is 18\%, observed from the sample.
+
+The \emph{point estimate} is 18\%, which is the numerical result produced by applying the sample-proportion estimator to the data. The estimator is the rule \(\hat{p}=x/n\), while the estimate is the specific value 0.18. An \emph{interval estimate} would give a range of plausible late-payment proportions.
+
+An interval would communicate uncertainty better than a single percentage because sample-to-sample fluctuation is real. For loan-risk policy, treating 18\% as exact could produce unnecessarily strict or lenient repayment rules.
+
+\item
+\subsection*{Problem 3}
+\subsection*{Problem description}
+A delivery platform looks at weekly earnings of riders in their 20s. A random sample gives a mean of \$520 and a sample standard deviation of \$140.
+
+Without using formulas, explain the roles of population mean, population standard deviation, sample mean, and sample standard deviation. Then state what can and cannot be concluded from only the sample mean.
+
+\subsection*{C3}
+The \emph{population parameter} for center is the true population mean weekly earnings, and another population parameter for spread is the true population standard deviation across all riders in the target group. The \emph{sample statistic} values are the sample mean \$520 and sample standard deviation \$140.
+
+The \emph{point estimate} of the population mean is \$520, and the point estimate of the population standard deviation is \$140. No \emph{interval estimate} is given, so we cannot judge how precise those point estimates are.
+
+Point estimates summarize quickly, but they do not show uncertainty in inference from sample to population. For deciding a minimum guaranteed rider bonus, management should avoid using \$520 alone as if it were exact.
+
+\newpage
+\item
+\subsection*{Problem 4}
+\subsection*{Problem description}
+A start-up studies monthly side-business revenue of young adults selling digital templates. A sample summary is: \(n=64\), sample mean \(\bar{x}=\$780\), sample standard deviation \(s=\$220\). A 95\% confidence interval for the population mean is \([\$726,\$834]\).
+
+Explain how this interval improves on the point estimate.
+
+\[
+\mu \in [726,834]
+\]
+
+\subsection*{C3}
+The \emph{population parameter} is the true mean monthly side-business revenue for all similar young adults in their 20s. The \emph{sample statistic} values are \(\bar{x}=780\) and \(s=220\) from the observed sample.
+
+The \emph{point estimate} is \$780. The \emph{interval estimate} is \([\$726,\$834]\), which provides a range of plausible values for the unknown mean.
+
+This interval handles uncertainty better because it reflects sampling variation, while the point estimate alone hides that variation. For setting a realistic revenue target in a business incubator, the interval supports safer planning than one number.
+
+\item
+\subsection*{Problem 5}
+\subsection*{Problem description}
+A housing analyst tracks monthly rent paid by young professionals in a city. The sample mean is \$1,240 and the reported 90\% confidence interval for the population mean rent is \([\$1,190,\$1,290]\).
+
+Interpret both the point estimate and the interval estimate in plain statistical language.
+
+\subsection*{C3}
+The \emph{population parameter} is the true mean monthly rent paid by the full population of relevant young professionals. The \emph{sample statistic} is the sample mean of \$1,240 from collected rent data.
+
+The \emph{point estimate} is \$1,240. The \emph{interval estimate} is \([\$1,190,\$1,290]\), meaning the study supports a plausible band for the population mean rather than one exact value.
+
+Compared with the point estimate, the interval provides clearer uncertainty information and helps avoid false precision. For a salary negotiation, this suggests a renter should prepare for typical rents across a range, not just at \$1,240.
+
+\item
+\subsection*{Problem 6}
+\subsection*{Problem description}
+A neobank measures monthly discretionary spending among users in their 20s. Two analysts report:
+\begin{itemize}
+    \item Analyst A: point estimate \(\bar{x}=\$610\)
+    \item Analyst B: 95\% confidence interval \([\$560,\$660]\)
+\end{itemize}
+Explain why Analyst B's report is usually more informative for policy decisions.
+
+\subsection*{C3}
+The \emph{population parameter} is the true mean discretionary spending of the target user population. The \emph{sample statistic} includes the sample mean \$610 used by both analysts.
+
+The \emph{point estimate} is \$610. The \emph{interval estimate} is \([\$560,\$660]\), which states a plausible range for the population mean and communicates precision.
+
+Analyst B adds uncertainty information that Analyst A does not provide with a single value. For deciding whether to launch a \$599 budgeting premium tier, the interval gives better evidence about market fit risk.
+
+\newpage
+\item
+\subsection*{Problem 7}
+\subsection*{Problem description}
+Two e-commerce cohorts of sellers in their 20s are studied.
+\begin{itemize}
+    \item Cohort A: point estimate of mean monthly sales = \$2,050; 95\% interval = \([\$1,900,\$2,200]\)
+    \item Cohort B: point estimate of mean monthly sales = \$2,140; 95\% interval = \([\$2,000,\$2,280]\)
+\end{itemize}
+The intervals overlap.
+
+Explain what can and cannot be concluded about which cohort has a higher population mean.
+
+\subsection*{C3}
+The \emph{population parameter} in each group is its true mean monthly sales. The \emph{sample statistic} values are the sample means \$2,050 and \$2,140 with their reported confidence intervals.
+
+Each cohort has a \emph{point estimate} (single mean), and each also has an \emph{interval estimate} showing plausible ranges. Because the intervals overlap, the evidence of a clear population-mean difference is weaker than the point estimates alone might suggest.
+
+Interval comparison better reflects uncertainty than only comparing 2,050 versus 2,140. For inventory financing, a manager should be cautious before assuming Cohort B is definitively stronger.
+
+\item
+\subsection*{Problem 8}
+\subsection*{Problem description}
+A platform compares monthly gig income in two cities:
+\begin{itemize}
+    \item City X: point estimate \$890; 95\% interval \([\$820,\$960]\)
+    \item City Y: point estimate \$870; 95\% interval \([\$860,\$880]\)
+\end{itemize}
+Discuss which city estimate is more precise and how interval width affects decision confidence.
+
+\subsection*{C3}
+The \emph{population parameter} for each city is the true mean monthly gig income. The \emph{sample statistic} values are the two sample means and their interval summaries.
+
+The \emph{point estimate} is \$890 for City X and \$870 for City Y. The \emph{interval estimate} is much wider for City X and very narrow for City Y, so City Y has the more precise estimate.
+
+Narrower intervals indicate less uncertainty about the parameter, while wider intervals indicate more uncertainty. For relocation advice to young workers, confidence is higher in the City Y estimate than in the City X estimate.
+
+\item
+\subsection*{Problem 9}
+\subsection*{Problem description}
+An investment app reports the average monthly return of beginner investors in their 20s using the same sample:
+\begin{itemize}
+    \item 90\% confidence interval: \([\$72,\$96]\)
+    \item 95\% confidence interval: \([\$68,\$100]\)
+\end{itemize}
+Explain why the 95\% interval is wider and how this affects interpretation.
+
+\subsection*{C3}
+The \emph{population parameter} is the true mean monthly return for the target beginner-investor population. The \emph{sample statistic} includes the sample mean at the center of both intervals.
+
+That center value is the \emph{point estimate}. The two reported ranges are \emph{interval estimate} outputs at different confidence levels.
+
+A higher confidence level asks for greater long-run reliability, so the interval becomes wider to capture the unknown parameter more often. For setting expected-return messaging in the app, the 95\% interval supports more conservative communication than the 90\% interval.
+
+\newpage
+\item
+\subsection*{Problem 10}
+\subsection*{Problem description}
+A payroll researcher estimates mean monthly freelance earnings for young adults.
+
+Case A assumes population variance is known from a very stable national database.
+Case B assumes population variance is unknown and must be estimated from the sample.
+
+Without computing any critical values, explain why interval estimation procedures differ conceptually (z-based vs t-based) and why assumptions matter.
+
+\subsection*{C3}
+The \emph{population parameter} is the true mean monthly freelance earnings. The \emph{sample statistic} includes the sample mean and, when needed, the sample standard deviation used to represent unknown spread.
+
+The \emph{point estimate} of the mean is still the sample mean in both cases. The \emph{interval estimate} differs conceptually: with known population variance the normal-based approach is used, while with unknown variance extra uncertainty from estimating spread leads to a t-based approach.
+
+So interval estimation depends on distributional and variance assumptions because those assumptions determine how much uncertainty is attached to the estimate. For compensation benchmarking, ignoring whether variance is known can produce overconfident pay recommendations.
+
+\item
+\subsection*{Problem 11}
+\subsection*{Problem description}
+A lender estimates average monthly loan repayment by young borrowers. Two studies report 95\% intervals around similar centers:
+\begin{itemize}
+    \item Study A: \([\$410,\$590]\)
+    \item Study B: \([\$470,\$530]\)
+\end{itemize}
+Which study likely used a larger sample, and why? Focus on margin of error intuition only.
+
+\subsection*{C3}
+The \emph{population parameter} is the true mean monthly repayment in the full young-borrower population. The \emph{sample statistic} in each study is the sample mean with its sampling variability summarized through the interval width.
+
+The center in each study is the \emph{point estimate}, while each bracketed range is an \emph{interval estimate}. Study B has a smaller margin of error because its interval is narrower, so it likely comes from a larger sample under similar conditions.
+
+Interval width directly communicates uncertainty: narrower means more precision, wider means less precision. For setting default payment reminders, the lender should trust Study B more for fine-grained targeting.
+
+\item
+\subsection*{Problem 12}
+\subsection*{Problem description}
+A digital bank evaluates two outcomes for clients in their 20s:
+\begin{itemize}
+    \item Mean monthly card spending amount (USD)
+    \item Proportion of clients who miss at least one payment in a quarter
+\end{itemize}
+Sample results are:
+\begin{itemize}
+    \item Spending: point estimate \$1,120, interval \([\$1,060,\$1,180]\)
+    \item Missed-payment rate: point estimate 0.14, interval \([0.11,0.17]\)
+\end{itemize}
+Identify which population parameter corresponds to each case and explain the role of point and interval estimates in both.
+
+\subsection*{C3}
+There are two \emph{population parameter} targets: a population mean for monthly spending and a population proportion for missed payments. The corresponding \emph{sample statistic} values are the sample mean \$1,120 and sample proportion 0.14 from observed client data.
+
+In each case, the single reported value is a \emph{point estimate}. The ranges \([\$1,060,\$1,180]\) and \([0.11,0.17]\) are each an \emph{interval estimate}, adapted to different parameter types (mean versus proportion).
+
+Both intervals express uncertainty that the point estimates alone cannot show, which improves inference quality across outcomes. For product design, the bank can set spending features and repayment alerts using ranges that better reflect real population behavior.
+
+\end{ExamProblems}
+\end{document}
