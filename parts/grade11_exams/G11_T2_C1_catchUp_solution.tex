@@ -159,68 +159,98 @@
 		\subsection*{Problem description}
 		A weekend delivery team led by senior students compared tip income per shift (USD) for two independent routes to see which route gives more stable earnings for transportation planning.
 
-		\textbf{Sample A (Route A, USD):}
-		\[8,\ 10,\ 12,\ 11,\ 9,\ 13,\ 7,\ 12,\ 10,\ 11\]
+		\textbf{Sample A (Route A, grouped data in USD):}
+		\begin{center}
+		\begin{tabular}{c c}
+		\toprule
+		Tip income $x$ & Frequency $f$\\
+		\midrule
+		6  & 2\\
+		10 & 4\\
+		14 & 6\\
+		18 & 5\\
+		22 & 3\\
+		\bottomrule
+		\end{tabular}
+		\end{center}
 
-		\textbf{Sample B (Route B, USD):}
-		\[5,\ 15,\ 9,\ 18,\ 6,\ 14,\ 8,\ 17,\ 7,\ 16\]
+		\textbf{Sample B (Route B, grouped data in USD):}
+		\begin{center}
+		\begin{tabular}{c c}
+		\toprule
+		Tip income $x$ & Frequency $f$\\
+		\midrule
+		5  & 4\\
+		9  & 6\\
+		13 & 5\\
+		17 & 3\\
+		21 & 2\\
+		\bottomrule
+		\end{tabular}
+		\end{center}
 
-		For each sample, compute the sample mean and sample standard deviation. Then compare the two routes in terms of tip-income volatility.
+		For each sample, compute the sample mean and sample standard deviation using grouped-data formulas. Then compare the two routes in terms of tip-income volatility.
 
 		\subsection*{C1}
-		We compute center and spread for each independent route sample.
+		We use frequency-weighted formulas for each grouped sample.
 
 		\textbf{Sample A}
 
 		Step 1: Compute $\bar{x}_A$.
 		\[
-		\bar{x}_A = \frac{\sum x_i}{n_A}
-		= \frac{8+10+12+11+9+13+7+12+10+11}{10}
-		= \frac{103}{10}
-		= 10.30\ \text{USD}
+		n_A = \sum f_i = 2+4+6+5+3 = 20
+		\]
+		\[
+		\bar{x}_A = \frac{\sum f_i x_i}{\sum f_i}
+		= \frac{6(2)+10(4)+14(6)+18(5)+22(3)}{20}
+		= \frac{292}{20}
+		= 14.60\ \text{USD}
 		\]
 
 		Step 2: Compute $s_A$.
 		\[
-		s_A = \sqrt{\frac{\sum (x_i-\bar{x}_A)^2}{n_A-1}}
+		s_A = \sqrt{\frac{\sum f_i(x_i-\bar{x}_A)^2}{n_A-1}}
 		\]
-		Using $\bar{x}_A=10.30$:
+		With $\bar{x}_A=14.60$:
 		\[
-		\sum (x_i-\bar{x}_A)^2 = (8-10.30)^2+(10-10.30)^2+(12-10.30)^2+(11-10.30)^2+(9-10.30)^2
-		\]
-		\[
-		\qquad +(13-10.30)^2+(7-10.30)^2+(12-10.30)^2+(10-10.30)^2+(11-10.30)^2 = 32.10
+		\sum f_i(x_i-\bar{x}_A)^2 = 2(6-14.60)^2 + 4(10-14.60)^2 + 6(14-14.60)^2 + 5(18-14.60)^2 + 3(22-14.60)^2
 		\]
 		\[
-		s_A = \sqrt{\frac{32.10}{10-1}} = \sqrt{3.57} = 1.89\ \text{USD}
+		\qquad = 147.92 + 84.64 + 2.16 + 57.80 + 164.28 = 456.80
+		\]
+		\[
+		s_A = \sqrt{\frac{456.80}{20-1}} = \sqrt{24.04} = 4.90\ \text{USD}
 		\]
 
 		\textbf{Sample B}
 
 		Step 1: Compute $\bar{x}_B$.
 		\[
-		\bar{x}_B = \frac{\sum x_i}{n_B}
-		= \frac{5+15+9+18+6+14+8+17+7+16}{10}
-		= \frac{115}{10}
-		= 11.50\ \text{USD}
+		n_B = \sum f_i = 4+6+5+3+2 = 20
+		\]
+		\[
+		\bar{x}_B = \frac{\sum f_i x_i}{\sum f_i}
+		= \frac{5(4)+9(6)+13(5)+17(3)+21(2)}{20}
+		= \frac{232}{20}
+		= 11.60\ \text{USD}
 		\]
 
 		Step 2: Compute $s_B$.
 		\[
-		s_B = \sqrt{\frac{\sum (x_i-\bar{x}_B)^2}{n_B-1}}
+		s_B = \sqrt{\frac{\sum f_i(x_i-\bar{x}_B)^2}{n_B-1}}
 		\]
-		Using $\bar{x}_B=11.50$:
+		With $\bar{x}_B=11.60$:
 		\[
-		\sum (x_i-\bar{x}_B)^2 = (5-11.50)^2+(15-11.50)^2+(9-11.50)^2+(18-11.50)^2+(6-11.50)^2
-		\]
-		\[
-		\qquad +(14-11.50)^2+(8-11.50)^2+(17-11.50)^2+(7-11.50)^2+(16-11.50)^2 = 222.50
+		\sum f_i(x_i-\bar{x}_B)^2 = 4(5-11.60)^2 + 6(9-11.60)^2 + 5(13-11.60)^2 + 3(17-11.60)^2 + 2(21-11.60)^2
 		\]
 		\[
-		s_B = \sqrt{\frac{222.50}{10-1}} = \sqrt{24.72} = 4.97\ \text{USD}
+		\qquad = 174.24 + 40.56 + 9.80 + 87.48 + 176.72 = 488.80
+		\]
+		\[
+		s_B = \sqrt{\frac{488.80}{20-1}} = \sqrt{25.73} = 5.07\ \text{USD}
 		\]
 
-		Route B has a slightly higher mean tip (11.50 USD vs 10.30 USD) but much larger spread (4.97 USD vs 1.89 USD), so Route A is more stable for predictable shift-level earnings.
+		Route A has the higher average tip income (14.60 USD vs 11.60 USD), while Route B has slightly larger spread (5.07 USD vs 4.90 USD), so Route A is both more profitable on average and marginally more stable.
 
 		\newpage
 		\item
@@ -278,70 +308,110 @@
 		\item
 		\subsection*{Problem 6}
 		\subsection*{Problem description}
-		A youth investment club compared two independent samples of monthly portfolio returns (USD) from two different micro-investment strategies before deciding how to allocate new capital.
+		A youth investment club compared two independent grouped samples of monthly portfolio returns (USD) from two different micro-investment strategies before deciding how to allocate new capital.
 
-		\textbf{Sample A (Strategy A, USD):}
-		\[-12,\ 5,\ 18,\ 24,\ 31,\ 12,\ 27,\ 20\]
+		\textbf{Sample A (Strategy A, grouped intervals in USD):}
+		\begin{center}
+		\begin{tabular}{c c}
+		\toprule
+		Interval & Frequency\\
+		\midrule
+		20--39   & 3\\
+		40--59   & 5\\
+		60--79   & 7\\
+		80--99   & 4\\
+		100--119 & 1\\
+		\bottomrule
+		\end{tabular}
+		\end{center}
 
-		\textbf{Sample B (Strategy B, USD):}
-		\[-25,\ 40,\ 5,\ 55,\ -10,\ 35,\ 60,\ 15\]
+		\textbf{Sample B (Strategy B, grouped intervals in USD):}
+		\begin{center}
+		\begin{tabular}{c c}
+		\toprule
+		Interval & Frequency\\
+		\midrule
+		10--29  & 2\\
+		30--49  & 4\\
+		50--69  & 6\\
+		70--89  & 5\\
+		90--109 & 3\\
+		\bottomrule
+		\end{tabular}
+		\end{center}
 
-		For each sample, compute the sample mean and sample standard deviation. Then compare which strategy appears more stable for conservative student investors.
+		Using class midpoints, compute the sample mean and sample standard deviation for each strategy. Then compare which strategy appears more stable for conservative student investors.
 
 		\subsection*{C1}
-		We compute center and spread for each independent strategy sample.
+		We approximate each grouped sample using class midpoints, then apply frequency weighting.
 
 		\textbf{Sample A}
 
-		Step 1: Compute $\bar{x}_A$.
+		Step 1: Compute midpoints and $\bar{x}_A$.
 		\[
-		\bar{x}_A = \frac{\sum x_i}{n_A}
-		= \frac{-12+5+18+24+31+12+27+20}{8}
-		= \frac{125}{8}
-		= 15.63\ \text{USD}
+		m_i:\ 29.5,\ 49.5,\ 69.5,\ 89.5,\ 109.5
+		\qquad
+		n_A = 3+5+7+4+1 = 20
+		\]
+		\[
+		\bar{x}_A = \frac{\sum f_i m_i}{\sum f_i}
+		= \frac{29.5(3)+49.5(5)+69.5(7)+89.5(4)+109.5(1)}{20}
+		= \frac{1290}{20}
+		= 64.50\ \text{USD}
 		\]
 
 		Step 2: Compute $s_A$.
 		\[
-		s_A = \sqrt{\frac{\sum (x_i-\bar{x}_A)^2}{n_A-1}}
+		s_A = \sqrt{\frac{\sum f_i(m_i-\bar{x}_A)^2}{n_A-1}}
 		\]
-		Using $\bar{x}_A=15.63$:
+		Using $\bar{x}_A=64.50$:
 		\[
-		\sum (x_i-\bar{x}_A)^2 = (-12-15.63)^2+(5-15.63)^2+(18-15.63)^2+(24-15.63)^2
-		\]
-		\[
-		\qquad +(31-15.63)^2+(12-15.63)^2+(27-15.63)^2+(20-15.63)^2 = 1349.87
+		\sum f_i(m_i-\bar{x}_A)^2 = 3(29.5-64.5)^2 + 5(49.5-64.5)^2 + 7(69.5-64.5)^2
 		\]
 		\[
-		s_A = \sqrt{\frac{1349.87}{8-1}} = \sqrt{192.84} = 13.89\ \text{USD}
+		\qquad + 4(89.5-64.5)^2 + 1(109.5-64.5)^2
+		\]
+		\[
+		\qquad = 3675 + 1125 + 175 + 2500 + 2025 = 9500
+		\]
+		\[
+		s_A = \sqrt{\frac{9500}{20-1}} = \sqrt{500.00} = 22.36\ \text{USD}
 		\]
 
 		\textbf{Sample B}
 
-		Step 1: Compute $\bar{x}_B$.
+		Step 1: Compute midpoints and $\bar{x}_B$.
 		\[
-		\bar{x}_B = \frac{\sum x_i}{n_B}
-		= \frac{-25+40+5+55-10+35+60+15}{8}
-		= \frac{175}{8}
-		= 21.88\ \text{USD}
+		m_i:\ 19.5,\ 39.5,\ 59.5,\ 79.5,\ 99.5
+		\qquad
+		n_B = 2+4+6+5+3 = 20
+		\]
+		\[
+		\bar{x}_B = \frac{\sum f_i m_i}{\sum f_i}
+		= \frac{19.5(2)+39.5(4)+59.5(6)+79.5(5)+99.5(3)}{20}
+		= \frac{1250}{20}
+		= 62.50\ \text{USD}
 		\]
 
 		Step 2: Compute $s_B$.
 		\[
-		s_B = \sqrt{\frac{\sum (x_i-\bar{x}_B)^2}{n_B-1}}
+		s_B = \sqrt{\frac{\sum f_i(m_i-\bar{x}_B)^2}{n_B-1}}
 		\]
-		Using $\bar{x}_B=21.88$:
+		Using $\bar{x}_B=62.50$:
 		\[
-		\sum (x_i-\bar{x}_B)^2 = (-25-21.88)^2+(40-21.88)^2+(5-21.88)^2+(55-21.88)^2
-		\]
-		\[
-		\qquad +(-10-21.88)^2+(35-21.88)^2+(60-21.88)^2+(15-21.88)^2 = 6596.87
+		\sum f_i(m_i-\bar{x}_B)^2 = 2(19.5-62.5)^2 + 4(39.5-62.5)^2 + 6(59.5-62.5)^2
 		\]
 		\[
-		s_B = \sqrt{\frac{6596.87}{8-1}} = \sqrt{942.41} = 30.70\ \text{USD}
+		\qquad + 5(79.5-62.5)^2 + 3(99.5-62.5)^2
+		\]
+		\[
+		\qquad = 3698 + 2116 + 54 + 1445 + 4107 = 11420
+		\]
+		\[
+		s_B = \sqrt{\frac{11420}{20-1}} = \sqrt{601.05} = 24.52\ \text{USD}
 		\]
 
-		Both strategies have positive average returns, but Strategy B has far greater variability (30.70 USD vs 13.89 USD), so Strategy A is more stable for conservative investors.
+		Both strategies have similar average monthly returns (64.50 USD and 62.50 USD), but Strategy B has the larger standard deviation (24.52 USD vs 22.36 USD), so Strategy A is slightly more stable for conservative investors.
 
 		\newpage
 		\item
