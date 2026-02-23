@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper,left=1.2cm,right=1.2cm,top=1.5cm,bottom=1.5cm]{geometry}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multicol}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.15}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}m{\dimexpr0.30\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
+\newcolumntype{Z}{>{\raggedright\arraybackslash}m{\dimexpr0.70\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcommand{\SubsectionBox}[1]{%
+\noindent\colorbox{gray!30}{\parbox{\linewidth}{\textbf{#1}}}\par\vspace{0.35cm}%
+}
+\newcommand{\CellCenter}[1]{\parbox{\linewidth}{\centering #1}}
+
+\begin{document}
+
+\noindent
+\begin{tabularx}{\textwidth}{|C{2.8cm}|C{\dimexpr\textwidth-6cm-4\tabcolsep-4\arrayrulewidth\relax}|C{2.8cm}|}
+\hline
+\centering\vspace{3mm}\includegraphics[width=2.5cm]{../../preamble/logo.png}&
+\CellCenter{\vspace{-5mm}\textbf{GLOBAL ECONOMICS}\par\textbf{GRADE: 11TH}\par\textbf{CATCH-UP}\par\textbf{CRITERION C7}\par\textbf{TEACHER'S NAME: Nicolás López Cuéllar}}&
+\CellCenter{\textbf{SECOND TERM}\par\textbf{2025--2026}}\\
+\hline
+\end{tabularx}
+
+\vspace{0.5cm}
+\noindent
+\begin{tabular}{|Y|Z|}
+\hline
+{\footnotesize\textbf{Learning objective:} Construct and interpret a confidence interval for a population proportion.}&
+{\footnotesize\textbf{Assessment criteria:}\par C7: Constructs the confidence interval for a proportion.}\\
+\hline
+\end{tabular}
+
+\vspace{0.4cm}
+\noindent
+\textbf{Student's name:} \rule{7cm}{0.4pt}\hfill\textbf{Group:} \rule{2cm}{0.4pt}\hfill\textbf{Date:} \rule{3cm}{0.4pt}
+
+\vspace{0.5cm}
+\SubsectionBox{Problems}
+
+\SubsectionBox{Problem 1}
+\subsection*{Problem description}
+A survey of 24 young adults who rent apartments in a large city recorded monthly rent payments. The sample average rent was \$1240, and the sample standard deviation was \$210. Construct a 95\% confidence interval for the mean monthly rent of similar young adult renters in that city.
+
+\subsection*{C7}
+\vspace{6cm}
+\vspace{0.3cm}
+\hrule
+\vspace{0.4cm}
+
+\SubsectionBox{Problem 2}
+\subsection*{Problem description}
+A sample of 18 freelance delivery riders reported weekly fuel spending. The sample average was \$520 and the sample standard deviation was \$95. Construct 90\%, 95\%, and 99\% confidence intervals for the mean weekly fuel spending.
+
+\subsection*{C7}
+\vspace{6cm}
+\vspace{0.3cm}
+\hrule
+\vspace{0.4cm}
+
+\SubsectionBox{Problem 3}
+\subsection*{Problem description}
+A platform surveyed 30 app-based tutors about their monthly side-hustle earnings. The sample average was \$860 and the sample standard deviation was \$140. Construct a 95\% confidence interval for the mean monthly earnings. Then evaluate whether a benchmark value of \$900 is plausible for the mean.
+
+\subsection*{C7}
+\vspace{6cm}
+\vspace{0.3cm}
+\hrule
+\vspace{0.4cm}
+
+\SubsectionBox{Problem 4}
+\subsection*{Problem description}
+A streaming app sampled 16 young professionals and measured monthly spending on digital subscriptions. The sample average was \$310 and the sample standard deviation was \$70. Construct 90\% and 98\% confidence intervals for the mean monthly subscription spending. Then discuss whether the estimate is precise enough for a personal budget target near \$300.
+
+\subsection*{C7}
+\vspace{6cm}
+\vspace{0.3cm}
+\hrule
+\vspace{0.4cm}
+
+\SubsectionBox{Problem 5}
+\subsection*{Problem description}
+An online store tracked monthly revenue from two independent recent samples of weeks during the same season.
+\begin{itemize}
+  \item Sample A: \(n=22\), sample average \$1450, sample standard deviation \$260.
+  \item Sample B: \(n=22\), sample average \$1580, sample standard deviation \$300.
+\end{itemize}
+Construct a 95\% confidence interval for each sample's mean weekly revenue, and compare the two intervals.
+
+\subsection*{C7}
+\vspace{6cm}
+\vspace{0.3cm}
+\hrule
+\vspace{0.4cm}
+
+\SubsectionBox{Problem 6}
+\subsection*{Problem description}
+Two different groups were studied:
+\begin{itemize}
+  \item Group 1 (part-time delivery workers): \(n=20\), sample average monthly earnings \$680, sample standard deviation \$120.
+  \item Group 2 (part-time graphic designers): \(n=26\), sample average monthly earnings \$910, sample standard deviation \$180.
+\end{itemize}
+Construct a 95\% confidence interval for each population mean and decide which group appears to have the higher mean earnings, using only interval logic.
+
+\subsection*{C7}
+\vspace{6cm}
+\vspace{0.3cm}
+\hrule
+\vspace{0.4cm}
+
+\SubsectionBox{Problem 7}
+\subsection*{Problem description}
+A finance app measured monthly savings contributions from the same target population (young workers in one city) using two independent samples collected in different weeks.
+\begin{itemize}
+  \item Sample A: \(n=14\), sample average \$430, sample standard deviation \$85.
+  \item Sample B: \(n=14\), sample average \$470, sample standard deviation \$90.
+\end{itemize}
+For each sample, construct 90\% and 95\% confidence intervals. Then explain how confidence level affects decision certainty about whether average savings is above \$450.
+
+\subsection*{C7}
+\vspace{6cm}
+\vspace{0.3cm}
+\hrule
+\vspace{0.4cm}
+
+\SubsectionBox{Problem 8}
+\subsection*{Problem description}
+A budgeting coach tracks monthly local travel spending in the same population of young workers using two independent samples.
+\begin{itemize}
+  \item Sample A: \(n=28\), sample average \$260, sample standard deviation \$55.
+  \item Sample B: \(n=28\), sample average \$295, sample standard deviation \$60.
+\end{itemize}
+Use 95\% confidence intervals to evaluate whether a benchmark mean of \$280 is plausible for each sample.
+
+\subsection*{C7}
+\vspace{6cm}
+\vspace{0.3cm}
+\hrule
+\vspace{0.4cm}
+
+\SubsectionBox{Problem 9}
+\subsection*{Problem description}
+A marketplace app collected three independent monthly samples from the same population of young creators and recorded side-hustle payouts.
+\begin{itemize}
+  \item Month 1: \(n=12\), sample average \$780, sample standard deviation \$130.
+  \item Month 2: \(n=12\), sample average \$840, sample standard deviation \$150.
+  \item Month 3: \(n=12\), sample average \$810, sample standard deviation \$140.
+\end{itemize}
+Construct a 95\% confidence interval for each month and comment on payout stability across the three months.
+
+\subsection*{C7}
+\vspace{6cm}
+\vspace{0.3cm}
+\hrule
+\vspace{0.4cm}
+
+\SubsectionBox{Problem 10}
+\subsection*{Problem description}
+A personal finance platform reviewed subscription-cancelation savings in three independent samples from the same population of users.
+\begin{itemize}
+  \item Sample A: \(n=10\), sample average \$1120, sample standard deviation \$240.
+  \item Sample B: \(n=10\), sample average \$980, sample standard deviation \$210.
+  \item Sample C: \(n=10\), sample average \$1050, sample standard deviation \$260.
+\end{itemize}
+Construct 90\% and 99\% confidence intervals for each sample mean. Then provide one recommendation about which sample appears strongest if the platform wants to promote plans with mean savings above \$1000.
+
+\subsection*{C7}
+\vspace{6cm}
+\end{document}
