@@ -1,400 +1,465 @@
 \input{../../preamble/preamble_exams.tex}
 \begin{document}
-\ExamTitleBlock{11th grade}{Term 2 Catch-up Solution: C7 (Mean Confidence Intervals with $t$)}{}
-
-\section*{Reference $t$-critical values used in this worksheet}
-\[
-\begin{array}{c|cccc}
-\text{df} & t_{0.05,\,df}\ (90\%) & t_{0.025,\,df}\ (95\%) & t_{0.01,\,df}\ (98\%) & t_{0.005,\,df}\ (99\%) \\
-\hline
-9  & 1.833 & 2.262 & 2.821 & 3.250 \\
-11 & 1.796 & 2.201 & 2.718 & 3.106 \\
-13 & 1.771 & 2.160 & 2.650 & 3.012 \\
-15 & 1.753 & 2.131 & 2.602 & 2.947 \\
-17 & 1.740 & 2.110 & 2.567 & 2.898 \\
-19 & 1.729 & 2.093 & 2.539 & 2.861 \\
-21 & 1.721 & 2.080 & 2.518 & 2.831 \\
-23 & 1.714 & 2.069 & 2.500 & 2.807 \\
-25 & 1.708 & 2.060 & 2.485 & 2.787 \\
-27 & 1.703 & 2.052 & 2.473 & 2.771 \\
-29 & 1.699 & 2.045 & 2.462 & 2.756
-\end{array}
-\]
+\ExamTitleBlock{11th grade}{Term 2 Catch-up Solution: C7 (Confidence Intervals for a Proportion)}{}
 
 \subsection*{Problem 1}
-\subsection*{City Rent Mean Interval}
-A survey of 24 young adults who rent apartments in a large city recorded monthly rent payments. The sample average rent was \$1240, and the sample standard deviation was \$210. Construct a 95\% confidence interval for the mean monthly rent of similar young adult renters in that city.
+\subsection*{Problem description}
+A digital bank wants to estimate the proportion of young adult clients (ages 20--29) who use automatic monthly savings transfers. In a random sample of \(n=120\) clients, \(x=66\) report using automatic transfers. Construct and interpret a \(90\%\) confidence interval for the population proportion.
 
 \subsection*{C7}
-We use the confidence interval for a population mean when the variance is unknown:
+We construct a confidence interval for a population proportion:
 \[
-\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
-\]
-Here, \(n=24\), so \(df=n-1=23\). From the table, for 95\% confidence and \(df=23\), \(t^*=2.069\).
-
-\[
-\bar{x}=1240,\quad s=210,\quad E=t^*\frac{s}{\sqrt{n}}=2.069\left(\frac{210}{\sqrt{24}}\right)\approx 88.69
+\hat p \pm z^*\sqrt{\frac{\hat p(1-\hat p)}{n}}
 \]
 
+Step 1: Sample proportion
 \[
-\text{CI}_{95\%}=1240\pm 88.69=[1151.31,\,1328.69]
+\hat p=\frac{x}{n}=\frac{66}{120}=0.55
+\]
+Check conditions:
+\[
+n\hat p=120(0.55)=66\ge 10,\qquad n(1-\hat p)=120(0.45)=54\ge 10
 \]
 
-Interpretation: We are 95\% confident that the mean monthly rent for similar young adult renters in this city is between \$1151.31 and \$1328.69.
+Step 2: Standard error
+\[
+SE=\sqrt{\frac{0.55(0.45)}{120}}\approx 0.0454
+\]
+
+Step 3: Margin of error for \(90\%\) confidence \((z^*=1.645)\)
+\[
+E=1.645(0.0454)\approx 0.0747
+\]
+
+Step 4: Confidence interval
+\[
+0.55\pm 0.0747\Rightarrow [0.475,\,0.625]
+\]
+
+Interpretation: We are 90\% confident that between 47.5\% and 62.5\% of young adult clients use automatic monthly savings transfers.
 
 \subsection*{Problem 2}
-\subsection*{Rider Fuel Confidence Levels}
-A sample of 18 freelance delivery riders reported weekly fuel spending. The sample average was \$520 and the sample standard deviation was \$95. Construct 90\%, 95\%, and 99\% confidence intervals for the mean weekly fuel spending.
+\subsection*{Problem description}
+A rideshare platform wants to estimate the proportion of drivers in their 20s who bought private accident insurance this year. In a sample of \(n=200\) drivers, \(x=92\) purchased insurance. Construct \(90\%\), \(95\%\), and \(99\%\) confidence intervals for the population proportion, and give a brief interpretation.
 
 \subsection*{C7}
-Formula:
+Step 1: Sample proportion
 \[
-\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\hat p=\frac{92}{200}=0.46
 \]
-Given \(n=18\), we have \(df=17\).
+Conditions:
+\[
+n\hat p=92\ge 10,\qquad n(1-\hat p)=108\ge 10
+\]
 
-\textbf{For 90\%:} \(t^*=1.740\)
+Step 2: Standard error
 \[
-E_{90}=1.740\left(\frac{95}{\sqrt{18}}\right)\approx 38.96
+SE=\sqrt{\frac{0.46(0.54)}{200}}\approx 0.0352
 \]
-\[
-\text{CI}_{90\%}=520\pm 38.96=[481.04,\,558.96]
-\]
-Interpretation: We are 90\% confident the mean weekly fuel spending is between \$481.04 and \$558.96.
 
-\textbf{For 95\%:} \(t^*=2.110\)
+Step 3: Margins of error
 \[
-E_{95}=2.110\left(\frac{95}{\sqrt{18}}\right)\approx 47.24
+E_{90}=1.645(0.0352)\approx 0.0579
 \]
 \[
-\text{CI}_{95\%}=520\pm 47.24=[472.76,\,567.24]
+E_{95}=1.96(0.0352)\approx 0.0690
 \]
-Interpretation: We are 95\% confident the mean weekly fuel spending is between \$472.76 and \$567.24.
+\[
+E_{99}=2.576(0.0352)\approx 0.0907
+\]
 
-\textbf{For 99\%:} \(t^*=2.898\)
+Step 4: Confidence intervals
 \[
-E_{99}=2.898\left(\frac{95}{\sqrt{18}}\right)\approx 64.88
+90\%:[0.46\pm 0.0579]\Rightarrow [0.402,\,0.518]
 \]
 \[
-\text{CI}_{99\%}=520\pm 64.88=[455.12,\,584.88]
+95\%:[0.46\pm 0.0690]\Rightarrow [0.391,\,0.529]
 \]
-Interpretation: We are 99\% confident the mean weekly fuel spending is between \$455.12 and \$584.88.
+\[
+99\%:[0.46\pm 0.0907]\Rightarrow [0.369,\,0.551]
+\]
+
+Interpretation: As confidence increases, the interval becomes wider. All three intervals suggest the insured proportion is around the mid-40\% range.
 
 \subsection*{Problem 3}
-\subsection*{Tutor Earnings Benchmark Check}
-A platform surveyed 30 app-based tutors about their monthly side-hustle earnings. The sample average was \$860 and the sample standard deviation was \$140. Construct a 95\% confidence interval for the mean monthly earnings. Then evaluate whether a benchmark value of \$900 is plausible for the mean.
+\subsection*{Problem description}
+A fintech app wants to estimate the proportion of users in their 20s who pay credit card balances in full each month. In a sample of \(n=260\) users, \(x=182\) report paying in full. Construct and interpret a \(95\%\) confidence interval. Then answer: is a benchmark value of \(p=0.75\) plausible based on this interval?
 
 \subsection*{C7}
-Formula:
+Step 1: Sample proportion
 \[
-\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\hat p=\frac{182}{260}=0.70
 \]
-Here \(n=30\), so \(df=29\). For 95\% confidence, \(t^*=2.045\).
+Conditions:
+\[
+n\hat p=182\ge 10,\qquad n(1-\hat p)=78\ge 10
+\]
 
+Step 2: Standard error
 \[
-E=2.045\left(\frac{140}{\sqrt{30}}\right)\approx 52.27
+SE=\sqrt{\frac{0.70(0.30)}{260}}\approx 0.0284
 \]
-\[
-\text{CI}_{95\%}=860\pm 52.27=[807.73,\,912.27]
-\]
-Interpretation: We are 95\% confident that the mean monthly tutoring side-hustle earnings are between \$807.73 and \$912.27.
 
-Analysis: Since \$900 lies inside the interval, \$900 is a plausible value for the population mean monthly earnings.
+Step 3: Margin of error \((95\%,\ z^*=1.96)\)
+\[
+E=1.96(0.0284)\approx 0.0557
+\]
+
+Step 4: Confidence interval
+\[
+0.70\pm 0.0557\Rightarrow [0.644,\,0.756]
+\]
+
+Interpretation: We are 95\% confident that between 64.4\% and 75.6\% of similar users pay their balances in full monthly.
+
+Analysis question: Is \(p=0.75\) plausible?
+
+Answer: Yes. The value 0.75 is inside the confidence interval, so it is plausible given this sample at the 95\% confidence level.
 
 \subsection*{Problem 4}
-\subsection*{Subscription Budget Precision}
-A streaming app sampled 16 young professionals and measured monthly spending on digital subscriptions. The sample average was \$310 and the sample standard deviation was \$70. Construct 90\% and 98\% confidence intervals for the mean monthly subscription spending. Then discuss whether the estimate is precise enough for a personal budget target near \$300.
+\subsection*{Problem description}
+A micro-investing platform is evaluating a support program. It wants the proportion of young clients who invest every month to be at least \(60\%\). After one cycle, a random sample of \(n=320\) clients finds \(x=173\) monthly investors. Construct a \(98\%\) confidence interval for the population proportion and decide whether the \(60\%\) benchmark is plausible. Justify your decision using the interval bounds.
 
 \subsection*{C7}
-Formula:
+Step 1: Sample proportion
 \[
-\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\hat p=\frac{173}{320}=0.5406
 \]
-With \(n=16\), \(df=15\).
+Conditions:
+\[
+n\hat p=173\ge 10,\qquad n(1-\hat p)=147\ge 10
+\]
 
-\textbf{90\% interval:} \(t^*=1.753\)
+Step 2: Standard error
 \[
-E_{90}=1.753\left(\frac{70}{\sqrt{16}}\right)=1.753(17.5)\approx 30.68
+SE=\sqrt{\frac{0.5406(0.4594)}{320}}\approx 0.0279
 \]
-\[
-\text{CI}_{90\%}=310\pm 30.68=[279.32,\,340.68]
-\]
-Interpretation: We are 90\% confident the mean monthly subscription spending is between \$279.32 and \$340.68.
 
-\textbf{98\% interval:} \(t^*=2.602\)
+Step 3: Margin of error \((98\%,\ z^*=2.326)\)
 \[
-E_{98}=2.602\left(\frac{70}{\sqrt{16}}\right)=2.602(17.5)\approx 45.54
+E=2.326(0.0279)\approx 0.0649
 \]
-\[
-\text{CI}_{98\%}=310\pm 45.54=[264.46,\,355.54]
-\]
-Interpretation: We are 98\% confident the mean monthly subscription spending is between \$264.46 and \$355.54.
 
-Analysis: Both intervals include \$300, so a budget target around \$300 is reasonable. The 90\% interval is narrower, while the 98\% interval gives more confidence but less precision.
+Step 4: Confidence interval
+\[
+0.5406\pm 0.0649\Rightarrow [0.476,\,0.606]
+\]
+
+Interpretation: We are 98\% confident that the true monthly-investor proportion is between 47.6\% and 60.6\%.
+
+Analysis question: Is the benchmark \(p\ge 0.60\) plausible, and what decision should the platform make?
+
+Answer: The value 0.60 is inside the interval but very near the upper bound. So \(60\%\) is still plausible, but only marginally. A careful decision is that the program has not clearly established a proportion above 60\%; the platform should continue support and collect more data before claiming the benchmark is comfortably met.
 
 \subsection*{Problem 5}
-\subsection*{Store Revenue Interval Comparison}
-An online store tracked monthly revenue from two independent recent samples of weeks during the same season.
+\subsection*{Problem description}
+A budgeting startup compares two groups of users in their 20s.
 \begin{itemize}
-  \item Sample A: \(n=22\), sample average \$1450, sample standard deviation \$260.
-  \item Sample B: \(n=22\), sample average \$1580, sample standard deviation \$300.
+  \item Group A (users who completed a financial bootcamp): \(n=250\), \(x=170\) keep an emergency fund.
+  \item Group B (users without bootcamp): \(n=250\), \(x=142\) keep an emergency fund.
 \end{itemize}
-Construct a 95\% confidence interval for each sample's mean weekly revenue, and compare the two intervals.
+Construct a \(95\%\) confidence interval for each group proportion. Compare the intervals and discuss what overlap or non-overlap suggests about relative plausibility of higher emergency-fund behavior.
 
 \subsection*{C7}
-For each sample, use:
+For each group:
 \[
-\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\hat p \pm 1.96\sqrt{\frac{\hat p(1-\hat p)}{n}}
 \]
-Both have \(n=22\), so \(df=21\), and for 95\% confidence \(t^*=2.080\).
 
-\textbf{Sample A}
+\textbf{Group A}
 \[
-E_A=2.080\left(\frac{260}{\sqrt{22}}\right)\approx 115.30
+\hat p_A=\frac{170}{250}=0.68
 \]
 \[
-\text{CI}_{A,95\%}=1450\pm 115.30=[1334.70,\,1565.30]
+SE_A=\sqrt{\frac{0.68(0.32)}{250}}\approx 0.0295,
+\quad E_A=1.96(0.0295)\approx 0.0577
 \]
-Interpretation: We are 95\% confident the mean weekly revenue in period A is between \$1334.70 and \$1565.30.
+\[
+\text{CI}_{A,95\%}=0.68\pm 0.0577\Rightarrow [0.622,\,0.738]
+\]
 
-\textbf{Sample B}
+\textbf{Group B}
 \[
-E_B=2.080\left(\frac{300}{\sqrt{22}}\right)\approx 133.04
+\hat p_B=\frac{142}{250}=0.568
 \]
 \[
-\text{CI}_{B,95\%}=1580\pm 133.04=[1446.96,\,1713.04]
+SE_B=\sqrt{\frac{0.568(0.432)}{250}}\approx 0.0313,
+\quad E_B=1.96(0.0313)\approx 0.0613
 \]
-Interpretation: We are 95\% confident the mean weekly revenue in period B is between \$1446.96 and \$1713.04.
+\[
+\text{CI}_{B,95\%}=0.568\pm 0.0613\Rightarrow [0.507,\,0.629]
+\]
 
-Analysis: The intervals overlap, but period B is shifted upward and has a higher center. This suggests mean revenue in period B is likely higher, though there is still shared plausible range.
+Interpretation: Group A is estimated around 62.2\% to 73.8\%, while Group B is around 50.7\% to 62.9\%.
+
+Analysis question: What does the overlap pattern suggest?
+
+Answer: The intervals have only a small overlap region (about 62.2\% to 62.9\%). This pattern supports that higher emergency-fund behavior is more plausible in Group A, although there is still some shared plausible range.
 
 \subsection*{Problem 6}
-\subsection*{Earnings Group Interval Comparison}
-Two different groups were studied:
+\subsection*{Problem description}
+A national survey studies young workers and compares two sectors.
 \begin{itemize}
-  \item Group 1 (part-time delivery workers): \(n=20\), sample average monthly earnings \$680, sample standard deviation \$120.
-  \item Group 2 (part-time graphic designers): \(n=26\), sample average monthly earnings \$910, sample standard deviation \$180.
+  \item Sector 1 (gig logistics): \(n=300\), \(x=126\) contributed to retirement savings last month.
+  \item Sector 2 (junior office jobs): \(n=280\), \(x=151\) contributed last month.
 \end{itemize}
-Construct a 95\% confidence interval for each population mean and decide which group appears to have the higher mean earnings, using only interval logic.
+Construct \(90\%\) confidence intervals for both sector proportions. Which sector appears safer in terms of consistently higher retirement-saving participation, and which estimate is more uncertain?
 
 \subsection*{C7}
-Formula for each group:
+\textbf{Sector 1}
 \[
-\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\hat p_1=\frac{126}{300}=0.42,
+\quad SE_1=\sqrt{\frac{0.42(0.58)}{300}}\approx 0.0285
+\]
+\[
+E_1=1.645(0.0285)\approx 0.0469
+\]
+\[
+\text{CI}_{1,90\%}=0.42\pm 0.0469\Rightarrow [0.373,\,0.467]
 \]
 
-\textbf{Group 1:} \(n=20\Rightarrow df=19\), \(t^*=2.093\)
+\textbf{Sector 2}
 \[
-E_1=2.093\left(\frac{120}{\sqrt{20}}\right)\approx 56.16
+\hat p_2=\frac{151}{280}=0.5393,
+\quad SE_2=\sqrt{\frac{0.5393(0.4607)}{280}}\approx 0.0298
 \]
 \[
-\text{CI}_{1,95\%}=680\pm 56.16=[623.84,\,736.16]
+E_2=1.645(0.0298)\approx 0.0490
 \]
-Interpretation: We are 95\% confident delivery workers' mean monthly earnings are between \$623.84 and \$736.16.
+\[
+\text{CI}_{2,90\%}=0.5393\pm 0.0490\Rightarrow [0.490,\,0.588]
+\]
 
-\textbf{Group 2:} \(n=26\Rightarrow df=25\), \(t^*=2.060\)
-\[
-E_2=2.060\left(\frac{180}{\sqrt{26}}\right)\approx 72.72
-\]
-\[
-\text{CI}_{2,95\%}=910\pm 72.72=[837.28,\,982.72]
-\]
-Interpretation: We are 95\% confident graphic designers' mean monthly earnings are between \$837.28 and \$982.72.
+Interpretation: Sector 2 has a clearly higher interval center and higher bounds.
 
-Analysis: The two intervals do not overlap, and Group 2's entire interval is above Group 1's interval. Using interval logic, Group 2 appears to have the higher mean earnings.
+Analysis questions:
+\begin{itemize}
+  \item Which sector appears safer for higher participation?
+  \item Which estimate is more uncertain?
+\end{itemize}
+
+Answers:
+\begin{itemize}
+  \item Sector 2 appears safer because its entire interval is shifted upward relative to Sector 1.
+  \item Sector 2 has slightly greater uncertainty here because its interval width (about 0.098) is a bit wider than Sector 1 (about 0.094).
+\end{itemize}
 
 \subsection*{Problem 7}
-\subsection*{Savings Confidence Level Effects}
-A finance app measured monthly savings contributions from the same target population (young workers in one city) using two independent samples collected in different weeks.
+\subsection*{Problem description}
+A payment app tracks budgeting-rule usage (the 50-30-20 rule) among users in their 20s in two cities.
 \begin{itemize}
-  \item Sample A: \(n=14\), sample average \$430, sample standard deviation \$85.
-  \item Sample B: \(n=14\), sample average \$470, sample standard deviation \$90.
+  \item City A: \(n=360\), \(x=198\) use the rule.
+  \item City B: \(n=340\), \(x=170\) use the rule.
 \end{itemize}
-For each sample, construct 90\% and 95\% confidence intervals. Then explain how confidence level affects decision certainty about whether average savings is above \$450.
+For each city, construct \(90\%\) and \(95\%\) confidence intervals. Then explain how the decision about whether City A is above \(55\%\) changes when the confidence level increases.
 
 \subsection*{C7}
-Use:
+\textbf{City A}
 \[
-\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\hat p_A=\frac{198}{360}=0.55,
+\quad SE_A=\sqrt{\frac{0.55(0.45)}{360}}\approx 0.0262
 \]
-For both samples, \(n=14\Rightarrow df=13\).
+\[
+E_{A,90}=1.645(0.0262)\approx 0.0431,
+\quad E_{A,95}=1.96(0.0262)\approx 0.0514
+\]
+\[
+\text{CI}_{A,90\%}=[0.507,\,0.593],
+\quad \text{CI}_{A,95\%}=[0.499,\,0.601]
+\]
 
-\textbf{Sample A (90\%):} \(t^*=1.771\)
+\textbf{City B}
 \[
-E_{A,90}=1.771\left(\frac{85}{\sqrt{14}}\right)\approx 40.23
+\hat p_B=\frac{170}{340}=0.50,
+\quad SE_B=\sqrt{\frac{0.50(0.50)}{340}}\approx 0.0271
 \]
 \[
-\text{CI}_{A,90\%}=[389.77,\,470.23]
+E_{B,90}=1.645(0.0271)\approx 0.0446,
+\quad E_{B,95}=1.96(0.0271)\approx 0.0531
 \]
-Interpretation: We are 90\% confident sample A's population mean monthly savings lies between \$389.77 and \$470.23.
+\[
+\text{CI}_{B,90\%}=[0.455,\,0.545],
+\quad \text{CI}_{B,95\%}=[0.447,\,0.553]
+\]
 
-\textbf{Sample A (95\%):} \(t^*=2.160\)
-\[
-E_{A,95}=2.160\left(\frac{85}{\sqrt{14}}\right)\approx 49.07
-\]
-\[
-\text{CI}_{A,95\%}=[380.93,\,479.07]
-\]
-Interpretation: We are 95\% confident sample A's population mean monthly savings lies between \$380.93 and \$479.07.
+Interpretation: City A is centered higher than City B at both confidence levels.
 
-\textbf{Sample B (90\%):} \(t^*=1.771\)
-\[
-E_{B,90}=1.771\left(\frac{90}{\sqrt{14}}\right)\approx 42.60
-\]
-\[
-\text{CI}_{B,90\%}=[427.40,\,512.60]
-\]
-Interpretation: We are 90\% confident sample B's population mean monthly savings lies between \$427.40 and \$512.60.
+Analysis question: How does the decision about \(p_A>0.55\) change?
 
-\textbf{Sample B (95\%):} \(t^*=2.160\)
-\[
-E_{B,95}=2.160\left(\frac{90}{\sqrt{14}}\right)\approx 51.96
-\]
-\[
-\text{CI}_{B,95\%}=[418.04,\,521.96]
-\]
-Interpretation: We are 95\% confident sample B's population mean monthly savings lies between \$418.04 and \$521.96.
-
-Analysis: Increasing confidence from 90\% to 95\% widens each interval. That gives stronger coverage certainty but weaker sharpness for decisions. For the \$450 benchmark, sample B looks more supportive than sample A at both levels, but neither level allows complete certainty because \$450 remains inside the intervals.
+Answer: At both confidence levels, 0.55 is inside City A's interval. Moving from 90\% to 95\% widens the interval and makes the claim less sharp, so we still cannot say the true proportion is clearly above 55\%; we can only say values around 55\% remain plausible.
 
 \subsection*{Problem 8}
-\subsection*{Travel Spending Benchmark Plausibility}
-A budgeting coach tracks monthly local travel spending in the same population of young workers using two independent samples.
+\subsection*{Problem description}
+An online broker compares two periods for the same age group.
 \begin{itemize}
-  \item Sample A: \(n=28\), sample average \$260, sample standard deviation \$55.
-  \item Sample B: \(n=28\), sample average \$295, sample standard deviation \$60.
+  \item Period 1: \(n=420\), \(x=231\) users made at least one ETF purchase.
+  \item Period 2: \(n=410\), \(x=254\) users made at least one ETF purchase.
 \end{itemize}
-Use 95\% confidence intervals to evaluate whether a benchmark mean of \$280 is plausible for each sample.
+Construct a \(95\%\) confidence interval for each period. Compare uncertainty and discuss whether adoption appears to have increased.
 
 \subsection*{C7}
-Formula:
+\textbf{Period 1}
 \[
-\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\hat p_1=\frac{231}{420}=0.55,
+\quad SE_1=\sqrt{\frac{0.55(0.45)}{420}}\approx 0.0243
 \]
-For both samples, \(n=28\Rightarrow df=27\), and \(t^*=2.052\) for 95\% confidence.
+\[
+E_1=1.96(0.0243)\approx 0.0476
+\]
+\[
+\text{CI}_{1,95\%}=[0.502,\,0.598]
+\]
 
-\textbf{Sample A}
+\textbf{Period 2}
 \[
-E_A=2.052\left(\frac{55}{\sqrt{28}}\right)\approx 21.33
+\hat p_2=\frac{254}{410}=0.6195,
+\quad SE_2=\sqrt{\frac{0.6195(0.3805)}{410}}\approx 0.0240
 \]
 \[
-\text{CI}_{A,95\%}=260\pm 21.33=[238.67,\,281.33]
+E_2=1.96(0.0240)\approx 0.0470
 \]
-Interpretation: We are 95\% confident the mean monthly travel spending for sample A's population is between \$238.67 and \$281.33.
+\[
+\text{CI}_{2,95\%}=[0.573,\,0.666]
+\]
 
-\textbf{Sample B}
-\[
-E_B=2.052\left(\frac{60}{\sqrt{28}}\right)\approx 23.27
-\]
-\[
-\text{CI}_{B,95\%}=295\pm 23.27=[271.73,\,318.27]
-\]
-Interpretation: We are 95\% confident the mean monthly travel spending for sample B's population is between \$271.73 and \$318.27.
+Interpretation: Period 2 is centered higher, and both intervals have similar width.
 
-Analysis: The benchmark \$280 is plausible for both samples because it lies inside both confidence intervals.
+Analysis questions:
+\begin{itemize}
+  \item Which period has greater uncertainty?
+  \item Does adoption appear to have increased?
+\end{itemize}
+
+Answers:
+\begin{itemize}
+  \item Uncertainty is very similar; Period 1 is slightly wider.
+  \item Yes, adoption appears to have increased because Period 2's interval is mostly above Period 1 and the overlap is small.
+\end{itemize}
 
 \subsection*{Problem 9}
-\subsection*{Creator Payout Stability Intervals}
-A marketplace app collected three independent monthly samples from the same population of young creators and recorded side-hustle payouts.
+\subsection*{Problem description}
+A policy team evaluates three training channels that teach debt-management skills to young adults.
 \begin{itemize}
-  \item Month 1: \(n=12\), sample average \$780, sample standard deviation \$130.
-  \item Month 2: \(n=12\), sample average \$840, sample standard deviation \$150.
-  \item Month 3: \(n=12\), sample average \$810, sample standard deviation \$140.
+  \item Channel A: \(n=280\), \(x=168\) participants reduced debt for three consecutive months.
+  \item Channel B: \(n=300\), \(x=171\) participants reduced debt for three consecutive months.
+  \item Channel C: \(n=260\), \(x=130\) participants reduced debt for three consecutive months.
 \end{itemize}
-Construct a 95\% confidence interval for each month and comment on payout stability across the three months.
+Construct \(90\%\) and \(99\%\) confidence intervals for all three channels. Then recommend which channel should be prioritized if the target is to keep the true success proportion around or above \(60\%\), considering uncertainty.
 
 \subsection*{C7}
-For each month:
+\textbf{Channel A}
 \[
-\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\hat p_A=\frac{168}{280}=0.60,
+\quad SE_A=\sqrt{\frac{0.60(0.40)}{280}}\approx 0.0293
 \]
-Each sample has \(n=12\), so \(df=11\), with \(t^*=2.201\) at 95\% confidence.
+\[
+E_{A,90}=1.645(0.0293)\approx 0.0482,
+\quad E_{A,99}=2.576(0.0293)\approx 0.0755
+\]
+\[
+\text{CI}_{A,90\%}=[0.552,\,0.648],
+\quad \text{CI}_{A,99\%}=[0.524,\,0.676]
+\]
 
-\textbf{Month 1}
+\textbf{Channel B}
 \[
-E_1=2.201\left(\frac{130}{\sqrt{12}}\right)\approx 82.60
+\hat p_B=\frac{171}{300}=0.57,
+\quad SE_B=\sqrt{\frac{0.57(0.43)}{300}}\approx 0.0286
 \]
 \[
-\text{CI}_{1,95\%}=780\pm 82.60=[697.40,\,862.60]
+E_{B,90}=1.645(0.0286)\approx 0.0470,
+\quad E_{B,99}=2.576(0.0286)\approx 0.0736
 \]
-Interpretation: We are 95\% confident the Month 1 mean payout is between \$697.40 and \$862.60.
+\[
+\text{CI}_{B,90\%}=[0.523,\,0.617],
+\quad \text{CI}_{B,99\%}=[0.496,\,0.644]
+\]
 
-\textbf{Month 2}
+\textbf{Channel C}
 \[
-E_2=2.201\left(\frac{150}{\sqrt{12}}\right)\approx 95.31
+\hat p_C=\frac{130}{260}=0.50,
+\quad SE_C=\sqrt{\frac{0.50(0.50)}{260}}\approx 0.0310
 \]
 \[
-\text{CI}_{2,95\%}=840\pm 95.31=[744.69,\,935.31]
+E_{C,90}=1.645(0.0310)\approx 0.0510,
+\quad E_{C,99}=2.576(0.0310)\approx 0.0799
 \]
-Interpretation: We are 95\% confident the Month 2 mean payout is between \$744.69 and \$935.31.
+\[
+\text{CI}_{C,90\%}=[0.449,\,0.551],
+\quad \text{CI}_{C,99\%}=[0.420,\,0.580]
+\]
 
-\textbf{Month 3}
-\[
-E_3=2.201\left(\frac{140}{\sqrt{12}}\right)\approx 88.95
-\]
-\[
-\text{CI}_{3,95\%}=810\pm 88.95=[721.05,\,898.95]
-\]
-Interpretation: We are 95\% confident the Month 3 mean payout is between \$721.05 and \$898.95.
+Interpretation: Channel A is centered highest and remains closest to the 60\% target even at 99\% confidence.
 
-Analysis: The three intervals overlap substantially, so the monthly mean payouts appear reasonably stable, with Month 2 slightly higher in center but not separated clearly from the other two months.
+Analysis question: Which channel should be prioritized and why?
+
+Answer: Channel A should be prioritized. Its intervals are consistently higher than the others, and its 90\% interval is entirely near or above the target threshold. Channel B is moderate, while Channel C is clearly below target in most plausible values.
 
 \subsection*{Problem 10}
-\subsection*{Cancelation Savings Interval Recommendation}
-A personal finance platform reviewed subscription-cancelation savings in three independent samples from the same population of users.
+\subsection*{Problem description}
+A youth-finance nonprofit pilots three versions of a savings habit program.
 \begin{itemize}
-  \item Sample A: \(n=10\), sample average \$1120, sample standard deviation \$240.
-  \item Sample B: \(n=10\), sample average \$980, sample standard deviation \$210.
-  \item Sample C: \(n=10\), sample average \$1050, sample standard deviation \$260.
+  \item Program X: \(n=350\), \(x=221\) participants stayed on a weekly savings plan for 12 weeks.
+  \item Program Y: \(n=330\), \(x=191\) participants stayed on plan.
+  \item Program Z: \(n=340\), \(x=180\) participants stayed on plan.
 \end{itemize}
-Construct 90\% and 99\% confidence intervals for each sample mean. Then provide one recommendation about which sample appears strongest if the platform wants to promote plans with mean savings above \$1000.
+Construct \(95\%\) and \(99\%\) confidence intervals for each program. Then give a decision recommendation if funding should prioritize programs with a plausibly highest retention proportion and relatively stable uncertainty.
 
 \subsection*{C7}
-Use:
+\textbf{Program X}
 \[
-\bar{x} \pm t_{\alpha/2,\,n-1}\frac{s}{\sqrt{n}}
+\hat p_X=\frac{221}{350}=0.6314,
+\quad SE_X=\sqrt{\frac{0.6314(0.3686)}{350}}\approx 0.0258
 \]
-All samples have \(n=10\), so \(df=9\). From the table: \(t^*=1.833\) for 90\% and \(t^*=3.250\) for 99\%.
+\[
+E_{X,95}=1.96(0.0258)\approx 0.0506,
+\quad E_{X,99}=2.576(0.0258)\approx 0.0665
+\]
+\[
+\text{CI}_{X,95\%}=[0.581,\,0.682],
+\quad \text{CI}_{X,99\%}=[0.565,\,0.698]
+\]
 
-\textbf{Sample A}
+\textbf{Program Y}
 \[
-E_{A,90}=1.833\left(\frac{240}{\sqrt{10}}\right)\approx 139.11,
-\quad
-E_{A,99}=3.250\left(\frac{240}{\sqrt{10}}\right)\approx 246.66
+\hat p_Y=\frac{191}{330}=0.5788,
+\quad SE_Y=\sqrt{\frac{0.5788(0.4212)}{330}}\approx 0.0272
 \]
 \[
-\text{CI}_{A,90\%}=[980.89,\,1259.11],
-\quad
-\text{CI}_{A,99\%}=[873.34,\,1366.66]
+E_{Y,95}=1.96(0.0272)\approx 0.0533,
+\quad E_{Y,99}=2.576(0.0272)\approx 0.0701
 \]
-Interpretation: At both levels, Sample A suggests a relatively high mean, but the interval still crosses \$1000 at 90\% and 99\%.
+\[
+\text{CI}_{Y,95\%}=[0.525,\,0.632],
+\quad \text{CI}_{Y,99\%}=[0.509,\,0.649]
+\]
 
-\textbf{Sample B}
+\textbf{Program Z}
 \[
-E_{B,90}=1.833\left(\frac{210}{\sqrt{10}}\right)\approx 121.73,
-\quad
-E_{B,99}=3.250\left(\frac{210}{\sqrt{10}}\right)\approx 215.83
+\hat p_Z=\frac{180}{340}=0.5294,
+\quad SE_Z=\sqrt{\frac{0.5294(0.4706)}{340}}\approx 0.0271
 \]
 \[
-\text{CI}_{B,90\%}=[858.27,\,1101.73],
-\quad
-\text{CI}_{B,99\%}=[764.17,\,1195.83]
+E_{Z,95}=1.96(0.0271)\approx 0.0531,
+\quad E_{Z,99}=2.576(0.0271)\approx 0.0698
 \]
-Interpretation: Sample B has a lower center, and both intervals include many values below \$1000.
+\[
+\text{CI}_{Z,95\%}=[0.476,\,0.582],
+\quad \text{CI}_{Z,99\%}=[0.460,\,0.599]
+\]
 
-\textbf{Sample C}
-\[
-E_{C,90}=1.833\left(\frac{260}{\sqrt{10}}\right)\approx 150.71,
-\quad
-E_{C,99}=3.250\left(\frac{260}{\sqrt{10}}\right)\approx 267.21
-\]
-\[
-\text{CI}_{C,90\%}=[899.29,\,1200.71],
-\quad
-\text{CI}_{C,99\%}=[782.79,\,1317.21]
-\]
-Interpretation: Sample C has a center above \$1000 but high spread, so uncertainty is wide.
+Interpretation: Program X has the highest center and higher interval bounds at both confidence levels.
 
-Analysis and recommendation: Considering both confidence levels together, Sample A is the strongest option to promote for plans targeting mean savings above \$1000 because it has the highest center and the most favorable interval position relative to \$1000, especially compared with Samples B and C.
+Analysis questions:
+\begin{itemize}
+  \item Which program is most plausible as the strongest retention option?
+  \item How does changing from 95\% to 99\% affect the confidence in the recommendation?
+\end{itemize}
+
+Answers:
+\begin{itemize}
+  \item Program X is the strongest recommendation because both its 95\% and 99\% intervals are shifted above Y and Z.
+  \item Moving to 99\% widens all intervals, increasing caution. Even so, X remains highest, so the recommendation is robust under a stricter confidence level.
+\end{itemize}
 
 \end{document}
