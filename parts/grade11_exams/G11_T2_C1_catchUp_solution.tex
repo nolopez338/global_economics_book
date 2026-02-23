@@ -157,52 +157,70 @@
 		\item
 		\subsection*{Problem 4}
 		\subsection*{Problem description}
-		A weekend delivery team led by senior students recorded tip income per shift (USD) across a random set of shifts. They need a measure of average tips and variability to forecast whether tips can reliably cover transportation costs.
+		A weekend delivery team led by senior students compared tip income per shift (USD) for two independent routes to see which route gives more stable earnings for transportation planning.
 
-		\begin{center}
-		\textit{Tip income per shift (USD)}\par
-		\begin{tabular}{c c}
-		\toprule
-		Tip amount $x$ & Frequency $f$\\
-		\midrule
-		6  & 4\\
-		9  & 6\\
-		12 & 8\\
-		15 & 5\\
-		18 & 3\\
-		\bottomrule
-		\end{tabular}
-		\end{center}
+		\textbf{Sample A (Route A, USD):}
+		\[8,\ 10,\ 12,\ 11,\ 9,\ 13,\ 7,\ 12,\ 10,\ 11\]
 
-		Treat this as one sample. Compute the sample mean and sample standard deviation, and state what the spread suggests about uncertainty in shift-level earnings.
+		\textbf{Sample B (Route B, USD):}
+		\[5,\ 15,\ 9,\ 18,\ 6,\ 14,\ 8,\ 17,\ 7,\ 16\]
+
+		For each sample, compute the sample mean and sample standard deviation. Then compare the two routes in terms of tip-income volatility.
 
 		\subsection*{C1}
-		We treat all frequency entries as one sample and compute weighted statistics.
+		We compute center and spread for each independent route sample.
 
-		Step 1: Compute $\bar{x}$.
-		\[
-		n = \sum f = 4+6+8+5+3 = 26
-		\]
-		\[
-		\bar{x} = \frac{\sum fx}{n}
-		= \frac{6(4)+9(6)+12(8)+15(5)+18(3)}{26}
-		= \frac{303}{26}
-		= 11.65\ \text{USD}
-		\]
+		\textbf{Sample A}
 
-		Step 2: Compute $s$.
+		Step 1: Compute $\bar{x}_A$.
 		\[
-		s = \sqrt{\frac{\sum f(x-\bar{x})^2}{n-1}}
-		\]
-		Using $\bar{x}=11.65$:
-		\[
-		\sum f(x-\bar{x})^2 = 347.88
-		\]
-		\[
-		s = \sqrt{\frac{347.88}{26-1}} = \sqrt{13.92} = 3.73\ \text{USD}
+		\bar{x}_A = \frac{\sum x_i}{n_A}
+		= \frac{8+10+12+11+9+13+7+12+10+11}{10}
+		= \frac{103}{10}
+		= 10.30\ \text{USD}
 		\]
 
-		The mean tip is 11.65 USD per shift, with typical variation of about 3.73 USD, so tip earnings have noticeable but manageable uncertainty.
+		Step 2: Compute $s_A$.
+		\[
+		s_A = \sqrt{\frac{\sum (x_i-\bar{x}_A)^2}{n_A-1}}
+		\]
+		Using $\bar{x}_A=10.30$:
+		\[
+		\sum (x_i-\bar{x}_A)^2 = (8-10.30)^2+(10-10.30)^2+(12-10.30)^2+(11-10.30)^2+(9-10.30)^2
+		\]
+		\[
+		\qquad +(13-10.30)^2+(7-10.30)^2+(12-10.30)^2+(10-10.30)^2+(11-10.30)^2 = 32.10
+		\]
+		\[
+		s_A = \sqrt{\frac{32.10}{10-1}} = \sqrt{3.57} = 1.89\ \text{USD}
+		\]
+
+		\textbf{Sample B}
+
+		Step 1: Compute $\bar{x}_B$.
+		\[
+		\bar{x}_B = \frac{\sum x_i}{n_B}
+		= \frac{5+15+9+18+6+14+8+17+7+16}{10}
+		= \frac{115}{10}
+		= 11.50\ \text{USD}
+		\]
+
+		Step 2: Compute $s_B$.
+		\[
+		s_B = \sqrt{\frac{\sum (x_i-\bar{x}_B)^2}{n_B-1}}
+		\]
+		Using $\bar{x}_B=11.50$:
+		\[
+		\sum (x_i-\bar{x}_B)^2 = (5-11.50)^2+(15-11.50)^2+(9-11.50)^2+(18-11.50)^2+(6-11.50)^2
+		\]
+		\[
+		\qquad +(14-11.50)^2+(8-11.50)^2+(17-11.50)^2+(7-11.50)^2+(16-11.50)^2 = 222.50
+		\]
+		\[
+		s_B = \sqrt{\frac{222.50}{10-1}} = \sqrt{24.72} = 4.97\ \text{USD}
+		\]
+
+		Route B has a slightly higher mean tip (11.50 USD vs 10.30 USD) but much larger spread (4.97 USD vs 1.89 USD), so Route A is more stable for predictable shift-level earnings.
 
 		\newpage
 		\item
@@ -260,53 +278,70 @@
 		\item
 		\subsection*{Problem 6}
 		\subsection*{Problem description}
-		A youth investment club recorded one sample of monthly portfolio returns (USD) from low-budget micro-investments. Because returns were stored in grouped form, the club needs midpoint-based estimates to evaluate risk before increasing capital.
+		A youth investment club compared two independent samples of monthly portfolio returns (USD) from two different micro-investment strategies before deciding how to allocate new capital.
 
-		\begin{center}
-		\textit{Monthly return intervals (USD)}\par
-		\begin{tabular}{c c}
-		\toprule
-		Interval & Frequency\\
-		\midrule
-		-20-- -1 & 2\\
-		0--19    & 5\\
-		20--39   & 7\\
-		40--59   & 4\\
-		60--79   & 2\\
-		\bottomrule
-		\end{tabular}
-		\end{center}
+		\textbf{Sample A (Strategy A, USD):}
+		\[-12,\ 5,\ 18,\ 24,\ 31,\ 12,\ 27,\ 20\]
 
-		Using class midpoints, compute the approximate sample mean and sample standard deviation. Interpret whether the return pattern looks stable enough for conservative student investors.
+		\textbf{Sample B (Strategy B, USD):}
+		\[-25,\ 40,\ 5,\ 55,\ -10,\ 35,\ 60,\ 15\]
+
+		For each sample, compute the sample mean and sample standard deviation. Then compare which strategy appears more stable for conservative student investors.
 
 		\subsection*{C1}
-		We estimate center and spread from grouped intervals using class midpoints.
+		We compute center and spread for each independent strategy sample.
 
-		Step 1: Compute $\bar{x}$.
+		\textbf{Sample A}
+
+		Step 1: Compute $\bar{x}_A$.
 		\[
-		m_i:\ -10.5,\ 9.5,\ 29.5,\ 49.5,\ 69.5
-		\qquad
-		n = 2+5+7+4+2 = 20
-		\]
-		\[
-		\bar{x} = \frac{\sum f m_i}{n}
-		= \frac{(-10.5)(2)+9.5(5)+29.5(7)+49.5(4)+69.5(2)}{20}
-		= \frac{570}{20}
-		= 28.50\ \text{USD}
+		\bar{x}_A = \frac{\sum x_i}{n_A}
+		= \frac{-12+5+18+24+31+12+27+20}{8}
+		= \frac{125}{8}
+		= 15.63\ \text{USD}
 		\]
 
-		Step 2: Compute $s$.
+		Step 2: Compute $s_A$.
 		\[
-		s = \sqrt{\frac{\sum f(m_i-\bar{x})^2}{n-1}}
+		s_A = \sqrt{\frac{\sum (x_i-\bar{x}_A)^2}{n_A-1}}
+		\]
+		Using $\bar{x}_A=15.63$:
+		\[
+		\sum (x_i-\bar{x}_A)^2 = (-12-15.63)^2+(5-15.63)^2+(18-15.63)^2+(24-15.63)^2
 		\]
 		\[
-		\sum f(m_i-\bar{x})^2 = 9980.00
+		\qquad +(31-15.63)^2+(12-15.63)^2+(27-15.63)^2+(20-15.63)^2 = 1349.87
 		\]
 		\[
-		s = \sqrt{\frac{9980.00}{20-1}} = \sqrt{525.26} = 22.92\ \text{USD}
+		s_A = \sqrt{\frac{1349.87}{8-1}} = \sqrt{192.84} = 13.89\ \text{USD}
 		\]
 
-		The estimated return mean is 28.50 USD, but the spread is almost as large as the mean, so the pattern is not very stable for conservative investors.
+		\textbf{Sample B}
+
+		Step 1: Compute $\bar{x}_B$.
+		\[
+		\bar{x}_B = \frac{\sum x_i}{n_B}
+		= \frac{-25+40+5+55-10+35+60+15}{8}
+		= \frac{175}{8}
+		= 21.88\ \text{USD}
+		\]
+
+		Step 2: Compute $s_B$.
+		\[
+		s_B = \sqrt{\frac{\sum (x_i-\bar{x}_B)^2}{n_B-1}}
+		\]
+		Using $\bar{x}_B=21.88$:
+		\[
+		\sum (x_i-\bar{x}_B)^2 = (-25-21.88)^2+(40-21.88)^2+(5-21.88)^2+(55-21.88)^2
+		\]
+		\[
+		\qquad +(-10-21.88)^2+(35-21.88)^2+(60-21.88)^2+(15-21.88)^2 = 6596.87
+		\]
+		\[
+		s_B = \sqrt{\frac{6596.87}{8-1}} = \sqrt{942.41} = 30.70\ \text{USD}
+		\]
+
+		Both strategies have positive average returns, but Strategy B has far greater variability (30.70 USD vs 13.89 USD), so Strategy A is more stable for conservative investors.
 
 		\newpage
 		\item
@@ -416,120 +451,79 @@
 		\item
 		\subsection*{Problem 9}
 		\subsection*{Problem description}
-		A student-built homework app has three realistic weekend revenue outcomes (USD) based on recent launch analytics. The founder models weekend revenue as a random variable $X$ to plan ad spending.
+		A student-built homework app tracked the monthly probability of late payment over eight recent months to evaluate consistency in payment behavior.
 
-		\begin{center}
-		\textit{Probability distribution of weekend revenue}\par
-		\begin{tabular}{c c}
-		\toprule
-		Outcome $x$ (USD) & Probability $P(X=x)$\\
-		\midrule
-		40  & 0.25\\
-		70  & 0.45\\
-		110 & 0.30\\
-		\bottomrule
-		\end{tabular}
-		\end{center}
+		\textbf{Probability observations:}
+		\[0.12,\ 0.18,\ 0.10,\ 0.16,\ 0.14,\ 0.20,\ 0.11,\ 0.19\]
 
-		Compute $E[X]$, $\mathrm{Var}(X)$, and $\mathrm{SD}(X)$. Interpret the mean as the expected weekend financial outcome and explain how the standard deviation informs revenue risk.
+		Treat these probability values as one sample dataset. Compute the sample mean and sample standard deviation, then interpret what the spread says about month-to-month payment risk.
 
 		\subsection*{C1}
-		We first compute the weighted mean outcome, then discuss dispersion.
+		We compute the arithmetic mean and sample standard deviation of the probability observations.
 
-		Step 1: Compute the mean value (expected value).
+		Step 1: Compute $\bar{x}$.
 		\[
-		\bar{x}_{\text{weighted}} = \sum x\,P(X=x)
-		= 40(0.25)+70(0.45)+110(0.30)
-		= 10+31.5+33
-		= 74.50\ \text{USD}
+		\bar{x} = \frac{\sum x_i}{n}
+		= \frac{0.12+0.18+0.10+0.16+0.14+0.20+0.11+0.19}{8}
+		= \frac{1.20}{8}
+		= 0.15
 		\]
-		So $E[X]=74.50$ USD.
 
-		Step 2: Sample standard deviation formula check.
+		Step 2: Compute $s$.
 		\[
 		s = \sqrt{\frac{\sum (x_i-\bar{x})^2}{n-1}}
 		\]
-		A sample standard deviation $s$ cannot be determined because no sample size $n$ or sample observations are provided; only a probability model is given.
-
-		For model-based dispersion:
+		Using $\bar{x}=0.15$:
 		\[
-		\mathrm{Var}(X)=\sum (x-\mu)^2P(X=x)
-		= (40-74.5)^2(0.25)+(70-74.5)^2(0.45)+(110-74.5)^2(0.30)
-		= 684.75
+		\sum (x_i-\bar{x})^2 = (0.12-0.15)^2+(0.18-0.15)^2+(0.10-0.15)^2+(0.16-0.15)^2
 		\]
 		\[
-		\mathrm{SD}(X)=\sqrt{684.75}=26.17\ \text{USD}
+		\qquad +(0.14-0.15)^2+(0.20-0.15)^2+(0.11-0.15)^2+(0.19-0.15)^2 = 0.0102
+		\]
+		\[
+		s = \sqrt{\frac{0.0102}{8-1}} = \sqrt{0.00146} = 0.04
 		\]
 
-		The model predicts an average weekend revenue of 74.50 USD, with a typical uncertainty of about 26.17 USD around that expected value.
+		The average late-payment probability is $0.15$ (15\%), and the spread of about $0.04$ shows moderate month-to-month variation in payment risk.
 
 		\newpage
 		\item
 		\subsection*{Problem 10}
 		\subsection*{Problem description}
-		A student startup sells a mini online course and records net revenue (USD) from 40 independent ad-campaign launches. The team wants to model campaign outcome as a random variable by converting observed frequencies into probabilities.
+		A student startup tracked the weekly probability of making at least one sale from social-media outreach over seven weeks.
 
-		\begin{center}
-		\textit{Net revenue by campaign outcome class}\par
-		\begin{tabular}{c c}
-		\toprule
-		Revenue outcome $x$ (USD) & Frequency\\
-		\midrule
-		20  & 8\\
-		50  & 12\\
-		80  & 10\\
-		120 & 6\\
-		150 & 4\\
-		\bottomrule
-		\end{tabular}
-		\end{center}
+		\textbf{Probability observations:}
+		\[0.35,\ 0.28,\ 0.32,\ 0.30,\ 0.27,\ 0.33,\ 0.29\]
 
-		First compute the probability distribution from the grouped counts. Then compute $\mu=E[X]$, $\mathrm{Var}(X)$, and $\mathrm{SD}(X)$. In context, explain why these statistics are useful before scaling campaign spending.
+		Treat these probability values as one sample dataset. Compute the sample mean and sample standard deviation, then interpret what this implies about weekly sales-consistency risk.
 
 		\subsection*{C1}
-		We convert the frequencies to probabilities, then compute the mean and spread.
+		We compute the arithmetic mean and sample standard deviation of the probability observations.
 
-		Step 1: Compute $\bar{x}$ (and $E[X]$ here).
+		Step 1: Compute $\bar{x}$.
 		\[
-		n=8+12+10+6+4=40
-		\]
-		\[
-		P(X=20)=\frac{8}{40}=0.20,\quad
-		P(X=50)=\frac{12}{40}=0.30,\quad
-		P(X=80)=\frac{10}{40}=0.25,
-		\]
-		\[
-		P(X=120)=\frac{6}{40}=0.15,\quad
-		P(X=150)=\frac{4}{40}=0.10
-		\]
-		\[
-		\bar{x}=\frac{\sum fx}{n}
-		=\frac{20(8)+50(12)+80(10)+120(6)+150(4)}{40}
-		=\frac{2880}{40}
-		=72.00\ \text{USD}
-		\]
-		Thus $\mu=E[X]=72.00$ USD.
-
-		Step 2: Compute $s$ from the sample and also report model spread.
-		\[
-		s=\sqrt{\frac{\sum f(x-\bar{x})^2}{n-1}}
-		\]
-		\[
-		\sum f(x-\bar{x})^2 = 66240.00
-		\]
-		\[
-		s=\sqrt{\frac{66240.00}{39}}=\sqrt{1698.46}=41.21\ \text{USD}
+		\bar{x} = \frac{\sum x_i}{n}
+		= \frac{0.35+0.28+0.32+0.30+0.27+0.33+0.29}{7}
+		= \frac{2.14}{7}
+		= 0.31
 		\]
 
-		For the random-variable model,
+		Step 2: Compute $s$.
 		\[
-		\mathrm{Var}(X)=\sum (x-\mu)^2P(X=x)=1656.00
+		s = \sqrt{\frac{\sum (x_i-\bar{x})^2}{n-1}}
+		\]
+		Using $\bar{x}=0.31$:
+		\[
+		\sum (x_i-\bar{x})^2 = (0.35-0.31)^2+(0.28-0.31)^2+(0.32-0.31)^2+(0.30-0.31)^2
 		\]
 		\[
-		\mathrm{SD}(X)=\sqrt{1656.00}=40.69\ \text{USD}
+		\qquad +(0.27-0.31)^2+(0.33-0.31)^2+(0.29-0.31)^2 = 0.0050
+		\]
+		\[
+		s = \sqrt{\frac{0.0050}{7-1}} = \sqrt{0.00083} = 0.03
 		\]
 
-		The expected campaign revenue is 72.00 USD, and the sizeable spread (about 41 USD) shows that outcomes vary substantially, so scaling ad spending requires careful risk control.
+		The average weekly sale probability is $0.31$ (31\%), and the small spread of about $0.03$ indicates fairly consistent week-to-week sales likelihood.
 
 	\end{ExamProblems}
 \end{document}
