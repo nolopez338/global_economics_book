@@ -94,9 +94,9 @@
 
 		\textbf{C9 solution (structured filtering)}
 		\begin{itemize}
-			\item \textbf{Step 1:} Retain the top three alternatives according to EV. Subset after Step 1: $\{A_4,A_5,A_2\}$.
-			\item \textbf{Step 2:} Within that subset, eliminate the alternative with the highest Max regret. Since $A_2=23$ is the highest (vs. $A_4=18$, $A_5=17$), reduced subset after Step 2: $\{A_4,A_5\}$.
-			\item \textbf{Step 3:} From the remaining alternatives, select the one with the highest minimum payoff (Maximin). Since $\min(A_5)=88>\min(A_4)=70$, final selection: $A_5$.
+			\item \textbf{Step 1:} Retain the top four alternatives according to EV. Subset after Step 1: $\{A_4,A_5,A_2,A_3\}$.
+			\item \textbf{Step 2:} From that subset, eliminate the alternative with the highest Max regret. Since $A_3=53$ is the highest (vs. $A_2=23$, $A_4=18$, $A_5=17$), reduced subset after Step 2: $\{A_4,A_5,A_2\}$.
+			\item \textbf{Step 3:} Select the alternative with the highest minimum payoff (Maximin) inside the reduced subset. Because $\min(A_5)=88>\min(A_2)=78>\min(A_4)=70$, final selection: $A_5$.
 		\end{itemize}
 		Final decision statement: choose $A_5$.
 
@@ -191,9 +191,8 @@
 
 		\textbf{C9 solution (structured filtering)}
 		\begin{itemize}
-			\item \textbf{Step 1:} Retain the top three alternatives according to EV. Subset after Step 1: $\{B_5,B_4,B_2\}$.
-			\item \textbf{Step 2:} Within that subset, eliminate the alternative with the highest Max regret. Since $B_4=30$ is the highest (vs. $B_5=10$, $B_2=22$), reduced subset after Step 2: $\{B_5,B_2\}$.
-			\item \textbf{Step 3:} From the remaining alternatives, select the one with the highest minimum payoff (Maximin). Since $\min(B_5)=76>\min(B_2)=70$, final selection: $B_5$.
+			\item \textbf{Step 1:} Keep the alternatives whose Max regret is at most 25. Subset after Step 1: $\{B_5,B_2\}$.
+			\item \textbf{Step 2:} Between the remaining alternatives, select the one with the higher EV. Since $EV(B_5)=116.00>EV(B_2)=113.20$, final selection: $B_5$.
 		\end{itemize}
 		Final decision statement: choose $B_5$.
 
@@ -288,9 +287,10 @@
 
 		\textbf{C9 solution (structured filtering)}
 		\begin{itemize}
-			\item \textbf{Step 1:} Retain the top three alternatives according to EV. Subset after Step 1: $\{C_5,C_4,C_2\}$.
-			\item \textbf{Step 2:} Within that subset, eliminate the alternative with the highest Max regret. Since $C_5=20$ is the highest (vs. $C_4=16$, $C_2=18$), reduced subset after Step 2: $\{C_4,C_2\}$.
-			\item \textbf{Step 3:} From the remaining alternatives, select the one with the highest minimum payoff (Maximin). Since $\min(C_2)=84>\min(C_4)=80$, final selection: $C_2$.
+			\item \textbf{Step 1:} Retain the top four alternatives according to EV. Subset after Step 1: $\{C_5,C_4,C_2,C_3\}$.
+			\item \textbf{Step 2:} Eliminate the alternative with the highest Max regret in that subset. Since $C_3=22$ is the highest (vs. $C_5=20$, $C_2=18$, $C_4=16$), reduced subset after Step 2: $\{C_5,C_4,C_2\}$.
+			\item \textbf{Step 3:} Retain the top two alternatives by Maximin from the reduced subset. With minimum payoffs $C_5=96$, $C_2=84$, and $C_4=80$, subset after Step 3: $\{C_5,C_2\}$.
+			\item \textbf{Step 4:} Use Minimax Regret as tie-break between the two finalists. Since $C_2=18<C_5=20$, final selection: $C_2$.
 		\end{itemize}
 		Final decision statement: choose $C_2$.
 
@@ -386,8 +386,8 @@
 		\textbf{C9 solution (structured filtering)}
 		\begin{itemize}
 			\item \textbf{Step 1:} Retain the top three alternatives according to EV. Subset after Step 1: $\{D_5,D_4,D_2\}$.
-			\item \textbf{Step 2:} Within that subset, eliminate the alternative with the highest Max regret. Since $D_4=30$ is the highest (vs. $D_5=20$, $D_2=24$), reduced subset after Step 2: $\{D_5,D_2\}$.
-			\item \textbf{Step 3:} From the remaining alternatives, select the one with the highest minimum payoff (Maximin). Since $\min(D_5)=90>\min(D_2)=86$, final selection: $D_5$.
+			\item \textbf{Step 2:} Keep only alternatives with Max regret at most 24. Subset after Step 2: $\{D_5,D_2\}$.
+			\item \textbf{Step 3:} Choose the remaining alternative with the higher Maximin value. Since $\min(D_5)=90>\min(D_2)=86$, final selection: $D_5$.
 		\end{itemize}
 		Final decision statement: choose $D_5$.
 
@@ -482,8 +482,8 @@
 		\textbf{C9 solution (structured filtering)}
 		\begin{itemize}
 			\item \textbf{Step 1:} Retain the top three alternatives according to EV. Subset after Step 1: $\{E_4,E_5,E_2\}$.
-			\item \textbf{Step 2:} Within that subset, eliminate the alternative with the highest Max regret. Since $E_2=28$ is the highest (vs. $E_4=16$, $E_5=14$), reduced subset after Step 2: $\{E_4,E_5\}$.
-			\item \textbf{Step 3:} From the remaining alternatives, select the one with the highest minimum payoff (Maximin). Since $\min(E_5)=90>\min(E_4)=74$, final selection: $E_5$.
+			\item \textbf{Step 2:} Remove the alternative with the lowest Maximax value inside that subset. Since $\max(E_2)=132$ is below $\max(E_5)=146$ and $\max(E_4)=150$, reduced subset after Step 2: $\{E_4,E_5\}$.
+			\item \textbf{Step 3:} Select the alternative with the lower Max regret. Since $E_5=14<E_4=16$, final selection: $E_5$.
 		\end{itemize}
 		Final decision statement: choose $E_5$.
 
@@ -577,9 +577,9 @@
 
 		\textbf{C9 solution (structured filtering)}
 		\begin{itemize}
-			\item \textbf{Step 1:} Retain the top three alternatives according to EV. Subset after Step 1: $\{F_4,F_2,F_5\}$.
-			\item \textbf{Step 2:} Within that subset, eliminate the alternative with the highest Max regret. Since $F_4=22$ is the highest (vs. $F_2=20$, $F_5=14$), reduced subset after Step 2: $\{F_2,F_5\}$.
-			\item \textbf{Step 3:} From the remaining alternatives, select the one with the highest minimum payoff (Maximin). Since $\min(F_2)=86>\min(F_5)=80$, final selection: $F_2$.
+			\item \textbf{Step 1:} Keep alternatives with minimum payoff at least 80. Subset after Step 1: $\{F_4,F_2,F_5\}$.
+			\item \textbf{Step 2:} In that subset, eliminate the alternative with the highest Max regret. Since $F_4=22$ exceeds $F_2=20$ and $F_5=14$, reduced subset after Step 2: $\{F_2,F_5\}$.
+			\item \textbf{Step 3:} Choose the remaining alternative with the higher EV. Since $EV(F_2)=118.00>EV(F_5)=115.00$, final selection: $F_2$.
 		\end{itemize}
 		Final decision statement: choose $F_2$.
 
@@ -674,8 +674,8 @@
 		\textbf{C9 solution (structured filtering)}
 		\begin{itemize}
 			\item \textbf{Step 1:} Retain the top three alternatives according to EV. Subset after Step 1: $\{G_5,G_4,G_2\}$.
-			\item \textbf{Step 2:} Within that subset, eliminate the alternative with the highest Max regret. Since $G_2=22$ is the highest (vs. $G_5=18$, $G_4=16$), reduced subset after Step 2: $\{G_5,G_4\}$.
-			\item \textbf{Step 3:} From the remaining alternatives, select the one with the highest minimum payoff (Maximin). Since $\min(G_5)=88>\min(G_4)=76$, final selection: $G_5$.
+			\item \textbf{Step 2:} Retain the top two by Maximin from that subset. With minimum payoffs $G_5=88$, $G_2=84$, and $G_4=76$, subset after Step 2: $\{G_5,G_2\}$.
+			\item \textbf{Step 3:} Select the alternative with lower Max regret among the finalists. Since $G_5=18<G_2=22$, final selection: $G_5$.
 		\end{itemize}
 		Final decision statement: choose $G_5$.
 
@@ -769,9 +769,8 @@
 
 		\textbf{C9 solution (structured filtering)}
 		\begin{itemize}
-			\item \textbf{Step 1:} Retain the top three alternatives according to EV. Subset after Step 1: $\{H_5,H_4,H_2\}$.
-			\item \textbf{Step 2:} Within that subset, eliminate the alternative with the highest Max regret. Since $H_2=26$ is the highest (vs. $H_5=22$, $H_4=18$), reduced subset after Step 2: $\{H_5,H_4\}$.
-			\item \textbf{Step 3:} From the remaining alternatives, select the one with the highest minimum payoff (Maximin). Since $\min(H_5)=92>\min(H_4)=78$, final selection: $H_5$.
+			\item \textbf{Step 1:} Retain the two alternatives with the lowest Max regret. Subset after Step 1: $\{H_4,H_5\}$.
+			\item \textbf{Step 2:} Between these finalists, choose the one with the higher minimum payoff (Maximin). Since $\min(H_5)=92>\min(H_4)=78$, final selection: $H_5$.
 		\end{itemize}
 		Final decision statement: choose $H_5$.
 
@@ -865,9 +864,10 @@
 
 		\textbf{C9 solution (structured filtering)}
 		\begin{itemize}
-			\item \textbf{Step 1:} Retain the top three alternatives according to EV. Subset after Step 1: $\{I_2,I_4,I_5\}$.
-			\item \textbf{Step 2:} Within that subset, eliminate the alternative with the highest Max regret. Since $I_2=22$ is higher than $I_4=14$ and $I_5=14$, reduced subset after Step 2: $\{I_4,I_5\}$.
-			\item \textbf{Step 3:} From the remaining alternatives, select the one with the highest minimum payoff (Maximin). Since $\min(I_5)=96>\min(I_4)=82$, final selection: $I_5$.
+			\item \textbf{Step 1:} Retain the three best alternatives by EV (including the tie at 114.80). Subset after Step 1: $\{I_2,I_4,I_5\}$.
+			\item \textbf{Step 2:} Keep alternatives with Max regret not exceeding 20. Subset after Step 2: $\{I_4,I_5\}$.
+			\item \textbf{Step 3:} Compare EV inside the reduced subset. Because $EV(I_4)=114.80$ and $EV(I_5)=114.80$, subset after Step 3 remains $\{I_4,I_5\}$.
+			\item \textbf{Step 4:} Break the tie using Maximin. Since $\min(I_5)=96>\min(I_4)=82$, final selection: $I_5$.
 		\end{itemize}
 		Final decision statement: choose $I_5$.
 
@@ -962,8 +962,8 @@
 		\textbf{C9 solution (structured filtering)}
 		\begin{itemize}
 			\item \textbf{Step 1:} Retain the top three alternatives according to EV. Subset after Step 1: $\{J_4,J_5,J_2\}$.
-			\item \textbf{Step 2:} Within that subset, eliminate the alternative with the highest Max regret. Since $J_2=24$ is the highest (vs. $J_4=18$, $J_5=22$), reduced subset after Step 2: $\{J_4,J_5\}$.
-			\item \textbf{Step 3:} From the remaining alternatives, select the one with the highest minimum payoff (Maximin). Since $\min(J_5)=94>\min(J_4)=80$, final selection: $J_5$.
+			\item \textbf{Step 2:} Eliminate the alternative with the highest Max regret within that subset. Since $J_2=24$ is above $J_5=22$ and $J_4=18$, reduced subset after Step 2: $\{J_4,J_5\}$.
+			\item \textbf{Step 3:} Select the alternative with the highest minimum payoff (Maximin) from the finalists. Since $\min(J_5)=94>\min(J_4)=80$, final selection: $J_5$.
 		\end{itemize}
 		Final decision statement: choose $J_5$.
 	\end{ExamProblems}
