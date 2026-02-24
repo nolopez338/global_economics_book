@@ -29,7 +29,17 @@
 			\end{tabular}
 		\end{center}
 
-		Step 2. Bayes criterion (EV).
+		Step 2. Maximax criterion (Maximum payoff).
+		\[
+		\max(A_1)=150,\quad \max(A_2)=142,\quad \max(A_3)=165,\quad \max(A_4)=155,\quad \max(A_5)=148.
+		\]
+
+		Step 3. Maximin criterion (Minimum payoff).
+		\[
+		\min(A_1)=52,\quad \min(A_2)=78,\quad \min(A_3)=35,\quad \min(A_4)=70,\quad \min(A_5)=88.
+		\]
+
+		Step 4. Bayes criterion (EV).
 		\[
 		\begin{aligned}
 		EV(A_1)&=0.45(150)+0.35(98)+0.20(52)=112.20,\\
@@ -39,21 +49,8 @@
 		EV(A_5)&=0.45(148)+0.35(104)+0.20(88)=120.60.
 		\end{aligned}
 		\]
-		EV ranking:
-		\[
-		A_4(125.05)>A_5(120.60)>A_2(118.70)>A_3(112.75)>A_1(112.20).
-		\]
 
-		Step 3. Maximin criterion.
-		\[
-		\min(A_1)=52,\quad \min(A_2)=78,\quad \min(A_3)=35,\quad \min(A_4)=70,\quad \min(A_5)=88.
-		\]
-		Maximin ranking:
-		\[
-		A_5(88)>A_2(78)>A_4(70)>A_1(52)>A_3(35).
-		\]
-
-		Step 4. Minimax Regret criterion.
+		Step 5. Minimax Regret criterion.
 		State best payoffs:
 		\[
 		\max(H)=165,\quad \max(M)=118,\quad \max(L)=88.
@@ -71,21 +68,37 @@
 				\bottomrule
 			\end{tabular}
 		\end{center}
-		Minimax Regret ranking (lower is better):
-		\[
-		A_5(17)<A_4(18)<A_2(23)<A_1(36)<A_3(53).
-		\]
 
-		Step 5. C8 conclusion.
-		Bayes selects $A_4$, while Maximin and Minimax Regret select $A_5$.
-		Given robustness in worst case and regret control, the team carries $A_5$ into C9.
+		\textbf{C10 summary table}
+		\begin{center}
+			\begin{tabular}{c c c c c}
+				\toprule
+				Alt. & Max P. & Min P. & EV & Max regret \\
+				\midrule
+				$A_1$ & 150 & 52 & 112.20 & 36 \\
+				$A_2$ & 142 & 78 & 118.70 & 23 \\
+				$A_3$ & 165 & 35 & 112.75 & 53 \\
+				$A_4$ & 155 & 70 & 125.05 & 18 \\
+				$A_5$ & 148 & 88 & 120.60 & 17 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
 
-		\subsection*{C9 solution (apply filters)}
+		\textbf{C8 solution}
 		\begin{itemize}
-			\item \textbf{(Step 1)} EV top 3: $\{A_4,A_5,A_2\}$.
-			\item \textbf{(Step 2)} Minimax Regret within that subset gives regrets $A_4=18$, $A_5=17$, $A_2=23$, so keep $\{A_5,A_4\}$.
-			\item \textbf{(Step 3)} Maximin on the remaining set: $\min(A_5)=88$, $\min(A_4)=70$, therefore select $A_5$.
+			\item \textbf{Expected Value (EV) ranking:} $A_4(125.05)>A_5(120.60)>A_2(118.70)>A_3(112.75)>A_1(112.20)$.
+			\item \textbf{Maximax ranking:} $A_3(165)>A_4(155)>A_1(150)>A_5(148)>A_2(142)$.
+			\item \textbf{Maximin ranking:} $A_5(88)>A_2(78)>A_4(70)>A_1(52)>A_3(35)$.
+			\item \textbf{Minimax Regret ranking (lower is better):} $A_5(17)<A_4(18)<A_2(23)<A_1(36)<A_3(53)$.
 		\end{itemize}
+
+		\textbf{C9 solution (structured filtering)}
+		\begin{itemize}
+			\item \textbf{Step 1:} Retain the top three alternatives according to EV. Subset after Step 1: $\{A_4,A_5,A_2\}$.
+			\item \textbf{Step 2:} Within that subset, eliminate the alternative with the highest Max regret. Since $A_2=23$ is the highest (vs. $A_4=18$, $A_5=17$), reduced subset after Step 2: $\{A_4,A_5\}$.
+			\item \textbf{Step 3:} From the remaining alternatives, select the one with the highest minimum payoff (Maximin). Since $\min(A_5)=88>\min(A_4)=70$, final selection: $A_5$.
+		\end{itemize}
+		Final decision statement: choose $A_5$.
 
 		Decision-tree framing for the selected alternative $A_5$ (regulation uncertainty):
 		\begin{itemize}
@@ -143,7 +156,17 @@
 			\end{tabular}
 		\end{center}
 
-		Step 2. Bayes criterion (EV).
+		Step 2. Maximax criterion (Maximum payoff).
+		\[
+		\max(B_1)=145,\quad \max(B_2)=138,\quad \max(B_3)=160,\quad \max(B_4)=130,\quad \max(B_5)=150.
+		\]
+
+		Step 3. Maximin criterion (Minimum payoff).
+		\[
+		\min(B_1)=42,\quad \min(B_2)=70,\quad \min(B_3)=28,\quad \min(B_4)=85,\quad \min(B_5)=76.
+		\]
+
+		Step 4. Bayes criterion (EV).
 		\[
 		\begin{aligned}
 		EV(B_1)&=0.40(145)+0.40(95)+0.20(42)=104.40,\\
@@ -153,22 +176,12 @@
 		EV(B_5)&=0.40(150)+0.40(102)+0.20(76)=116.00.
 		\end{aligned}
 		\]
-		EV ranking:
-		\[
-		B_5(116.00)>B_4(113.80)>B_2(113.20)>B_3(104.80)>B_1(104.40).
-		\]
 
-		Step 3. Maximin criterion.
+		Step 5. Regret table and Minimax Regret.
+		State best payoffs:
 		\[
-		\min(B_1)=42,\ \min(B_2)=70,\ \min(B_3)=28,\ \min(B_4)=85,\ \min(B_5)=76.
+		\max(S_1)=160,\quad \max(S_2)=112,\quad \max(S_3)=85.
 		\]
-		Maximin ranking:
-		\[
-		B_4(85)>B_5(76)>B_2(70)>B_1(42)>B_3(28).
-		\]
-
-		Step 4. Regret table and Minimax Regret ranking.
-		State best payoffs: $\max(S_1)=160$, $\max(S_2)=112$, $\max(S_3)=85$.
 		\begin{center}
 			\begin{tabular}{l c c c c}
 				\toprule
@@ -182,21 +195,37 @@
 				\bottomrule
 			\end{tabular}
 		\end{center}
-		Minimax Regret ranking:
-		\[
-		B_5(10)<B_2(22)<B_4(30)<B_1(43)<B_3(57).
-		\]
 
-		Step 5. C8 conclusion.
-		Bayes and Minimax Regret select $B_5$, while Maximin selects $B_4$.
-		With expected-value leadership and the lowest regret, the team forwards $B_5$ to C9.
+		\textbf{C10 summary table}
+		\begin{center}
+			\begin{tabular}{c c c c c}
+				\toprule
+				Alt. & Max P. & Min P. & EV & Max regret \\
+				\midrule
+				$B_1$ & 145 & 42 & 104.40 & 43 \\
+				$B_2$ & 138 & 70 & 113.20 & 22 \\
+				$B_3$ & 160 & 28 & 104.80 & 57 \\
+				$B_4$ & 130 & 85 & 113.80 & 30 \\
+				$B_5$ & 150 & 76 & 116.00 & 10 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
 
-		\subsection*{C9 solution (apply filters)}
+		\textbf{C8 solution}
 		\begin{itemize}
-			\item \textbf{(Step 1)} EV top 3: $\{B_5,B_4,B_2\}$.
-			\item \textbf{(Step 2)} Minimax Regret within that subset gives regrets $B_5=10$, $B_4=30$, $B_2=22$, so keep $\{B_5,B_2\}$.
-			\item \textbf{(Step 3)} Maximin on the remaining set: $\min(B_5)=76$, $\min(B_2)=70$, therefore select $B_5$.
+			\item \textbf{Expected Value (EV) ranking:} $B_5(116.00)>B_4(113.80)>B_2(113.20)>B_3(104.80)>B_1(104.40)$.
+			\item \textbf{Maximax ranking:} $B_3(160)>B_5(150)>B_1(145)>B_2(138)>B_4(130)$.
+			\item \textbf{Maximin ranking:} $B_4(85)>B_5(76)>B_2(70)>B_1(42)>B_3(28)$.
+			\item \textbf{Minimax Regret ranking (lower is better):} $B_5(10)<B_2(22)<B_4(30)<B_1(43)<B_3(57)$.
 		\end{itemize}
+
+		\textbf{C9 solution (structured filtering)}
+		\begin{itemize}
+			\item \textbf{Step 1:} Retain the top three alternatives according to EV. Subset after Step 1: $\{B_5,B_4,B_2\}$.
+			\item \textbf{Step 2:} Within that subset, eliminate the alternative with the highest Max regret. Since $B_4=30$ is the highest (vs. $B_5=10$, $B_2=22$), reduced subset after Step 2: $\{B_5,B_2\}$.
+			\item \textbf{Step 3:} From the remaining alternatives, select the one with the highest minimum payoff (Maximin). Since $\min(B_5)=76>\min(B_2)=70$, final selection: $B_5$.
+		\end{itemize}
+		Final decision statement: choose $B_5$.
 
 		Decision-tree framing for the selected alternative $B_5$ (quality-audit uncertainty):
 		\begin{itemize}
@@ -253,7 +282,17 @@
 			\end{tabular}
 		\end{center}
 
-		Step 2. Bayes criterion (EV).
+		Step 2. Maximax criterion (Maximum payoff).
+		\[
+		\max(C_1)=168,\quad \max(C_2)=150,\quad \max(C_3)=158,\quad \max(C_4)=162,\quad \max(C_5)=148.
+		\]
+
+		Step 3. Maximin criterion (Minimum payoff).
+		\[
+		\min(C_1)=30,\quad \min(C_2)=84,\quad \min(C_3)=74,\quad \min(C_4)=80,\quad \min(C_5)=96.
+		\]
+
+		Step 4. Bayes criterion (EV).
 		\[
 		\begin{aligned}
 		EV(C_1)&=0.30(168)+0.45(92)+0.25(30)=99.30,\\
@@ -263,22 +302,12 @@
 		EV(C_5)&=0.30(148)+0.45(120)+0.25(96)=122.40.
 		\end{aligned}
 		\]
-		EV ranking:
-		\[
-		C_5(122.40)>C_4(119.90)>C_2(119.10)>C_3(113.60)>C_1(99.30).
-		\]
 
-		Step 3. Maximin criterion.
+		Step 5. Minimax Regret criterion.
+		State best payoffs:
 		\[
-		\min(C_1)=30,\quad \min(C_2)=84,\quad \min(C_3)=74,\quad \min(C_4)=80,\quad \min(C_5)=96.
+		\max(E_1)=168,\quad \max(E_2)=120,\quad \max(E_3)=96.
 		\]
-		Maximin ranking:
-		\[
-		C_5(96)>C_2(84)>C_4(80)>C_3(74)>C_1(30).
-		\]
-
-		Step 4. Minimax Regret criterion.
-		State best payoffs: $\max(E_1)=168$, $\max(E_2)=120$, $\max(E_3)=96$.
 		\begin{center}
 			\begin{tabular}{l c c c c}
 				\toprule
@@ -292,21 +321,37 @@
 				\bottomrule
 			\end{tabular}
 		\end{center}
-		Minimax Regret ranking: 
-		\[
-		C_4(16)<C_2(18)<C_5(20)<C_3(22)<C_1(66).
-		\]
 
-		Step 5. C8 conclusion.
-		Bayes and Maximin select $C_5$, while Minimax Regret selects $C_4$.
-		The team keeps the C9 filtering process to reconcile these close options.
+		\textbf{C10 summary table}
+		\begin{center}
+			\begin{tabular}{c c c c c}
+				\toprule
+				Alt. & Max P. & Min P. & EV & Max regret \\
+				\midrule
+				$C_1$ & 168 & 30 & 99.30 & 66 \\
+				$C_2$ & 150 & 84 & 119.10 & 18 \\
+				$C_3$ & 158 & 74 & 113.60 & 22 \\
+				$C_4$ & 162 & 80 & 119.90 & 16 \\
+				$C_5$ & 148 & 96 & 122.40 & 20 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
 
-		\subsection*{C9 solution (apply filters)}
+		\textbf{C8 solution}
 		\begin{itemize}
-			\item \textbf{(Step 1)} EV top 3: $\{C_5,C_4,C_2\}$.
-			\item \textbf{(Step 2)} Minimax Regret within that subset gives regrets $C_5=20$, $C_4=16$, $C_2=18$, so keep $\{C_4,C_2\}$.
-			\item \textbf{(Step 3)} Maximin on the remaining set: $\min(C_4)=80$, $\min(C_2)=84$, therefore select $C_2$.
+			\item \textbf{Expected Value (EV) ranking:} $C_5(122.40)>C_4(119.90)>C_2(119.10)>C_3(113.60)>C_1(99.30)$.
+			\item \textbf{Maximax ranking:} $C_1(168)>C_4(162)>C_3(158)>C_2(150)>C_5(148)$.
+			\item \textbf{Maximin ranking:} $C_5(96)>C_2(84)>C_4(80)>C_3(74)>C_1(30)$.
+			\item \textbf{Minimax Regret ranking (lower is better):} $C_4(16)<C_2(18)<C_5(20)<C_3(22)<C_1(66)$.
 		\end{itemize}
+
+		\textbf{C9 solution (structured filtering)}
+		\begin{itemize}
+			\item \textbf{Step 1:} Retain the top three alternatives according to EV. Subset after Step 1: $\{C_5,C_4,C_2\}$.
+			\item \textbf{Step 2:} Within that subset, eliminate the alternative with the highest Max regret. Since $C_5=20$ is the highest (vs. $C_4=16$, $C_2=18$), reduced subset after Step 2: $\{C_4,C_2\}$.
+			\item \textbf{Step 3:} From the remaining alternatives, select the one with the highest minimum payoff (Maximin). Since $\min(C_2)=84>\min(C_4)=80$, final selection: $C_2$.
+		\end{itemize}
+		Final decision statement: choose $C_2$.
 
 		Decision-tree framing for the selected alternative $C_2$ (cybersecurity uncertainty):
 		\begin{itemize}
@@ -363,7 +408,17 @@
 			\end{tabular}
 		\end{center}
 
-		Step 2. Bayes criterion (EV).
+		Step 2. Maximax criterion (Maximum payoff).
+		\[
+		\max(D_1)=155,\quad \max(D_2)=146,\quad \max(D_3)=170,\quad \max(D_4)=140,\quad \max(D_5)=150.
+		\]
+
+		Step 3. Maximin criterion (Minimum payoff).
+		\[
+		\min(D_1)=45,\quad \min(D_2)=86,\quad \min(D_3)=22,\quad \min(D_4)=94,\quad \min(D_5)=90.
+		\]
+
+		Step 4. Bayes criterion (EV).
 		\[
 		\begin{aligned}
 		EV(D_1)&=0.35(155)+0.40(100)+0.25(45)=105.50,\\
@@ -373,22 +428,12 @@
 		EV(D_5)&=0.35(150)+0.40(116)+0.25(90)=121.40.
 		\end{aligned}
 		\]
-		EV ranking:
-		\[
-		D_5(121.40)>D_4(121.30)>D_2(119.80)>D_1(105.50)>D_3(100.20).
-		\]
 
-		Step 3. Maximin criterion.
+		Step 5. Minimax Regret.
+		State best payoffs:
 		\[
-		\min(D_1)=45,\ \min(D_2)=86,\ \min(D_3)=22,\ \min(D_4)=94,\ \min(D_5)=90.
+		\max(P_1)=170,\quad \max(P_2)=122,\quad \max(P_3)=94.
 		\]
-		Maximin ranking:
-		\[
-		D_4(94)>D_5(90)>D_2(86)>D_1(45)>D_3(22).
-		\]
-
-		Step 4. Minimax Regret.
-		State best payoffs: $\max(P_1)=170$, $\max(P_2)=122$, $\max(P_3)=94$.
 		\begin{center}
 			\begin{tabular}{l c c c c}
 				\toprule
@@ -402,21 +447,37 @@
 				\bottomrule
 			\end{tabular}
 		\end{center}
-		Minimax Regret ranking:
-		\[
-		D_5(20)<D_2(24)<D_4(30)<D_1(49)<D_3(72).
-		\]
 
-		Step 5. C8 conclusion.
-		Bayes and Minimax Regret select $D_5$, while Maximin selects $D_4$.
-		Given the marginal EV lead and lower regret, management forwards $D_5$ to C9.
+		\textbf{C10 summary table}
+		\begin{center}
+			\begin{tabular}{c c c c c}
+				\toprule
+				Alt. & Max P. & Min P. & EV & Max regret \\
+				\midrule
+				$D_1$ & 155 & 45 & 105.50 & 49 \\
+				$D_2$ & 146 & 86 & 119.80 & 24 \\
+				$D_3$ & 170 & 22 & 100.20 & 72 \\
+				$D_4$ & 140 & 94 & 121.30 & 30 \\
+				$D_5$ & 150 & 90 & 121.40 & 20 \\
+				\bottomrule
+			\end{tabular}
+		\end{center}
 
-		\subsection*{C9 solution (apply filters)}
+		\textbf{C8 solution}
 		\begin{itemize}
-			\item \textbf{(Step 1)} EV top 3: $\{D_5,D_4,D_2\}$.
-			\item \textbf{(Step 2)} Minimax Regret within that subset gives regrets $D_5=20$, $D_4=30$, $D_2=24$, so keep $\{D_5,D_2\}$.
-			\item \textbf{(Step 3)} Maximin on the remaining set: $\min(D_5)=90$, $\min(D_2)=86$, therefore select $D_5$.
+			\item \textbf{Expected Value (EV) ranking:} $D_5(121.40)>D_4(121.30)>D_2(119.80)>D_1(105.50)>D_3(100.20)$.
+			\item \textbf{Maximax ranking:} $D_3(170)>D_1(155)>D_5(150)>D_2(146)>D_4(140)$.
+			\item \textbf{Maximin ranking:} $D_4(94)>D_5(90)>D_2(86)>D_1(45)>D_3(22)$.
+			\item \textbf{Minimax Regret ranking (lower is better):} $D_5(20)<D_2(24)<D_4(30)<D_1(49)<D_3(72)$.
 		\end{itemize}
+
+		\textbf{C9 solution (structured filtering)}
+		\begin{itemize}
+			\item \textbf{Step 1:} Retain the top three alternatives according to EV. Subset after Step 1: $\{D_5,D_4,D_2\}$.
+			\item \textbf{Step 2:} Within that subset, eliminate the alternative with the highest Max regret. Since $D_4=30$ is the highest (vs. $D_5=20$, $D_2=24$), reduced subset after Step 2: $\{D_5,D_2\}$.
+			\item \textbf{Step 3:} From the remaining alternatives, select the one with the highest minimum payoff (Maximin). Since $\min(D_5)=90>\min(D_2)=86$, final selection: $D_5$.
+		\end{itemize}
+		Final decision statement: choose $D_5$.
 
 		Decision-tree framing for the selected alternative $D_5$ (fuel-volatility uncertainty):
 		\begin{itemize}
