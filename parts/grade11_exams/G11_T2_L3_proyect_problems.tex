@@ -18,8 +18,8 @@
 \renewcommand{\arraystretch}{1.15}
 
 % Column types
-\newcolumntype{Y}{>{\raggedright\arraybackslash}m{\dimexpr0.30\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
-\newcolumntype{Z}{>{\raggedright\arraybackslash}m{\dimexpr0.70\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}m{\dimexpr0.50\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
+\newcolumntype{Z}{>{\raggedright\arraybackslash}m{\dimexpr0.50\textwidth-2\tabcolsep-2\arrayrulewidth\relax}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 
 % Gray subsection header box
@@ -89,7 +89,7 @@
 	% =========================
 	\begin{multicols}{2}
 		\SubsectionBox{Criteria assessment}\vspace{-0.25cm}
-		Each assessment criterion is evaluated across the ten problems. A criterion is considered passed when it is correctly activated in at least five of the ten problems.
+		Each assessment criterion is evaluated across the ten problems. A criterion is considered passed when it is correctly activated in at least 8 of the 10 problems.
 		
 		\vspace{0.25cm}
 		\SubsectionBox{1. Driver payouts in ride-sharing}\vspace{-0.25cm}
@@ -106,7 +106,10 @@
 		An investment app analyzes mean per-trade platform fees (USD) paid by users in their 20s.
 		A random sample of $n=18$ transactions gives the raw data:
 		\[
-		1.8,\ 2.1,\ 1.9,\ 2.4,\ 2.0,\ 1.7,\ 2.2,\ 2.3,\ 1.8,\ 2.5,\ 2.1,\ 1.9,\ 2.0,\ 2.2,\ 1.6,\ 2.4,\ 2.3,\ 1.9
+		\begin{aligned}
+			1.8,\ 2.1,\ 1.9,\ 2.4,\ 2.0,\ 1.7,\ 2.2,\ 2.3,\ 1.8,\\
+			2.5,\ 2.1,\ 1.9,\ 2.0,\ 2.2,\ 1.6,\ 2.4,\ 2.3,\ 1.9
+		\end{aligned}
 		\]
 		1) Construct a 90\% confidence interval for the population mean using the t-distribution.
 		2) Using the interval and the computed statistics, apply the structured C9 decision procedure to compare the t-based and z-based intervals and determine which interval is wider and by what percentage.
@@ -116,10 +119,12 @@
 		A food-delivery app studies mean order value (USD) during weekday mornings for young professionals.
 		A random sample of $n=30$ receipts gives the raw data:
 		\[
-		115,\ 122,\ 118,\ 130,\ 126,\ 119,\ 121,\ 124,\ 128,\ 117,
-		123,\ 120,\ 125,\ 129,\ 116,\ 127,\ 122,\]
-		\[118,\ 124,\ 121,
-		126,\ 119,\ 123,\ 128,\ 120,\ 125,\ 117,\ 124,\ 122,\ 126
+		\begin{aligned}
+			115,\ 122,\ 118,\ 130,\ 126,\ 119,\ 121,\ 124,\\
+			128,\ 117,\ 123,\ 120,\ 125,\ 129,\ 116,\ 127,\\
+			122,\ 118,\ 124,\ 121,\ 126,\ 119,\ 123,\ 128,\\
+			120,\ 125,\ 117,\ 124,\ 122,\ 126
+		\end{aligned}
 		\]
 		1) Construct a 99\% confidence interval for the population mean using the t-distribution.
 		2) Using the interval and the computed statistics, apply the structured C9 decision procedure to compare the t-based and z-based intervals and determine which interval is wider and by what percentage.
