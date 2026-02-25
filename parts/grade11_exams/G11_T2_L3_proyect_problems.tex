@@ -9,6 +9,7 @@
 \usepackage{array}
 \usepackage{tabularx}
 \usepackage{multicol}
+\usepackage{amsmath}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
@@ -24,7 +25,7 @@
 % Gray subsection header box
 \newcommand{\SubsectionBox}[1]{%
 \noindent\colorbox{gray!30}{%
-\parbox{\linewidth}{\textbf{#1}}%
+\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\textbf{#1}}%
 }\par\vspace{0.35cm}%
 }
 
@@ -39,7 +40,7 @@
 	% HEADER BOX (3 COLUMNS)
 	% =========================
 	\noindent
-	\begin{tabularx}{\textwidth}{|C{2.8cm}|C{\dimexpr\textwidth-6cm-4\tabcolsep-4\arrayrulewidth\relax}|C{2.8cm}|}
+	\begin{tabularx}{\textwidth}{|C{2.8cm}|>{\centering\arraybackslash}X|C{2.8cm}|}
 		\hline
 		\centering
 		\vspace{3mm}
