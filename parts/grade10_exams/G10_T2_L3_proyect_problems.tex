@@ -102,86 +102,110 @@
 		
 		\vspace{0.25cm}
 		\SubsectionBox{1. Coffee-export logistics model under demand uncertainty}\vspace{-0.25cm}
-		A coffee-export startup must choose one logistics model for the next season: $A_1$ (outsourced shipping), $A_2$ (mixed model), or $A_3$ (own fleet).
+		A coffee-export startup must choose one logistics model for the next season: $A_1$ (outsourced shipping), $A_2$ (mixed model), $A_3$ (own fleet), $A_4$ (regional consolidation hubs), or $A_5$ (strategic alliance network).
 		Demand states and probabilities are $H:0.45$, $M:0.35$, and $L:0.20$. Payoffs are in thousand USD. The payoff table is:
 		
 		\begin{center}
 			\textit{Payoff table} \\
-			\begin{tabular}{l c c c c}
+			\begin{tabular}{l c c c c c c}
 				\hline
-				State of nature & Prob. & $A_1$ & $A_2$ & $A_3$ \\
+				State of nature & Prob. & $A_1$ & $A_2$ & $A_3$ & $A_4$ & $A_5$ \\
 				\hline
-				$H$ & 0.45 & 150 & 142 & 165 \\
-				$M$ & 0.35 & 98 & 112 & 90 \\
-				$L$ & 0.20 & 52 & 78 & 35 \\
+				$H$ & 0.45 & 150 & 142 & 165 & 155 & 148 \\
+				$M$ & 0.35 & 98 & 112 & 90 & 118 & 104 \\
+				$L$ & 0.20 & 52 & 78 & 35 & 70 & 88 \\
 				\hline
 			\end{tabular}
 		\end{center}
 		
 		Apply C8 by computing and ranking alternatives using Bayes (expected value), Maximin, and Minimax Regret, including any intermediate tables needed (EV summary and regret table).
+		After obtaining the C10 summary and computing the C8 results, apply the following structured C9 decision procedure:
+		\begin{itemize}
+			\item Retain the top four alternatives according to EV.
+			\item From that subset, eliminate the alternative with the highest Max regret.
+			\item Select the alternative with the highest minimum payoff (Maximin) inside the reduced subset.
+		\end{itemize}
 		Using the C8 recommendation as the first-stage choice, apply C9 with second-stage uncertainty where the rule stays stable with probability $0.60$ (payoff adjustment $+12$) or the rule tightens with probability $0.40$ (payoff adjustment $-18$). Construct and evaluate the decision tree and state the final recommendation.
 		
 		\vspace{0.25cm}
 		\SubsectionBox{2. Textile production policy under market acceptance uncertainty}\vspace{-0.25cm}
-		A textile manufacturer must choose one production policy: $B_1$ (premium fabrics), $B_2$ (balanced mix), $B_3$ (mass volume), or $B_4$ (contract manufacturing).
+		A textile manufacturer must choose one production policy: $B_1$ (premium fabrics), $B_2$ (balanced mix), $B_3$ (mass volume), $B_4$ (contract manufacturing), or $B_5$ (nearshoring hybrid).
 		Market acceptance states and probabilities are $S_1:0.40$, $S_2:0.40$, and $S_3:0.20$. Payoffs are in thousand USD. The payoff table is:
 		
 		\begin{center}
 			\textit{Payoff table} \\
-			\begin{tabular}{l c c c c c}
+			\begin{tabular}{l c c c c c c}
 				\hline
-				State of nature & Prob. & $B_1$ & $B_2$ & $B_3$ & $B_4$ \\
+				State of nature & Prob. & $B_1$ & $B_2$ & $B_3$ & $B_4$ & $B_5$ \\
 				\hline
-				$S_1$ & 0.40 & 145 & 138 & 160 & 130 \\
-				$S_2$ & 0.40 & 95 & 110 & 88 & 112 \\
-				$S_3$ & 0.20 & 42 & 70 & 28 & 85 \\
+				$S_1$ & 0.40 & 145 & 138 & 160 & 130 & 150 \\
+				$S_2$ & 0.40 & 95 & 110 & 88 & 112 & 102 \\
+				$S_3$ & 0.20 & 42 & 70 & 28 & 85 & 76 \\
 				\hline
 			\end{tabular}
 		\end{center}
 		
 		Apply C8 by computing and ranking alternatives using Bayes (expected value), Maximin, and Minimax Regret, including any intermediate tables needed (EV summary and regret table).
+		After obtaining the C10 summary and computing the C8 results, apply the following structured C9 decision procedure:
+		\begin{itemize}
+			\item Keep the alternatives whose Max regret is at most 25.
+			\item Between the remaining alternatives, select the one with the higher EV.
+		\end{itemize}
 		Using the C8 recommendation as the first-stage choice, apply C9 with second-stage uncertainty where the audit passes with probability $0.70$ (payoff adjustment $+9$) or the audit fails with probability $0.30$ (payoff adjustment $-21$). Construct and evaluate the decision tree and state the final recommendation.
 		
 		\vspace{0.25cm}
 		\SubsectionBox{3. Platform launch strategy under enrollment uncertainty}\vspace{-0.25cm}
-		A digital-learning company must choose one platform launch strategy: $C_1$ (fast launch), $C_2$ (guided rollout), or $C_3$ (institutional partnership).
+		A digital-learning company must choose one platform launch strategy: $C_1$ (fast launch), $C_2$ (guided rollout), $C_3$ (institutional partnership), $C_4$ (regional pilot clusters), or $C_5$ (franchise licensing).
 		Enrollment states and probabilities are $E_1:0.30$, $E_2:0.45$, and $E_3:0.25$. Payoffs are in thousand USD. The payoff table is:
 		
 		\begin{center}
 			\textit{Payoff table} \\
-			\begin{tabular}{l c c c c}
+			\begin{tabular}{l c c c c c c}
 				\hline
-				State of nature & Prob. & $C_1$ & $C_2$ & $C_3$ \\
+				State of nature & Prob. & $C_1$ & $C_2$ & $C_3$ & $C_4$ & $C_5$ \\
 				\hline
-				$E_1$ & 0.30 & 168 & 150 & 158 \\
-				$E_2$ & 0.45 & 92 & 118 & 106 \\
-				$E_3$ & 0.25 & 30 & 84 & 74 \\
+				$E_1$ & 0.30 & 168 & 150 & 158 & 162 & 148 \\
+				$E_2$ & 0.45 & 92 & 118 & 106 & 114 & 120 \\
+				$E_3$ & 0.25 & 30 & 84 & 74 & 80 & 96 \\
 				\hline
 			\end{tabular}
 		\end{center}
 		
 		Apply C8 by computing and ranking alternatives using Bayes (expected value), Maximin, and Minimax Regret, including any intermediate tables needed (EV summary and regret table).
+		After obtaining the C10 summary and computing the C8 results, apply the following structured C9 decision procedure:
+		\begin{itemize}
+			\item Retain the top four alternatives according to EV.
+			\item Eliminate the alternative with the highest Max regret in that subset.
+			\item Retain the top two alternatives by Maximin from the reduced subset.
+			\item Use Minimax Regret as tie-break between the two finalists.
+		\end{itemize}
 		Using the C8 recommendation as the first-stage choice, apply C9 with second-stage uncertainty where there is a controlled incident with probability $0.75$ (payoff adjustment $+8$) or a major outage with probability $0.25$ (payoff adjustment $-24$). Construct and evaluate the decision tree and state the final recommendation.
 		
 		\vspace{0.25cm}
 		\SubsectionBox{4. Health-supply inventory strategy under demand-pressure uncertainty}\vspace{-0.25cm}
-		A health-supply distributor must choose one inventory strategy: $D_1$ (aggressive stock), $D_2$ (balanced stock), $D_3$ (just-in-time), or $D_4$ (regional micro-warehouses).
+		A health-supply distributor must choose one inventory strategy: $D_1$ (aggressive stock), $D_2$ (balanced stock), $D_3$ (just-in-time), $D_4$ (regional micro-warehouses), or $D_5$ (vendor-managed inventory).
 		Demand-pressure states and probabilities are $P_1:0.35$, $P_2:0.40$, and $P_3:0.25$. Payoffs are in thousand USD. The payoff table is:
 		
 		\begin{center}
 			\textit{Payoff table} \\
-			\begin{tabular}{l c c c c c}
+			\begin{tabular}{l c c c c c c}
 				\hline
-				State of nature & Prob. & $D_1$ & $D_2$ & $D_3$ & $D_4$ \\
+				State of nature & Prob. & $D_1$ & $D_2$ & $D_3$ & $D_4$ & $D_5$ \\
 				\hline
-				$P_1$ & 0.35 & 155 & 146 & 170 & 140 \\
-				$P_2$ & 0.40 & 100 & 118 & 88 & 122 \\
-				$P_3$ & 0.25 & 45 & 86 & 22 & 94 \\
+				$P_1$ & 0.35 & 155 & 146 & 170 & 140 & 150 \\
+				$P_2$ & 0.40 & 100 & 118 & 88 & 122 & 116 \\
+				$P_3$ & 0.25 & 45 & 86 & 22 & 94 & 90 \\
 				\hline
 			\end{tabular}
 		\end{center}
 		
 		Apply C8 by computing and ranking alternatives using Bayes (expected value), Maximin, and Minimax Regret, including any intermediate tables needed (EV summary and regret table).
+		After obtaining the C10 summary and computing the C8 results, apply the following structured C9 decision procedure:
+		\begin{itemize}
+			\item Retain the top three alternatives according to EV.
+			\item Keep only alternatives with Max regret at most 24.
+			\item Choose the remaining alternative with the higher Maximin value.
+		\end{itemize}
 		Using the C8 recommendation as the first-stage choice, apply C9 with second-stage uncertainty where fuel is stable with probability $0.55$ (payoff adjustment $+11$) or there is a fuel spike with probability $0.45$ (payoff adjustment $-14$). Construct and evaluate the decision tree and state the final recommendation.
 		
 	\end{multicols}
